@@ -35,6 +35,7 @@ import org.ei.common.Constants;
 import org.ei.common.bd.BdAuthors;
 import org.ei.dataloading.DataLoadDictionary;
 import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
+import org.ei.xml.Entity;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import org.ei.data.compendex.runtime.*;
@@ -56,6 +57,17 @@ public class BdReverseRecordBuilder
     private static String password = "";
     private DataLoadDictionary dictionary = new DataLoadDictionary();
 
+    private static Hashtable contributorRole = new Hashtable();
+	{
+		contributorRole.put("author","auth");
+		contributorRole.put("compiler","comp");
+		contributorRole.put("editor","edit");
+		contributorRole.put("illustrator","illu");
+		contributorRole.put("photographer","phot");
+		contributorRole.put("publisher","publ");
+		contributorRole.put("reviewer","revi");
+		contributorRole.put("translator","tran");
+	}
    
     public static void main(String args[])
         throws Exception
@@ -70,26 +82,35 @@ public class BdReverseRecordBuilder
             System.exit(1);
         }
          */
-        loadN = Integer.parseInt(args[0]);
-
-        //infile = args[1];
-        String databaseName = args[1];
-        String tableName = args[2];
+       
+        
         if(args.length>3)
         {
             url = args[3];
             driver = args[4];
             username = args[5];
-            password = args[6];
-            //tableName = args[3];
+            password = args[6];          
         }
         else
         {
-            System.out.println("USING DEFAULT DATABASE SETTING");
-            System.out.println("DATABASE URL= "+url);
-            System.out.println("DATABASE USERNAME= "+username);
-            System.out.println("DATABASE PASSWORD= "+password);
+        	
+        	infile = args[0];
+        	String xdsName = args[1];
+        	System.out.println("Validating XML file "+infile);
+        	BdReverseRecordBuilder b = new BdReverseRecordBuilder();
+        	if(b.validatedXml(infile,xdsName))
+            {
+            	 System.out.println("File "+infile+" is valid");
+            }
+        	else
+        	{
+        		System.out.println("File "+infile+" is NOT valid");
+        	}
+        	System.exit(1);
         }
+        loadN = Integer.parseInt(args[0]);
+        String databaseName = args[1];
+        String tableName = args[2];
         BdReverseRecordBuilder c;
 
         try
@@ -121,7 +142,11 @@ public class BdReverseRecordBuilder
             System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
         }
     }
-    
+   
+    public BdReverseRecordBuilder()
+    {
+    	
+    }
     public BdReverseRecordBuilder(int loadN,String databaseName)
     {
         this.loadNumber = loadN;
@@ -230,6 +255,13 @@ public class BdReverseRecordBuilder
                  writeRecord(rs,file);
                  file.write("</bibdataset>");
                  file.close();
+                 
+                 if(!validatedXml(filename,xsdFileName))
+                 {
+                	 continue;
+                	 //break;
+                 }
+                 
              }
              
             
@@ -278,7 +310,7 @@ public class BdReverseRecordBuilder
 		   //validator.validate(new DOMSource(document));
 			validator.validate(new StreamSource(new File(filename)));
 			
-		    System.out.println(filename+" is valid!");
+		    //System.out.println(filename+" is valid!");
 		    return true;
 		} catch (SAXException e) {
 			System.out.println(filename+" is invalid!");
@@ -380,6 +412,7 @@ public class BdReverseRecordBuilder
     	String normstandardid = rs.getString("NORMSTANDARDID");
     	String isopenaccess = rs.getString("ISOPENACESS");
     	String sourcebibtext = rs.getString("SOURCEBIBTEXT");
+    	String granttext = rs.getString("GRANTTEXT");
     	
  	
     	file.write("<item>\n");
@@ -394,9 +427,14 @@ public class BdReverseRecordBuilder
     		}
     		else
     		{
-    			System.out.println("record "+accessnumber+" date-sort format is wrong");
+    			file.write("<ait:date-sort year=\""+year+"\" month=\""+month+"\" day=\""+day+"\"/>\n");
     		}
     	}
+    	else
+    	{
+    		file.write("<ait:date-sort year=\""+year+"\" month=\""+month+"\" day=\""+day+"\"/>\n");
+    	}
+    	
     	file.write("<ait:status type=\"core\" state=\"new\" stage=\"S300\"/>\n");
     	file.write("</ait:process-info>\n");
     	file.write("<bibrecord>\n");
@@ -417,8 +455,8 @@ public class BdReverseRecordBuilder
     	//DOI
     	if(doi!=null && doi.length()>0)
     	{
-    		doi = doi.replaceAll("<","&#60;").replaceAll(">", "&#62;").trim();
-    		file.write("<ce:doi>"+doi+"</ce:doi>\n");
+    		//doi = doi.replaceAll("<","&#60;").replaceAll(">", "&#62;").trim();
+    		file.write("<ce:doi>"+cleanBadCharacters(doi)+"</ce:doi>\n");
     		//file.write("<ce:doi><![CDATA["+doi+"]]></ce:doi>\n");
     	}
 
@@ -437,19 +475,19 @@ public class BdReverseRecordBuilder
     	//NORMSTANDARDID
     	if(normstandardid!=null && normstandardid.length()>0)
     	{
-    		file.write("<itemid idtype=\"NORMSTANDARDID\">"+normstandardid+"</itemid>\n");
+    		file.write("<itemid idtype=\"NORMSTANDARDID\">"+cleanBadCharacters(normstandardid)+"</itemid>\n");
     	}
     	
     	//"STANDARDDESIGNATION"
     	if(standarddesignation!=null && standarddesignation.length()>0)
     	{
-    		file.write("<itemid idtype=\"STANDARDDESIGNATION\">"+standarddesignation+"</itemid>\n");
+    		file.write("<itemid idtype=\"STANDARDDESIGNATION\">"+cleanBadCharacters(standarddesignation)+"</itemid>\n");
     	}
     	
     	//STANDARDID
     	if(standardid!=null && standardid.length()>0)
     	{
-    		file.write("<itemid idtype=\"STANDARDID\">"+standardid+"</itemid>\n");
+    		file.write("<itemid idtype=\"STANDARDID\">"+cleanBadCharacters(standardid)+"</itemid>\n");
     	}
     	
     	file.write("</itemidlist>\n");
@@ -457,7 +495,7 @@ public class BdReverseRecordBuilder
     	//HISTORY  	   
     	//System.out.println("The current date is : " + calendar.getTime());  
         
-    	 file.write("<history><date-created timestamp=\""+time+"\" year=\""+year+"\" month=\""+month+"\" day=\""+day+"\"/></history>");
+    	 file.write("<history>\n<date-created timestamp=\""+time+"\" year=\""+year+"\" month=\""+month+"\" day=\""+day+"\"/>\n</history>\n");
 
     	
     	//DATABASE
@@ -490,7 +528,7 @@ public class BdReverseRecordBuilder
     	//CITTYPE
     	if(documentType!=null && documentType.length()>0)
     	{
-    		file.write("<citation-type code=\""+documentType+"\"/>\n");
+    		file.write("<citation-type code=\""+bdDocType.get(documentType.toLowerCase())+"\"/>\n");
     	}
 
     	//CITATION-LANGUAGE
@@ -511,7 +549,7 @@ public class BdReverseRecordBuilder
 	    		//System.out.println("keyword "+keyword);	
     			if(keyword!=null && keyword.length()>0)
     			{
-    				file.write("<author-keyword>"+keyword+"</author-keyword>\n");
+    				file.write("<author-keyword>"+cleanBadCharacters(keyword)+"</author-keyword>\n");
     			}
     		}
     		file.write("</author-keywords>\n");
@@ -539,7 +577,7 @@ public class BdReverseRecordBuilder
 		outputAuthorGroup(file,authorString,affiliationString);
     	
     
-    		
+    	
 		//CORRESPONDENCEAFFILIATION
 		if(correspondencename!=null || correspondenceaffiliation!=null || correspondenceeaddress!=null)
 		{
@@ -563,7 +601,7 @@ public class BdReverseRecordBuilder
 		file.write("<source");
 		if(sourcetype!=null && sourcetype.length()>0)
 		{
-			file.write(" type=\""+sourcetype+"\""); 
+			file.write(" type=\""+sourcetype.toLowerCase()+"\""); 
 		}
 		
 		if(sourcecountry!=null && sourcecountry.length()>0)
@@ -579,22 +617,22 @@ public class BdReverseRecordBuilder
 		
 		if(sourcetitle!=null && sourcetitle.length()>0)
 		{
-			file.write("<sourcetitle>"+sourcetitle+"</sourcetitle>\n");
+			file.write("<sourcetitle>"+cleanBadCharacters(sourcetitle)+"</sourcetitle>\n");
 		}
 		
 		if(sourcetitleabbrev!=null && sourcetitleabbrev.length()>0)
 		{
-			file.write("<sourcetitle-abbrev>"+sourcetitleabbrev+"</sourcetitle-abbrev>\n");
+			file.write("<sourcetitle-abbrev>"+cleanBadCharacters(sourcetitleabbrev)+"</sourcetitle-abbrev>\n");
 		}
 		
 		if(translatedsourcetitle!=null && translatedsourcetitle.length()>0)
 		{
-			file.write("<translated-sourcetitle>"+translatedsourcetitle+"</translated-sourcetitle>\n");
+			file.write("<translated-sourcetitle>"+cleanBadCharacters(translatedsourcetitle)+"</translated-sourcetitle>\n");
 		}
 		
 		if(issuetitle!=null && issuetitle.length()>0)
 		{
-			file.write("<issuetitle>"+issuetitle+"</issuetitle>\n");
+			file.write("<issuetitle>"+cleanBadCharacters(issuetitle)+"</issuetitle>\n");
 		}
 		
 		if(issn!=null && issn.length()>0)
@@ -642,7 +680,7 @@ public class BdReverseRecordBuilder
 		//SOURCEWEBSITE
 		if(sourcewebsite!=null && sourcewebsite.length()>0)
 		{
-			outputWebsite(file,sourcewebsite);			
+			outputWebsite(file,cleanBadCharacters(sourcewebsite));			
 		}
 		
 		//Contributor
@@ -672,19 +710,11 @@ public class BdReverseRecordBuilder
 				file.write("<confevent>\n");
 				if(confname!=null && confname.length()>0)
 				{
-					file.write("<confname>"+confname+"</confname>\n");
+					file.write("<confname>"+cleanBadCharacters(confname)+"</confname>\n");
 					//System.out.println(accessnumber+" confname="+confname);
 				}
-				if(confcatnumber!=null && confcatnumber.length()>0)
-				{
-					file.write("<confcatnumber>"+confcatnumber+"</confcatnumber>\n");
-					//System.out.println(accessnumber+" confcatnumber="+confcatnumber);
-				}
-				if(confcode!=null && confcode.length()>0)
-				{
-					file.write("<confcode>"+confcode+"</confcode>\n");
-					//System.out.println(accessnumber+" confcode="+confcode);
-				}
+				
+				
 				if(conflocation!=null && conflocation.length()>0)
 				{
 					outputConflocation(file,conflocation);
@@ -692,8 +722,87 @@ public class BdReverseRecordBuilder
 				
 				if(confdate!=null && confdate.length()>0)
 				{
-					file.write("<confdate>\n<date-text>"+confdate+"</date-text>\n</confdate>\n");
+					confdate = confdate.trim();
+					String[] confdateArr = confdate.split("-",-1);
+					String[] dateString = null;
+					file.write("<confdate>\n");
+					file.write("<date-text>"+confdate+"</date-text>");
+					/*
+					for(int j=0;j<confdateArr.length;j++)
+					{
+						if(j==0)
+						{
+							file.write("<startdate");
+						}
+						else
+						{
+							file.write("<enddate");
+						}
+						
+						if(confdateArr[j].indexOf(",")>-1)
+						{
+							String cYear=confdateArr[j].substring(confdateArr[j].indexOf(",")+1);
+							file.write(" year=\""+cYear.trim()+"\"");	
+							if(confdateArr[j].trim().indexOf(" ")>-1) 
+							{
+								String confdateA = confdateArr[j].trim();
+								String cMonth = confdateA.substring(0,confdateA.indexOf(" "));
+								String cDay =null;
+								if(confdateA.indexOf(",")>0)
+								{
+									cDay = confdateA.substring(confdateA.indexOf(" "),confdateA.indexOf(","));
+								}
+								file.write(" month=\""+cMonth.trim()+"\"");
+								if(cDay!=null)
+									file.write(" day=\""+cDay.replaceAll(",", "").trim()+"\"");
+							}
+						}
+						else
+						{
+							dateString = confdateArr[j].split("\\s",-1);
+							System.out.println("DATESTRING LENGTH="+dateString.length);
+							if(dateString.length>2)
+							{
+								String cMonth=dateString[0];
+								String cDay=dateString[1];
+								String cYear=dateString[2];
+								file.write(" year=\""+cYear.trim()+"\"");	
+								file.write(" month=\""+cMonth.trim()+"\"");
+								file.write(" day=\""+cDay.replaceAll(",", "").trim()+"\"");
+							}
+							else if (dateString.length>1)  
+							{
+								String cMonth=dateString[0];								
+								String cYear=dateString[1];
+								file.write(" year=\""+cYear.trim()+"\"");	
+								file.write(" month=\""+cMonth.trim()+"\"");							
+							}
+							else if (dateString.length>0)  
+							{														
+								String cYear=dateString[0];
+								file.write(" year=\""+cYear.trim()+"\"");												
+							}
+						}
+						
+						
+						file.write(" />\n");
+					}
+					*/
+					file.write("</confdate>\n");
+					//file.write("<confdate>\n<date-text>"+confdate+"</date-text>\n</confdate>\n");
 					//System.out.println("c-confdate="+confdate);
+				}
+				
+				if(confcatnumber!=null && confcatnumber.length()>0)
+				{
+					file.write("<confcatnumber>"+confcatnumber+"</confcatnumber>\n");
+					//System.out.println(accessnumber+" confcatnumber="+confcatnumber);
+				}
+				
+				if(confcode!=null && confcode.length()>0)
+				{
+					file.write("<confcode>"+confcode+"</confcode>\n");
+					//System.out.println(accessnumber+" confcode="+confcode);
 				}
 				
 				if(confsponsors!=null && confsponsors.length()>0)
@@ -703,7 +812,7 @@ public class BdReverseRecordBuilder
 					for(int i=0;i<confsponsorArray.length;i++)
 					{
 						String confsponsor = confsponsorArray[i];
-						file.write("<confsponsor>"+confsponsor+"</confsponsor>\n");					
+						file.write("<confsponsor>"+cleanBadCharacters(confsponsor)+"</confsponsor>\n");					
 					}
 					file.write("</confsponsors>\n");
 				}
@@ -739,7 +848,6 @@ public class BdReverseRecordBuilder
 				file.write("</conferenceinfo>\n");
 				    				
 			}
-			file.write("</additional-srcinfo>\n");
 			
 			if(reportnumber!=null && reportnumber.length()>0)
 			{
@@ -747,6 +855,10 @@ public class BdReverseRecordBuilder
 				file.write("<reportnumber>"+reportnumber+"</reportnumber>\n");
 				file.write("</reportinfo>\n");
 			}
+			
+			file.write("</additional-srcinfo>\n");
+			
+			
 		}
 		file.write("</source>\n");
 	    		
@@ -868,7 +980,7 @@ public class BdReverseRecordBuilder
 				String title = ct[1];
 				String original = ct[2];
 				String lang = ct[3];
-				file.write("<titletext xml:lang=\""+lang+"\" original=\""+original+"\">"+title+"</titletext>\n");
+				file.write("<titletext xml:lang=\""+lang+"\" original=\""+original+"\">"+cleanBadCharacters(title)+"</titletext>\n");
 			}
 			else
 			{
@@ -893,12 +1005,12 @@ public class BdReverseRecordBuilder
 			}
 			if(websitename!=null && websitename.length()>0)
 			{
-				file.write("<websitename>"+websitename+"</websitename>\n");
+				file.write("<websitename>"+cleanBadCharacters(websitename)+"</websitename>\n");
 			}
 			
 			if(eaddress!=null && eaddress.length()>0)
 			{
-				file.write("<ce:e-address>"+eaddress+"</ce:e-address>\n");
+				file.write("<ce:e-address>"+cleanBadCharacters(eaddress)+"</ce:e-address>\n");
 			}
 		}
 		file.write("</website>\n");
@@ -965,7 +1077,7 @@ public class BdReverseRecordBuilder
 						}
 						if(contributors.length>4)
 						{
-							role = contributors[4];
+							role = (String)contributorRole.get(contributors[4]);
 						}
 						if(contributors.length>5)
 						{
@@ -1019,13 +1131,32 @@ public class BdReverseRecordBuilder
 						
 						if(initials!=null && initials.length()>0)
 						{
-							file.write("<ce:initials>"+initials+"</ce:initials>\n");
+							file.write("<ce:initials>"+cleanBadCharacters(initials)+"</ce:initials>\n");
 						}
 						
 						if(indexed_name!=null && indexed_name.length()>0)
 						{
-							file.write("<ce:indexed-name>"+indexed_name+"</ce:indexed-name>\n");
+							file.write("<ce:indexed-name>"+cleanBadCharacters(indexed_name)+"</ce:indexed-name>\n");
 						}
+						else
+			    		{
+			    			if(surname!=null && initials!=null)
+			    			{
+			    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(initials)+"</ce:indexed-name>\n");
+			    			}
+			    			else if(surname!=null && given_name!=null)
+			    			{
+			    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+			    			}
+			    			else if(surname!=null)
+			    			{
+			    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+"</ce:indexed-name>\n");
+			    			}
+			    			else if(given_name!=null)
+			    			{
+			    				file.write("<ce:indexed-name>"+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+			    			}
+			    		}
 						
 						if(degrees!=null && degrees.length()>0)
 						{
@@ -1034,20 +1165,20 @@ public class BdReverseRecordBuilder
 						
 						if(surname!=null && surname.length()>0)
 						{
-							file.write("<ce:surname>"+surname+"</ce:surname>\n");
+							file.write("<ce:surname>"+cleanBadCharacters(surname)+"</ce:surname>\n");
 						}
 						
 						if(given_name!=null && given_name.length()>0)
 						{
-							file.write("<ce:given-name>"+given_name+"</ce:given-name>\n");
+							file.write("<ce:given-name>"+cleanBadCharacters(given_name)+"</ce:given-name>\n");
 						}
 						file.write("</contributor>\n");
 						
 						if(contributoraffiliationMap.get(contributorid)!=null)
 						{
 							String caffiliation = (String)contributoraffiliationMap.get(contributorid);
-							String[] caffiliationElements = caffiliation.split(Constants.IDDELIMITER);
-							file.write("<affiliation>\n");
+							String[] caffiliationElements = caffiliation.split(Constants.IDDELIMITER,-1);
+							file.write("<affiliation");
 							if(caffiliationElements.length>0)
 							{
 								String affVenue = null;
@@ -1062,12 +1193,7 @@ public class BdReverseRecordBuilder
 								{	
 									affText = caffiliationElements[2];
 								}
-								
-								if(affText!=null && affText.length()>0)
-								{
-									file.write("<ce:text>"+affText+"</ce:text>\n");
-								}
-								
+
 								if(caffiliationElements.length>3)
 								{
 									String affOrg = caffiliationElements[3];
@@ -1092,34 +1218,63 @@ public class BdReverseRecordBuilder
 										if(affOrgs.length>3)
 										{
 											country = affOrgs[3];
+											file.write(" country=\""+country+"\">\n");
+										}
+										else
+										{
+											file.write(">");
 										}
 										
 										if(affOrganization!=null && affOrganization.length()>0)
 										{
-											file.write("<organization>"+affOrganization+"</organization>\n");
+											file.write("<organization>"+cleanBadCharacters(affOrganization)+"</organization>\n");
 										}
 										if(address_part!=null && address_part.length()>0)
 										{
-											file.write("<address-part>"+address_part+"</address-part>\n");
+											file.write("<address-part>"+cleanBadCharacters(address_part)+"</address-part>\n");
 										}
 										if(city_group!=null && city_group.length()>0)
 										{
-											file.write("<city-group>"+city_group+"</city-group>\n");
+											file.write("<city-group>"+cleanBadCharacters(city_group)+"</city-group>\n");
 										}
+										/*
 										if(country!=null && country.length()>0)
 										{
-											file.write("<country>"+country+"</country>\n");
-										}	    								
+											file.write("<country>"+cleanBadCharacters(country)+"</country>\n");
+										}	
+										*/    								
 									}
 									else
 									{
+										file.write(">\n");	
 										System.out.println("affOrgs has wrong format size="+affOrgs.length);
 									}
+									
+									if(affText!=null && affText.length()>0)
+									{
+										file.write("<ce:text>"+cleanBadCharacters(affText)+"</ce:text>\n");
+									}
+									
+									
 								}
+								else
+								{
+									file.write(">\n");
+									
+								}
+								
+								
+								if(affID!=null && !affID.equals("0"))
+								{
+									file.write("<affiliation-id afid=\""+affID+"\"/>\n");
+									//System.out.println("affiliation-id="+affID);
+								}
+								
 								
 							}
 							else
 							{
+								//file.write("<affiliation-id/>\n");
 								System.out.println("affiliationElements has wrong format size="+caffiliationElements.length);
 							}
 							file.write("</affiliation>\n");
@@ -1225,27 +1380,46 @@ public class BdReverseRecordBuilder
 	    		
 	    		if(initials!=null)
 	    		{
-	    			file.write("<ce:initials>"+initials+"</ce:initials>\n");
+	    			file.write("<ce:initials>"+cleanBadCharacters(initials)+"</ce:initials>\n");
 	    		}
 	    		
 	    		if(indexname!=null)
 	    		{
-	    			file.write("<ce:indexed-name>"+indexname+"</ce:indexed-name>\n");
+	    			file.write("<ce:indexed-name>"+cleanBadCharacters(indexname)+"</ce:indexed-name>\n");
+	    		}
+	    		else
+	    		{
+	    			if(surname!=null && initials!=null)
+	    			{
+	    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(initials)+"</ce:indexed-name>\n");
+	    			}
+	    			else if(surname!=null && givenname!=null)
+	    			{
+	    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(givenname)+"</ce:indexed-name>\n");
+	    			}
+	    			else if(surname!=null)
+	    			{
+	    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+"</ce:indexed-name>\n");
+	    			}
+	    			else if(givenname!=null)
+	    			{
+	    				file.write("<ce:indexed-name>"+cleanBadCharacters(givenname)+"</ce:indexed-name>\n");
+	    			}
 	    		}
 	    		
 	    		if(surname!=null)
 	    		{
-	    			file.write("<ce:surname>"+surname+"</ce:surname>\n");
+	    			file.write("<ce:surname>"+cleanBadCharacters(surname)+"</ce:surname>\n");
 	    		}
 	    		
 	    		if(givenname!=null)
 	    		{
-	    			file.write("<ce:given-name>"+givenname+"</ce:given-name>\n");
+	    			file.write("<ce:given-name>"+cleanBadCharacters(givenname)+"</ce:given-name>\n");
 	    		}
 	    		
 	    		if(eaddress!=null)
 	    		{
-	    			file.write("<ce:e-address>"+eaddress+"</ce:e-address>\n");
+	    			file.write("<ce:e-address>"+cleanBadCharacters(eaddress)+"</ce:e-address>\n");
 	    		}
 	    		
 	    		if(degree!=null)
@@ -1255,7 +1429,7 @@ public class BdReverseRecordBuilder
 	    		
 	    		if(suffix!=null)
 	    		{
-	    			file.write("<ce:suffix>"+suffix+"</ce:suffix>\n");
+	    			file.write("<ce:suffix>"+cleanBadCharacters(suffix)+"</ce:suffix>\n");
 	    		}
 	    		file.write("</author>\n");
     		}// for author
@@ -1323,7 +1497,7 @@ public class BdReverseRecordBuilder
 	    		file.write("<affiliation");
 	    		if(affCountry!=null && affCountry.length()>0)
 	    		{
-	    			file.write(" country=\""+affCountry+"\"");
+	    			file.write(" country=\""+cleanBadCharacters(affCountry)+"\"");
 	    		}
 	    		
 	    		if(affiliationId!=null && affiliationId.length()>0)
@@ -1336,47 +1510,79 @@ public class BdReverseRecordBuilder
 	    			file.write(" dptid=\""+affDeptId+"\"");
 	    		}
 	    		
-	    		file.write(">\n");
+	    		file.write(">\n");	    		
 	    		
-	    			    		
 	    		if(affText!=null && affText.length()>0)
 	    		{
-	    			file.write("<ce:text>"+affText+"</ce:text>\n");
+	    			file.write("<ce:text>"+cleanBadCharacters(affText)+"</ce:text>\n");
 	    		}
 	    		else
 	    		{
 	    			if(affOrganization!=null && affOrganization.length()>0)
 	    			{
-	    				file.write("<organization>"+affOrganization+"</organization>\n");
+	    				file.write("<organization>"+cleanBadCharacters(affOrganization)+"</organization>\n");
 	    			}
 	    			
 	    			if(affAddressPart!=null && affAddressPart.length()>0)
 	    			{
-	    				file.write("<address-part>"+affAddressPart+"</address-part>\n");
+	    				file.write("<address-part>"+cleanBadCharacters(affAddressPart)+"</address-part>\n");
 	    			}
 	    			
 	    			if(affCityGroup!=null && affCityGroup.length()>0)
 	    			{
-	    				file.write("<city-group>"+affCityGroup+"</city-group>\n"); 
+	    				file.write("<city-group>"+cleanBadCharacters(affCityGroup)+"</city-group>\n"); 
+	    				/*
+	    				String[] cityGroupArr = cleanBadCharacters(affCityGroup).split(";");
+	    				if(cityGroupArr.length==1)
+	    				{
+	    					file.write("<city>"+cityGroupArr[0]+"</city>\n");
+	    				}
+	    				else if(cityGroupArr.length==2)
+	    				{
+	    					file.write("<city>"+cityGroupArr[0]+"</city>\n");
+	    					file.write("<postal-code>"+cityGroupArr[1].trim()+"</postal-code>\n");
+	    				}
+	    				else
+	    				{
+	    					System.out.println("affiliation city-group has wrong format");
+	    				}
+	    				*/
 	    			}
 	    			else
 	    			{
 	    				if(affCity!=null && affCity.length()>0)
 	    				{
-	    					file.write("<city>"+affCity+"</city>\n");
+	    					file.write("<city>"+cleanBadCharacters(affCity)+"</city>\n");
 	    				}
 	    				
 	    				if(affState!=null && affState.length()>0)
 	    				{
-	    					file.write("<state>"+affState+"</state>\n");
+	    					file.write("<state>"+cleanBadCharacters(affState)+"</state>\n");
 	    				}
 	    				
 	    				if(affPostalCode!=null && affPostalCode.length()>0)
 	    				{
-	    					file.write("<postal-code>"+affPostalCode+"</postal-code>\n");
+	    					file.write("<postal-code>"+cleanBadCharacters(affPostalCode).trim()+"</postal-code>\n");
 	    				}
 	    				
 	    			}//if affCityGroup
+	    			
+	    			if((affiliationId!=null && affiliationId.length()>0 && !affiliationId.equals("0")) || (affDeptId!=null && affDeptId.length()>0 && !affDeptId.equals("0")))
+					{						
+						file.write("<affiliation-id ");
+						if(affiliationId!=null && affiliationId.length()>0)
+						{
+							file.write("afid=\""+affiliationId+"\"");
+						}
+						if(affDeptId!=null && affDeptId.length()>0)
+						{
+							file.write(" dptid=\""+affDeptId+"\"");
+						}						
+						file.write(" />");
+					}
+	    			
+	    			
+					
 	    			
 	    		}//if affText
 	    		file.write("</affiliation>\n");
@@ -1388,12 +1594,28 @@ public class BdReverseRecordBuilder
 
 	private void outputCorrespondence(FileWriter file, String correspondencename,String correspondenceaffiliation,String correspondenceeaddress,String accessnumber) throws Exception
 	{
-		file.write("<correspondence>\n");
+		
+		String[] correspondencenames=null;
+		String[] correspondenceAffArr=null;
+		String[] correspondenceeaddressArr=null;
+		
+		if(correspondenceaffiliation!=null)
+		{
+			correspondenceAffArr=correspondenceaffiliation.split(Constants.AUDELIMITER,-1);
+		}
+		
+		if(correspondenceeaddress!=null)
+		{
+			correspondenceeaddressArr=correspondenceeaddress.split(Constants.AUDELIMITER,-1);
+		}
+		
 		if(correspondencename!=null)
 		{
-			String[] correspondencenames = correspondencename.split(Constants.AUDELIMITER,-1);
+			
+			correspondencenames = correspondencename.split(Constants.AUDELIMITER,-1);
 			for(int i=0;i<correspondencenames.length;i++)
 			{
+				file.write("<correspondence>\n");
 				String cperson = correspondencenames[i];
 				String[] cnames = cperson.split(Constants.IDDELIMITER,-1);
 				if(cnames.length>0)
@@ -1442,13 +1664,32 @@ public class BdReverseRecordBuilder
 					file.write("<person>\n");
 					if(initials!=null && initials.length()>0)
 					{
-						file.write("<ce:initials>"+initials+"</ce:initials>\n");
+						file.write("<ce:initials>"+cleanBadCharacters(initials)+"</ce:initials>\n");
 					}
 					
 					if(indexed_name!=null && indexed_name.length()>0)
 					{
-						file.write("<ce:indexed-name>"+indexed_name+"</ce:indexed-name>\n");
+						file.write("<ce:indexed-name>"+cleanBadCharacters(indexed_name)+"</ce:indexed-name>\n");
 					}
+					else
+		    		{
+		    			if(surname!=null && initials!=null)
+		    			{
+		    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(initials)+"</ce:indexed-name>\n");
+		    			}
+		    			else if(surname!=null && given_name!=null)
+		    			{
+		    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+		    			}
+		    			else if(surname!=null)
+		    			{
+		    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+"</ce:indexed-name>\n");
+		    			}
+		    			else if(given_name!=null)
+		    			{
+		    				file.write("<ce:indexed-name>"+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+		    			}
+		    		}
 					
 					if(degrees!=null && degrees.length()>0)
 					{
@@ -1457,164 +1698,215 @@ public class BdReverseRecordBuilder
 					
 					if(surname!=null && surname.length()>0)
 					{
-						file.write("<ce:surname>"+surname+"</ce:surname>\n");
+						file.write("<ce:surname>"+cleanBadCharacters(surname)+"</ce:surname>\n");
 					}
 					
 					if(given_name!=null && given_name.length()>0)
 					{
-						file.write("<ce:given-name>"+given_name+"</ce:given-name>\n");
+						file.write("<ce:given-name>"+cleanBadCharacters(given_name)+"</ce:given-name>\n");
 					}
 					
 					if(suffix!=null && suffix.length()>0)
 					{
-						file.write("<ce:suffix>"+suffix+"</ce:suffix>\n");
+						file.write("<ce:suffix>"+cleanBadCharacters(suffix)+"</ce:suffix>\n");
 					}
 					
 					if(nametext!=null && nametext.length()>0)
 					{
-						file.write("<ce:nametext>"+nametext+"</ce:nametext>\n");
+						file.write("<ce:nametext>"+cleanBadCharacters(nametext)+"</ce:nametext>\n");
 					}
 					
 					if(text!=null && text.length()>0)
 					{
-						file.write("<ce:text>"+text+"</ce:text>\n");
+						file.write("<ce:text>"+cleanBadCharacters(text)+"</ce:text>\n");
 					}
 					
 					file.write("</person>\n");
 					
-				}
-				else
-				{
-					System.out.println("correspondencename has wrong format, size is "+cnames.length);
-				}//cnames
-			}
-			    			
-		}//correspondencename
-		
-		if(correspondenceaffiliation!=null)
-		{
-			file.write("<affiliation");
-			String[] affs = correspondenceaffiliation.split(Constants.IDDELIMITER,-1);
-			
-			//System.out.println("correspondenceaffiliation size = "+affs.length);
-			if(affs.length>0)
-			{
-				String afid = affs[0];
-				String venue = null;
-				String content =null;
-				String dptid = null;
-				if(affs.length>1)
-				{
-					venue = affs[1];
-				}
-				if(affs.length>2)
-				{
-					content = affs[2];
-				}
-				
-				if(affs.length>3)
-				{
-					dptid = affs[3];
-				}
-				
-				if(afid!=null && afid.length()>0 && dptid!=null && dptid.length()>0)
-				{
-					file.write(" afid=\""+afid+"\" dptid=\""+dptid+"\">\n");
-				}
-				else if(afid!=null && afid.length()>0)
-				{
-					file.write(" afid=\""+afid+"\">\n");
-				}
-				else if(dptid!=null && dptid.length()>0)
-				{
-					file.write(" dptid=\""+dptid+"\">\n");
-				}
-				else
-				{
-					file.write(">\n");
-				}
-				if(content!=null)
-				{
-					if(content.indexOf(Constants.GROUPDELIMITER)>-1)
+					if(correspondenceAffArr!=null && correspondenceAffArr.length>i)
 					{
-						String[] organizations = content.split(Constants.GROUPDELIMITER);
+						String[] affs = correspondenceAffArr[i].split(Constants.IDDELIMITER,-1);
 						
-						String organization = null;
-						String address_part = null;
-						String city_group = null;
-						String country = null;
-						if(organizations.length>0)
+						//System.out.println("correspondenceaffiliation size = "+affs.length);
+						if(affs.length>0)
 						{
-							organization = organizations[0];
+							
+							
+							String afid = affs[0];
+							String venue = null;
+							String content =null;
+							String dptid = null;
+							if(affs.length>1)
+							{
+								venue = affs[1];
+							}
+							
+							String country = null;
+							if(affs.length>2)
+							{
+								content = affs[2];				
+								if(content.indexOf(Constants.GROUPDELIMITER)>-1)
+								{
+									String[] organizations = content.split(Constants.GROUPDELIMITER);																					
+									if(organizations.length>3)
+									{
+										country = organizations[3];
+									}
+								}
+							}
+							
+							if(affs.length>3)
+							{
+								dptid = affs[3];
+							}
+							
+							if((afid!=null && afid.length()>0 ) || (dptid!=null && dptid.length()>0 ) || 
+									(country!=null && country.length()>0 ) || (content!=null))
+							{
+								file.write("<affiliation");
+							
+								if(afid!=null && afid.length()>0 && !afid.equals("0"))
+								{
+									file.write(" afid=\""+afid+"\"");
+								}
+								
+								if(dptid!=null && dptid.length()>0 && !dptid.equals("0"))
+								{
+									file.write(" dptid=\""+dptid+"\"");
+								}
+								
+								if(country!=null && country.length()>0 )
+								{
+									file.write(" country=\""+country+"\"");
+								}								
+								file.write(">\n");
+							
+							
+							
+								if(content!=null)
+								{
+									if(content.indexOf(Constants.GROUPDELIMITER)>-1)
+									{
+										String[] organizations = content.split(Constants.GROUPDELIMITER);
+										
+										String organization = null;
+										String address_part = null;
+										String city_group = null;
+										
+										if(organizations.length>0)
+										{
+											organization = organizations[0];
+										}
+										if(organizations.length>1)
+										{
+											address_part = organizations[1];
+										}
+										if(organizations.length>2)
+										{
+											city_group = organizations[2];
+										}
+										if(organizations.length>3)
+										{
+											country = organizations[3];
+										}
+										
+										if(organization!=null && organization.length()>0)
+										{
+											file.write("<organization>"+cleanBadCharacters(organization)+"</organization>\n");
+										}
+										
+										if(address_part!=null && address_part.length()>0)
+										{
+											file.write("<address-part>"+cleanBadCharacters(address_part)+"</address-part>\n");
+										}
+										
+										if(city_group!=null && city_group.length()>0)
+										{
+											file.write("<city-group>"+cleanBadCharacters(city_group)+"</city-group>\n");
+											/*
+											if(city_group.indexOf(",")>-1) 
+											{
+												String[] cityArr=city_group.split(",");
+												if(cityArr.length==1)
+												{
+													file.write("<city>"+cityArr[0]+"</city>\n");
+												}
+												else if(cityArr.length==2)
+												{
+													file.write("<city>"+cityArr[0].trim()+"</city>\n");
+													file.write("<postal-code>"+cityArr[1].trim()+"</postal-code>\n");
+												}
+												else
+												{
+													System.out.println("correspondence city-group has wrong format");
+												}
+											}
+											else
+											{
+												file.write("<city-group>"+cleanBadCharacters(city_group)+"</city-group>\n");
+											}
+											*/
+										}
+				   				
+									}
+									else
+									{
+										file.write("<ce:text>"+cleanBadCharacters(content)+"</ce:text>\n");
+									}//content
+									
+									if(afid!=null && afid.length()>0 && !afid.equals("0"))
+									{
+										//System.out.println("affiliation-id="+afid);
+										file.write("<affiliation-id>"+afid+"</affiliation-id>\n");
+									}
+									file.write("</affiliation>\n");		
+								}
+							}
+							else
+							{
+								System.out.println("record "+accessnumber+" has no correspondence affiliation");
+								
+							}//content			
+								
 						}
-						if(organizations.length>1)
+						else
 						{
-							address_part = organizations[1];
-						}
-						if(organizations.length>2)
-						{
-							city_group = organizations[2];
-						}
-						if(organizations.length>3)
-						{
-							country = organizations[3];
-						}
-						if(organization!=null && organization.length()>0)
-						{
-							file.write("<organization>"+organization+"</organization>\n");
-						}
-						
-						if(address_part!=null && address_part.length()>0)
-						{
-							file.write("<address-part>"+address_part+"</address-part>\n");
-						}
-						
-						if(city_group!=null && city_group.length()>0)
-						{
-							file.write("<city-group>"+city_group+"</city-group>\n");
-						}
-						
-						if(country!=null && country.length()>0)
-						{
-							file.write("<country>"+country+"</country>\n");
-						}
-   				
+							System.out.println("2 correspondence affiliation format is wrong ");
+							System.out.println("else affs[0]="+affs[0]);
+							System.out.println("else affs[1]="+affs[1]);
+							System.out.println("else affs[2]="+affs[2]);
+						}//content				
+				}
+					
+				if(correspondenceeaddressArr!=null && correspondenceeaddressArr.length>i)
+				{
+					String[] cEaddress = correspondenceeaddressArr[i].split(Constants.IDDELIMITER);
+					if(cEaddress.length==2)
+					{
+						//file.write("<ce:e-address type=\""+cleanBadCharacters(cEaddress[0])+"\">"+cEaddress[1]+"</ce:e-address>\n");
+						file.write("<ce:e-address>"+cEaddress[1]+"</ce:e-address>\n");
 					}
 					else
 					{
-						file.write("<text>"+content+"</text>\n");
-					}//content
+						//System.out.println("record "+accessnumber+" correspondenceeaddress has wrong format");
+					}
 				}
-				else
-				{
-					System.out.println("record "+accessnumber+" correspondence affiliation format is wrong: "+correspondenceaffiliation);
-					
-				}//content
-				file.write("</affiliation>\n");			
+				file.write("</correspondence>\n");
+				
 			}
 			else
 			{
-				System.out.println("2 correspondence affiliation format is wrong ");
-				System.out.println("else affs[0]="+affs[0]);
-				System.out.println("else affs[1]="+affs[1]);
-				System.out.println("else affs[2]="+affs[2]);
-			}//content
+				System.out.println("correspondencename has wrong format, size is "+cnames.length);
+			}//cnames
 		}
+		    			
+	}//correspondencename
+		
+		
 			
 			
-		if(correspondenceeaddress!=null && correspondenceeaddress.length()>0)
-		{
-			String[] cEaddress = correspondenceeaddress.split(Constants.IDDELIMITER);
-			if(cEaddress.length==2)
-			{
-				file.write("<ce:e-address type=\""+cEaddress[0]+"\">"+cEaddress[1]+"</ce:e-address>\n");
-			}
-			else
-			{
-				//System.out.println("record "+accessnumber+" correspondenceeaddress has wrong format");
-			}
-		}
-		file.write("</correspondence>\n");
+		
+		
 	}
 	
 	private void outputGrantlist(FileWriter file, String grantlist) throws Exception
@@ -1631,15 +1923,15 @@ public class BdReverseRecordBuilder
 				String grantAcronym = grantElements[1];
 				String grantAgency = grantElements[2];
 				if(grantId!=null && grantId.length()>0){
-					file.write("<grant-id>"+grantId+"</grant-id>\n");
+					file.write("<grant-id>"+cleanBadCharacters(grantId)+"</grant-id>\n");
 				}
 				
 				if(grantAcronym!=null && grantAcronym.length()>0){
-					file.write("<grant-acronym>"+grantAcronym+"</grant-acronym>\n");
+					file.write("<grant-acronym>"+cleanBadCharacters(grantAcronym)+"</grant-acronym>\n");
 				}
 				
 				if(grantAgency!=null && grantAgency.length()>0){
-					file.write("<grant-agency>"+grantAgency+"</grant-agency>\n");
+					file.write("<grant-agency>"+cleanBadCharacters(grantAgency)+"</grant-agency>\n");
 				}
 				file.write("</grant>");
 				
@@ -1680,7 +1972,7 @@ public class BdReverseRecordBuilder
 			//System.out.println("copyright="+abstractcopyright);
 			//System.out.println("abstract="+abstractdata);
 		}
-		file.write("<ce:para>"+StringEscapeUtils.escapeHtml4(abstractdata)+"</ce:para>\n");
+		file.write("<ce:para>"+cleanBadCharacters(abstractdata)+"</ce:para>\n");
 		file.write("</abstract>\n");
 		file.write("</abstracts>\n");
 	}
@@ -1813,16 +2105,35 @@ public class BdReverseRecordBuilder
 				{
 					text = editorElements[8];
 				}
-				file.write("<person>\n");
+				//file.write("<person>\n");
 				if(initials!=null && initials.length()>0)
 				{
-					file.write("<ce:initials>"+initials+"</ce:initials>\n");
+					file.write("<ce:initials>"+cleanBadCharacters(initials)+"</ce:initials>\n");
 				}
 				
 				if(indexed_name!=null && indexed_name.length()>0)
 				{
-					file.write("<ce:indexed-name>"+indexed_name+"</ce:indexed-name>\n");
+					file.write("<ce:indexed-name>"+cleanBadCharacters(indexed_name)+"</ce:indexed-name>\n");
 				}
+				else
+	    		{
+	    			if(surname!=null && initials!=null)
+	    			{
+	    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(initials)+"</ce:indexed-name>\n");
+	    			}
+	    			else if(surname!=null && given_name!=null)
+	    			{
+	    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+	    			}
+	    			else if(surname!=null)
+	    			{
+	    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+"</ce:indexed-name>\n");
+	    			}
+	    			else if(given_name!=null)
+	    			{
+	    				file.write("<ce:indexed-name>"+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+	    			}
+	    		}
 				
 				if(degrees!=null && degrees.length()>0)
 				{
@@ -1831,30 +2142,30 @@ public class BdReverseRecordBuilder
 				
 				if(surname!=null && surname.length()>0)
 				{
-					file.write("<ce:surname>"+surname+"</ce:surname>\n");
+					file.write("<ce:surname>"+cleanBadCharacters(surname)+"</ce:surname>\n");
 				}
 				
 				if(given_name!=null && given_name.length()>0)
 				{
-					file.write("<ce:given-name>"+given_name+"</ce:given-name>\n");
+					file.write("<ce:given-name>"+cleanBadCharacters(given_name)+"</ce:given-name>\n");
 				}
 				
 				if(suffix!=null && suffix.length()>0)
 				{
-					file.write("<ce:suffix>"+suffix+"</ce:suffix>\n");
+					file.write("<ce:suffix>"+cleanBadCharacters(suffix)+"</ce:suffix>\n");
 				}
 				
 				if(nametext!=null && nametext.length()>0)
 				{
-					file.write("<ce:nametext>"+nametext+"</ce:nametext>\n");
+					file.write("<ce:nametext>"+cleanBadCharacters(nametext)+"</ce:nametext>\n");
 				}
 				
 				if(text!=null && text.length()>0)
 				{
-					file.write("<ce:text>"+text+"</ce:text>\n");
+					file.write("<ce:text>"+cleanBadCharacters(text)+"</ce:text>\n");
 				}
 				
-				file.write("</person>\n");
+				//file.write("</person>\n");
 				
 			}
 			else
@@ -1891,7 +2202,7 @@ public class BdReverseRecordBuilder
 			for(int i=0;i<publishernameArray.length;i++)
 			{
 				file.write("<publisher>\n");
-				file.write("<publishername>"+publishernameArray[i]+"</publishername>\n");
+				file.write("<publishername>"+cleanBadCharacters(publishernameArray[i])+"</publishername>\n");
 				if(publisheraddressArray!=null && publisheraddressArray.length>i)
 				{
 					//file.write("<publisheraddress>"+publisheraddressArray[i]+"</publisheraddress>\n");
@@ -1900,7 +2211,7 @@ public class BdReverseRecordBuilder
 					{	
 						if(paddress.indexOf(Constants.IDDELIMITER)<0)
 						{
-							file.write("<publisheraddress>"+paddress+"</publisheraddress>\n");
+							file.write("<publisheraddress>"+cleanBadCharacters(paddress)+"</publisheraddress>\n");
 						}
 						else
 						{
@@ -1942,7 +2253,7 @@ public class BdReverseRecordBuilder
 								}
 								if(affcountry!=null && affcountry.length()>0)
 								{
-									file.write(" country=\""+affcountry+"\">\n");
+									file.write(" country=\""+cleanBadCharacters(affcountry)+"\">\n");
 								}
 								else
 								{
@@ -1951,15 +2262,27 @@ public class BdReverseRecordBuilder
 								
 								if(venue!=null && venue.length()>0)
 								{
-									file.write("<venue>"+venue+"</venue>\n");
+									file.write("<venue>"+cleanBadCharacters(venue)+"</venue>\n");
 								}
 								if(affaddress_part!=null && affaddress_part.length()>0)
 								{
-									file.write("<address-part>"+affaddress_part+"</address-part>\n");
+									file.write("<address-part>"+cleanBadCharacters(affaddress_part)+"</address-part>\n");
 								}
 								if(affcity_group!=null && affcity_group.length()>0)
 								{
-									file.write("<affcity-group>"+affcity_group+"</affcity-group>\n");
+									if(affcity_group.indexOf(",")>-1)
+									{
+										String[] affCitys = affcity_group.split(",");
+										if(affCitys.length>1)
+										{
+											file.write("<city>"+cleanBadCharacters(affCitys[0])+"</city>\n");
+											file.write("<postal-code>"+cleanBadCharacters(affCitys[1])+"</postal-code>\n");
+										}
+									}
+									else
+									{
+										file.write("<city-group>"+cleanBadCharacters(affcity_group)+"</city-group>\n");
+									}
 								}
 								
 								file.write("</affiliation>\n");	
@@ -1982,7 +2305,13 @@ public class BdReverseRecordBuilder
 						{
 							file.write(" type=\""+pEaddress[0]+"\"");
 						}
-						file.write(">"+pEaddress[1]+"</ce:e-address>\n");
+						file.write(">"+cleanBadCharacters(pEaddress[1])+"</ce:e-address>\n");
+						//System.out.println("PUBLISHER0="+pEaddress[0]);
+						//System.out.println("PUBLISHER1="+pEaddress[1]);
+					}
+					else
+					{
+						System.out.println("PUBLISHER="+publisherelectronicaddressArray[i]+" size="+pEaddress.length);
 					}
 					
 				}
@@ -1995,11 +2324,21 @@ public class BdReverseRecordBuilder
 			{
 				file.write("<publisher>\n");
 				    				
-				file.write("<publisheraddress>"+publisheraddressArray[i]+"</publisheraddress>\n");
+				file.write("<publisheraddress>"+cleanBadCharacters(publisheraddressArray[i])+"</publisheraddress>\n");
 				
 				if(publisherelectronicaddressArray!=null && publisherelectronicaddressArray.length>i)
 				{
-					file.write("<publisherelectronicaddress>"+publisherelectronicaddressArray[i]+"</publisherelectronicaddress>\n");
+					String[] pEaddress = publisherelectronicaddressArray[i].split(Constants.IDDELIMITER);
+					String emailAddress = null;
+					if(pEaddress.length>1)
+					{
+						emailAddress=pEaddress[1];
+					}
+					else
+					{
+						emailAddress=pEaddress[0];
+					}
+					file.write("<ce:e-address>"+cleanBadCharacters(emailAddress)+"</ce:e-address>\n");
 				}
 				file.write("</publisher>\n");
 			}
@@ -2009,8 +2348,17 @@ public class BdReverseRecordBuilder
 			for(int i=0;i<publisherelectronicaddressArray.length;i++)
 			{
 				file.write("<publisher>\n");
-			
-				file.write("<publisherelectronicaddress>"+publisherelectronicaddressArray[i]+"</publisherelectronicaddress>\n");
+				String[] pEaddress = publisherelectronicaddressArray[i].split(Constants.IDDELIMITER);
+				String emailAddress = null;
+				if(pEaddress.length>1)
+				{
+					emailAddress=pEaddress[1];
+				}
+				else
+				{
+					emailAddress=pEaddress[0];
+				}
+				file.write("<ce:e-address>"+cleanBadCharacters(emailAddress)+"</ce:e-address>\n");
 				
 				file.write("</publisher>\n");
 			}
@@ -2064,7 +2412,7 @@ public class BdReverseRecordBuilder
 					
 					if(affcountry!=null && affcountry.length()>0)
 					{
-						file.write(" country=\""+affcountry+"\">\n");
+						file.write(" country=\""+cleanBadCharacters(affcountry)+"\">\n");
 					}
 					else
 					{
@@ -2073,15 +2421,28 @@ public class BdReverseRecordBuilder
 					
 					if(venue!=null && venue.length()>0)
 					{
-						file.write("<venue>"+venue+"</venue>\n");
+						file.write("<venue>"+cleanBadCharacters(venue)+"</venue>\n");
 					}
 					if(affaddress_part!=null && affaddress_part.length()>0)
 					{
-						file.write("<address-part>"+affaddress_part+"</address-part>\n");
+						file.write("<address-part>"+cleanBadCharacters(affaddress_part)+"</address-part>\n");
 					}
 					if(affcity_group!=null && affcity_group.length()>0)
 					{
-						file.write("<affcity-group>"+affcity_group+"</affcity-group>\n");
+						if(affcity_group.indexOf(",")>-1)
+						{
+							String[] affCitys = affcity_group.split(",");
+							if(affCitys.length>1)
+							{
+								file.write("<city>"+cleanBadCharacters(affCitys[0])+"</city>\n");
+								file.write("<postal-code>"+cleanBadCharacters(affCitys[1])+"</postal-code>\n");
+							}
+						}
+						else
+						{
+							//file.write("<city-group>"+cleanBadCharacters(affcity_group)+"</city-group>\n");
+							file.write("<city>"+cleanBadCharacters(affcity_group)+"</city>\n");
+						}
 					}					
 					file.write("</conflocation>\n");	    												
 				}
@@ -2127,7 +2488,7 @@ public class BdReverseRecordBuilder
 		    	String lastPage = pageArray[2];
 		    	if(pages!=null && pages.length()>0)
 		    	{
-		    		file.write("<page>"+pages+"</page>\n");
+		    		file.write("<pages>"+cleanBadCharacters(pages)+"</pages>\n");
 		    	}
 		    	else if((firstPage!=null && firstPage.length()>0) || (lastPage!=null && lastPage.length()>0))
 		    	{
@@ -2156,9 +2517,16 @@ public class BdReverseRecordBuilder
 				String pagecountElement = pagecounts[i];
 				//System.out.println("pagecounts"+pagecounts.length);
 				if(pagecountElement!=null && pagecountElement.length()>0)
-				{								
-					file.write("<pagecount>"+pagecountElement+"</pagecount>\n");
-					
+				{	
+					String[] pCount = pagecountElement.split(Constants.IDDELIMITER);
+					if(pCount.length>1)
+					{
+						file.write("<pagecount>"+cleanBadCharacters(pCount[1])+"</pagecount>\n");						
+					}
+					else
+					{
+						file.write("<pagecount>"+cleanBadCharacters(pCount[0])+"</pagecount>\n");	
+					}										
 				}//if
 			}//for
 		}
@@ -2168,24 +2536,18 @@ public class BdReverseRecordBuilder
     private void outputConfeditors(FileWriter file, String conferenceeditoraddress,String conferenceorganization,String confenceeditor) throws Exception
     {
     	file.write("<confeditors>\n");
-		if(conferenceeditoraddress!=null && conferenceeditoraddress.length()>0)
-		{
-			file.write("<editoraddress>"+conferenceeditoraddress+"</editoraddress>\n");
-		}
-		if(conferenceorganization!=null && conferenceorganization.length()>0)
-		{
-			file.write("<editororganization>"+conferenceorganization+"</editororganization>\n");
-		}
+		
 		
 		if(confenceeditor!=null && confenceeditor.length()>0)
 		{
+			file.write("<editors>\n");
 			String[] confeditorArray = confenceeditor.split(Constants.AUDELIMITER,-1);
 			for(int i=0;i<confeditorArray.length;i++)
 			{
 				String confeditor = confeditorArray[i];
 				if(confeditor!=null && confeditor.length()>0)
 				{
-					file.write("<confeditor>\n");
+					file.write("<editor>\n");
 					String[] confeditorElement = confeditor.split(Constants.IDDELIMITER,-1);
 					//System.out.println("confeditorElement SIZE="+confeditorElement.length);
 					String editorID = null;
@@ -2233,40 +2595,85 @@ public class BdReverseRecordBuilder
 					{
 						text = confeditorElement[8];
 					}
+					
 					if(initials!=null && initials.length()>0)
 					{
-						file.write("<ce:initials>"+initials+"</ce:initials>\n");
+						file.write("<ce:initials>"+cleanBadCharacters(initials)+"</ce:initials>\n");
 					}
+					
+					
+					
 					if(indexed_name!=null && indexed_name.length()>0)
 					{
-						file.write("<ce:indexed-name>"+indexed_name+"</ce:indexed-name>\n");
+						file.write("<ce:indexed-name>"+cleanBadCharacters(indexed_name)+"</ce:indexed-name>\n");
 					}
+					else
+		    		{
+		    			if(surname!=null && initials!=null)
+		    			{
+		    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(initials)+"</ce:indexed-name>\n");
+		    			}
+		    			else if(surname!=null && given_name!=null)
+		    			{
+		    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+		    			}
+		    			else if(surname!=null)
+		    			{
+		    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+"</ce:indexed-name>\n");
+		    			}
+		    			else if(given_name!=null)
+		    			{
+		    				file.write("<ce:indexed-name>"+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+		    			}
+		    		}
+					
 					if(degrees!=null && degrees.length()>0)
 					{
 						file.write("<ce:degrees>"+degrees+"</ce:degrees>\n");
 					}
+					
+					if(surname!=null && surname.length()>0)
+					{
+						file.write("<ce:surname>"+cleanBadCharacters(surname)+"</ce:surname>\n");
+					}
+										
 					if(given_name!=null && given_name.length()>0)
 					{
-						file.write("<ce:given-name>"+given_name+"</ce:given-name>\n");
+						file.write("<ce:given-name>"+cleanBadCharacters(given_name)+"</ce:given-name>\n");
 					}
+					
 					if(suffix!=null && suffix.length()>0)
 					{
 						file.write("<ce:suffix>"+suffix+"</ce:suffix>\n");
 					}
 					if(nametext!=null && nametext.length()>0)
 					{
-						file.write("<ce:nametext>"+nametext+"</ce:nametext>\n");
+						file.write("<ce:nametext>"+cleanBadCharacters(nametext)+"</ce:nametext>\n");
 					}
+					
 					if(text!=null && text.length()>0)
 					{
-						file.write("<ce:text>"+text+"</ce:text>\n");
-					}	    												
-					file.write("</confeditor>\n");
+						file.write("<nametext>"+cleanBadCharacters(text)+"</nametext>\n");
+					}
+					    												
+					file.write("</editor>\n");
 				}
 			}
 		}
-		
+		file.write("</editors>\n");
 		file.write("</confeditors>\n");
+		
+		if(conferenceorganization!=null && conferenceorganization.length()>0)
+		{
+			file.write("<editororganization>"+cleanBadCharacters(conferenceorganization)+"</editororganization>\n");
+		}
+		
+		if(conferenceeditoraddress!=null && conferenceeditoraddress.trim().length()>0)
+		{
+			file.write("<editoraddress>"+cleanBadCharacters(conferenceeditoraddress)+"</editoraddress>\n");
+		}
+		
+		
 	}
 	
     
@@ -2296,7 +2703,7 @@ public class BdReverseRecordBuilder
 			if(controlledtermElement!=null && controlledtermElement.length()>0)
 			{
 				file.write("<descriptor>\n");
-				file.write("<mainterm>"+controlledtermElement+"</mainterm>\n");
+				file.write("<mainterm>"+cleanBadCharacters(controlledtermElement)+"</mainterm>\n");
 				file.write("</descriptor>\n");
 			}
 		}
@@ -2314,7 +2721,7 @@ public class BdReverseRecordBuilder
 			if(uncontrolledtermElement!=null && uncontrolledtermElement.length()>0)
 			{
 				file.write("<descriptor>\n");
-				file.write("<mainterm>"+uncontrolledtermElement+"</mainterm>\n");
+				file.write("<mainterm>"+cleanBadCharacters(uncontrolledtermElement)+"</mainterm>\n");
 				file.write("</descriptor>\n");
 			}
 		}
@@ -2332,7 +2739,7 @@ public class BdReverseRecordBuilder
 			if(mainheadingElement!=null && mainheadingElement.length()>0)
 			{
 				file.write("<descriptor>\n");
-				file.write("<mainterm>"+mainheadingElement+"</mainterm>\n");
+				file.write("<mainterm>"+cleanBadCharacters(mainheadingElement)+"</mainterm>\n");
 				file.write("</descriptor>\n");
 			}
 		}
@@ -2350,7 +2757,7 @@ public class BdReverseRecordBuilder
 			if(speciestermElement!=null && speciestermElement.length()>0)
 			{
 				file.write("<descriptor>\n");
-				file.write("<mainterm>"+speciestermElement+"</mainterm>\n");
+				file.write("<mainterm>"+cleanBadCharacters(speciestermElement)+"</mainterm>\n");
 				file.write("</descriptor>\n");
 			}
 		}
@@ -2368,7 +2775,7 @@ public class BdReverseRecordBuilder
 			if(regionaltermElement!=null && regionaltermElement.length()>0)
 			{
 				file.write("<descriptor>\n");
-				file.write("<mainterm>"+regionaltermElement+"</mainterm>\n");
+				file.write("<mainterm>"+cleanBadCharacters(regionaltermElement)+"</mainterm>\n");
 				file.write("</descriptor>");
 			}
 		}
@@ -2386,7 +2793,7 @@ public class BdReverseRecordBuilder
 			if(treatmentcodeElement!=null && treatmentcodeElement.length()>0)
 			{
 				file.write("<descriptor>\n");
-				file.write("<mainterm>"+treatmentcodeElement+"</mainterm>\n");
+				file.write("<mainterm>"+cleanBadCharacters(treatmentcodeElement)+"</mainterm>\n");
 				file.write("</descriptor>\n");
 			}
 		}
@@ -2404,7 +2811,7 @@ public class BdReverseRecordBuilder
 			if(chemicaltermElement!=null && chemicaltermElement.length()>0)
 			{
 				file.write("<descriptor>\n");
-				file.write("<mainterm>"+chemicaltermElement+"</mainterm>\n");
+				file.write("<mainterm>"+cleanBadCharacters(chemicaltermElement)+"</mainterm>\n");
 				file.write("</descriptor>\n");
 			}
 		}
@@ -2475,7 +2882,7 @@ public class BdReverseRecordBuilder
 							
 							if(manufacturerContent!=null && manufacturerContent.length()>0) 
 							{
-								file.write(manufacturerContent);
+								file.write(cleanBadCharacters(manufacturerContent));
 							}
 							
 							file.write("</manufacturer>\n");
@@ -2504,7 +2911,7 @@ public class BdReverseRecordBuilder
 				String sequencebankName = sequencebankArray[0];
 				if(sequencebankName!=null && sequencebankName.length()>0)
 				{
-					file.write(" name=\""+sequencebankName+"\">\n");
+					file.write(" name=\""+cleanBadCharacters(sequencebankName)+"\">\n");
 				}
 				else
 				{
@@ -2547,7 +2954,7 @@ public class BdReverseRecordBuilder
 				for(int j=1;j<tradenameElements.length;j++)
 				{
 					String tradenameContent = tradenameElements[j];
-					file.write("<trademanuitem>\n<tradename>"+tradenameContent+"</tradename>\n</trademanuitem>\n");
+					file.write("<trademanuitem>\n<tradename>"+cleanBadCharacters(tradenameContent)+"</tradename>\n</trademanuitem>\n");
 				}  								 								
 			}//if
 			else
@@ -2582,7 +2989,7 @@ public class BdReverseRecordBuilder
 						
 						if(chemical_name!=null && chemical_name.length()>0)
 						{
-							file.write("<chemical-name>"+chemical_name+"</chemical-name>\n");
+							file.write("<chemical-name>"+cleanBadCharacters(chemical_name)+"</chemical-name>\n");
 						}
 						
 						for(int k=1; k<chemicalElement.length;k++)
@@ -2666,11 +3073,23 @@ public class BdReverseRecordBuilder
             		 String[] titles = referencetitle.split(",");
             		 for(int i=0;i<titles.length;i++)
             		 {
-            			 file.write("<ref-titletext>"+referencetitle+"</ref-titletext>\n");
+            			 file.write("<ref-titletext>"+cleanBadCharacters(referencetitle)+"</ref-titletext>\n");
             		 } 
             		 file.write("</ref-title>\n");
             	 }
             	 
+            	 if((pui!=null && pui.length()>0) || (accessnumber!=null && accessnumber.length()>0))
+     	 		{
+     	 			file.write("<refd-itemidlist>\n");
+     	 			//file.write("<itemid>");
+     	 			file.write("<itemid  idtype=\"CPX\">"+accessnumber+"</itemid>\n"); 
+     	 			if(pui!=null && pui.length()>0)
+     	 			{
+     	 				file.write("<itemid  idtype=\"PUI\">"+pui+"</itemid>\n");
+     	 			}
+     	 			//file.write("</itemid>");
+     	 			file.write("</refd-itemidlist>\n");
+     	 		}
             	 
             	if(referenceauthor!=null && referenceauthor.length()>0)
          		{
@@ -2749,94 +3168,351 @@ public class BdReverseRecordBuilder
      						file.write(">\n");
      						if(initials!=null && initials.length()>0)
      						{
-     							file.write("<ce:initials>"+initials+"</ce:initials>\n");
+     							//System.out.println(initials+" --- "+cleanBadCharacters(initials));
+     							file.write("<ce:initials>"+cleanBadCharacters(initials)+"</ce:initials>\n");
      						}
      						if(indexed_name!=null && indexed_name.length()>0)
      						{
-     							file.write("<ce:indexed_name>"+indexed_name+"</ce:indexed_name>\n");	    							
+     							file.write("<ce:indexed-name>"+cleanBadCharacters(indexed_name)+"</ce:indexed-name>\n");	    							
      						}
      						if(surname!=null && surname.length()>0)
      						{
-     							file.write("<ce:surname>"+surname+"</ce:surname>\n");
+     							file.write("<ce:surname>"+cleanBadCharacters(surname)+"</ce:surname>\n");
      						}
      						
      						if(suffix!=null && suffix.length()>0)
      						{
-     							file.write("<ce:suffix>"+suffix+"</ce:suffix>\n");    							
+     							file.write("<ce:suffix>"+cleanBadCharacters(suffix)+"</ce:suffix>\n");    							
      						}
      						file.write("</author>\n");
          						
-         					}
          				}
-         				
-         			}
-            	 	file.write("</ref-authors>\n");
+         			}//for
+         			file.write("</ref-authors>\n");      				
+         		}
             	 	
-            	 	//REFERENCESOURCETITLE
-            	 	if(referencesourcetitle!=null && referencesourcetitle.length()>0)
-            	 	{
-            	 		file.write("<ref-sourcetitle>"+referencesourcetitle+"</ref-sourcetitle>\n");
-            	 	}
             	 	
-            	 	//REFERENCEPUBLICATIONYEAR
-            	 	if(referencepublicationyear!=null && referencepublicationyear.length()>0)
-            	 	{
-            	 		file.write("<ref-publicationyear");
-            	 		if(referencepublicationyear.indexOf("-")<0)
+        	 	//REFERENCESOURCETITLE
+        	 	if(referencesourcetitle!=null && referencesourcetitle.length()>0)
+        	 	{
+        	 		file.write("<ref-sourcetitle>"+cleanBadCharacters(referencesourcetitle)+"</ref-sourcetitle>\n");
+        	 	}
+            	 	
+        	 	//REFERENCEPUBLICATIONYEAR
+        	 	if(referencepublicationyear!=null && referencepublicationyear.length()>0)
+        	 	{
+        	 		file.write("<ref-publicationyear");
+        	 		if(referencepublicationyear.indexOf("-")<0)
+        	 		{
+        	 			file.write(" first=\""+referencepublicationyear+"\"");
+        	 		}
+        	 		else
+        	 		{
+        	 			String[] publicationYears = referencepublicationyear.split("-");
+        	 			if(publicationYears[0]!=null && publicationYears[0].length()>0)
+        	 			{
+        	 				file.write(" first=\""+publicationYears[0]+"\"");
+        	 			}
+        	 			
+        	 			if(publicationYears[1]!=null && publicationYears[1].length()>0)
+        	 			{
+        	 				file.write(" last=\""+publicationYears[1]+"\"");
+        	 			}
+        	 			
+        	 		}
+        	 		file.write("/>\n");
+        	 	}
+            	 	
+            	 	
+        	 	//REFERENCEVOLUME
+        	 	if((referencevolume!=null && referencevolume.length()>0) || (referenceissue!=null && referenceissue.length()>0) || (referencepages!=null && referencepages.length()>0))            	 	
+        	 	{
+        	 		file.write("<ref-volisspag>\n");
+        	 		if((referencevolume!=null && referencevolume.length()>0) || (referenceissue!=null && referenceissue.length()>0))
+        	 		{
+	        	 		file.write("<voliss");
+	        	 		if(referencevolume!=null && referencevolume.length()>0)
+	        	 		{
+	        	 			file.write(" volume=\""+cleanBadCharacters(referencevolume)+"\"");
+	        	 		}
+	        	 		
+	        	 		if(referenceissue!=null && referenceissue.length()>0)
+	        	 		{
+	        	 			file.write(" issue=\""+cleanBadCharacters(referenceissue)+"\"");
+	        	 		}
+	        	 		
+	        	 		file.write("/>\n");
+        	 		}
+            	 		
+        	 		if(referencepages!=null && referencepages.length()>0)
+        	 		{
+        	 			if(referencepages.indexOf("PAGES:")>-1)
+        	 			{
+        	 				file.write("<pages>"+cleanBadCharacters(referencepages.substring(6))+"\"</pages>\n");
+        	 			}
+        	 			else if(referencepages.indexOf("PAGERANGE:")>-1)
+        	 			{
+        	 				file.write("<pagerange");
+        	 				referencepages = cleanBadCharacters(referencepages.substring(9));
+        	 				if(referencepages.indexOf("-")>-1)
+        	 				{
+        	 					String[] referenceP = referencepages.split("-");
+        	 					if(referenceP.length>0 && referenceP[0]!=null && referenceP[0].length()>0)
+        	 					{
+        	 						file.write(" first=\""+referenceP[0].replace(":", "")+"\"");           	 						
+        	 					}
+        	 					if(referenceP.length>1 && referenceP[1]!=null && referenceP[1].length()>0)
+        	 					{
+        	 						file.write(" last=\""+referenceP[1]+"\"");           	 						
+        	 					}
+        	 					
+        	 				}
+        	 				else
+        	 				{
+        	 					file.write(" first=\""+referencepages+"\"");
+        	 				}
+        	 				file.write("/>\n");
+        	 			}
+        	 			else if(referencepages.indexOf("PAGECOUNT:")>-1)
+        	 			{
+        	 				file.write("<pagecount");
+        	 				
+        	 				String[] referenceP = referencepages.split(Constants.IDDELIMITER);
+        	 				if(referenceP.length==1)
+        	 				{
+        	 					file.write(">"+referenceP[0]+"</pagecount>\n");
+        	 				}
+        	 				else
+        	 				{
+        	 					file.write(" type=\""+referenceP[0]+"\">"+referenceP[1]+"</pagecount>\n");
+        	 				}
+        	 			
+        	 			}//if
+        	 		
+        	 		}//REFERENCEVOLUME
+        	 		
+        	 		file.write("</ref-volisspag>\n");
+        	 	}
+        	 	
+        	 	//REFERENCEWEBSITE
+    	 		if(referencewebsite!=null && referencewebsite.length()>0)
+    	 		{
+    	 			file.write("<ref-website>\n");
+    	 			String[] referencewebsites = referencewebsite.split(Constants.IDDELIMITER);
+    	 			if(referencewebsites[0]!=null && referencewebsites[0].length()>0)
+    	 			{
+    	 				file.write("<websitename>"+cleanBadCharacters(referencewebsites[0])+"</websitename>\n");
+    	 			}
+    	 			
+    	 			if(referencewebsites.length>1 && referencewebsites[1]!=null && referencewebsites[1].length()>0)
+    	 			{
+    	 				file.write("<ce:e-address type=\"email\">"+cleanBadCharacters(referencewebsites[1])+"</ce:e-address>\n");
+    	 			}
+    	 			        	 			
+    	 			file.write("</ref-website>\n");
+    	 		}
+            	 		
+    	 		
+        	 	
+        	 	//REFERENCETEXT
+    	 		if(referencetext!=null && referencetext.length()>0)
+    	 		{
+    	 			file.write("<ref-text>"+cleanBadCharacters(referencetext)+"</ref-text>\n");
+    	 		}
+        	 		
+            	file.write("</ref-info>\n");       	
+        	 	
+    	 		//REFERENCEFULLTEXT
+    	 		if(referencefulltext!=null && referencefulltext.length()>0)
+    	 		{
+    	 			file.write("<ref-fulltext>"+cleanBadCharacters(referencefulltext)+"</ref-fulltext>\n");
+    	 		}
+    	 			
+            	 		
+    	 		if((referenceitemcitationpii!=null && referenceitemcitationpii.length()>0) || 
+    	 				(referenceitemcitationdoi!=null && referenceitemcitationdoi.length()>0) ||
+    	 				(referenceitemcitationauthor!=null && referenceitemcitationauthor.length()>0) || 
+    	 				(refitemcitationsourcetitle!=null && refitemcitationsourcetitle.length()>0) ||
+    	 				(refcitationsourcetitleabbrev!=null && refcitationsourcetitleabbrev.length()>0) ||
+    	 				(referenceitemcitationissn!=null && referenceitemcitationissn.length()>0) ||
+    	 				(referenceitemcitationisbn!=null && referenceitemcitationisbn.length()>0) || 
+    	 				(referenceitemcitationpart!=null && referenceitemcitationpart.length()>0) ||           	 				
+    	 				(refitemcitationpublicationyear!=null && refitemcitationpublicationyear.length()>0) ||
+    	 				(referenceitemcitationvolume!=null && referenceitemcitationvolume.length()>0) || 
+    	 				(referenceitemcitationissue!=null && referenceitemcitationissue.length()>0) ||
+    	 				(referencecitationpage!=null && referencecitationpage.length()>0) ||
+    	 				(referenceitemcitationisbn!=null && referenceitemcitationisbn.length()>0) || 
+    	 				(refitemcitationarticlenumber!=null && refitemcitationarticlenumber.length()>0) ||          	 				
+    	 				(referenceitemcitationwebsite!=null && referenceitemcitationwebsite.length()>0) ||
+    	 				(referenceitemcitationeaddress!=null && referenceitemcitationeaddress.length()>0) || 
+    	 				(referenceitemcitationreftext!=null && referenceitemcitationreftext.length()>0) ||
+    	 				(referenceitemcitationtitle!=null && referenceitemcitationtitle.length()>0) ||
+    	 				(referenceitemcitationcoden!=null && referenceitemcitationcoden.length()>0))
+    	 		{
+    	 			file.write("<refd-itemcitation  type=\"core\">\n");  
+    	 			if(referenceitemcitationpii!=null && referenceitemcitationpii.length()>0)
+    	 			{
+    	 				file.write("<ce:pii>"+referenceitemcitationpii+"</ce:pii>\n");
+    	 			}
+    	 			
+    	 			if(referenceitemcitationdoi!=null && referenceitemcitationdoi.length()>0)
+    	 			{
+    	 				file.write("<ce:doi>"+cleanBadCharacters(referenceitemcitationdoi)+"</ce:doi>\n");
+    	 			}
+    	 			
+    	 			if(refitemcitationsourcetitle!=null && refitemcitationsourcetitle.length()>0)
+    	 			{
+    	 				file.write("<sourcetitle>"+cleanBadCharacters(refitemcitationsourcetitle)+"</sourcetitle>\n");
+    	 			}
+    	 			
+    	 			if(refcitationsourcetitleabbrev!=null && refcitationsourcetitleabbrev.length()>0)
+    	 			{
+    	 				file.write("<sourcetitle-abbrev>"+cleanBadCharacters(refcitationsourcetitleabbrev)+"</sourcetitle-abbrev>\n");
+    	 			}
+			         	 			
+    	 			if(referenceitemcitationissn!=null && referenceitemcitationissn.length()>0)
+    	 			{
+    	 				if(referenceitemcitationissn.indexOf(Constants.IDDELIMITER)>-1)
+    	 				{
+        	 				String[] issns = referenceitemcitationissn.split(Constants.IDDELIMITER);
+        	 				for(int i=0;i<issns.length;i++)
+        	 				{
+        	 					String issn = issns[i];
+        	 					if(issn!=null && issn.length()>0)
+        	 					{
+        	 						if(issn.indexOf(":")>-1)
+        	 						{
+        	 							String[] issnElements = issn.split(":");
+        	 							file.write("<issn type=\""+issnElements[0]+"\">"+issnElements[1]+"</issn>\n");
+        	 						}
+        	 						else
+        	 						{
+        	 							file.write("<issn type=\"print\">"+issn+"</issn>\n");
+        	 						}
+        	 						
+        	 					}
+        	 				}
+    	 				}
+    	 				else
+    	 				{
+    	 					if(referenceitemcitationissn.indexOf(":")>-1)
+    	 					{
+    	 						String[] issnElements = referenceitemcitationissn.split(":");
+	 							file.write("<issn type=\""+issnElements[0]+"\">"+issnElements[1]+"</issn>\n");           	 						
+    	 					}
+    	 					else
+    	 					{
+    	 						file.write("<issn type=\"print\">"+referenceitemcitationissn+"</issn>\n");
+    	 					}           	 					
+    	 				}
+    	 			}
+    	 			
+    	 			if(referenceitemcitationisbn!=null && referenceitemcitationisbn.length()>0)
+    	 			{
+    	 				String[] isbns = referenceitemcitationisbn.split(Constants.AUDELIMITER,-1);
+    	 				for(int i=0;i<isbns.length;i++)
+    	 				{
+    	 					String isbnArray = isbns[i];
+    	 					if(isbnArray!=null && isbnArray.length()>0)
+    	 					{
+    	 						String[] isbnElements = isbnArray.split(Constants.IDDELIMITER,-1);
+    	 						if(isbnElements.length==4)
+    	 						{
+    	 							String type = isbnElements[0];
+    	 							String length = isbnElements[1];
+    	 							String level = isbnElements[2];
+    	 							String value = isbnElements[3];
+    	 							file.write("<isbn");
+    	 							if(type!=null && type.length()>0)
+    	 							{
+    	 								file.write(" type=\""+type+"\"");
+    	 							}
+    	 							
+    	 							if(length!=null && length.length()>0)
+    	 							{
+    	 								file.write(" length=\""+length+"\"");
+    	 							}
+    	 							
+    	 							if(level!=null && level.length()>0)
+    	 							{
+    	 								file.write(" level=\""+level+"\"");
+    	 							}
+    	 							
+    	 							file.write(">"+value+"</isbn>\n");
+    	 						}
+    	 						else
+    	 						{
+    	 							System.out.println("records "+accessnumber+" has wrong format in referenceitemcitationisbn");
+    	 						}//if
+    	 					}//if
+    	 				}//for
+    	 			}//if
+            	 			
+    	 			//REFERENCEITEMCITATIONPART
+    	 			if(referenceitemcitationpart!=null && referenceitemcitationpart.length()>0)
+    	 			{
+    	 				file.write("<part>"+cleanBadCharacters(referenceitemcitationpart)+"</part>\n");
+    	 			}
+    	 			
+    	 			//REFITEMCITATIONPUBLICATIONYEAR
+    	 			if(refitemcitationpublicationyear!=null && refitemcitationpublicationyear.length()>0)
+    	 			{
+    	 				file.write("<publicationyear");
+    	 				if(refitemcitationpublicationyear.indexOf("-")<0)
             	 		{
-            	 			file.write(" first=\""+referencepublicationyear+"\"");
+            	 			file.write(" first=\""+refitemcitationpublicationyear+"\"");
             	 		}
             	 		else
             	 		{
-            	 			String[] publicationYears = referencepublicationyear.split("-");
+            	 			String[] publicationYears = refitemcitationpublicationyear.split("-");
             	 			if(publicationYears[0]!=null && publicationYears[0].length()>0)
             	 			{
             	 				file.write(" first=\""+publicationYears[0]+"\"");
             	 			}
             	 			
-            	 			if(publicationYears[1]!=null && publicationYears[1].length()>0)
+            	 			if(publicationYears.length>1 && publicationYears[1]!=null && publicationYears[1].length()>0)
             	 			{
             	 				file.write(" last=\""+publicationYears[1]+"\"");
-            	 			}
+            	 			}                  	 			
+            	 		}
+            	 		file.write("/>\n");            	 				
+    	 			}//REFITEMCITATIONPUBLICATIONYEAR
             	 			
-            	 		}
-            	 		file.write("/>\n");
-            	 	}
-            	 	
-            	 	
-            	 	//REFERENCEVOLUME
-            	 	if((referencevolume!=null && referencevolume.length()>0) || (referenceissue!=null && referenceissue.length()>0) || (referencepages!=null && referencepages.length()>0))            	 	
-            	 	{
-            	 		file.write("<ref-volisspag>\n");
+    	 			//REFERENCEITEMCITATIONVOLUME
+    	 			if((referenceitemcitationvolume!=null && referenceitemcitationvolume.length()>0) ||
+    	 					(referenceitemcitationissue!=null && referenceitemcitationissue.length()>0) ||
+    	 					(referencecitationpage!=null && referencecitationpage.length()>0))
+    	 			{
+    	 				file.write("<volisspag>\n");
             	 		file.write("<voliss");
-            	 		if(referencevolume!=null && referencevolume.length()>0)
+            	 		if(referenceitemcitationvolume!=null && referenceitemcitationvolume.length()>0)
             	 		{
-            	 			file.write(" volume=\""+referencevolume+"\"");
+            	 			file.write(" volume=\""+referenceitemcitationvolume+"\"");
             	 		}
             	 		
-            	 		if(referenceissue!=null && referenceissue.length()>0)
+            	 		if(referenceitemcitationissue!=null && referenceitemcitationissue.length()>0)
             	 		{
-            	 			file.write(" issue=\""+referenceissue+"\"");
+            	 			file.write(" issue=\""+referenceitemcitationissue+"\"");
             	 		}
             	 		
             	 		file.write("/>\n");
             	 		
-            	 		if(referencepages!=null && referencepages.length()>0)
+            	 		if(referencecitationpage!=null && referencecitationpage.length()>0)
             	 		{
-            	 			if(referencepages.indexOf("PAGES:")>-1)
+            	 			if(referencecitationpage.indexOf("PAGES:")>-1)
             	 			{
-            	 				file.write("<pages>"+referencepages.substring(6)+"\"</pages>\n");
+            	 				file.write("<pages>"+cleanBadCharacters(referencecitationpage.substring(6))+"\"</pages>\n");
             	 			}
-            	 			else if(referencepages.indexOf("PAGERANGE:")>-1)
+            	 			else if(referencecitationpage.indexOf("PAGERANGE:")>-1)
             	 			{
             	 				file.write("<pagerange");
-            	 				referencepages = referencepages.substring(9);
-            	 				if(referencepages.indexOf("-")>-1)
+            	 				referencecitationpage = referencecitationpage.substring(9);
+            	 				if(referencecitationpage.indexOf("-")>-1)
             	 				{
-            	 					String[] referenceP = referencepages.split("-");
-            	 					if(referenceP.length>0 && referenceP[0]!=null && referenceP[0].length()>0)
+            	 					String[] referenceP = referencecitationpage.split("-");
+            	 					if(referenceP[0]!=null && referenceP[0].length()>0)
             	 					{
-            	 						file.write(" first=\""+referenceP[0].replace(":", "")+"\"");           	 						
+            	 						file.write(" first=\""+referenceP[0]+"\"");           	 						
             	 					}
             	 					if(referenceP.length>1 && referenceP[1]!=null && referenceP[1].length()>0)
             	 					{
@@ -2846,7 +3522,7 @@ public class BdReverseRecordBuilder
             	 				}
             	 				else
             	 				{
-            	 					file.write(" first=\""+referencepages+"\"");
+            	 					file.write(" first=\""+referencecitationpage+"\"");
             	 				}
             	 				file.write("/>\n");
             	 			}
@@ -2854,7 +3530,7 @@ public class BdReverseRecordBuilder
             	 			{
             	 				file.write("<pagecount");
             	 				
-            	 				String[] referenceP = referencepages.split(Constants.IDDELIMITER);
+            	 				String[] referenceP = referencecitationpage.split(Constants.IDDELIMITER);
             	 				if(referenceP.length==1)
             	 				{
             	 					file.write(">"+referenceP[0]+"</pagecount>\n");
@@ -2867,407 +3543,147 @@ public class BdReverseRecordBuilder
             	 			}
             	 		
             	 		}           	 		            	 		
-            	 		file.write("</ref-volisspag>\n");
-            	 		file.write("</ref-info>\n");
-            	 		//REFERENCEFULLTEXT
-            	 		if(referencefulltext!=null && referencefulltext.length()>0)
-            	 		{
-            	 			file.write("<ref-fulltext>"+referencefulltext+"</ref-fulltext>\n");
-            	 		}
-            	 		
-            	 		//REFERENCETEXT
-            	 		if(referencetext!=null && referencetext.length()>0)
-            	 		{
-            	 			file.write("<ref-text>"+referencetext+"</ref-text>\n");
-            	 		}
-            	 		
-            	 		//REFERENCEWEBSITE
-            	 		if(referencewebsite!=null && referencewebsite.length()>0)
-            	 		{
-            	 			file.write("<ref-website>\n");
-            	 			String[] referencewebsites = referencewebsite.split(Constants.IDDELIMITER);
-            	 			if(referencewebsites[0]!=null && referencewebsites[0].length()>0)
-            	 			{
-            	 				file.write("<websitename>"+referencewebsites[0]+"</websitename>\n");
-            	 			}
+            	 		file.write("</volisspag>\n");
+    	 				
+    	 			}//REFERENCEITEMCITATIONVOLUME
             	 			
-            	 			if(referencewebsites.length>1 && referencewebsites[1]!=null && referencewebsites[1].length()>0)
-            	 			{
-            	 				file.write("<ce:e-address type=\"email\">"+referencewebsites[1]+"</ce:e-address>\n");
-            	 			}
-            	 			        	 			
-            	 			file.write("</ref-website>\n");
-            	 		}
-            	 		
-            	 		if((pui!=null && pui.length()>0) || (accessnumber!=null && accessnumber.length()>0))
-            	 		{
-            	 			file.write("<refd-itemidlist>\n");
-            	 			//file.write("<itemid>");
-            	 			file.write("<itemid  idtype=\"CPX\">"+accessnumber+"</itemid>\n"); 
-            	 			if(pui!=null && pui.length()>0)
-            	 			{
-            	 				file.write("<itemid  idtype=\"PUI\">"+pui+"</itemid>\n");
-            	 			}
-            	 			//file.write("</itemid>");
-            	 			file.write("</refd-itemidlist>\n");
-            	 		}
-            	 		
-            	 		if((referenceitemcitationpii!=null && referenceitemcitationpii.length()>0) || 
-            	 				(referenceitemcitationdoi!=null && referenceitemcitationdoi.length()>0) ||
-            	 				(referenceitemcitationauthor!=null && referenceitemcitationauthor.length()>0) || 
-            	 				(refitemcitationsourcetitle!=null && refitemcitationsourcetitle.length()>0) ||
-            	 				(refcitationsourcetitleabbrev!=null && refcitationsourcetitleabbrev.length()>0) ||
-            	 				(referenceitemcitationissn!=null && referenceitemcitationissn.length()>0) ||
-            	 				(referenceitemcitationisbn!=null && referenceitemcitationisbn.length()>0) || 
-            	 				(referenceitemcitationpart!=null && referenceitemcitationpart.length()>0) ||           	 				
-            	 				(refitemcitationpublicationyear!=null && refitemcitationpublicationyear.length()>0) ||
-            	 				(referenceitemcitationvolume!=null && referenceitemcitationvolume.length()>0) || 
-            	 				(referenceitemcitationissue!=null && referenceitemcitationissue.length()>0) ||
-            	 				(referencecitationpage!=null && referencecitationpage.length()>0) ||
-            	 				(referenceitemcitationisbn!=null && referenceitemcitationisbn.length()>0) || 
-            	 				(refitemcitationarticlenumber!=null && refitemcitationarticlenumber.length()>0) ||          	 				
-            	 				(referenceitemcitationwebsite!=null && referenceitemcitationwebsite.length()>0) ||
-            	 				(referenceitemcitationeaddress!=null && referenceitemcitationeaddress.length()>0) || 
-            	 				(referenceitemcitationreftext!=null && referenceitemcitationreftext.length()>0) ||
-            	 				(referenceitemcitationtitle!=null && referenceitemcitationtitle.length()>0) ||
-            	 				(referenceitemcitationcoden!=null && referenceitemcitationcoden.length()>0))
-            	 		{
-            	 			file.write("<refd-itemcitation  type=\"core\">\n");  
-            	 			if(referenceitemcitationpii!=null && referenceitemcitationpii.length()>0)
-            	 			{
-            	 				file.write("<ce:pii>"+referenceitemcitationpii+"</ce:pii>\n");
-            	 			}
-            	 			
-            	 			if(referenceitemcitationdoi!=null && referenceitemcitationdoi.length()>0)
-            	 			{
-            	 				file.write("<ce:doi>"+referenceitemcitationdoi+"</ce:doi>\n");
-            	 			}
-            	 			
-            	 			if(refitemcitationsourcetitle!=null && refitemcitationsourcetitle.length()>0)
-            	 			{
-            	 				file.write("<sourcetitle>"+refitemcitationsourcetitle+"</sourcetitlei>\n");
-            	 			}
-            	 			
-            	 			if(refcitationsourcetitleabbrev!=null && refcitationsourcetitleabbrev.length()>0)
-            	 			{
-            	 				file.write("<sourcetitle-abbrev>"+refcitationsourcetitleabbrev+"</sourcetitle-abbrev>\n");
-            	 			}
- 	 				         	 			
-            	 			if(referenceitemcitationissn!=null && referenceitemcitationissn.length()>0)
-            	 			{
-            	 				if(referenceitemcitationissn.indexOf(Constants.IDDELIMITER)>-1)
-            	 				{
-	            	 				String[] issns = referenceitemcitationissn.split(Constants.IDDELIMITER);
-	            	 				for(int i=0;i<issns.length;i++)
-	            	 				{
-	            	 					String issn = issns[i];
-	            	 					if(issn!=null && issn.length()>0)
-	            	 					{
-	            	 						if(issn.indexOf(":")>-1)
-	            	 						{
-	            	 							String[] issnElements = issn.split(":");
-	            	 							file.write("<issn type=\""+issnElements[0]+"\">"+issnElements[1]+"</issn>\n");
-	            	 						}
-	            	 						else
-	            	 						{
-	            	 							file.write("<issn type=\"print\">"+issn+"</issn>\n");
-	            	 						}
-	            	 						
-	            	 					}
-	            	 				}
-            	 				}
-            	 				else
-            	 				{
-            	 					if(referenceitemcitationissn.indexOf(":")>-1)
-            	 					{
-            	 						String[] issnElements = referenceitemcitationissn.split(":");
-        	 							file.write("<issn type=\""+issnElements[0]+"\">"+issnElements[1]+"</issn>\n");           	 						
-            	 					}
-            	 					else
-            	 					{
-            	 						file.write("<issn type=\"print\">"+referenceitemcitationissn+"</issn>\n");
-            	 					}           	 					
-            	 				}
-            	 			}
-            	 			
-            	 			if(referenceitemcitationisbn!=null && referenceitemcitationisbn.length()>0)
-            	 			{
-            	 				String[] isbns = referenceitemcitationisbn.split(Constants.AUDELIMITER,-1);
-            	 				for(int i=0;i<isbns.length;i++)
-            	 				{
-            	 					String isbnArray = isbns[i];
-            	 					if(isbnArray!=null && isbnArray.length()>0)
-            	 					{
-            	 						String[] isbnElements = isbnArray.split(Constants.IDDELIMITER,-1);
-            	 						if(isbnElements.length==4)
-            	 						{
-            	 							String type = isbnElements[0];
-            	 							String length = isbnElements[1];
-            	 							String level = isbnElements[2];
-            	 							String value = isbnElements[3];
-            	 							file.write("<isbn");
-            	 							if(type!=null && type.length()>0)
-            	 							{
-            	 								file.write(" type=\""+type+"\"");
-            	 							}
-            	 							
-            	 							if(length!=null && length.length()>0)
-            	 							{
-            	 								file.write(" length=\""+length+"\"");
-            	 							}
-            	 							
-            	 							if(level!=null && level.length()>0)
-            	 							{
-            	 								file.write(" level=\""+level+"\"");
-            	 							}
-            	 							
-            	 							file.write(">"+value+"</isbn>\n");
-            	 						}
-            	 						else
-            	 						{
-            	 							System.out.println("records "+accessnumber+" has wrong format in referenceitemcitationisbn");
-            	 						}//if
-            	 					}//if
-            	 				}//for
-            	 			}//if
-            	 			
-            	 			//REFERENCEITEMCITATIONPART
-            	 			if(referenceitemcitationpart!=null && referenceitemcitationpart.length()>0)
-            	 			{
-            	 				file.write("<part>"+referenceitemcitationpart+"</part>\n");
-            	 			}
-            	 			
-            	 			//REFITEMCITATIONPUBLICATIONYEAR
-            	 			if(refitemcitationpublicationyear!=null && refitemcitationpublicationyear.length()>0)
-            	 			{
-            	 				file.write("<publicationyear");
-            	 				if(refitemcitationpublicationyear.indexOf("-")<0)
-                    	 		{
-                    	 			file.write(" first=\""+refitemcitationpublicationyear+"\"");
-                    	 		}
-                    	 		else
-                    	 		{
-                    	 			String[] publicationYears = refitemcitationpublicationyear.split("-");
-                    	 			if(publicationYears[0]!=null && publicationYears[0].length()>0)
-                    	 			{
-                    	 				file.write(" first=\""+publicationYears[0]+"\"");
-                    	 			}
-                    	 			
-                    	 			if(publicationYears.length>1 && publicationYears[1]!=null && publicationYears[1].length()>0)
-                    	 			{
-                    	 				file.write(" last=\""+publicationYears[1]+"\"");
-                    	 			}                  	 			
-                    	 		}
-                    	 		file.write("/>\n");            	 				
-            	 			}
-            	 			
-            	 			//REFERENCEITEMCITATIONVOLUME
-            	 			if((referenceitemcitationvolume!=null && referenceitemcitationvolume.length()>0) ||
-            	 					(referenceitemcitationissue!=null && referenceitemcitationissue.length()>0) ||
-            	 					(referencecitationpage!=null && referencecitationpage.length()>0))
-            	 			{
-            	 				file.write("<volisspag>\n");
-                    	 		file.write("<voliss");
-                    	 		if(referenceitemcitationvolume!=null && referenceitemcitationvolume.length()>0)
-                    	 		{
-                    	 			file.write(" volume=\""+referenceitemcitationvolume+"\"");
-                    	 		}
-                    	 		
-                    	 		if(referenceitemcitationissue!=null && referenceitemcitationissue.length()>0)
-                    	 		{
-                    	 			file.write(" issue=\""+referenceitemcitationissue+"\"");
-                    	 		}
-                    	 		
-                    	 		file.write("/>\n");
-                    	 		
-                    	 		if(referencecitationpage!=null && referencecitationpage.length()>0)
-                    	 		{
-                    	 			if(referencecitationpage.indexOf("PAGES:")>-1)
-                    	 			{
-                    	 				file.write("<pages>"+referencecitationpage.substring(6)+"\"</pages>\n");
-                    	 			}
-                    	 			else if(referencecitationpage.indexOf("PAGERANGE:")>-1)
-                    	 			{
-                    	 				file.write("<pagerange");
-                    	 				referencecitationpage = referencecitationpage.substring(9);
-                    	 				if(referencecitationpage.indexOf("-")>-1)
-                    	 				{
-                    	 					String[] referenceP = referencecitationpage.split("-");
-                    	 					if(referenceP[0]!=null && referenceP[0].length()>0)
-                    	 					{
-                    	 						file.write(" first=\""+referenceP[0]+"\"");           	 						
-                    	 					}
-                    	 					if(referenceP.length>1 && referenceP[1]!=null && referenceP[1].length()>0)
-                    	 					{
-                    	 						file.write(" last=\""+referenceP[1]+"\"");           	 						
-                    	 					}
-                    	 					
-                    	 				}
-                    	 				else
-                    	 				{
-                    	 					file.write(" first=\""+referencecitationpage+"\"");
-                    	 				}
-                    	 				file.write("/>\n");
-                    	 			}
-                    	 			else if(referencepages.indexOf("PAGECOUNT:")>-1)
-                    	 			{
-                    	 				file.write("<pagecount");
-                    	 				
-                    	 				String[] referenceP = referencecitationpage.split(Constants.IDDELIMITER);
-                    	 				if(referenceP.length==1)
-                    	 				{
-                    	 					file.write(">"+referenceP[0]+"</pagecount>\n");
-                    	 				}
-                    	 				else
-                    	 				{
-                    	 					file.write(" type=\""+referenceP[0]+"\">"+referenceP[1]+"</pagecount>\n");
-                    	 				}
-                    	 			
-                    	 			}
-                    	 		
-                    	 		}           	 		            	 		
-                    	 		file.write("</volisspag>\n");
-            	 				
-            	 			}
-            	 			
-            	 			//REF-ARTICLE-NUMBER
-            	 			if(refitemcitationarticlenumber!=null && refitemcitationarticlenumber.length()>0)
-            	 			{
-            	 				file.write("<article-number>"+refitemcitationarticlenumber+"</article-number>\n");
-            	 			}
+    	 			//REF-ARTICLE-NUMBER
+    	 			if(refitemcitationarticlenumber!=null && refitemcitationarticlenumber.length()>0)
+    	 			{
+    	 				file.write("<article-number>"+refitemcitationarticlenumber+"</article-number>\n");
+    	 			}
             	 			
             	 			
-            	 			if((referenceitemcitationwebsite!=null && referenceitemcitationwebsite.length()>0) ||
-            	 					(referenceitemcitationeaddress!=null && referenceitemcitationeaddress.length()>0) )	
-            	 			{
-            	 				file.write("<website>\n");
-            	 				 
-            	 				//REFERENCEITEMCITATIONWEBSITE
-                	 			if(referenceitemcitationwebsite!=null && referenceitemcitationwebsite.length()>0)
-                	 			{
-                	 				file.write("<websitename>"+referenceitemcitationwebsite+"</websitename>\n");
-                	 			}
-                	 			
-                	 			//REFERENCEITEMCITATIONEADDRESS
-                	 			if(referenceitemcitationeaddress!=null && referenceitemcitationeaddress.length()>0)
-                	 			{
-                	 				file.write("<ce:e-address");
-                	 				String[] referenceeaddress = referenceitemcitationeaddress.split(Constants.IDDELIMITER);
-                	 				if(referenceeaddress[0]!=null && referenceeaddress[0].length()>0)
-                	 				{
-                	 					file.write(" type=\""+referenceeaddress[0]+"\"");
-                	 				}
-                	 				file.write(">");
-                	 				if(referenceeaddress.length>1 && referenceeaddress[1]!=null && referenceeaddress[1].length()>0)
-                	 				{
-                	 					file.write(referenceeaddress[1]);
-                	 				}
-                	 				file.write("</ce:e-address>\n");
-                	 			}
-            	 				
-            	 				file.write("</website>\n");
-            	 			}
+    	 			if((referenceitemcitationwebsite!=null && referenceitemcitationwebsite.length()>0) ||
+    	 					(referenceitemcitationeaddress!=null && referenceitemcitationeaddress.length()>0) )	
+    	 			{
+    	 				file.write("<website>\n");
+    	 				 
+    	 				//REFERENCEITEMCITATIONWEBSITE
+        	 			if(referenceitemcitationwebsite!=null && referenceitemcitationwebsite.length()>0)
+        	 			{
+        	 				file.write("<websitename>"+cleanBadCharacters(referenceitemcitationwebsite)+"</websitename>\n");
+        	 			}
+        	 			
+        	 			//REFERENCEITEMCITATIONEADDRESS
+        	 			if(referenceitemcitationeaddress!=null && referenceitemcitationeaddress.length()>0)
+        	 			{
+        	 				file.write("<ce:e-address");
+        	 				String[] referenceeaddress = referenceitemcitationeaddress.split(Constants.IDDELIMITER);
+        	 				if(referenceeaddress[0]!=null && referenceeaddress[0].length()>0)
+        	 				{
+        	 					file.write(" type=\""+referenceeaddress[0]+"\"");
+        	 				}
+        	 				file.write(">");
+        	 				if(referenceeaddress.length>1 && referenceeaddress[1]!=null && referenceeaddress[1].length()>0)
+        	 				{
+        	 					file.write(cleanBadCharacters(referenceeaddress[1]));
+        	 				}
+        	 				file.write("</ce:e-address>\n");
+        	 			}
+    	 				
+    	 				file.write("</website>\n");
+    	 			}
             	 			
-            	 			if(referenceitemcitationreftext!=null && referenceitemcitationreftext.length()>0)
-            	 			{
-            	 				file.write("<ref-text>"+referenceitemcitationreftext+"</ref-text>\n");
-            	 			}
-            	 			 
-            	 			if(referenceitemcitationtitle!=null && referenceitemcitationtitle.length()>0)
-            	 			{
-            	 				file.write("<ce:citation-title>\n");
-            	 				String[] refTitles = referenceitemcitationtitle.split(Constants.AUDELIMITER,-1);
-            	 				for(int i=0;i<refTitles.length;i++)
-            	 				{
-            	 					String refTitle = refTitles[i];
-            	 					if(refTitle!=null && refTitle.length()>0)
-            	 					{
-            	 						file.write("<titletext");
-            	 						String[] refTitleElements = refTitle.split(Constants.IDDELIMITER,-1);
-            	 						if(refTitleElements.length==4)
-            	 						{
-            	 							String id = refTitleElements[0];
-            	 							String original = refTitleElements[1];
-            	 							String lang = refTitleElements[2];
-            	 							String titlecontent = refTitleElements[3];
-            	 							if(original!=null && original.length()>0)
-            	 							{
-            	 								file.write(" original=\""+original+"\"");
-            	 							}
-            	 							
-            	 							if(lang!=null && lang.length()>0)
-            	 							{
-            	 								file.write(" lang=\""+lang+"\"");
-            	 							}
-            	 							
-            	 							file.write(">"+titlecontent+"</titletext>\n");
-            	 							
-            	 						}
-            	 						else
-            	 						{
-            	 							System.out.println("record "+accessnumber+" has wrong referenceitemcitationtitle format");
-            	 						}
-            	 					}
-            	 					 
-            	 				}
-            	 				
-            	 				file.write("</ce:citation-title>\n");
-            	 			}
+    	 			if(referenceitemcitationreftext!=null && referenceitemcitationreftext.length()>0)
+    	 			{
+    	 				file.write("<ref-text>"+cleanBadCharacters(referenceitemcitationreftext)+"</ref-text>\n");
+    	 			}
+    	 			 
+    	 			if(referenceitemcitationtitle!=null && referenceitemcitationtitle.length()>0)
+    	 			{
+    	 				file.write("<ce:citation-title>\n");
+    	 				String[] refTitles = referenceitemcitationtitle.split(Constants.AUDELIMITER,-1);
+    	 				for(int i=0;i<refTitles.length;i++)
+    	 				{
+    	 					String refTitle = refTitles[i];
+    	 					if(refTitle!=null && refTitle.length()>0)
+    	 					{
+    	 						file.write("<titletext");
+    	 						String[] refTitleElements = refTitle.split(Constants.IDDELIMITER,-1);
+    	 						if(refTitleElements.length==4)
+    	 						{
+    	 							String id = refTitleElements[0];
+    	 							String original = refTitleElements[1];
+    	 							String lang = refTitleElements[2];
+    	 							String titlecontent = refTitleElements[3];
+    	 							if(original!=null && original.length()>0)
+    	 							{
+    	 								file.write(" original=\""+original+"\"");
+    	 							}
+    	 							
+    	 							if(lang!=null && lang.length()>0)
+    	 							{
+    	 								file.write(" lang=\""+lang+"\"");
+    	 							}
+    	 							
+    	 							file.write(">"+cleanBadCharacters(titlecontent)+"</titletext>\n");
+    	 							
+    	 						}
+    	 						else
+    	 						{
+    	 							System.out.println("record "+accessnumber+" has wrong referenceitemcitationtitle format");
+    	 						}
+    	 					}
+    	 					 
+    	 				}
+    	 				
+    	 				file.write("</ce:citation-title>\n");
+    	 			}
             	 			
-            	 			//CODEN
-            	 			if(referenceitemcitationcoden!=null && referenceitemcitationcoden.length()>0)
-            	 			{
-            	 				file.write("<codencode>"+referenceitemcitationcoden+"</codencode>\n");
-            	 			}
-            	 			
-	            	 		if(referenceitemcitationauthor!=null && referenceitemcitationauthor.length()>0)
-	            	 		{
-	            	 			
-	            	 		}
-            	 		
-	            	 		file.write("</refd-itemcitation>\n");
-            	 		}
-            	 		file.write("</reference>\n");
-            	 	}            	           	 	
-         		}
-         }
-    	 catch(ArrayIndexOutOfBoundsException ea)
-    	 {
-        	 //ea.printStackTrace();
-            System.err.println(ea);
-            System.out.println("EXCEPTION IN "+accessnumber);
-            // System.exit(1);
-         }
-         catch(Exception e)
-         {
-        	 e.printStackTrace();
-            //System.err.println(e);
-            // System.exit(1);
-         }
-         finally
-         {
-             if(rs != null)
-             {
-            	 try{
-            		 rs.close();
-            	 }
-            	 catch(Exception er)
-            	 {
-            		 er.printStackTrace();
-            	 }
-             }
-             
-             if(stmt != null)
-             {
-            	 try{
-            		 stmt.close();
-            	 }
-            	 catch(Exception es)
-            	 {
-            		 es.printStackTrace();
-            	 }
-             }
-         }
+    	 			//CODEN
+    	 			if(referenceitemcitationcoden!=null && referenceitemcitationcoden.length()>0)
+    	 			{
+    	 				file.write("<codencode>"+referenceitemcitationcoden+"</codencode>\n");
+    	 			}
+    	 			
+        	 		//if(referenceitemcitationauthor!=null && referenceitemcitationauthor.length()>0)
+        	 		//{
+        	 			
+        	 		//}
+    	 		
+        	 		file.write("</refd-itemcitation>\n");
+    	 		}
+    	 		file.write("</reference>\n");
+    	 	}            	           	 	
+ 		}         
+    	catch(ArrayIndexOutOfBoundsException ea)
+		{
+			 //ea.printStackTrace();
+		System.err.println(ea);
+		System.out.println("EXCEPTION IN "+accessnumber);
+		// System.exit(1);
+		}
+		catch(Exception e)
+		{
+			 e.printStackTrace();
+		    //System.err.println(e);
+		// System.exit(1);
+		}
+		finally
+		{
+		     if(rs != null)
+		     {
+		    	 try{
+		    		 rs.close();
+		    	 }
+		    	 catch(Exception er)
+		    	 {
+		    		 er.printStackTrace();
+		    	 }
+		     }
+		     
+		     if(stmt != null)
+		     {
+		    	 try{
+		    		 stmt.close();
+		    	 }
+		    	 catch(Exception es)
+		    	 {
+		    		 es.printStackTrace();
+		    	 }
+		     }
+		}
     }
     
     public void add(Map authorGroup, String key, BdAuthor newValue) {
@@ -3294,40 +3710,274 @@ public class BdReverseRecordBuilder
     
      public void zipBatchFile(String filename,String database)
     		    throws Exception
-	    {
-	    	long starttime = System.currentTimeMillis();
+    {
+    	long starttime = System.currentTimeMillis();
 
-	    	if(database.equalsIgnoreCase("upa") || database.equalsIgnoreCase("eup") || database.equalsIgnoreCase("wop"))
-	    	{
-	    		database="upt";
-	    	}
+    	if(database.equalsIgnoreCase("upa") || database.equalsIgnoreCase("eup") || database.equalsIgnoreCase("wop"))
+    	{
+    		database="upt";
+    	}
 
-	    	String path="json/"+database+"/";
-	        
-	        byte[] buf = new byte[1024];
-	        
-	        //create zip file name
-	        String ZipFilename =  filename.replace("xml", "zip");
-	        File file = new File(filename);
-	        
-	        //long timediff = time - this.starttime;
-	       
-	        ZipOutputStream outZIP = new ZipOutputStream(new FileOutputStream(path+ZipFilename));
-	      
-	        FileInputStream in = new FileInputStream(filename);
-	        outZIP.putNextEntry(new ZipEntry(filename));
-	        int len;
-            while ((len = in.read(buf)) > 0) {
-                outZIP.write(buf, 0, len);
-            }
-            outZIP.closeEntry();
-            in.close();
-            file.delete();
-	                   
-	        outZIP.close();
-	     
-	        long endtime = System.currentTimeMillis();
-	        System.out.println("Time for Zipping="+(endtime-starttime));
-	    }
+    	String path="json/"+database+"/";
+        
+        byte[] buf = new byte[1024];
+        
+        //create zip file name
+        String ZipFilename =  filename.replace("xml", "zip");
+        File file = new File(filename);
+        
+        //long timediff = time - this.starttime;
+       
+        ZipOutputStream outZIP = new ZipOutputStream(new FileOutputStream(path+ZipFilename));
+      
+        FileInputStream in = new FileInputStream(filename);
+        outZIP.putNextEntry(new ZipEntry(filename));
+        int len;
+        while ((len = in.read(buf)) > 0) {
+            outZIP.write(buf, 0, len);
+        }
+        outZIP.closeEntry();
+        in.close();
+        file.delete();
+                   
+        outZIP.close();
+     
+        long endtime = System.currentTimeMillis();
+        System.out.println("Time for Zipping="+(endtime-starttime));
+    }
+     
+    public static String cleanBadCharacters(String input)
+ 	{
+     	//System.out.println("INPUT3"+input);
+     	Set<String> keys = badCharacterMap.keySet();
+         for(String key: keys){
+             String value = badCharacterMap.get(key);
+             input = input.replaceAll(key, value);
+         }
+         //System.out.println("INPUT4"+input);
+         input=Entity.unescapeHtml(input);
+         input=input.replaceAll("&", "&amp;");
+         input=input.replaceAll(">", "&gt;");
+         input=input.replaceAll("<", "&lt;");
+         input=input.replaceAll("<br/>"," ");
+
+         return input;
+     	
+ 	}
+    
+    private static Map<String,String> bdDocType = new HashMap<String, String>();
+    static {
+	    bdDocType.put("cp","cp");
+	    bdDocType.put("ab","ab");
+	    bdDocType.put("ar","ar");
+	    bdDocType.put("bk","bk");
+	    bdDocType.put("br","br");
+	    bdDocType.put("bz","bz");
+	    bdDocType.put("ca","cp");
+	    bdDocType.put("ch","ch");  
+	    bdDocType.put("cr","cr");
+	    bdDocType.put("di","di");
+	    bdDocType.put("ds","di");
+	    bdDocType.put("ed","ed");
+	    bdDocType.put("er","er");      
+	    bdDocType.put("le","le");
+	    bdDocType.put("mc","ch");
+	    bdDocType.put("mr","br");
+	    bdDocType.put("no","no");
+	    bdDocType.put("pa","pa");
+	    bdDocType.put("pr","pr");
+	    bdDocType.put("re","re");
+	    bdDocType.put("rp","rp");
+	    bdDocType.put("sh","sh");
+	    bdDocType.put("wp","wp");
+	    bdDocType.put("ja","ar");
+	    bdDocType.put("pa","pa");
+	    bdDocType.put("ip","ip");
+	    bdDocType.put("gi","ip");
+	    bdDocType.put("st","st");
+    }
+     
+     private static Map<String, String> badCharacterMap = new HashMap<String, String>();
+     static {
+         // &die is the same as an &uml
+         badCharacterMap.put("a&die;", "&#228;");
+         badCharacterMap.put("e&die;", "&#235;");
+         badCharacterMap.put("i&die;", "&#239;");
+         badCharacterMap.put("o&die;", "&#246;");
+         badCharacterMap.put("u&die;", "&#252;");
+         badCharacterMap.put("A&die;", "&#196;");
+         badCharacterMap.put("E&die;", "&#203;");
+         badCharacterMap.put("I&die;", "&#207;");
+         badCharacterMap.put("O&die;", "&#214;");
+         badCharacterMap.put("U&die;", "&#220;");
+         badCharacterMap.put("A&grave;", "&#192;");
+         badCharacterMap.put("A&acute;", "&#193;");
+         badCharacterMap.put("A&circ;", "&#194;");
+         badCharacterMap.put("A&tilde;", "&#195;");
+         badCharacterMap.put("A&uml;", "&#196;");
+         badCharacterMap.put("A&ring;", "&#197;");
+         badCharacterMap.put("C&cedil;", "&#199;");
+         badCharacterMap.put("E&grave;", "&#200;");
+         badCharacterMap.put("E&acute;", "&#201;");
+         badCharacterMap.put("E&circ;", "&#202;");
+         badCharacterMap.put("E&uml;", "&#203;");
+         badCharacterMap.put("I&grave;", "&#204;");
+         badCharacterMap.put("I&acute;", "&#205;");
+         badCharacterMap.put("I&circ;", "&#206;");
+         badCharacterMap.put("I&uml;", "&#207;");
+         badCharacterMap.put("N&tilde;", "&#209;");
+         badCharacterMap.put("O&grave;", "&#210;");
+         badCharacterMap.put("O&acute;", "&#211;");
+         badCharacterMap.put("O&circ;", "&#212;");
+         badCharacterMap.put("O&tilde;", "&#213;");
+         badCharacterMap.put("O&uml;", "&#214;");
+         badCharacterMap.put("O&slash;", "&#216;");
+         badCharacterMap.put("S&caron;", "&#352;");
+         badCharacterMap.put("U&grave;", "&#217;");
+         badCharacterMap.put("U&acute;", "&#218;");
+         badCharacterMap.put("U&circ;", "&#219;");
+         badCharacterMap.put("U&uml;", "&#220;");
+         badCharacterMap.put("Y&acute;", "&#221;");
+         badCharacterMap.put("Y&uml;", "&#376;");
+         badCharacterMap.put("a&grave;", "&#224;");
+         badCharacterMap.put("a&acute;", "&#225;");
+         badCharacterMap.put("a&circ;", "&#226;");
+         badCharacterMap.put("a&tilde;", "&#227;");
+         badCharacterMap.put("a&uml;", "&#228;");
+         badCharacterMap.put("a&ring;", "&#229;");
+         badCharacterMap.put("c&cedil;", "&#231;");
+         badCharacterMap.put("e&grave;", "&#232;");
+         badCharacterMap.put("e&acute;", "&#233;");
+         badCharacterMap.put("e&circ;", "&#234;");
+         badCharacterMap.put("e&uml;", "&#235;");
+         badCharacterMap.put("i&grave;", "&#236;");
+         badCharacterMap.put("i&acute;", "&#237;");
+         badCharacterMap.put("i&circ;", "&#238;");
+         badCharacterMap.put("i&uml;", "&#239;");
+         badCharacterMap.put("n&tilde;", "&#241;");
+         badCharacterMap.put("o&grave;", "&#242;");
+         badCharacterMap.put("o&acute;", "&#243;");
+         badCharacterMap.put("o&circ;", "&#244;");
+         badCharacterMap.put("o&tilde;", "&#245;");
+         badCharacterMap.put("o&uml;", "&#246;");
+         badCharacterMap.put("o&slash;", "&#248;");
+         badCharacterMap.put("s&caron;", "&#353;");
+         badCharacterMap.put("u&grave;", "&#249;");
+         badCharacterMap.put("u&acute;", "&#250;");
+         badCharacterMap.put("u&circ;", "&#251;");
+         badCharacterMap.put("u&uml;", "&#252;");
+         badCharacterMap.put("y&acute;", "&#253;");
+         badCharacterMap.put("y&uml;", "&#255;");
+         badCharacterMap.put("&nbsp;","&#160;");
+         badCharacterMap.put("&iexcl;","&#161;");
+         badCharacterMap.put("&cent;","&#162;");
+         badCharacterMap.put("&pound;","&#163;");
+         badCharacterMap.put("&curren;","&#164;");
+         badCharacterMap.put("&yen;","&#165;");
+         badCharacterMap.put("&brvbar;","&#166;");
+         badCharacterMap.put("&sect;","&#167;");
+         badCharacterMap.put("&uml;","&#168;");
+         badCharacterMap.put("&copy;","&#169;");
+         badCharacterMap.put("&ordf;","&#170;");
+         badCharacterMap.put("&laquo;","&#171;");
+         badCharacterMap.put("&not;","&#172;");
+         badCharacterMap.put("&shy;","&#173;");
+         badCharacterMap.put("&reg;","&#174;");
+         badCharacterMap.put("&macr;","&#175;");
+         badCharacterMap.put("&deg;","&#176;");
+         badCharacterMap.put("&plusmn;","&#177;");
+         badCharacterMap.put("&sup2;","&#178;");
+         badCharacterMap.put("&sup3;","&#179;");
+         badCharacterMap.put("&acute;","&#180;");
+         badCharacterMap.put("&micro;","&#181;");
+         badCharacterMap.put("&para;","&#182;");
+         badCharacterMap.put("&middot;","&#183;");
+         badCharacterMap.put("&cedil;","&#184;");
+         badCharacterMap.put("&sup1;","&#185;");
+         badCharacterMap.put("&ordm;","&#186;");
+         badCharacterMap.put("&raquo;","&#187;");
+         badCharacterMap.put("&frac14;","&#188;");
+         badCharacterMap.put("&frac12;","&#189;");
+         badCharacterMap.put("&frac34;","&#190;");
+         badCharacterMap.put("&iquest;","&#191;");
+         badCharacterMap.put("&Agrave;","&#192;");
+         badCharacterMap.put("&Aacute;","&#193;");
+         badCharacterMap.put("&Acirc;","&#194;");
+         badCharacterMap.put("&Atilde;","&#195;");
+         badCharacterMap.put("&Auml;","&#196;");
+         badCharacterMap.put("&Aring;","&#197;");
+         badCharacterMap.put("&AElig;","&#198;");
+         badCharacterMap.put("&Ccedil;","&#199;");
+         badCharacterMap.put("&Egrave;","&#200;");
+         badCharacterMap.put("&Eacute;","&#201;");
+         badCharacterMap.put("&Ecirc;","&#202;");
+         badCharacterMap.put("&Euml;","&#203;");
+         badCharacterMap.put("&Igrave;","&#204;");
+         badCharacterMap.put("&Iacute;","&#205;");
+         badCharacterMap.put("&Icirc;","&#206;");
+         badCharacterMap.put("&Iuml;","&#207;");
+         badCharacterMap.put("&ETH;","&#208;");
+         badCharacterMap.put("&Ntilde;","&#209;");
+         badCharacterMap.put("&Ograve;","&#210;");
+         badCharacterMap.put("&Oacute;","&#211;");
+         badCharacterMap.put("&Ocirc;","&#212;");
+         badCharacterMap.put("&Otilde;","&#213;");
+         badCharacterMap.put("&Ouml;","&#214;");
+         badCharacterMap.put("&times;","&#215;");
+         badCharacterMap.put("&Oslash;","&#216;");
+         badCharacterMap.put("&Ugrave;","&#217;");
+         badCharacterMap.put("&Uacute;","&#218;");
+         badCharacterMap.put("&Ucirc;","&#219;");
+         badCharacterMap.put("&Uuml;","&#220;");
+         badCharacterMap.put("&Yacute;","&#221;");
+         badCharacterMap.put("&THORN;","&#222;");
+         badCharacterMap.put("&szlig;","&#223;");
+         badCharacterMap.put("&agrave;","&#224;");
+         badCharacterMap.put("&aacute;","&#225;");
+         badCharacterMap.put("&acirc;","&#226;");
+         badCharacterMap.put("&atilde;","&#227;");
+         badCharacterMap.put("&auml;","&#228;");
+         badCharacterMap.put("&aring;","&#229;");
+         badCharacterMap.put("&aelig;","&#230;");
+         badCharacterMap.put("&ccedil;","&#231;");
+         badCharacterMap.put("&egrave;","&#232;");
+         badCharacterMap.put("&eacute;","&#233;");
+         badCharacterMap.put("&ecirc;","&#234;");
+         badCharacterMap.put("&euml;","&#235;");
+         badCharacterMap.put("&igrave;","&#236;");
+         badCharacterMap.put("&iacute;","&#237;");
+         badCharacterMap.put("&icirc;","&#238;");
+         badCharacterMap.put("&iuml;","&#239;");
+         badCharacterMap.put("&eth;","&#240;");
+         badCharacterMap.put("&ntilde;","&#241;");
+         badCharacterMap.put("&ograve;","&#242;");
+         badCharacterMap.put("&oacute;","&#243;");
+         badCharacterMap.put("&ocirc;","&#244;");
+         badCharacterMap.put("&otilde;","&#245;");
+         badCharacterMap.put("&ouml;","&#246;");
+         badCharacterMap.put("&divide;","&#247;");
+         badCharacterMap.put("&oslash;","&#248;");
+         badCharacterMap.put("&ugrave;","&#249;");
+         badCharacterMap.put("&uacute;","&#250;");
+         badCharacterMap.put("&ucirc;","&#251;");
+         badCharacterMap.put("&uuml;","&#252;");
+         badCharacterMap.put("&yacute;","&#253;");
+         badCharacterMap.put("&thorn;","&#254;");
+         badCharacterMap.put("&yuml;","&#255;");
+         badCharacterMap.put("&ndash;","&#8211;");
+         badCharacterMap.put("&rsquo;","&#146;");
+         badCharacterMap.put("&lsquo;","&#145;");
+         badCharacterMap.put("&mdash;","&#151;");
+         badCharacterMap.put("&mellip;","&#8943;");
+         badCharacterMap.put("&ldquo;","&#8220;");
+         badCharacterMap.put("&rdquo;","&#8221;");
+         
+   
+         
+       
+        
+         
+     }
+
 	    
 }

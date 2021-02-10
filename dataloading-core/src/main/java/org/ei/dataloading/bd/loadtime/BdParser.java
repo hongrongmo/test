@@ -3434,24 +3434,51 @@ public class BdParser
 					Element confname = confevent.getChild("confname",noNamespace);
 					Element confseriestitle = confevent.getChild("confseriestitle",noNamespace);
 					Element conftheme = confevent.getChild("conftheme",noNamespace);
+					Element conforganization = confevent.getChild("conforganization",noNamespace);
+					Element confURL = confevent.getChild("confURL",noNamespace);
 					//System.out.println("CONFNAME " + confname);
 
-					//if(confnumber!= null && confname != null)
+					//if(confnumber!= null)
 					//{
 					//	record.put("CONFNAME",dictionary.mapEntity(getMixData(confnumber.getContent())+" "+getMixData(confname.getContent())));
 					//}
 					//else if(confname!= null)
 					/* based on Frank request, remove confnumber from conference name column 10/23/2014 */
+					
+					//added by hmo at 02/08/2021
+					if(conforganization!= null)
+					{
+						record.put("CONFORGANIZATIONE",conforganization.getTextTrim());
+					}
+					
+					//added by hmo at 02/08/2021
+					if(confURL!= null)
+					{
+						record.put("CONFURL",confURL.getTextTrim());
+					}
+					
+					//added by hmo at 02/08/2021
+					if(conftheme!= null)
+					{
+						record.put("CONFTHEME",conftheme.getTextTrim());
+					}
+					
+					//added by hmo at 02/08/2021
+					if(confnumber!= null)
+					{
+						record.put("CONFNUMBER",confnumber.getTextTrim());
+					}
+					
 					if(confname!= null)
 					{
 						record.put("CONFNAME",dictionary.mapEntity(getMixData(confname.getContent())));
 					}
-					/*
-					else if(confnumber!= null)
+					
+					if(confseriestitle!= null)
 					{
-						record.put("CONFNAME",dictionary.mapEntity(getMixData(confnumber.getContent())));
+						record.put("CONFSERIESTITLE",confseriestitle.getTextTrim());
 					}
-					*/
+					
 
 					//confcatnumber
 
