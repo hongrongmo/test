@@ -579,6 +579,23 @@ public class NewDataTesting
 		KafkaService kafka = new KafkaService(processTime+"delete"+infile, propertyFileName);
 		BufferedReader deleteFileStream;
 		List deleteList = new ArrayList();
+		List databaseList =  new ArrayList<String>();
+		databaseList.add("cpx_");
+		databaseList.add("ins_");
+		databaseList.add("upt_");
+		databaseList.add("grf_");
+		databaseList.add("pch_");
+		databaseList.add("geo_");
+		databaseList.add("chm_");
+		databaseList.add("elt_");
+		databaseList.add("cbn_");
+		databaseList.add("ntis");
+		databaseList.add("knc_");
+		databaseList.add("kna_");
+		databaseList.add("ept_");
+		databaseList.add("c84_");
+		databaseList.add("ibf_");
+		
 		String eid=null;
         try
         {
@@ -593,12 +610,16 @@ public class NewDataTesting
                      deleteFileStream = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
                      while((eid=deleteFileStream.readLine())!=null)
                      {                   	 
-                         if(eid != null)
+                         if(eid != null && eid.length()>4 && databaseList.contains(eid.substring(0,4)))
                          {
                         	 System.out.println("EID="+eid);
                             // kafka.runProducer("{}","\""+eid.trim()+"\"",0,new HashMap());
                         	 kafka.runProducer("{}",eid.trim(),0,new HashMap());
                             
+                         }
+                         else
+                         {
+                        	 System.out.println("m_id "+eid+" is invalid");
                          }
                      }
                  }
@@ -611,11 +632,15 @@ public class NewDataTesting
                  deleteFileStream = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
                  while((eid=deleteFileStream.readLine())!=null)
                  {                   	 
-                     if(eid != null)
+                	 if(eid != null && eid.length()>4 && databaseList.contains(eid.substring(0,4)))
                      {
                     	 System.out.println("EID="+eid);
                          //kafka.runProducer("{}","\""+eid+"\"",0,new HashMap());
                          kafka.runProducer("{}",eid,0,new HashMap());
+                     }
+                     else
+                     {
+                    	 System.out.println("m_id "+eid+" is invalid");
                      }
                  }
              }        

@@ -13,13 +13,19 @@ import java.io.InputStreamReader;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
+
+import javax.xml.XMLConstants;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 import java.util.*;
 
 import org.ei.common.bd.*;
 import org.apache.commons.text.StringEscapeUtils;
 import org.ei.common.Constants;
-
-
 
 //import org.ei.data.LoadNumber;
 //import org.ei.dataloading.bd.*;
@@ -29,6 +35,8 @@ import org.ei.common.Constants;
 import org.ei.common.bd.BdAuthors;
 import org.ei.dataloading.DataLoadDictionary;
 import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 import org.ei.data.compendex.runtime.*;
 
 public class BdReverseRecordBuilder
@@ -121,6 +129,7 @@ public class BdReverseRecordBuilder
    
     }
     
+    /* this one is used for generate a file per loadnumber 
     public void writeFile(Connection con,int loadN,String databaseName, String tableName)
             throws Exception
     {
@@ -135,6 +144,7 @@ public class BdReverseRecordBuilder
          int count = 0;
          boolean checkResult = false;
          FileWriter file = null;
+         String xsdFileName="ani515/ani515.xsd";
          try
          {
              stmt = con.createStatement();
@@ -148,7 +158,8 @@ public class BdReverseRecordBuilder
              }
              file.write("</bibdataset>");
              file.close();
-             zipBatchFile(filename,databaseName);
+             if(validatedXml(filename,xsdFileName))
+            	 zipBatchFile(filename,databaseName);
          }
          catch (Exception e)
          {
@@ -170,6 +181,114 @@ public class BdReverseRecordBuilder
          }
     	
     }
+    */
+    
+    //this one is used for a record for each xml file
+    public void writeFile(Connection con,int loadN,String databaseName, String tableName)
+            throws Exception
+    {
+    	StringBuffer initialString = new StringBuffer("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+    	initialString.append("<bibdataset xsi:schemaLocation=\"http://www.elsevier.com/xml/ani/ani http://www.elsevier.com/xml/ani/ani512.xsd\" ");
+    	initialString.append("xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ");
+    	initialString.append("xmlns:ait=\"http://www.elsevier.com/xml/ani/ait\" ");
+    	initialString.append("xmlns:ce=\"http://www.elsevier.com/xml/ani/common\" ");
+    	initialString.append("xmlns=\"http://www.elsevier.com/xml/ani/ani\">\n");
+    	 Statement stmt = null;
+         ResultSet rs = null;
+         int count = 0;
+         boolean checkResult = false;
+         FileWriter file = null;
+         String xsdFileName="ani515/ani515.xsd";
+         File path = null;
+         try
+         {
+             stmt = con.createStatement();
+            
+             rs = stmt.executeQuery("select *  from bd_master where loadnumber="+loadN+" and database='"+databaseName+"'");
+             path=new File(databaseName);
+         	 if(!path.exists())
+             {
+                 path.mkdir();
+             }
+         	 path=new File(databaseName+"/xml");
+         	 if(!path.exists())
+             {
+                 path.mkdir();
+             }
+         	path=new File(databaseName+"/xml/"+loadN);
+        	if(!path.exists())
+            {
+                path.mkdir();
+            }
+         	 
+             while (rs.next())
+             {
+            	 String m_id=rs.getString("M_ID");
+            	 String filename = path+"/"+m_id+".xml";
+                 file = new FileWriter(filename);
+                 file.write(initialString.toString());
+                 writeRecord(rs,file);
+                 file.write("</bibdataset>");
+                 file.close();
+             }
+             
+            
+         }
+         catch (Exception e)
+         {
+        	 System.out.println("problem with accessnumber="+this.accessnumber);
+        	 e.printStackTrace();
+             System.exit(1);
+         }
+         finally
+         {
+             if(rs != null)
+             {
+                 rs.close();
+             }
+             
+             if(file != null)
+             {
+            	 file.close();
+             }
+         }
+    	
+    }
+    
+    private boolean validatedXml(String filename,String xsdFileName) throws Exception
+	{
+		// parse an XML document into a DOM tree
+		 javax.xml.parsers.DocumentBuilder parser =  javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		 Document document = parser.parse(new File(filename));
+
+		// create a SchemaFactory capable of understanding WXS schemas
+		//SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		 SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+
+		// load a WXS schema, represented by a Schema instance
+		//Source schemaFile = new StreamSource(new File("ani512.xsd"));
+		Source schemaFile = new StreamSource(new File(xsdFileName));
+		Schema schema = factory.newSchema(schemaFile);
+
+		// create a Validator instance, which can be used to validate an instance document
+		Validator validator = schema.newValidator();
+
+		// validate the DOM tree
+		try {
+		   //validator.validate(new DOMSource(document));
+			validator.validate(new StreamSource(new File(filename)));
+			
+		    System.out.println(filename+" is valid!");
+		    return true;
+		} catch (SAXException e) {
+			System.out.println(filename+" is invalid!");
+			e.printStackTrace();
+			return false;
+		    // instance document is invalid!
+		}
+		
+	}
+    
   
     public void writeRecord(ResultSet rs, FileWriter file) throws Exception
     {
@@ -178,6 +297,7 @@ public class BdReverseRecordBuilder
     	int year= calendar.get(Calendar.YEAR);
     	int month = calendar.get(Calendar.MONTH);
     	int day = calendar.get(Calendar.DATE);
+    	String time = calendar.getTime().toString();
     	String dateSort = rs.getString("DATESORT");
     	String accessnumber = rs.getString("ACCESSNUMBER");
     	this.accessnumber=accessnumber;
@@ -333,6 +453,12 @@ public class BdReverseRecordBuilder
     	}
     	
     	file.write("</itemidlist>\n");
+    	
+    	//HISTORY  	   
+    	//System.out.println("The current date is : " + calendar.getTime());  
+        
+    	 file.write("<history><date-created timestamp=\""+time+"\" year=\""+year+"\" month=\""+month+"\" day=\""+day+"\"/></history>");
+
     	
     	//DATABASE
     	if(database.equals("chm"))
@@ -713,8 +839,8 @@ public class BdReverseRecordBuilder
 				{
 					file.write("<bibliography refcount=\""+refcount+"\">\n");	
 					//skip reference for now @12/2/2020 by HMO
-					file.write("<reference>SKIP REFERENCE</reference>");
-					//getReference(file,accessnumber);
+					//file.write("<reference>SKIP REFERENCE</reference>");
+					getReference(file,accessnumber);
 					file.write("</bibliography>\n");
 							
 				}
@@ -2436,7 +2562,7 @@ public class BdReverseRecordBuilder
     private void outputChemicalgroup(FileWriter file, String casregistrynumber) throws Exception 
     {
     	file.write("<chemicalgroup>\n");
-		String[] chemicalgroup = casregistrynumber.split(Constants.AUDELIMITER,-1);
+		String[] chemicalgroup = casregistrynumber.split(Constants.AUDELIMITER,-1);	
 		for(int i=0;i<chemicalgroup.length;i++)
 		{
 			file.write("<chemicals>\n");
@@ -2708,11 +2834,11 @@ public class BdReverseRecordBuilder
             	 				if(referencepages.indexOf("-")>-1)
             	 				{
             	 					String[] referenceP = referencepages.split("-");
-            	 					if(referenceP[0]!=null && referenceP[0].length()>0)
+            	 					if(referenceP.length>0 && referenceP[0]!=null && referenceP[0].length()>0)
             	 					{
-            	 						file.write(" first=\""+referenceP[0]+"\"");           	 						
+            	 						file.write(" first=\""+referenceP[0].replace(":", "")+"\"");           	 						
             	 					}
-            	 					if(referenceP[1]!=null && referenceP[1].length()>0)
+            	 					if(referenceP.length>1 && referenceP[1]!=null && referenceP[1].length()>0)
             	 					{
             	 						file.write(" last=\""+referenceP[1]+"\"");           	 						
             	 					}
@@ -2746,44 +2872,44 @@ public class BdReverseRecordBuilder
             	 		//REFERENCEFULLTEXT
             	 		if(referencefulltext!=null && referencefulltext.length()>0)
             	 		{
-            	 			file.write("<ref-fulltext>"+referencefulltext+"</ref-fulltext>");
+            	 			file.write("<ref-fulltext>"+referencefulltext+"</ref-fulltext>\n");
             	 		}
             	 		
             	 		//REFERENCETEXT
             	 		if(referencetext!=null && referencetext.length()>0)
             	 		{
-            	 			file.write("<ref-text>"+referencetext+"</ref-text>");
+            	 			file.write("<ref-text>"+referencetext+"</ref-text>\n");
             	 		}
             	 		
             	 		//REFERENCEWEBSITE
             	 		if(referencewebsite!=null && referencewebsite.length()>0)
             	 		{
-            	 			file.write("<ref-website>");
+            	 			file.write("<ref-website>\n");
             	 			String[] referencewebsites = referencewebsite.split(Constants.IDDELIMITER);
             	 			if(referencewebsites[0]!=null && referencewebsites[0].length()>0)
             	 			{
-            	 				file.write("<websitename>"+referencewebsites[0]+"</websitename>");
+            	 				file.write("<websitename>"+referencewebsites[0]+"</websitename>\n");
             	 			}
             	 			
-            	 			if(referencewebsites[1]!=null && referencewebsites[1].length()>0)
+            	 			if(referencewebsites.length>1 && referencewebsites[1]!=null && referencewebsites[1].length()>0)
             	 			{
-            	 				file.write("<ce:e-address type=\"email\">"+referencewebsites[1]+"</ce:e-address>");
+            	 				file.write("<ce:e-address type=\"email\">"+referencewebsites[1]+"</ce:e-address>\n");
             	 			}
             	 			        	 			
-            	 			file.write("</ref-website>");
+            	 			file.write("</ref-website>\n");
             	 		}
             	 		
             	 		if((pui!=null && pui.length()>0) || (accessnumber!=null && accessnumber.length()>0))
             	 		{
-            	 			file.write("<refd-itemidlist>");
-            	 			file.write("<itemid>");
-            	 			file.write("<itemid  idtype=\"CPX\">"+accessnumber+"</itemid>"); 
+            	 			file.write("<refd-itemidlist>\n");
+            	 			//file.write("<itemid>");
+            	 			file.write("<itemid  idtype=\"CPX\">"+accessnumber+"</itemid>\n"); 
             	 			if(pui!=null && pui.length()>0)
             	 			{
-            	 				file.write("<itemid  idtype=\"PUI\">"+pui+"</itemid>");
+            	 				file.write("<itemid  idtype=\"PUI\">"+pui+"</itemid>\n");
             	 			}
-            	 			file.write("</itemid>");
-            	 			file.write("</refd-itemidlist>");
+            	 			//file.write("</itemid>");
+            	 			file.write("</refd-itemidlist>\n");
             	 		}
             	 		
             	 		if((referenceitemcitationpii!=null && referenceitemcitationpii.length()>0) || 
@@ -2908,7 +3034,7 @@ public class BdReverseRecordBuilder
             	 			//REFERENCEITEMCITATIONPART
             	 			if(referenceitemcitationpart!=null && referenceitemcitationpart.length()>0)
             	 			{
-            	 				file.write("<part>"+referenceitemcitationpart+"</part>");
+            	 				file.write("<part>"+referenceitemcitationpart+"</part>\n");
             	 			}
             	 			
             	 			//REFITEMCITATIONPUBLICATIONYEAR
@@ -2927,7 +3053,7 @@ public class BdReverseRecordBuilder
                     	 				file.write(" first=\""+publicationYears[0]+"\"");
                     	 			}
                     	 			
-                    	 			if(publicationYears[1]!=null && publicationYears[1].length()>0)
+                    	 			if(publicationYears.length>1 && publicationYears[1]!=null && publicationYears[1].length()>0)
                     	 			{
                     	 				file.write(" last=\""+publicationYears[1]+"\"");
                     	 			}                  	 			
@@ -2971,7 +3097,7 @@ public class BdReverseRecordBuilder
                     	 					{
                     	 						file.write(" first=\""+referenceP[0]+"\"");           	 						
                     	 					}
-                    	 					if(referenceP[1]!=null && referenceP[1].length()>0)
+                    	 					if(referenceP.length>1 && referenceP[1]!=null && referenceP[1].length()>0)
                     	 					{
                     	 						file.write(" last=\""+referenceP[1]+"\"");           	 						
                     	 					}
@@ -3032,7 +3158,7 @@ public class BdReverseRecordBuilder
                 	 					file.write(" type=\""+referenceeaddress[0]+"\"");
                 	 				}
                 	 				file.write(">");
-                	 				if(referenceeaddress[1]!=null && referenceeaddress[1].length()>0)
+                	 				if(referenceeaddress.length>1 && referenceeaddress[1]!=null && referenceeaddress[1].length()>0)
                 	 				{
                 	 					file.write(referenceeaddress[1]);
                 	 				}
@@ -3074,7 +3200,7 @@ public class BdReverseRecordBuilder
             	 								file.write(" lang=\""+lang+"\"");
             	 							}
             	 							
-            	 							file.write(">"+titlecontent+"</titletext\n>");
+            	 							file.write(">"+titlecontent+"</titletext>\n");
             	 							
             	 						}
             	 						else
@@ -3091,7 +3217,7 @@ public class BdReverseRecordBuilder
             	 			//CODEN
             	 			if(referenceitemcitationcoden!=null && referenceitemcitationcoden.length()>0)
             	 			{
-            	 				file.write("<codencode>"+referenceitemcitationcoden+"</codencode>");
+            	 				file.write("<codencode>"+referenceitemcitationcoden+"</codencode>\n");
             	 			}
             	 			
 	            	 		if(referenceitemcitationauthor!=null && referenceitemcitationauthor.length()>0)
@@ -3100,14 +3226,23 @@ public class BdReverseRecordBuilder
 	            	 		}
             	 		
 	            	 		file.write("</refd-itemcitation>\n");
-            	 		}               	
+            	 		}
+            	 		file.write("</reference>\n");
             	 	}            	           	 	
          		}
          }
-         catch (Exception e)
+    	 catch(ArrayIndexOutOfBoundsException ea)
+    	 {
+        	 //ea.printStackTrace();
+            System.err.println(ea);
+            System.out.println("EXCEPTION IN "+accessnumber);
+            // System.exit(1);
+         }
+         catch(Exception e)
          {
-             System.err.println(e);
-             System.exit(1);
+        	 e.printStackTrace();
+            //System.err.println(e);
+            // System.exit(1);
          }
          finally
          {
@@ -3118,7 +3253,7 @@ public class BdReverseRecordBuilder
             	 }
             	 catch(Exception er)
             	 {
-            		 System.err.println(er); 
+            		 er.printStackTrace();
             	 }
              }
              
@@ -3129,11 +3264,12 @@ public class BdReverseRecordBuilder
             	 }
             	 catch(Exception es)
             	 {
-            		 System.err.println(es); 
+            		 es.printStackTrace();
             	 }
              }
          }
     }
+    
     public void add(Map authorGroup, String key, BdAuthor newValue) {
         List<BdAuthor> currentValue = (List)authorGroup.get(key);
         if (currentValue == null) {

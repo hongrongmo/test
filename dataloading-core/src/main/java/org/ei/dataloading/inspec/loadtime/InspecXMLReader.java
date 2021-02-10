@@ -121,7 +121,10 @@ public class InspecXMLReader extends FilterReader
 
 			// Material Identity No.
 			if(controlGroup.getChild("ming")!=null)
-			   record.put("MATID",new StringBuffer(controlGroup.getChild("ming").getChild("min2").getTextTrim()));
+				   record.put("MATID1",new StringBuffer(controlGroup.getChild("ming").getChild("min").getTextTrim())); //OLD MIN added by hmo@12/22/2020 for EVOPS-1068
+
+			if(controlGroup.getChild("ming")!=null)
+			   record.put("MATID",new StringBuffer(controlGroup.getChild("ming").getChild("min2").getTextTrim())); //Y2k MIN
 
 			//VB:abstract number
 			if(controlGroup.getChild("abng")!=null)
@@ -130,7 +133,16 @@ public class InspecXMLReader extends FilterReader
 			//Record type
 			if(controlGroup.getChild("rtypg").getChild("rtyp")!=null)
 				record.put("RTYPE",new StringBuffer(controlGroup.getChild("rtypg").getChild("rtyp").getTextTrim()));
-
+			
+			//added by hmo@12/22/2020 for EVOPS-1068
+			//Record Type Name
+			if(controlGroup.getChild("rtypg").getChild("rtng").getChild("rtname")!=null)
+			{
+				record.put("RTNAME",new StringBuffer(controlGroup.getChild("rtypg").getChild("rtng").getChild("rtname").getTextTrim()));
+				//System.out.println("RTNAME="+controlGroup.getChild("rtypg").getChild("rtng").getChild("rtname").getTextTrim());
+			}
+			
+			
 			//VB:new Record type
 			if(controlGroup.getChild("rtypg").getChild("newrt")!=null)
 				record.put("NRTYPE",new StringBuffer(controlGroup.getChild("rtypg").getChild("newrt").getTextTrim()));
@@ -152,6 +164,14 @@ public class InspecXMLReader extends FilterReader
 			if(bibGroup.getChild("aug")!=null) {
 				record.put("AUS",getName(bibGroup.getChild("aug")));
 				record.put("AAFF",getAffiliation(bibGroup.getChild("aug"),"A"));
+			}
+			
+			//add reposg by hmo @12/22/2020 for EVOPS-1068
+			// reposg
+			if(bibGroup.getChild("reposg")!=null) {
+				Element reposg=bibGroup.getChild("reposg");
+				if(reposg.getChildText("access")!=null)
+					record.put("ACCESS",new StringBuffer(reposg.getChildText("access")));				
 			}
 
 			//Journal
@@ -235,10 +255,13 @@ public class InspecXMLReader extends FilterReader
 			}
 			
 			//add cpc group by hmo @12/17/2020 based on EVOPS-1068
+			// CPC
 			if(idxGroup.getChild("cpcg")!=null)
 			{
-				record.put("CPC",getIndexing(idxGroup.getChild("cpcg"),"cc"));
-				System.out.println("CPC="+getIndexing(idxGroup.getChild("cpcg"),"cc"));
+				Element cpcGroup = idxGroup.getChild("cpcg");
+				//record.put("CPC",getIndexing(idxGroup.getChild("cpcg"),"cc"));
+				record.put("CPC",new StringBuffer(getMixData("cpcg",cpcGroup.getContent())));
+				System.out.println("CPCG="+getMixData("cpcg",cpcGroup.getContent()));
 			}
 			
 			if(idxGroup.getChild("ucindg")!=null)
@@ -254,14 +277,29 @@ public class InspecXMLReader extends FilterReader
 				record.put("AOI",getFields(idxGroup.getChild("aoig")));
 			
 			/*
+			 * fundg group
+			 */
+			//added by hmo @12/22/2020 for EVOPS-1068
+			Element fundGroup = article.getChild("fundg");
+			if(fundGroup!=null)
+			{
+				//record.put("FUNDG",getFungs(fundGroup));
+				//record.put("FUNDG",getFungs(fundGroup));
+				record.put("FUNDG",new StringBuffer(getMixData("fundg",fundGroup.getContent())));
+				System.out.println("FUNDG="+getMixData("fundg",fundGroup.getContent()));
+			}			
+			
+			
+			/*
 				Linking Group
 			 */
 			//added by hmo @12/17/2020 for EVOPS-1068
 			Element linkGroup = article.getChild("linkg");
 			if(linkGroup!=null)
 			{
-				record.put("LINKG",getLinkgs(linkGroup));
-				System.out.println("LINKG="+getLinkgs(linkGroup).toString());
+				//record.put("LINKG",getLinkgs(linkGroup));
+				record.put("LINKG",new StringBuffer(getMixData("linkg",linkGroup.getContent())));
+				System.out.println("LINKG="+getMixData("linkg",linkGroup.getContent()));
 			}
 
 			// sortdate
@@ -289,6 +327,29 @@ public class InspecXMLReader extends FilterReader
 
 			    record.put("SRTDATE",sDate);
 
+			}
+			
+			
+			/*
+			Video Group
+			 */
+			//added by hmo @1/28/2021 for EVOPS-1068
+			Element videoGroup = bibGroup.getChild("videog");
+			if(videoGroup!=null)
+			{			
+				record.put("VIDEOG",new StringBuffer(getMixData("videog",videoGroup.getContent())));
+				System.out.println("VIDEOG="+getMixData("videog",videoGroup.getContent()));
+			}
+			
+			/*
+			Repository Group
+			 */
+			//added by hmo @1/28/2021 for EVOPS-1068
+			Element reposGroup = bibGroup.getChild("reposg");
+			if(reposGroup!=null)
+			{			
+				record.put("REPOSG",new StringBuffer(getMixData("reposg",reposGroup.getContent())));
+				System.out.println("REPOSG="+getMixData("reposg",reposGroup.getContent()));
 			}
 
 			/*
@@ -885,6 +946,49 @@ public class InspecXMLReader extends FilterReader
 		return citS.toString();
 	}
 	
+	
+	private StringBuffer getFungs(Element e)
+	{
+		StringBuffer fundBuffer=new StringBuffer();
+		if(e.getChildren("awardg")!=null)
+		{
+			List funds=e.getChildren("awardg");
+			
+			for (int k = 0; k < funds.size(); k++)
+			{
+				   Element fund = (Element)funds.get(k);
+				   String funder =fund.getChildText("funder");
+				   String doiAttr=fund.getAttributeValue("doi");
+				   System.out.println("DOI="+doiAttr);
+				   List awardids=fund.getChildren("awardid");
+				 
+				   if(funder!=null)
+					   fundBuffer.append(funder.replaceAll("\\n", "").replaceAll("\\t", ""));
+				   fundBuffer.append(Constants.IDDELIMITER);
+				   if(doiAttr!=null)
+					   fundBuffer.append(doiAttr);
+				   fundBuffer.append(Constants.IDDELIMITER);
+				   if(awardids!=null)
+					   for(int l=0;l<awardids.size();l++)
+					   {
+						   Element awardid = (Element)awardids.get(l);
+						   String awardidContent = awardid.getTextTrim();
+						   System.out.println("awardid"+awardidContent);
+						   if(awardidContent!=null)
+							   fundBuffer.append(awardidContent);
+						   if(l<awardids.size()-1)
+							   fundBuffer.append(Constants.GROUPDELIMITER);
+					   }
+					   
+				   if(k<funds.size()-1)
+					   fundBuffer.append(Constants.AUDELIMITER);
+				   
+			}	
+		
+		}
+		return fundBuffer;
+	}
+	
 	private StringBuffer getLinkgs(Element e)
 	{
 		StringBuffer linkBuffer=new StringBuffer();
@@ -1003,6 +1107,66 @@ public class InspecXMLReader extends FilterReader
 		return dateB.toString();
 	}
 	*/
+	
+	private  String getMixData(String name, List l)
+    {
+		Iterator it = l.iterator();
+		String content="";
+       
+        content=getMixData(l, content);
+          
+		content="<"+name+">"+content.trim()+"</"+name+">";
+		return content;
+    }
+	
+	private  String getMixData(List l, String content)
+    {
+		Iterator it = l.iterator();		
+        while(it.hasNext())
+        {
+            Object o = it.next();
+
+            if(o instanceof Text )
+            {
+
+				String text=((Text)o).getText();
+				text= perl.substitute("s/&/&amp;/g",text);
+				text= perl.substitute("s/</&lt;/g",text);
+				text= perl.substitute("s/>/&gt;/g",text);
+				text= perl.substitute("s/\n//g",text);
+				text= perl.substitute("s/\r//g",text);
+
+				content=content.trim()+text.trim();
+
+            }
+            else if(o instanceof EntityRef)
+            {
+  				if(inabstract)
+  						entity.add(((EntityRef)o).getName());
+
+                  content=content.trim()+("&")+(((EntityRef)o).getName())+";";
+            }
+            else if(o instanceof Element)
+            {
+                Element e = (Element)o;
+                content=content+"<"+e.getName();
+                List ats = e.getAttributes();
+                if(!ats.isEmpty())
+                {	Iterator at = ats.iterator();
+					while(at.hasNext())
+        			{
+						Attribute a = (Attribute)at.next();
+					   	content=content.trim()+" "+a.getName()+"=\""+a.getValue()+"\"";
+					}
+				}
+                content=content.trim()+">";
+                content=getMixData(e.getContent(), content.trim());
+               content=content.trim()+"</"+e.getName()+">";
+            }
+        }
+		//content=content.trim()+"</"+name+">";
+		return content;
+    }
 	
     private  StringBuffer getMixData(List l, StringBuffer b)
     {
@@ -1536,9 +1700,11 @@ public class InspecXMLReader extends FilterReader
 		{
 			Element t = (Element)lt.get(i);
 			getMixData(t.getContent(),field);
+			if(i<lt.size()-1)
 			field.append(Constants.AUDELIMITER);
 		}
-		return field.delete(field.lastIndexOf(Constants.AUDELIMITER),field.length());
+		//return field.delete(field.lastIndexOf(Constants.AUDELIMITER),field.length());
+		return field;
 	}
 
 	private void getPatentData(Element e)
@@ -1560,10 +1726,10 @@ public class InspecXMLReader extends FilterReader
 				record.put("PAS",getFields(e.getChild("pdg").getChild("assg")));
 			
 			//add Patent authority by hmo @12/17/2020 based on EVOPS-1068
-			if(e.getChild("pdg").getChild("patauth")!=null)
+			if(e.getChild("pdg").getChildTextTrim("patauth")!=null)
 			{
-				record.put("PAUTH",getFields(e.getChild("pdg").getChild("patauth")));
-				System.out.println("PATENT AUTHORITY="+getFields(e.getChild("pdg").getChild("patauth")));
+				record.put("PAUTH",new StringBuffer(e.getChild("pdg").getChildTextTrim("patauth")));
+				System.out.println("PATENT AUTHORITY="+e.getChild("pdg").getChildTextTrim("patauth"));
 			}
 		}
 		//VB:added for original patent
@@ -1867,7 +2033,7 @@ public class InspecXMLReader extends FilterReader
 										t.getChild("cct")!= null )
 				{
 					terms.append(Constants.IDDELIMITER);
-					terms.append(t.getChildTextTrim("cct"));
+					//terms.append(t.getChildTextTrim("cct").replaceAll("\\n", "").replaceAll("\\t", ""));
 				}
 				terms.append(Constants.AUDELIMITER);
 

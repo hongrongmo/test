@@ -444,7 +444,7 @@ public class XmlCombiner extends CombinerTimestamp {
         {
             stmt = con.createStatement();
             String sqlquery="select trim(cittype) cittype,database from bd_master_cittype where database='"+database+"'";
-            System.out.println("get cittype "+sqlquery);
+            //System.out.println("get cittype "+sqlquery);
             rs = stmt.executeQuery(sqlquery);
             while (rs.next())
             {
@@ -658,7 +658,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                             BdAffiliations aff = new BdAffiliations(affiliation);
                             rec.put(EVCombinedRec.AUTHOR_AFFILIATION,  aff.getSearchValue());
                             rec.put(EVCombinedRec.AFFILIATION_LOCATION,  aff.getLocationsSearchValue());
-                            rec.put(EVCombinedRec.COUNTRY,  aff.getCountriesSearchValue());
+                            rec.put(EVCombinedRec.COUNTRY,  aff.getCountriesSearchValue());                            
                           
                         }
                         else if(rs.getString("AFFILIATION_1")!=null)
