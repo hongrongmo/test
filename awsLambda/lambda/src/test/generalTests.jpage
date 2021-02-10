@@ -1,0 +1,3 @@
+String sharedSearchurl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/facets";
+sharedSearchurl = sharedSearchurl.replace("prod", "cert");
+System.out.println(sharedSearchurl) (No explicit return value)
