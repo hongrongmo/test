@@ -526,9 +526,17 @@ public class BdReverseRecordBuilder
     	file.write("<citation-info>\n");
     	
     	//CITTYPE
-    	if(documentType!=null && documentType.length()>0)
+    	if(documentType!=null && documentType.trim().length()>0)
     	{
-    		file.write("<citation-type code=\""+bdDocType.get(documentType.toLowerCase())+"\"/>\n");
+    		//System.out.println(documentType.trim()+" --- "+bdDocType.get(documentType.trim().toLowerCase()));
+    		if(bdDocType.get(documentType.trim().toLowerCase())!=null)
+    		{
+    			file.write("<citation-type code=\""+bdDocType.get(documentType.trim().toLowerCase())+"\"/>\n");
+    		}
+    		else
+    		{
+    			file.write("<citation-type code=\""+documentType.trim().toLowerCase()+"\"/>\n");
+    		}
     	}
 
     	//CITATION-LANGUAGE
@@ -674,7 +682,7 @@ public class BdReverseRecordBuilder
 		//PUBLICATIONDATE
 		if(publicationdate!=null && publicationdate.length()>0)
 		{
-			file.write("<publicationdate>\n<date-text>"+publicationdate+"</date-text>\n</publicationdate>\n");
+			file.write("<publicationdate>\n<date-text>"+cleanBadCharacters(publicationdate)+"</date-text>\n</publicationdate>\n");
 		}
 		
 		//SOURCEWEBSITE
@@ -822,6 +830,13 @@ public class BdReverseRecordBuilder
 	    			(conferenceorganization!=null && conferenceorganization.length()>0) || (conferenceeditoraddress!=null && conferenceeditoraddress.length()>0))
     			{
     				file.write("<confpublication>\n");
+    				
+    				if((confenceeditor!=null && confenceeditor.length()>0) || (conferenceorganization!=null && conferenceorganization.length()>0) ||
+    	    				(conferenceeditoraddress!=null && conferenceeditoraddress.length()>0))
+    				{
+    					outputConfeditors(file,conferenceeditoraddress,conferenceorganization,confenceeditor);	
+    				}
+    				
     				if(confencepartnumber!=null && confencepartnumber.length()>0)
     				{
     					file.write("<procpartno>"+confencepartnumber+"</procpartno>\n");
@@ -836,17 +851,10 @@ public class BdReverseRecordBuilder
     				{
     					file.write("<procpagecount>"+confencepagecount+"</procpagecount>\n");
     				}
-    				
-    				if((confenceeditor!=null && confenceeditor.length()>0) || (conferenceorganization!=null && conferenceorganization.length()>0) ||
-	    				(conferenceeditoraddress!=null && conferenceeditoraddress.length()>0))
-    				{
-    					outputConfeditors(file,conferenceeditoraddress,conferenceorganization,confenceeditor);	
-    				}
-    					
+  				
     				file.write("</confpublication>\n");
     			}
-				file.write("</conferenceinfo>\n");
-				    				
+				file.write("</conferenceinfo>\n");				    				
 			}
 			
 			if(reportnumber!=null && reportnumber.length()>0)
@@ -1112,6 +1120,10 @@ public class BdReverseRecordBuilder
 						{
 							file.write(" seq=\""+seq+"\"");	    							
 						}
+						else
+						{
+							file.write(" seq=\""+i+"\"");	    	
+						}
 						
 						if(auid!=null && auid.length()>0)
 						{
@@ -1155,6 +1167,10 @@ public class BdReverseRecordBuilder
 			    			else if(given_name!=null)
 			    			{
 			    				file.write("<ce:indexed-name>"+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+			    			}
+			    			else
+			    			{
+			    				file.write("<ce:indexed-name/>\n");
 			    			}
 			    		}
 						
@@ -1411,8 +1427,12 @@ public class BdReverseRecordBuilder
 	    		{
 	    			file.write("<ce:surname>"+cleanBadCharacters(surname)+"</ce:surname>\n");
 	    		}
-	    		
-	    		if(givenname!=null)
+	    		else if(givenname!=null)
+	    		{
+	    			file.write("<ce:surname>"+cleanBadCharacters(givenname)+"</ce:surname>\n");
+	    		}
+
+	    		if(surname!=null && givenname!=null)
 	    		{
 	    			file.write("<ce:given-name>"+cleanBadCharacters(givenname)+"</ce:given-name>\n");
 	    		}
@@ -1609,7 +1629,7 @@ public class BdReverseRecordBuilder
 			correspondenceeaddressArr=correspondenceeaddress.split(Constants.AUDELIMITER,-1);
 		}
 		
-		if(correspondencename!=null)
+		if(correspondencename!=null && correspondencename.length()>0)
 		{
 			
 			correspondencenames = correspondencename.split(Constants.AUDELIMITER,-1);
@@ -1661,67 +1681,70 @@ public class BdReverseRecordBuilder
 					{
 						text = cnames[8];
 					}
-					file.write("<person>\n");
-					if(initials!=null && initials.length()>0)
-					{
-						file.write("<ce:initials>"+cleanBadCharacters(initials)+"</ce:initials>\n");
-					}
-					
 					if(indexed_name!=null && indexed_name.length()>0)
 					{
-						file.write("<ce:indexed-name>"+cleanBadCharacters(indexed_name)+"</ce:indexed-name>\n");
+						file.write("<person>\n");
+						if(initials!=null && initials.length()>0)
+						{
+							file.write("<ce:initials>"+cleanBadCharacters(initials)+"</ce:initials>\n");
+						}
+						
+						if(indexed_name!=null && indexed_name.length()>0)
+						{
+							file.write("<ce:indexed-name>"+cleanBadCharacters(indexed_name)+"</ce:indexed-name>\n");
+						}
+						else
+			    		{
+			    			if(surname!=null && initials!=null)
+			    			{
+			    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(initials)+"</ce:indexed-name>\n");
+			    			}
+			    			else if(surname!=null && given_name!=null)
+			    			{
+			    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+			    			}
+			    			else if(surname!=null)
+			    			{
+			    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+"</ce:indexed-name>\n");
+			    			}
+			    			else if(given_name!=null)
+			    			{
+			    				file.write("<ce:indexed-name>"+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
+			    			}
+			    		}
+						
+						if(degrees!=null && degrees.length()>0)
+						{
+							file.write("<ce:degrees>"+degrees+"</ce:degrees>\n");
+						}
+						
+						if(surname!=null && surname.length()>0)
+						{
+							file.write("<ce:surname>"+cleanBadCharacters(surname)+"</ce:surname>\n");
+						}
+						
+						if(given_name!=null && given_name.length()>0)
+						{
+							file.write("<ce:given-name>"+cleanBadCharacters(given_name)+"</ce:given-name>\n");
+						}
+						
+						if(suffix!=null && suffix.length()>0)
+						{
+							file.write("<ce:suffix>"+cleanBadCharacters(suffix)+"</ce:suffix>\n");
+						}
+						
+						if(nametext!=null && nametext.length()>0)
+						{
+							file.write("<ce:nametext>"+cleanBadCharacters(nametext)+"</ce:nametext>\n");
+						}
+						
+						if(text!=null && text.length()>0)
+						{
+							file.write("<ce:text>"+cleanBadCharacters(text)+"</ce:text>\n");
+						}
+						
+						file.write("</person>\n");
 					}
-					else
-		    		{
-		    			if(surname!=null && initials!=null)
-		    			{
-		    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(initials)+"</ce:indexed-name>\n");
-		    			}
-		    			else if(surname!=null && given_name!=null)
-		    			{
-		    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
-		    			}
-		    			else if(surname!=null)
-		    			{
-		    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+"</ce:indexed-name>\n");
-		    			}
-		    			else if(given_name!=null)
-		    			{
-		    				file.write("<ce:indexed-name>"+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
-		    			}
-		    		}
-					
-					if(degrees!=null && degrees.length()>0)
-					{
-						file.write("<ce:degrees>"+degrees+"</ce:degrees>\n");
-					}
-					
-					if(surname!=null && surname.length()>0)
-					{
-						file.write("<ce:surname>"+cleanBadCharacters(surname)+"</ce:surname>\n");
-					}
-					
-					if(given_name!=null && given_name.length()>0)
-					{
-						file.write("<ce:given-name>"+cleanBadCharacters(given_name)+"</ce:given-name>\n");
-					}
-					
-					if(suffix!=null && suffix.length()>0)
-					{
-						file.write("<ce:suffix>"+cleanBadCharacters(suffix)+"</ce:suffix>\n");
-					}
-					
-					if(nametext!=null && nametext.length()>0)
-					{
-						file.write("<ce:nametext>"+cleanBadCharacters(nametext)+"</ce:nametext>\n");
-					}
-					
-					if(text!=null && text.length()>0)
-					{
-						file.write("<ce:text>"+cleanBadCharacters(text)+"</ce:text>\n");
-					}
-					
-					file.write("</person>\n");
 					
 					if(correspondenceAffArr!=null && correspondenceAffArr.length>i)
 					{
@@ -1862,11 +1885,11 @@ public class BdReverseRecordBuilder
 									file.write("</affiliation>\n");		
 								}
 							}
-							else
-							{
-								System.out.println("record "+accessnumber+" has no correspondence affiliation");
+							//else
+							//{
+							//	System.out.println("record "+accessnumber+" has no correspondence affiliation");
 								
-							}//content			
+							//}//content			
 								
 						}
 						else
@@ -2133,6 +2156,10 @@ public class BdReverseRecordBuilder
 	    			{
 	    				file.write("<ce:indexed-name>"+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
 	    			}
+	    			else
+	    			{
+	    				file.write("<ce:indexed-name/>");
+	    			}
 	    		}
 				
 				if(degrees!=null && degrees.length()>0)
@@ -2283,18 +2310,18 @@ public class BdReverseRecordBuilder
 									{
 										file.write("<city-group>"+cleanBadCharacters(affcity_group)+"</city-group>\n");
 									}
-								}
-								
+								}//if								
 								file.write("</affiliation>\n");	
 							}															
 							else
 							{
 								System.out.println("format is wrong publisheraddressElements size"+publisheraddressElements.length);
-							}
-						}
-					}
+							}//else
+						}//else
+					}//if
 					
-				}
+				}//if
+				
 				if(publisherelectronicaddressArray!=null && publisherelectronicaddressArray.length>i)
 				{
 					String[] pEaddress = publisherelectronicaddressArray[i].split(Constants.IDDELIMITER);
@@ -2314,21 +2341,121 @@ public class BdReverseRecordBuilder
 						System.out.println("PUBLISHER="+publisherelectronicaddressArray[i]+" size="+pEaddress.length);
 					}
 					
-				}
+				}//if
 				file.write("</publisher>\n");
-			}
+			}//for
+			
 		}
 		else if(publisheraddressArray!=null && publisheraddressArray.length>0)
 		{
 			for(int i=0;i<publisheraddressArray.length;i++)
 			{
 				file.write("<publisher>\n");
-				    				
-				file.write("<publisheraddress>"+cleanBadCharacters(publisheraddressArray[i])+"</publisheraddress>\n");
-				
-				if(publisherelectronicaddressArray!=null && publisherelectronicaddressArray.length>i)
+				String paddress = publisheraddressArray[i];
+				if(paddress!=null && paddress.length()>0)
+				{	
+					if(paddress.indexOf(Constants.IDDELIMITER)<0)
+					{
+						file.write("<publisheraddress>"+cleanBadCharacters(paddress)+"</publisheraddress>\n");
+					}
+					else
+					{
+						String[] publisheraddressElements = paddress.split(Constants.IDDELIMITER);
+						file.write("<affiliation");
+						if(publisheraddressElements.length>2)
+						{
+							String affaddress_part = null;
+							String affcity_group = null;
+							String affcountry = null;
+							String afforganization = null;
+							String afftext = null;
+							String venue = null;
+							String afid = publisheraddressElements[0];
+							if(publisheraddressElements.length>3)
+							{
+								venue = publisheraddressElements[1];
+							}
+							if(publisheraddressElements.length>3)
+							{
+								afftext = publisheraddressElements[2];
+							}
+							
+							if(publisheraddressElements.length>3)
+							{
+								afforganization = publisheraddressElements[3];
+							}
+							if(publisheraddressElements.length>4)
+							{
+								affaddress_part = publisheraddressElements[4];
+							}
+							if(publisheraddressElements.length>5)
+							{
+								affcity_group = publisheraddressElements[5];
+							}
+							if(publisheraddressElements.length>6)
+							{
+								affcountry = publisheraddressElements[6];
+							}
+							if(affcountry!=null && affcountry.length()>0)
+							{
+								file.write(" country=\""+cleanBadCharacters(affcountry)+"\">\n");
+							}
+							else
+							{
+								file.write(">");
+							}
+							
+							if(venue!=null && venue.length()>0)
+							{
+								file.write("<venue>"+cleanBadCharacters(venue)+"</venue>\n");
+							}
+							if(affaddress_part!=null && affaddress_part.length()>0)
+							{
+								file.write("<address-part>"+cleanBadCharacters(affaddress_part)+"</address-part>\n");
+							}
+							if(affcity_group!=null && affcity_group.length()>0)
+							{
+								if(affcity_group.indexOf(",")>-1)
+								{
+									String[] affCitys = affcity_group.split(",");
+									if(affCitys.length>1)
+									{
+										file.write("<city>"+cleanBadCharacters(affCitys[0])+"</city>\n");
+										file.write("<postal-code>"+cleanBadCharacters(affCitys[1])+"</postal-code>\n");
+									}
+								}
+								else
+								{
+									file.write("<city-group>"+cleanBadCharacters(affcity_group)+"</city-group>\n");
+								}
+							}
+							
+							file.write("</affiliation>\n");	
+						}//else
+									    							
+						if(publisherelectronicaddressArray!=null && publisherelectronicaddressArray.length>i)
+						{
+							String[] pEaddress = publisherelectronicaddressArray[i].split(Constants.IDDELIMITER);
+							String emailAddress = null;
+							if(pEaddress.length>1)
+							{
+								emailAddress=pEaddress[1];
+							}
+							else
+							{
+								emailAddress=pEaddress[0];
+							}
+							file.write("<ce:e-address>"+cleanBadCharacters(emailAddress)+"</ce:e-address>\n");
+						}
+						file.write("</publisher>\n");	
+					}//for
+			}
+			else if(publisherelectronicaddressArray!=null && publisherelectronicaddressArray.length>0)
+			{
+				for(int j=0;j<publisherelectronicaddressArray.length;j++)
 				{
-					String[] pEaddress = publisherelectronicaddressArray[i].split(Constants.IDDELIMITER);
+					file.write("<publisher>\n");
+					String[] pEaddress = publisherelectronicaddressArray[j].split(Constants.IDDELIMITER);
 					String emailAddress = null;
 					if(pEaddress.length>1)
 					{
@@ -2339,31 +2466,13 @@ public class BdReverseRecordBuilder
 						emailAddress=pEaddress[0];
 					}
 					file.write("<ce:e-address>"+cleanBadCharacters(emailAddress)+"</ce:e-address>\n");
+					
+					file.write("</publisher>\n");
 				}
-				file.write("</publisher>\n");
 			}
-		}
-		else if(publisherelectronicaddressArray!=null && publisherelectronicaddressArray.length>0)
-		{
-			for(int i=0;i<publisherelectronicaddressArray.length;i++)
-			{
-				file.write("<publisher>\n");
-				String[] pEaddress = publisherelectronicaddressArray[i].split(Constants.IDDELIMITER);
-				String emailAddress = null;
-				if(pEaddress.length>1)
-				{
-					emailAddress=pEaddress[1];
-				}
-				else
-				{
-					emailAddress=pEaddress[0];
-				}
-				file.write("<ce:e-address>"+cleanBadCharacters(emailAddress)+"</ce:e-address>\n");
-				
-				file.write("</publisher>\n");
-			}
-		}
+		}}
     }
+    
     private void outputConflocation(FileWriter file, String conflocation) throws Exception
     {
     	String[] conflocationArray = conflocation.split(Constants.AUDELIMITER,-1);
@@ -2534,12 +2643,10 @@ public class BdReverseRecordBuilder
     }
     
     private void outputConfeditors(FileWriter file, String conferenceeditoraddress,String conferenceorganization,String confenceeditor) throws Exception
-    {
-    	file.write("<confeditors>\n");
-		
-		
+    {   	
 		if(confenceeditor!=null && confenceeditor.length()>0)
 		{
+			file.write("<confeditors>\n");
 			file.write("<editors>\n");
 			String[] confeditorArray = confenceeditor.split(Constants.AUDELIMITER,-1);
 			for(int i=0;i<confeditorArray.length;i++)
@@ -2625,6 +2732,10 @@ public class BdReverseRecordBuilder
 		    			{
 		    				file.write("<ce:indexed-name>"+cleanBadCharacters(given_name)+"</ce:indexed-name>\n");
 		    			}
+		    			else
+		    			{
+		    				file.write("<ce:indexed-name/>");
+		    			}
 		    		}
 					
 					if(degrees!=null && degrees.length()>0)
@@ -2659,20 +2770,18 @@ public class BdReverseRecordBuilder
 					file.write("</editor>\n");
 				}
 			}
+			file.write("</editors>\n");
+			if(conferenceorganization!=null && conferenceorganization.length()>0)
+			{
+				file.write("<editororganization>"+cleanBadCharacters(conferenceorganization)+"</editororganization>\n");
+			}
+			
+			if(conferenceeditoraddress!=null && conferenceeditoraddress.trim().length()>0)
+			{
+				file.write("<editoraddress>"+cleanBadCharacters(conferenceeditoraddress)+"</editoraddress>\n");
+			}
+			file.write("</confeditors>\n");
 		}
-		file.write("</editors>\n");
-		file.write("</confeditors>\n");
-		
-		if(conferenceorganization!=null && conferenceorganization.length()>0)
-		{
-			file.write("<editororganization>"+cleanBadCharacters(conferenceorganization)+"</editororganization>\n");
-		}
-		
-		if(conferenceeditoraddress!=null && conferenceeditoraddress.trim().length()>0)
-		{
-			file.write("<editoraddress>"+cleanBadCharacters(conferenceeditoraddress)+"</editoraddress>\n");
-		}
-		
 		
 	}
 	
@@ -3066,9 +3175,8 @@ public class BdReverseRecordBuilder
             	 }
             	 file.write("<ref-info>\n");
             	 //REFERENCETITLE
-            	 if(referencetitle!=null && referencetitle.length()>0)
-            	 {
-            		 
+            	 if(referencetitle!=null && referencetitle.trim().length()>1)
+            	 {           	
             		 file.write("<ref-title>\n");
             		 String[] titles = referencetitle.split(",");
             		 for(int i=0;i<titles.length;i++)
@@ -3151,21 +3259,38 @@ public class BdReverseRecordBuilder
      						//System.out.println("seq="+seq);
      						//System.out.println("auid="+auid);
      						//System.out.println("indexed_name="+indexed_name);
-     						
      						file.write("<author");
      						if(seq!=null && seq.length()>0)
      						{
      							file.write(" seq=\""+seq+"\"");	    							
      						}
-     						
-     						/*
-     						if(auid!=null && auid.length()>0)
+     						else
      						{
-     							file.write(" auid=\""+auid+"\"");	    							
+     							file.write(" seq=\""+i+"\"");
      						}
-     						*/
-     						
      						file.write(">\n");
+     						
+     						if(indexed_name==null || indexed_name.trim().length()<1)
+     						{						
+     			    			if(surname!=null && initials!=null)
+     			    			{
+     			    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+" "+cleanBadCharacters(initials)+"</ce:indexed-name>\n");
+     			    			}
+     			    			else if(surname!=null)
+     			    			{
+     			    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+"</ce:indexed-name>\n");
+     			    			}
+     			    			else if(surname!=null)
+     			    			{
+     			    				file.write("<ce:indexed-name>"+cleanBadCharacters(surname)+"</ce:indexed-name>\n");
+     			    			}    			    		
+     			    			else
+     			    			{
+     			    				file.write("<ce:indexed-name/>");
+     			    			}     			    		
+	     						
+     						}
+     						
      						if(initials!=null && initials.length()>0)
      						{
      							//System.out.println(initials+" --- "+cleanBadCharacters(initials));
@@ -3183,7 +3308,7 @@ public class BdReverseRecordBuilder
      						if(suffix!=null && suffix.length()>0)
      						{
      							file.write("<ce:suffix>"+cleanBadCharacters(suffix)+"</ce:suffix>\n");    							
-     						}
+     						}   						
      						file.write("</author>\n");
          						
          				}
@@ -3280,11 +3405,29 @@ public class BdReverseRecordBuilder
         	 				String[] referenceP = referencepages.split(Constants.IDDELIMITER);
         	 				if(referenceP.length==1)
         	 				{
-        	 					file.write(">"+referenceP[0]+"</pagecount>\n");
+        	 					String pagecount = referenceP[0];
+        	 					if(pagecount.indexOf(":")>0)
+        	 					{
+        	 						pagecount=pagecount.substring(pagecount.indexOf(":")+1);
+        	 						//System.out.println("pagecount="+pagecount);
+        	 					}
+        	 					file.write(">"+pagecount+"</pagecount>\n");
         	 				}
-        	 				else
+        	 				else if(referenceP.length>1)
         	 				{
-        	 					file.write(" type=\""+referenceP[0]+"\">"+referenceP[1]+"</pagecount>\n");
+        	 					String pagecountType = referenceP[0];
+        	 					if(pagecountType.indexOf(":")>0)
+        	 					{
+        	 						pagecountType=pagecountType.substring(pagecountType.indexOf(":")+1);
+        	 						//System.out.println("pagecountType="+pagecountType);
+        	 					}
+        	 					String pagecount = referenceP[1];
+        	 					if(pagecount.indexOf(":")>0)
+        	 					{
+        	 						pagecount=pagecount.substring(pagecount.indexOf(":")+1);
+        	 						//System.out.println("pagecount="+pagecount);
+        	 					}
+        	 					file.write(" type=\""+pagecountType+"\">"+pagecount+"</pagecount>\n");
         	 				}
         	 			
         	 			}//if

@@ -822,11 +822,68 @@ public class INSPECCombiner
 	                rec.put(EVCombinedRec.ISSUE, rs.getString("piss"));
 	                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
 	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
-	
+	                
+	                //following items are newly added for new inspec DTD(EVOPS-1068)@2/12/2021 by hmo
+	                /*
+	                //1. USPTO
+	                if(rs.getString("pauth")!=null && rs.getString("pauth").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.AUTHORITY_CODE, rs.getString("pauth"));
+	                }
+	                
+	                //2. CPC
+	                if(rs.getString("cpc")!=null && rs.getString("cpc").trim().length()>0)
+	                {
+	                	//rec.put(EVCombinedRec.ECLA_CODES, getCPCCode(rs.getString("cpc")));
+	                }
+	                
+	                //3. link DOI
+	                if(rs.getString("linkg")!=null && rs.getString("linkg").trim().length()>0)
+	                {
+	                	//rec.put(EVCombinedRec.LINK_DOI, getLinkGroupDOICode(rs.getString("linkg")));
+	                }
+	                
+	                //3. link DOI
+	                if(rs.getString("linkg")!=null && rs.getString("linkg").trim().length()>0)
+	                {
+	                	//rec.put(EVCombinedRec.LINK_DOI, getLinkGroupDOICode(rs.getString("linkg")));
+	                }
+	                
+	                //4. MIN group(Material Ident. no., Y2k MIN)
+	                if(rs.getString("mat_id")!=null && rs.getString("mat_id").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.MATERIAL_NUMBER, rs.getString("mat_id"));
+	                }
+	                
+	                //6. Video group
+	                if(rs.getString("videog")!=null && rs.getString("videog").trim().length()>0)
+	                {
+	                	//rec.put(EVCombinedRec.LINK_DOI, getVideoLocation(rs.getString("videog")));
+	                }
+	                
+	                
+	                //7. Funding group
+	                if(rs.getString("fundg")!=null && rs.getString("fundg").trim().length()>0)
+	                {
+	                	//rec.put(EVCombinedRec.GRANTID, getGrantID(rs.getString("fundg")));
+	                	//rec.put(EVCombinedRec.GRANTAGENCY, getGrantAgency(rs.getString("fundg")));
+	                }
+	                
+	                //9. open access
+	                if(rs.getString("openaccess")!=null && rs.getString("openaccess").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.ISOPENACESS, rs.getString("openaccess"));
+	                }
+	                
+	                //end of new items for new inspec dtd
+	                */
+	                
 	                if (this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	                {
 	                	writer.writeRec(rec);//Use this line for FAST extraction
 	                }
+	                
+	                
 	                /*HT added 09/21/2020 for ES lookup*/
 	                else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
 	                {
@@ -1623,19 +1680,24 @@ public class INSPECCombiner
         //  rs = stmt.executeQuery("select m_id, aaff, su, ab, anum, aoi, aus, aus2,pyr, rnum, pnum, cpat, ciorg, iorg, pas, cdate, cedate, doi, nrtype, doit, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN);
             if (loadN == 3001)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
+            	sqlQuery="select * from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
+                //sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
             }
             else if (loadN == 3002)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn,  LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
+                
+            	sqlQuery="select * from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
+            	//sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn,  LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
             }
             else if(loadN ==8413583)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
+            	sqlQuery="select * from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
+                //sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
             }
             else
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
+            	sqlQuery="select * from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
+                //sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
             }
             System.out.println("Inspect sqlQuery= "+sqlQuery);
             rs = stmt.executeQuery(sqlQuery);

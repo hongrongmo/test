@@ -2675,7 +2675,7 @@ public class BdParser
 					record.put("CORRESPONDENCEEADDRESS",eAddressString);
 				}
 	
-				if(personName!=null)
+				if(personName!=null && personName.length()>0)
 				{
 					//System.out.println("personName "+personName);
 					if(record.get("CORRESPONDENCENAME")!=null)
