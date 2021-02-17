@@ -872,8 +872,8 @@ public class INSPECCombiner
 	                //7. Funding group
 	                if(rs.getString("fundg")!=null && rs.getString("fundg").trim().length()>0)
 	                {
-	                	//rec.put(EVCombinedRec.GRANTID, getGrantID(rs.getString("fundg")));
-	                	//rec.put(EVCombinedRec.GRANTAGENCY, getGrantAgency(rs.getString("fundg")));
+	                	rec.put(EVCombinedRec.GRANTID, getGrantID(rs.getString("fundg")));
+	                	rec.put(EVCombinedRec.GRANTAGENCY, getGrantAgency(rs.getString("fundg")));
 	                }
 	                
 	                //9. open access
@@ -1016,6 +1016,32 @@ public class INSPECCombiner
     			grantID[i] = awardid;
     		}
     		return grantID;
+    	 
+    	}
+    	return null;
+    }
+    
+    private String[] getGrantAgency(String fundgStr) throws Exception
+    {
+    	String[] grantAgency = null;
+    	if(fundgStr!=null)
+    	{
+    		InputStream fundInputStream = new ByteArrayInputStream(fundgStr.getBytes(Charset.forName("UTF-8")));
+    		SAXBuilder builder = new SAXBuilder();
+    		builder.setExpandEntities(false);
+    		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+    		Document fundgDoc = builder.build(fundInputStream);
+    		Element fundgRoot = fundgDoc.getRootElement();
+    		System.out.println("root element name "+fundgRoot.getName());
+    		Element fundg = fundgRoot.getChild("fundg");
+    		List awardg = fundg.getChildren("awardg");
+    		for(int i=0;i<awardg.size();i++)
+    		{  			
+    			Element awardgElement = (Element)awardg.get(i);
+    			String awardid = awardgElement.getChildText("awardid");
+    			grantAgency[i] = awardid;
+    		}
+    		return grantAgency;
     	 
     	}
     	return null;
