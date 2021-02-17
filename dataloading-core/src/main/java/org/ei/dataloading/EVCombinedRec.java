@@ -509,7 +509,10 @@ public class EVCombinedRec {
 	public static final String PROCESS_INFO = "377";
 
 	//added by hmo @2020-12-09
-	public static final String FREETOREADSTATUS = "378";
+	public static final String LINK_DOI = "378";
+	
+	//added by hmo @2021-02-17
+	public static final String VIDEO_LOCATION = "379";
 	 //*/
 
 	private Hashtable h = new Hashtable();
