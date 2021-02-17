@@ -34,6 +34,14 @@ import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
 import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.dataloading.MessageSender;
 import org.ei.util.kafka.*;
+import org.jdom2.Element;
+import org.jdom2.Namespace;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.Document; 
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.nio.charset.Charset;
 
 
 public class INSPECCombiner
@@ -146,53 +154,53 @@ public class INSPECCombiner
 
     public void writeCombinedByTableHook(Connection con)
     		throws Exception
-    		{
-    			Statement stmt = null;
-    			ResultSet rs = null;
-    			try
-    			{
-    			
-    				stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-    				System.out.println("Running the query...");
-    				String sqlQuery = "select * from " + Combiner.TABLENAME;
-    				System.out.println(sqlQuery);
-    				rs = stmt.executeQuery(sqlQuery);
-    				
-    				System.out.println("Got records ...from table::"+Combiner.TABLENAME);
-    				writeRecs(rs,con);
-    				System.out.println("Wrote records.");
-    				this.writer.end();
-    				this.writer.flush();
-    			
-    			}
-    			finally
-    			{
-    			
-    				if (rs != null)
-    				{
-    					try
-    					{
-    						rs.close();
-    					}
-    					catch (Exception e)
-    					{
-    						e.printStackTrace();
-    					}
-    				}
-    				
-    				if (stmt != null)
-    				{
-    					try
-    					{
-    						stmt.close();
-    					}
-    					catch (Exception e)
-    					{
-    						e.printStackTrace();
-    					}
-    				}
-    			}
-    		}
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		try
+		{
+		
+			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			System.out.println("Running the query...");
+			String sqlQuery = "select * from " + Combiner.TABLENAME;
+			System.out.println(sqlQuery);
+			rs = stmt.executeQuery(sqlQuery);
+			
+			System.out.println("Got records ...from table::"+Combiner.TABLENAME);
+			writeRecs(rs,con);
+			System.out.println("Wrote records.");
+			this.writer.end();
+			this.writer.flush();
+		
+		}
+		finally
+		{
+		
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+	}
 
 
     public void writeCombinedByYearHook(Connection con,
@@ -822,11 +830,67 @@ public class INSPECCombiner
 	                rec.put(EVCombinedRec.ISSUE, rs.getString("piss"));
 	                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
 	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
-	
+	                
+	                //following items are newly added for new inspec DTD(EVOPS-1068)@2/12/2021 by hmo
+	              
+	                //1. USPTO
+	                if(rs.getString("pauth")!=null && rs.getString("pauth").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.AUTHORITY_CODE, rs.getString("pauth"));
+	                }
+	                
+	                //2. CPC
+	                if(rs.getString("cpc")!=null && rs.getString("cpc").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.ECLA_CODES, getCPCCode(rs.getString("cpc")));
+	                }
+	                
+	                //3. link DOI
+	                if(rs.getString("linkg")!=null && rs.getString("linkg").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.LINK_DOI, getLinkGroupDOICode(rs.getString("linkg")));
+	                }
+	                
+	                //3. link DOI
+	                if(rs.getString("linkg")!=null && rs.getString("linkg").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.LINK_DOI, getLinkGroupDOICode(rs.getString("linkg")));
+	                }
+	                
+	                //4. MIN group(Material Ident. no., Y2k MIN)
+	                if(rs.getString("mat_id")!=null && rs.getString("mat_id").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.MATERIAL_NUMBER, rs.getString("mat_id"));
+	                }
+	                
+	                //6. Video group
+	                if(rs.getString("videog")!=null && rs.getString("videog").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.VIDEO_LOCATION, getVideoLocation(rs.getString("videog")));
+	                }
+	                	                
+	                //7. Funding group
+	                if(rs.getString("fundg")!=null && rs.getString("fundg").trim().length()>0)
+	                {
+	                	//rec.put(EVCombinedRec.GRANTID, getGrantID(rs.getString("fundg")));
+	                	//rec.put(EVCombinedRec.GRANTAGENCY, getGrantAgency(rs.getString("fundg")));
+	                }
+	                
+	                //9. open access
+	                if(rs.getString("openaccess")!=null && rs.getString("openaccess").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.ISOPENACESS, rs.getString("openaccess"));
+	                }
+	                
+	                //end of new items for new inspec dtd
+	                
+	                
 	                if (this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	                {
 	                	writer.writeRec(rec);//Use this line for FAST extraction
 	                }
+	                
+	                
 	                /*HT added 09/21/2020 for ES lookup*/
 	                else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
 	                {
@@ -903,6 +967,117 @@ public class INSPECCombiner
 	        
 	        }
        }
+    }
+    
+    private String getVideoLocation(String videoGroup) throws Exception
+    {
+    	String videoLoc = null;
+    	if(videoGroup!=null)
+    	{
+    		InputStream videogInputStream = new ByteArrayInputStream(videoGroup.getBytes(Charset.forName("UTF-8")));
+    		SAXBuilder builder = new SAXBuilder();
+    		builder.setExpandEntities(false);
+    		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+    		Document videoDoc = builder.build(videogInputStream);
+    		Element videogRoot = videoDoc.getRootElement();
+    		System.out.println("root element name "+videogRoot.getName());
+    		Element videog = videogRoot.getChild("videog");
+    		if(videog!=null)
+    		{
+    			Element pugs = videog.getChild("pug");
+    			if(pugs!=null)
+    			{
+    				videoLoc = pugs.getChildText("loc");   	    		 	 
+    			}
+    		}    		
+    		return videoLoc;  
+    	}
+    	return null;
+    }
+    
+    private String[] getGrantID(String fundgStr) throws Exception
+    {
+    	String[] grantID = null;
+    	if(fundgStr!=null)
+    	{
+    		InputStream fundInputStream = new ByteArrayInputStream(fundgStr.getBytes(Charset.forName("UTF-8")));
+    		SAXBuilder builder = new SAXBuilder();
+    		builder.setExpandEntities(false);
+    		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+    		Document fundgDoc = builder.build(fundInputStream);
+    		Element fundgRoot = fundgDoc.getRootElement();
+    		System.out.println("root element name "+fundgRoot.getName());
+    		Element fundg = fundgRoot.getChild("fundg");
+    		List awardg = fundg.getChildren("awardg");
+    		for(int i=0;i<awardg.size();i++)
+    		{  			
+    			Element awardgElement = (Element)awardg.get(i);
+    			String awardid = awardgElement.getChildText("awardid");
+    			grantID[i] = awardid;
+    		}
+    		return grantID;
+    	 
+    	}
+    	return null;
+    }
+    
+    private String getLinkGroupDOICode(String linkGroupDoi) throws Exception
+    {
+    	String linkgDoi = null;
+    	if(linkGroupDoi!=null)
+    	{
+    		InputStream linkInputStream = new ByteArrayInputStream(linkGroupDoi.getBytes(Charset.forName("UTF-8")));
+    		SAXBuilder builder = new SAXBuilder();
+    		builder.setExpandEntities(false);
+    		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+    		Document linkgDoc = builder.build(linkInputStream);
+    		Element linkgRoot = linkgDoc.getRootElement();
+    		System.out.println("root element name "+linkgRoot.getName());
+    		Element cpcg = linkgRoot.getChild("linkgg");
+    		List links = cpcg.getChildren("link");
+    		for(int i=0;i<links.size();i++)
+    		{  			
+    			Element linkElement = (Element)links.get(i);
+    			String linkType = linkElement.getAttributeValue("type");
+    			String link = linkElement.getAttributeValue("link");
+    			if(linkType !=null && linkType.equals("doi"))
+    			{
+    				System.out.println("link code="+linkType+" link="+link);
+    				linkgDoi = link;
+    			}
+    		}
+    		return linkgDoi;
+    	 
+    	}
+    	return null;
+    }
+    
+    private String[] getCPCCode(String cpcXmlString) throws Exception
+    {
+    	String[] cpcArr = null;
+    	if(cpcXmlString!=null)
+    	{
+    		InputStream cpcInputStream = new ByteArrayInputStream(cpcXmlString.getBytes(Charset.forName("UTF-8")));
+    		SAXBuilder builder = new SAXBuilder();
+    		builder.setExpandEntities(false);
+    		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+    		Document cpcDoc = builder.build(cpcInputStream);
+    		Element cpcRoot = cpcDoc.getRootElement();
+    		System.out.println("root element name "+cpcRoot.getName());
+    		Element cpcg = cpcRoot.getChild("cpcg");
+    		List cc = cpcg.getChildren("cc");
+    		for(int i=0;i<cc.size();i++)
+    		{
+    			cpcArr = new String[cc.size()];
+    			Element ccElement = (Element)cc.get(i);
+    			String cpcCode = ccElement.getChildText("code");
+    			System.out.println("cpc code="+cpcCode);
+    			cpcArr[i] = cpcCode;
+    		}
+    		return cpcArr;
+    	 
+    	}
+    	return null;
     }
     
     private String getIpcCode(String ipc) throws Exception
@@ -1623,19 +1798,24 @@ public class INSPECCombiner
         //  rs = stmt.executeQuery("select m_id, aaff, su, ab, anum, aoi, aus, aus2,pyr, rnum, pnum, cpat, ciorg, iorg, pas, cdate, cedate, doi, nrtype, doit, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN);
             if (loadN == 3001)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
+            	sqlQuery="select * from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
+                //sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
             }
             else if (loadN == 3002)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn,  LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
+                
+            	sqlQuery="select * from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
+            	//sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn,  LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
             }
             else if(loadN ==8413583)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
+            	sqlQuery="select * from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
+                //sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
             }
             else
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
+            	sqlQuery="select * from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
+                //sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
             }
             System.out.println("Inspect sqlQuery= "+sqlQuery);
             rs = stmt.executeQuery(sqlQuery);
