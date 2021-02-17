@@ -2814,7 +2814,7 @@ public class CombinedXMLWriter
             }
            
             //added by hmo @12-09-2020
-            String freetoreadstatus=rec.getString(EVCombinedRec.FREETOREADSTATUS);
+            //String freetoreadstatus=rec.getString(EVCombinedRec.FREETOREADSTATUS);
             String isopenaccess=rec.getString(EVCombinedRec.ISOPENACESS);
             String openaccess="";
             if(isopenaccess!=null)
