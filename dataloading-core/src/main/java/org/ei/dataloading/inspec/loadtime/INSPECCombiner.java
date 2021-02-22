@@ -849,13 +849,7 @@ public class INSPECCombiner
 	                if(rs.getString("linkg")!=null && rs.getString("linkg").trim().length()>0)
 	                {
 	                	rec.put(EVCombinedRec.LINK_DOI, getLinkGroupDOICode(rs.getString("linkg")));
-	                }
-	                
-	                //3. link DOI
-	                if(rs.getString("linkg")!=null && rs.getString("linkg").trim().length()>0)
-	                {
-	                	rec.put(EVCombinedRec.LINK_DOI, getLinkGroupDOICode(rs.getString("linkg")));
-	                }
+	                }	             
 	                
 	                //4. MIN group(Material Ident. no., Y2k MIN)
 	                if(rs.getString("mat_id")!=null && rs.getString("mat_id").trim().length()>0)
@@ -864,9 +858,9 @@ public class INSPECCombiner
 	                }
 	                
 	                //6. Video group
-	                if(rs.getString("videog")!=null && rs.getString("videog").trim().length()>0)
+	                if(rs.getString("videogroup")!=null && rs.getString("videogroup").trim().length()>0)
 	                {
-	                	rec.put(EVCombinedRec.VIDEO_LOCATION, getVideoLocation(rs.getString("videog")));
+	                	rec.put(EVCombinedRec.VIDEO_LOCATION, getVideoLocation(rs.getString("videogroup")));
 	                }
 	                	                
 	                //7. Funding group
@@ -980,16 +974,17 @@ public class INSPECCombiner
     		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
     		Document videoDoc = builder.build(videogInputStream);
     		Element videogRoot = videoDoc.getRootElement();
-    		System.out.println("root element name "+videogRoot.getName());
-    		Element videog = videogRoot.getChild("videog");
-    		if(videog!=null)
+    		//System.out.println("root element name "+videogRoot.getName());
+    		//Element videog = videogRoot.getChild("videog");
+    		if(videogRoot!=null)
     		{
-    			Element pugs = videog.getChild("pug");
+    			Element pugs = videogRoot.getChild("pug");
     			if(pugs!=null)
     			{
     				videoLoc = pugs.getChildText("loc");   	    		 	 
     			}
-    		}    		
+    		}  
+    		//System.out.println("video location "+videoLoc);
     		return videoLoc;  
     	}
     	return null;
@@ -1006,15 +1001,25 @@ public class INSPECCombiner
     		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
     		Document fundgDoc = builder.build(fundInputStream);
     		Element fundgRoot = fundgDoc.getRootElement();
-    		System.out.println("root element name "+fundgRoot.getName());
-    		Element fundg = fundgRoot.getChild("fundg");
-    		List awardg = fundg.getChildren("awardg");
-    		for(int i=0;i<awardg.size();i++)
-    		{  			
-    			Element awardgElement = (Element)awardg.get(i);
-    			String awardid = awardgElement.getChildText("awardid");
-    			grantID[i] = awardid;
+    		
+    		//Element fundg = fundgRoot.getChild("fundg");
+    		List awardg = fundgRoot.getChildren("awardg");
+    		if(awardg!=null)
+    		{
+	    		grantID = new String[awardg.size()];
+	    		for(int i=0;i<awardg.size();i++)
+	    		{  			
+	    			Element awardgElement = (Element)awardg.get(i);
+	    			List awardidArr = awardgElement.getChildren("awardid");
+	    			for(int j=0;j<awardidArr.size();j++)
+	    			{
+	    				Element awardidElement = (Element)awardidArr.get(j);
+	    				String awardid = awardidElement.getTextTrim();
+	    				grantID[i+j] = awardid;
+	    			}
+	    		}
     		}
+    		//System.out.println("grantID "+String.join(",", grantID));
     		return grantID;
     	 
     	}
@@ -1033,14 +1038,19 @@ public class INSPECCombiner
     		Document fundgDoc = builder.build(fundInputStream);
     		Element fundgRoot = fundgDoc.getRootElement();
     		System.out.println("root element name "+fundgRoot.getName());
-    		Element fundg = fundgRoot.getChild("fundg");
-    		List awardg = fundg.getChildren("awardg");
-    		for(int i=0;i<awardg.size();i++)
-    		{  			
-    			Element awardgElement = (Element)awardg.get(i);
-    			String awardid = awardgElement.getChildText("awardid");
-    			grantAgency[i] = awardid;
+    		//Element fundg = fundgRoot.getChild("fundg");
+    		List awardg = fundgRoot.getChildren("awardg");
+    		grantAgency = new String[awardg.size()];
+    		if(awardg!=null)
+    		{
+	    		for(int i=0;i<awardg.size();i++)
+	    		{  			
+	    			Element awardgElement = (Element)awardg.get(i);
+	    			String funder = awardgElement.getChildText("funder");
+	    			grantAgency[i] = funder;
+	    		}
     		}
+    		//System.out.println("grantAgency "+String.join(",", grantAgency));
     		return grantAgency;
     	 
     	}
@@ -1058,24 +1068,24 @@ public class INSPECCombiner
     		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
     		Document linkgDoc = builder.build(linkInputStream);
     		Element linkgRoot = linkgDoc.getRootElement();
-    		System.out.println("root element name "+linkgRoot.getName());
-    		Element cpcg = linkgRoot.getChild("linkgg");
-    		List links = cpcg.getChildren("link");
+    		//System.out.println("root element name "+linkgRoot.getName());
+    		//Element linkg = linkgRoot.getChild("linkg");
+    		List links = linkgRoot.getChildren("link");
     		for(int i=0;i<links.size();i++)
     		{  			
     			Element linkElement = (Element)links.get(i);
     			String linkType = linkElement.getAttributeValue("type");
     			String link = linkElement.getAttributeValue("link");
-    			if(linkType !=null && linkType.equals("doi"))
-    			{
-    				System.out.println("link code="+linkType+" link="+link);
+    			if(linkType !=null && linkType.equalsIgnoreCase("doi"))
+    			{  				
     				linkgDoi = link;
+    				//System.out.println("linkgDoi "+linkgDoi);
+    				return linkgDoi;
     			}
-    		}
-    		return linkgDoi;
+    		}   		 		
     	 
     	}
-    	return null;
+    	return linkgDoi;
     }
     
     private String[] getCPCCode(String cpcXmlString) throws Exception
@@ -1089,17 +1099,17 @@ public class INSPECCombiner
     		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
     		Document cpcDoc = builder.build(cpcInputStream);
     		Element cpcRoot = cpcDoc.getRootElement();
-    		System.out.println("root element name "+cpcRoot.getName());
-    		Element cpcg = cpcRoot.getChild("cpcg");
-    		List cc = cpcg.getChildren("cc");
+    		
+    		//Element cpcg = cpcRoot.getChild("cpcg");
+    		List cc = cpcRoot.getChildren("cc");
     		for(int i=0;i<cc.size();i++)
     		{
     			cpcArr = new String[cc.size()];
     			Element ccElement = (Element)cc.get(i);
-    			String cpcCode = ccElement.getChildText("code");
-    			System.out.println("cpc code="+cpcCode);
+    			String cpcCode = ccElement.getChildText("code");   			
     			cpcArr[i] = cpcCode;
     		}
+    		//System.out.println("cpc= "+String.join(",", cpcArr));
     		return cpcArr;
     	 
     	}
@@ -1704,6 +1714,14 @@ public class INSPECCombiner
         else if(newdocType.equals("80"))
         {
             list.add("PA");
+        }
+        else if(newdocType.equals("90"))
+        {
+            list.add("RP");
+        }
+        else if(newdocType.equals("95"))
+        {
+            list.add("MM");
         }
         else
         {
