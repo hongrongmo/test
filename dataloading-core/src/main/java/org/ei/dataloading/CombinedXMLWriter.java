@@ -2865,6 +2865,19 @@ public class CombinedXMLWriter
  	            contentObject.put("PROCESSINFO".toLowerCase(),rec.getString(EVCombinedRec.PROCESS_INFO));       
             } 
             
+            //LINKINGDOI
+            //System.out.println("DOI="+rec.getString(EVCombinedRec.LINK_DOI));
+            if(rec.getString(EVCombinedRec.LINK_DOI)!=null && rec.getString(EVCombinedRec.LINK_DOI).length()>0)
+            {          	
+ 	            contentObject.put("LINKINGDOI".toLowerCase(),rec.getString(EVCombinedRec.LINK_DOI));       
+            } 
+            
+            //VIDEOLOCATION
+            //System.out.println("VIDEO_LOCATION="+rec.getString(EVCombinedRec.VIDEO_LOCATION));
+            if(rec.getString(EVCombinedRec.VIDEO_LOCATION)!=null && rec.getString(EVCombinedRec.VIDEO_LOCATION).length()>0)
+            {          	
+ 	            contentObject.put("VIDEOLOCATION".toLowerCase(),rec.getString(EVCombinedRec.VIDEO_LOCATION));       
+            }
             
             
             //output pretty format        
@@ -4675,11 +4688,26 @@ public class CombinedXMLWriter
  	            contentObject.put("SOURCETYPE".toLowerCase(),rec.getString(EVCombinedRec.SOURCE_TYPE));       
             }                           
             
-          //SOURCE TYPE
+           //PROCESSINFO
             if(rec.getString(EVCombinedRec.PROCESS_INFO)!=null && rec.getString(EVCombinedRec.PROCESS_INFO).length()>0)
             {          	
  	            contentObject.put("PROCESSINFO".toLowerCase(),rec.getString(EVCombinedRec.PROCESS_INFO));       
             }  
+            
+           //LINKINGDOI
+            System.out.println("DOI="+rec.getString(EVCombinedRec.LINK_DOI));
+            if(rec.getString(EVCombinedRec.LINK_DOI)!=null && rec.getString(EVCombinedRec.LINK_DOI).length()>0)
+            {          	
+ 	            contentObject.put("LINKINGDOI".toLowerCase(),rec.getString(EVCombinedRec.LINK_DOI));       
+            } 
+            
+            //VIDEOLOCATION
+            System.out.println("VIDEO_LOCATION="+rec.getString(EVCombinedRec.VIDEO_LOCATION));
+            if(rec.getString(EVCombinedRec.VIDEO_LOCATION)!=null && rec.getString(EVCombinedRec.VIDEO_LOCATION).length()>0)
+            {          	
+ 	            contentObject.put("VIDEOLOCATION".toLowerCase(),rec.getString(EVCombinedRec.VIDEO_LOCATION));       
+            }
+            
             //output pretty format        
             //Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
             
