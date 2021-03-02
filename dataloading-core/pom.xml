@@ -236,6 +236,13 @@
     		<version>1.11.23</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-s3</artifactId>
+			<version>1.11.946</version>
+		</dependency>
+		
+		
   		<dependency>
      		 <groupId>org.mockito</groupId>
       		<artifactId>mockito-core</artifactId>

@@ -38,3 +38,4 @@ public class AmazonDynamodbService {
 		return this.dynamodbclient;
 	}
 }
+

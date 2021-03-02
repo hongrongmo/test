@@ -448,6 +448,7 @@ public class ExtractOracleDataForDynamo {
 					dynamodbBatchWriteList.add(item);
 					DynamoDbBatchWrite th = new DynamoDbBatchWrite("Thread" + threadCount, dynamoDbTableName, dynamodbBatchWriteList, dynamodbClient, dynamodb);
 					th.start();
+
 					Thread.sleep(200);
 					dynamodbBatchWriteList = new ArrayList<>();
 					++threadCount;
