@@ -9,9 +9,11 @@ public enum DBMetadata {
 
 	M_ID,
 	ACCESSNUMBER,
+	ANUM,
 	PUI,
 	EID,
 	DOI,
 	LOADNUMBER,
+	LOAD_NUMBER,
 	UPDATENUMBER
 }
