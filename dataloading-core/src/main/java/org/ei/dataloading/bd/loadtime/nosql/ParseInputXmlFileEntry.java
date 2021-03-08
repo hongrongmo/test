@@ -40,11 +40,16 @@ import com.amazonaws.SdkClientException;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.document.DynamoDB;
+import com.amazonaws.services.dynamodbv2.document.Index;
 import com.amazonaws.services.dynamodbv2.document.Item;
 import com.amazonaws.services.dynamodbv2.document.ItemCollection;
+import com.amazonaws.services.dynamodbv2.document.QueryOutcome;
 import com.amazonaws.services.dynamodbv2.document.ScanOutcome;
 import com.amazonaws.services.dynamodbv2.document.Table;
+import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
 import com.amazonaws.services.dynamodbv2.document.spec.ScanSpec;
+import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
+import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 
@@ -74,13 +79,28 @@ public class ParseInputXmlFileEntry {
 	
 	File outDir;
 	
-	private static final String ENCODING="<?xml version=\"1.0\" encoding=\"UTF-8\"?>"; 
-	 private static final String STARTROOTELEMENT = "<bibdataset xsi:schemaLocation=\"http://www.elsevier.com/xml/ani/ani http://www.elsevier.com/xml/ani/compendex.xsd\" xmlns=\"http://www.elsevier.com/xml/ani/ani\" xmlns:aii=\"http://www.elsevier.com/xml/ani/internal\" xmlns:ce=\"http://www.elsevier.com/xml/ani/common\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:ait=\"http://www.elsevier.com/xml/ani/ait\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">";
-	 private static final String ENDROOTELEMENT   ="</bibdataset>";
-	    
 	
 	Map<String,String> dynamoDBPuiMidList = new HashMap<>();
 	Map<String,String> dynamoDBAnMidList = new HashMap<>();
+	
+	public enum db
+	{
+		CPX,
+		GEO,
+		CHM,
+		PCH,
+		ELT,
+		INS,
+		UPT,
+		GRF,
+		CBN,
+		NTI,
+		C84,
+		IBF,
+		KNC,
+		KNA
+	}
+	
 	
 	public ParseInputXmlFileEntry() {}
 	public ParseInputXmlFileEntry(int loadNumber, String databaseName)
@@ -122,10 +142,59 @@ public class ParseInputXmlFileEntry {
 		catch(Exception e)
 		{
 			System.err.println("Unable to scan the table:");
-			System.err.println(e.getMessage());
 			e.printStackTrace();
 		}
 	}
+	
+	// Search DynamoDB table for specific AN/PUI 
+		public void ScanDynamoDBTable(String id)
+		{
+			AmazonDynamoDB dynamodbClient = AmazonDynamodbService.getInstance().getAmazonDynamodbClient();
+			DynamoDB dynamoDB = new DynamoDB(dynamodbClient);
+			Table table = null;
+			Index index = null;
+			QuerySpec spec = null;
+			
+			if(database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("geo") || database.equalsIgnoreCase("pch")
+					|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt"))
+			{
+				dynamoDB.getTable("dl_bd_master_dev");
+				index = table.getIndex("ACCESSNUMBER-index"); 
+				spec = new QuerySpec().withKeyConditionExpression("ACCESSNUMBER  = :v_an")
+						//.withNameMap(new NameMap().with("#d", "accessnumber"))
+						.withValueMap(new ValueMap().withString(":v_an", "201806"));
+				
+			}
+					
+			else if(database.equalsIgnoreCase("ins"))
+			{
+				table = dynamoDB.getTable("dl_ins_master_dev");
+				index = table.getIndex("ANUM-index"); 
+				spec = new QuerySpec().withKeyConditionExpression("ANUM  = :v_an")
+						//.withNameMap(new NameMap().with("#d", "accessnumber"))
+						.withValueMap(new ValueMap().withString(":v_an", id));
+				
+			}
+			
+			try
+			{
+				ItemCollection<QueryOutcome> items = index.query(spec);
+				Iterator<Item> itr = items.iterator();
+				while(itr.hasNext())
+				{
+					Item item = itr.next();
+					//System.out.println(item.toJSONPretty());   only for testing
+					parseDynamoDBJsonResponse(item.toJSONPretty());
+				}
+				
+			}
+			catch(Exception e)
+			{
+				System.err.println("Unable to scan the table:");
+				System.err.println(e.getMessage());
+				e.printStackTrace();
+			}
+		}
 	
 	// Initialization
 	public void init()
@@ -137,7 +206,7 @@ public class ParseInputXmlFileEntry {
 				outDir.mkdir();
 			
 			//Fetch Metadata from DynamoDB table
-			ScanDynamoDBTable();
+			//ScanDynamoDBTable();    // WOrks for scanning whole table
 		}
 		catch(Exception ex)
 		{
@@ -182,7 +251,7 @@ public class ParseInputXmlFileEntry {
 					if(!entry.getName().toLowerCase().startsWith("cpxni"))
 					{
 						br = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
-						writeRecs(br);
+						determineWriteFunction(br);
 					}
 					else
 					{
@@ -197,7 +266,7 @@ public class ParseInputXmlFileEntry {
 				System.out.println("Input Is Xml file: " + inFile);
 				File file = new File(inFile);
 				br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-				writeRecs(br);
+				determineWriteFunction(br);
 			}
 		}
 		catch(IOException ex)
@@ -220,6 +289,18 @@ public class ParseInputXmlFileEntry {
 		}
 	}
 	
+	public void determineWriteFunction(BufferedReader br)
+	{
+		
+		if(database != null && ! database.isBlank())
+		{
+			if(database.toUpperCase().equals(db.CPX.name()))
+				writeRecs(br);
+			else if(database.toUpperCase().equals(db.INS.name()))
+				writeINSRecs(br);
+		}
+	
+	}
 	public void writeRecs(BufferedReader xmlReader)
 	{
 		int recordCount = 0;
@@ -254,8 +335,8 @@ public class ParseInputXmlFileEntry {
 				if(line.indexOf("<item>") > -1)
 				{
 					start = true;
-					sb.append(ENCODING + "\n");
-					sb.append(STARTROOTELEMENT + "\n");
+					sb.append(SchemaConstants.BD_ENCODING + "\n");
+					sb.append(SchemaConstants.BD_STARTROOTELEMENT + "\n");
 					sb.append(line + "\n");
 				}
 				if(line.contains("<itemid idtype=\"PUI\">"))
@@ -277,7 +358,7 @@ public class ParseInputXmlFileEntry {
 				if(line.indexOf("</item>") > -1)
 				{
 					start = false;
-					sb.append(ENDROOTELEMENT);
+					sb.append(SchemaConstants.BD_ENDROOTELEMENT);
 					
 					// Get M_ID for naming file
 					m_id = getMid(pui, accessNumber);
@@ -350,6 +431,136 @@ public class ParseInputXmlFileEntry {
 			System.out.println("Total Time used: " + (endTime - midTime) /1000 + " seconds");
 		}
 	}
+	
+	
+	public void writeINSRecs(BufferedReader xmlReader)
+	{
+		
+		int recordCount = 0;
+		boolean start = false;
+		String line;
+		String m_id = null;
+		
+		StringBuilder sb = new StringBuilder();
+		
+		String accessNumber = null; 
+		FileWriter outFile = null;
+		List<File> filesList = new ArrayList<>();
+		
+		long startTime = System.currentTimeMillis();
+		long midTime = 0, endTime = 0;
+		
+		try {
+			AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
+                    .withRegion(Regions.US_EAST_1)
+                    .build();
+			
+			
+			
+			while((line = xmlReader.readLine()) != null)
+			{
+				// If identified beginning of file, next few lines are for the item record
+				if(start)
+				{
+					sb.append(line + "\n");
+				}
+				// Beginning of Record, start reading
+				if(line.indexOf("<article type=\"current\">") > -1 || (line.indexOf("<article type=\"backfill\">") > -1))
+				{
+					start = true;
+					sb.append(SchemaConstants.INS_ENCODING + "\n");
+					sb.append(SchemaConstants.INS_SCHEMA + "\n");
+					sb.append(SchemaConstants.INS_STARTROOTELEMENT + "\n");
+					sb.append(line + "\n");
+				}
+				
+				
+				// If record didnot match DynamoDB record based on PUI, try accessnumber
+				if(line.contains("<accn>"))
+				{
+					accessNumber = line.substring(line.indexOf(">") +1, line.indexOf("</accn>"));
+					//scan DynamoDB table to fetch M_ID
+					ScanDynamoDBTable(accessNumber);
+					//System.out.println("AN: " + accessNumber);
+					continue;
+				}
+					
+				// End of record, stop reading & retain M_ID for naming out file
+				if(line.indexOf("</article>") > -1)
+				{
+					start = false;
+					sb.append(SchemaConstants.INS_ENDROOTELEMENT);
+					
+					// Get M_ID for naming file
+					m_id = getMid(null, accessNumber);
+					File file = new File(outDir + File.separator +m_id + ".xml");
+					outFile = new FileWriter(file);
+					outFile.write(sb.toString());
+					
+					recordCount ++;
+					
+					// Reset/clear out SB for next record
+					sb.delete(0, sb.length());
+					
+					//close fileWriter
+					close(outFile);
+					filesList.add(file);
+					
+					//endTime = System.currentTimeMillis();
+					//System.out.println("Total Time to generate xml file: " + (endTime - startTime)/1000 + " seconds....");
+					//Write record to S3 bucket
+					
+					
+					//[1] Thread option for individual file upload to S3, slower than transfermanager
+					/*@SuppressWarnings("static-access")
+					//UploadFileToS3Thread thread = new UploadFileToS3Thread("thread" + recordCount, s3Client, bucketName, file.getName(), file.getAbsolutePath(), loadNumber);
+					thread.run(); */
+
+					
+				}
+			}
+
+			midTime = System.currentTimeMillis();
+			System.out.println("Total time to parse inFile: " + (midTime - startTime)/1000 + " seconds");
+			//[2] dir option for whole dir
+			UploadFileToS3 s3upload = new UploadFileToS3();
+			s3upload.uploadDirToS3Bucket(outDir.getAbsolutePath(), s3Client,bucketName, database, Integer.toString(loadNumber), filesList);
+		} 
+			
+		catch (IOException e) 
+		{
+			System.err.println("Problem reading XML FILE!!!!");
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		} 
+		
+		catch(AmazonServiceException ase)
+		{
+			System.out.println("Exception in parsingInput XML file!!!!");
+			System.out.println("Error Message:    " + ase.getMessage());
+			System.out.println("HTTP Status Code: " + ase.getStatusCode());
+			System.out.println("AWS Error Code:   " + ase.getErrorCode());
+			System.out.println("Error Type:       " + ase.getErrorType());
+			System.out.println("Request ID:       " + ase.getRequestId());
+		}
+		catch (SdkClientException e) {
+			System.out.println("Exception in parsingInput XML file!!!!");
+            e.printStackTrace();
+        }
+		catch(Exception e)
+		{
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		}
+		finally
+		{
+			System.out.println("Total Record Count uploaded for file: " + inFile + " : " + recordCount);
+			endTime = System.currentTimeMillis();
+			System.out.println("Total Time used: " + (endTime - midTime) /1000 + " seconds");
+		}
+	}
+	
+	// GET M_ID for given PUI/AccessNumber
 	
 	public String getMid(String pui, String accessNumber) throws Exception {
 		String m_id = null;
@@ -462,15 +673,22 @@ public class ParseInputXmlFileEntry {
 	
 	public void parseDynamoDBJsonResponse(String response) {
 
-		String pui = null;
+		String pui = null, accessNumber = null, m_id = null;;
 		JSONParser parser = new JSONParser();
 		JSONObject json;
 		try {
 			json = (JSONObject) parser.parse(response);
 
-			pui  =json.get("PUI").toString().trim();
-			String accessNumber = json.get("AccessNumber").toString().trim();
-			String m_id = json.get("M_ID").toString().trim();
+			if(json.containsKey("PUI"))
+				pui  =json.get("PUI").toString().trim();
+			
+			if(json.containsKey("ACCESSNUMBER"))
+				accessNumber = json.get("ACCESSNUMBER").toString().trim();
+			if(json.containsKey("ANUM"))
+				accessNumber = json.get("ANUM").toString().trim();
+			
+			if(json.containsKey("M_ID"))
+				m_id = json.get("M_ID").toString().trim();
 			if(pui != null)
 				dynamoDBPuiMidList.put(pui, m_id);
 			if(accessNumber != null)

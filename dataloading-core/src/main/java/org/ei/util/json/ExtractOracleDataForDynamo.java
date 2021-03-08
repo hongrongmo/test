@@ -178,7 +178,7 @@ public class ExtractOracleDataForDynamo {
 							
 						else if(database.equalsIgnoreCase("ins"))
 						{
-							query = "select m_id, anum, load_number, pdoi from ins_master where load_number=?";
+							query = "select m_id, anum, load_number, updatenumber,pdoi from ins_master where load_number=?";
 							stmt = con.prepareStatement(query);
 							stmt.setString(1, loadNumber);
 						}
@@ -223,7 +223,7 @@ public class ExtractOracleDataForDynamo {
 							
 						else if(database.equalsIgnoreCase("ins"))
 						{
-							query = "select m_id, anum, load_number, pdoi from ins_master";
+							query = "select m_id, anum, load_number, updatenumber from ins_master";
 							stmt = con.prepareStatement(query);
 						}
 						else if(database.equalsIgnoreCase("ibf"))
@@ -431,14 +431,29 @@ public class ExtractOracleDataForDynamo {
 				if(rs.getString(DBMetadata.M_ID.toString()) != null && !rs.getString(DBMetadata.M_ID.toString()).isBlank())
 					item.withString(DBMetadata.M_ID.toString(), rs.getString(DBMetadata.M_ID.toString()));
 				
-				if(rs.getString(DBMetadata.PUI.toString()) != null && !rs.getString(DBMetadata.PUI.toString()).isBlank())
-					item.withString(DBMetadata.PUI.toString(), rs.getString(DBMetadata.PUI.toString()));
 				
-				if(rs.getString(DBMetadata.ACCESSNUMBER.toString()) != null && !rs.getString(DBMetadata.ACCESSNUMBER.toString()).isBlank())
-					item.withString(DBMetadata.ACCESSNUMBER.toString(), rs.getString(DBMetadata.ACCESSNUMBER.toString()));
 				
-				if(rs.getString(DBMetadata.LOADNUMBER.toString()) != null && !rs.getString(DBMetadata.LOADNUMBER.toString()).isBlank())
-					item.withString(DBMetadata.LOADNUMBER.toString(), rs.getString(DBMetadata.LOADNUMBER.toString()));
+				if(database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("geo") || database.equalsIgnoreCase("pch")
+						|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt"))
+				{
+					if(rs.getString(DBMetadata.PUI.toString()) != null && !rs.getString(DBMetadata.PUI.toString()).isBlank())
+						item.withString(DBMetadata.PUI.toString(), rs.getString(DBMetadata.PUI.toString()));
+					
+					if(rs.getString(DBMetadata.ACCESSNUMBER.toString()) != null && !rs.getString(DBMetadata.ACCESSNUMBER.toString()).isBlank())
+						item.withString(DBMetadata.ACCESSNUMBER.toString(), rs.getString(DBMetadata.ACCESSNUMBER.toString()));
+					
+					if(rs.getString(DBMetadata.LOADNUMBER.toString()) != null && !rs.getString(DBMetadata.LOADNUMBER.toString()).isBlank())
+						item.withString(DBMetadata.LOADNUMBER.toString(), rs.getString(DBMetadata.LOADNUMBER.toString()));
+				}
+				else if (database.equalsIgnoreCase("ins"))
+				{
+					if(rs.getString(DBMetadata.ANUM.toString()) != null && !rs.getString(DBMetadata.ANUM.toString()).isBlank())
+						item.withString(DBMetadata.ANUM.toString(), rs.getString(DBMetadata.ANUM.toString()));
+				}
+				
+				if(rs.getString(DBMetadata.LOAD_NUMBER.toString()) != null && !rs.getString(DBMetadata.LOAD_NUMBER.toString()).isBlank())
+					item.withString(DBMetadata.LOAD_NUMBER.toString(), rs.getString(DBMetadata.LOAD_NUMBER.toString()));
+				
 				
 				if(rs.getString(DBMetadata.UPDATENUMBER.toString()) != null && !rs.getString(DBMetadata.UPDATENUMBER.toString()).isBlank())
 					item.withString(DBMetadata.UPDATENUMBER.toString(), rs.getString(DBMetadata.UPDATENUMBER.toString()));
