@@ -2,6 +2,7 @@ package org.ei.util.kafka;
 
 
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -41,7 +42,7 @@ public class KafkaService {
     {
     	this.propertyFileName = "./lib/config.properties";
     	this.logFileName = "MyLogFile.log";
-    	init(logFileName,propertyFileName);
+    	//init(logFileName,propertyFileName);
     }
     
     public KafkaService(String processInfo) 
@@ -118,11 +119,41 @@ public class KafkaService {
                 System.out.println("Record value " + record.value());
                 System.out.println("Record partition " + record.partition());
                 System.out.println("Record offset " + record.offset());
+                saveIntoFile(record.key(),record.value());
             });
             // commits the offset of record to broker.
             consumer.commitAsync();
         }
         consumer.close();
+    }
+    
+    private void saveIntoFile(String key, String value) 
+    {
+    	FileWriter out = null;
+    	try
+    	{
+	    	 out = new FileWriter(key+".json");
+	    	 out.write(value);
+	    	 out.flush();
+    	}
+    	catch(IOException e)
+    	{
+    		e.printStackTrace();
+    	}
+    	finally
+    	{
+    		if(out!=null)
+    		{
+    			try
+    			{
+    				out.close();
+    			}
+    			catch(Exception er)
+    	    	{
+    	    		er.printStackTrace();
+    	    	}
+    		}
+    	}
     }
     public void runProducer() {
         Producer<String, String> producer = ProducerCreator.createProducer(this.KAFKA_BROKERS);

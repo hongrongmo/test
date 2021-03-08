@@ -513,7 +513,7 @@ public class EVCombinedRec {
 	public static final String FREETOREADSTATUS = "378";
 	
 	
-	public static final String LINK_DOI = "379";
+	public static final String VIDEO_PUBLISHERNAME = "379";
 	public static final String VIDEO_LOCATION = "380";
 
 

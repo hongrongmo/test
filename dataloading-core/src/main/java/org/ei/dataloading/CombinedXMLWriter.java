@@ -2865,11 +2865,11 @@ public class CombinedXMLWriter
  	            contentObject.put("PROCESSINFO".toLowerCase(),rec.getString(EVCombinedRec.PROCESS_INFO));       
             } 
             
-            //LINKINGDOI
+            //VIDEO_PUBLISHERNAME
             //System.out.println("DOI="+rec.getString(EVCombinedRec.LINK_DOI));
-            if(rec.getString(EVCombinedRec.LINK_DOI)!=null && rec.getString(EVCombinedRec.LINK_DOI).length()>0)
+            if(rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME)!=null && rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME).length()>0)
             {          	
- 	            contentObject.put("LINKINGDOI".toLowerCase(),rec.getString(EVCombinedRec.LINK_DOI));       
+ 	            contentObject.put("VIDEOPUBLISHERNAME".toLowerCase(),rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME));       
             } 
             
             //VIDEOLOCATION
@@ -4694,11 +4694,11 @@ public class CombinedXMLWriter
  	            contentObject.put("PROCESSINFO".toLowerCase(),rec.getString(EVCombinedRec.PROCESS_INFO));       
             }  
             
-           //LINKINGDOI
-            System.out.println("DOI="+rec.getString(EVCombinedRec.LINK_DOI));
-            if(rec.getString(EVCombinedRec.LINK_DOI)!=null && rec.getString(EVCombinedRec.LINK_DOI).length()>0)
+           //VIDEO_PUBLISHERNAME
+            System.out.println("VIDEO_PUBLISHERNAME="+rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME));
+            if(rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME)!=null && rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME).length()>0)
             {          	
- 	            contentObject.put("LINKINGDOI".toLowerCase(),rec.getString(EVCombinedRec.LINK_DOI));       
+ 	            contentObject.put("VIDEO_PUBLISHERNAME".toLowerCase(),rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME));       
             } 
             
             //VIDEOLOCATION

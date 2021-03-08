@@ -843,13 +843,7 @@ public class INSPECCombiner
 	                if(rs.getString("cpc")!=null && rs.getString("cpc").trim().length()>0)
 	                {
 	                	rec.put(EVCombinedRec.ECLA_CODES, getCPCCode(rs.getString("cpc")));
-	                }
-	                
-	                //3. link DOI
-	                if(rs.getString("linkg")!=null && rs.getString("linkg").trim().length()>0)
-	                {
-	                	rec.put(EVCombinedRec.LINK_DOI, getLinkGroupDOICode(rs.getString("linkg")));
-	                }	             
+	                }	                          
 	                
 	                //4. MIN group(Material Ident. no., Y2k MIN)
 	                if(rs.getString("mat_id")!=null && rs.getString("mat_id").trim().length()>0)
@@ -860,7 +854,24 @@ public class INSPECCombiner
 	                //6. Video group
 	                if(rs.getString("videogroup")!=null && rs.getString("videogroup").trim().length()>0)
 	                {
-	                	rec.put(EVCombinedRec.VIDEO_LOCATION, getVideoLocation(rs.getString("videogroup")));
+	                	String[] videoGroup = getVideoLocation(rs.getString("videogroup"));
+	                	if(videoGroup[0]!=null && videoGroup[1]!=null)
+	                	{
+	                		rec.put(EVCombinedRec.VIDEO_LOCATION, videoGroup[0]+", "+videoGroup[1]);
+	                	}
+	                	else if(videoGroup[0]!=null)
+	                	{
+	                		rec.put(EVCombinedRec.VIDEO_LOCATION, videoGroup[0]);
+	                	}
+	                	else if(videoGroup[1]!=null)
+	                	{
+	                		rec.put(EVCombinedRec.VIDEO_LOCATION, videoGroup[1]);
+	                	}
+	                	
+	                	if(videoGroup[2]!=null)
+	                	{
+	                		rec.put(EVCombinedRec.VIDEO_PUBLISHERNAME, videoGroup[2]);
+	                	}	                	
 	                }
 	                	                
 	                //7. Funding group
@@ -963,9 +974,12 @@ public class INSPECCombiner
        }
     }
     
-    private String getVideoLocation(String videoGroup) throws Exception
+    private String[] getVideoLocation(String videoGroup) throws Exception
     {
     	String videoLoc = null;
+    	String videoCountry = null;
+    	String videoPnm = null;
+    	String[] videoLocationGroup = new String[3];
     	if(videoGroup!=null)
     	{
     		InputStream videogInputStream = new ByteArrayInputStream(videoGroup.getBytes(Charset.forName("UTF-8")));
@@ -981,11 +995,13 @@ public class INSPECCombiner
     			Element pugs = videogRoot.getChild("pug");
     			if(pugs!=null)
     			{
-    				videoLoc = pugs.getChildText("loc");   	    		 	 
+    				videoLocationGroup[0] = pugs.getChildText("loc");  //videoLoc 	 
+    				videoLocationGroup[1] = pugs.getChildText("cntry");  //videoCountry
+    				videoLocationGroup[2] = pugs.getChildText("pnm");  //videoPnm
     			}
     		}  
     		//System.out.println("video location "+videoLoc);
-    		return videoLoc;  
+    		return videoLocationGroup;  
     	}
     	return null;
     }
@@ -1717,11 +1733,11 @@ public class INSPECCombiner
         }
         else if(newdocType.equals("90"))
         {
-            list.add("RP");
+            list.add("REP");
         }
         else if(newdocType.equals("95"))
         {
-            list.add("MM");
+            list.add("VID");
         }
         else
         {

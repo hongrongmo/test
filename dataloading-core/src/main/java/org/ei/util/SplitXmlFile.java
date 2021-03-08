@@ -39,6 +39,9 @@ import org.jdom2.output.XMLOutputter;
 import org.jdom2.DocType;
 
 import org.ei.dataloading.knovel.loadtime.*;
+import org.ei.dataloading.awss3.AmazonS3Service;
+import org.ei.dataloading.awss3.UploadFileToS3;
+import org.ei.dataloading.awss3.UploadFileToS3Thread;
 
 public class SplitXmlFile
 {
@@ -878,36 +881,8 @@ public class SplitXmlFile
 		return m_id;
 	    
 	}
+    
+   
 	 
-    /*
-    private static void writeXmlDocumentToXmlFile(Document xmlDocument, String fileName)
-    {
-        TransformerFactory tf = TransformerFactory.newInstance();
-        Transformer transformer;
-        try {
-            transformer = tf.newTransformer();
-             
-            // Uncomment if you do not require XML declaration
-            // transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
-             
-            //Print XML or Logs or Console
-            StringWriter writer = new StringWriter();
-            transformer.transform(new DOMSource(xmlDocument), new StreamResult(writer));
-            String xmlString = writer.getBuffer().toString();   
-            System.out.println(xmlString);          
-             
-            //Write XML to file
-            FileOutputStream outStream = new FileOutputStream(new File(fileName)); 
-            transformer.transform(new DOMSource(xmlDocument), new StreamResult(outStream));
-        } 
-        catch (TransformerException e) 
-        {
-            e.printStackTrace();
-        }
-        catch (Exception e) 
-        {
-            e.printStackTrace();
-        }
-    }
-    */
+    
 }
