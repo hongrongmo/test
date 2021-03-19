@@ -140,7 +140,7 @@ public class KafkaService {
             //print each record.
             consumerRecords.forEach(record -> {
                 System.out.println("Record Key " + record.key());
-              //System.out.println("Record value " + record.value());
+                System.out.println("Record value " + record.value());
                 System.out.println("Record partition " + record.partition());
                 System.out.println("Record offset " + record.offset());
                 saveIntoFile(record.key(),record.value());

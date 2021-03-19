@@ -834,10 +834,12 @@ public class INSPECCombiner
 	                //following items are newly added for new inspec DTD(EVOPS-1068)@2/12/2021 by hmo
 	              
 	                //1. USPTO
+	                /*
 	                if(rs.getString("pauth")!=null && rs.getString("pauth").trim().length()>0)
 	                {
 	                	rec.put(EVCombinedRec.AUTHORITY_CODE, rs.getString("pauth"));
 	                }
+	                
 	                
 	                //2. CPC
 	                if(rs.getString("cpc")!=null && rs.getString("cpc").trim().length()>0)
@@ -879,14 +881,14 @@ public class INSPECCombiner
 	                {
 	                	rec.put(EVCombinedRec.GRANTID, getGrantID(rs.getString("fundg")));
 	                	rec.put(EVCombinedRec.GRANTAGENCY, getGrantAgency(rs.getString("fundg")));
-	                }
+	                }	                	              
 	                
 	                //9. open access
 	                if(rs.getString("openaccess")!=null && rs.getString("openaccess").trim().length()>0)
 	                {
 	                	rec.put(EVCombinedRec.ISOPENACESS, rs.getString("openaccess"));
 	                }
-	                
+	                */
 	                //end of new items for new inspec dtd
 	                
 	                

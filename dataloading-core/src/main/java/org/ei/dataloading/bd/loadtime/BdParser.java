@@ -661,8 +661,9 @@ public class BdParser
 									{
 										
 										//String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));															
+										//System.out.println("ABSTRACT1="+abstractData.getChildren("para",ceNamespace));
 										String abstractString = dictionary.mapEntity(getAbstractMixData(abstractData.getChildren("para",ceNamespace)));
-										//System.out.println("ABSTRACT="+ abstractString);
+										//System.out.println("ABSTRACT2="+ abstractString);
 										if(this.databaseName.equalsIgnoreCase("elt"))
 										{
 											abstractString = abstractString.replaceAll("<inf>", "<sub>");
