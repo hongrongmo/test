@@ -49,23 +49,23 @@ public class BaseTableWriter
 		String path="";
 		String name="";
 		int pathSeperator = filename.lastIndexOf("/");
-		System.out.println("pathSeperator "+pathSeperator);
+		//System.out.println("pathSeperator "+pathSeperator);
 		if(pathSeperator>=0)
 		{
 			path=filename.substring(0,pathSeperator+1);			
 		}
 		name=filename.substring(pathSeperator+1);
-		System.out.println("PATH "+path);
-		System.out.println("NAME "+name);
+		//System.out.println("PATH "+path);
+		//System.out.println("NAME "+name);
 		
 		referenceOut = new PrintWriter(new FileWriter(path+"Reference_"+name));
-		System.out.println("Output Filename "+filename);
-		System.out.println("Reference Output Filename "+path+"Reference_"+name);
+		//System.out.println("Output Filename "+filename);
+		//System.out.println("Reference Output Filename "+path+"Reference_"+name);
 		
 		puiOut = new PrintWriter(new FileWriter(path+"Pui_"+name));
-		System.out.println("Output Filename "+filename);
-		System.out.println("Reference Output Filename "+path+"Reference_"+name);
-		System.out.println("PUI Output Filename "+path+"Pui_"+name);
+		//System.out.println("Output Filename "+filename);
+		//System.out.println("Reference Output Filename "+path+"Reference_"+name);
+		//System.out.println("PUI Output Filename "+path+"Pui_"+name);
 		
 		samePuiPuisecondaryOut = new PrintWriter(new FileWriter(path+"SamePui_PuiSecondary_"+name));
 		
@@ -165,7 +165,7 @@ public class BaseTableWriter
 					}
 					catch(Exception e)
 					{
-						System.out.println("Access Number= "+getAccessionNumber()+" COLUMN NAME= "+thisColumnName);
+						//System.out.println("Access Number= "+getAccessionNumber()+" COLUMN NAME= "+thisColumnName);
 						e.printStackTrace();
 					}
 
@@ -290,14 +290,6 @@ public class BaseTableWriter
 		}
 	    
 	    recordBuf.append(FIELDDELIM);
-	    //added on 20200122 by hongrong for ani5.15
-	    if(record.get("CSXTERM")!=null)
-		{
-	    	recordBuf.append(record.get("CSXTERM"));
-	    	//System.out.println("CSXTERM"+record.get("CSXTERM"));
-		}
-	    
-	    recordBuf.append(FIELDDELIM);
 	    //added on 20200406 by hongrong for ani5.15
 	    if(record.get("COLLABORATION")!=null && ((String)record.get("COLLABORATION")).length()>0)
 		{
@@ -313,7 +305,16 @@ public class BaseTableWriter
 	    	//System.out.println("COLLABORATION AFF term"+record.get("COLLABORATION_AFF"));
 		}
 	    
+	    recordBuf.append(FIELDDELIM);
+	    //added on 20200122 by hongrong for ani5.15
+	    if(record.get("CSXTERM")!=null)
+		{
+	    	recordBuf.append(record.get("CSXTERM"));
+	    	//System.out.println("CSXTERM"+record.get("CSXTERM"));
+		}
+	    
 	   //added on 20201209 by hongrong for EVOPS 1055
+	    /*
 	    recordBuf.append(FIELDDELIM);
 	    if(record.get("FREETOREADSTATUS")!=null)
 		{
@@ -321,7 +322,7 @@ public class BaseTableWriter
 	    	//System.out.println("FREETOREADSTATUS"+record.get("FREETOREADSTATUS"));
 		}
 	    
-	    //*/
+	    */
 	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
 	    {
