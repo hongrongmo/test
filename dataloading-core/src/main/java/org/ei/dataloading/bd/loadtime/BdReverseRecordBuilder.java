@@ -499,7 +499,7 @@ public class BdReverseRecordBuilder
 
     	
     	//DATABASE
-    	if(database.equals("chm"))
+    	if(database.equals("chem"))
     	{
     		file.write("<dbcollection>CHEM</dbcollection>\n");
     	}

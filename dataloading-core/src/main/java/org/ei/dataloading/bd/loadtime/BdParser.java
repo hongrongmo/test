@@ -661,7 +661,7 @@ public class BdParser
 									{
 										
 										//String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));															
-										//System.out.println("ABSTRACT1="+abstractData.getChildren("para",ceNamespace));
+										//System.out.println("ABSTRACT1="+getAbstractMixData(abstractData.getChildren("para",ceNamespace)));
 										String abstractString = dictionary.mapEntity(getAbstractMixData(abstractData.getChildren("para",ceNamespace)));
 										//System.out.println("ABSTRACT2="+ abstractString);
 										if(this.databaseName.equalsIgnoreCase("elt"))
@@ -5191,8 +5191,8 @@ public class BdParser
 				//System.out.println("text1::"+text);
 
 				//text= perl.substitute("s/&/&amp;/g",text); 	//remove by hmo@9/16/2020
-				//text= perl.substitute("s/</&lt;/g",text);   	//remove by hmo@9/16/2020
-				//text= perl.substitute("s/>/&gt;/g",text);		//remove by hmo@9/16/2020
+				text= perl.substitute("s/</&lt;/g",text);   	//restore by hmo@3/21/2021
+				text= perl.substitute("s/>/&gt;/g",text);		//restore by hmo@3/21/2021
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
 				text= perl.substitute("s/\t//g",text);	
