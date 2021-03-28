@@ -663,6 +663,16 @@ public class BdParser
 										//String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));															
 										//System.out.println("ABSTRACT1="+getAbstractMixData(abstractData.getChildren("para",ceNamespace)));
 										String abstractString = dictionary.mapEntity(getAbstractMixData(abstractData.getChildren("para",ceNamespace)));
+										
+										//added by hmo at 3/25/2021 to capture multiple abstract
+										if(record.get("ABSTRACTDATA")!=null)
+										{
+											abstractString = record.get("ABSTRACTDATA")+"<br/><br/>"+abstractString;
+											if(abstractString.indexOf("<br/><br/><br/>")>-1)
+											{
+												abstractString = abstractString.replaceAll("<br/><br/><br/>", "<br/><br/>");
+											}
+										}
 										//System.out.println("ABSTRACT2="+ abstractString);
 										if(this.databaseName.equalsIgnoreCase("elt"))
 										{
@@ -5187,10 +5197,6 @@ public class BdParser
 
 				String text=((Text)o).getText();
 
-			
-				//System.out.println("text1::"+text);
-
-				//text= perl.substitute("s/&/&amp;/g",text); 	//remove by hmo@9/16/2020
 				text= perl.substitute("s/</&lt;/g",text);   	//restore by hmo@3/21/2021
 				text= perl.substitute("s/>/&gt;/g",text);		//restore by hmo@3/21/2021
 				text= perl.substitute("s/\n//g",text);

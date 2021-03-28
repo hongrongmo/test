@@ -225,11 +225,19 @@ public class BdReverseRecordBuilder
          FileWriter file = null;
          String xsdFileName="ani515/ani515.xsd";
          File path = null;
+         Hashtable recordData = new Hashtable();     	
          try
          {
              stmt = con.createStatement();
-            
-             rs = stmt.executeQuery("select *  from bd_master where loadnumber="+loadN+" and database='"+databaseName+"'");
+             if(databaseName.equalsIgnoreCase("cbn"))
+             {
+            	 rs = stmt.executeQuery("select *  from cbn_master where loadnumber="+loadN);
+             }
+             else
+             {
+            	 rs = stmt.executeQuery("select *  from bd_master where loadnumber="+loadN+" and database='"+databaseName+"'");
+             }
+             
              path=new File(databaseName);
          	 if(!path.exists())
              {
@@ -252,7 +260,15 @@ public class BdReverseRecordBuilder
             	 String filename = path+"/"+m_id+".xml";
                  file = new FileWriter(filename);
                  file.write(initialString.toString());
-                 writeRecord(rs,file);
+                 if(databaseName.equalsIgnoreCase("cbn"))
+                 {
+                	 recordData=getCBNBDataFromDatabase(rs);
+                 }
+                 else
+                 {
+                	 recordData=getBDDataFromDatabase(rs);
+                 }
+                 writeRecord(recordData,file);
                  file.write("</bibdataset>");
                  file.close();
                  
@@ -321,98 +337,934 @@ public class BdReverseRecordBuilder
 		
 	}
     
+    public Hashtable getCBNBDataFromDatabase(ResultSet rs)
+    {
+    	Hashtable singleRecordData = new Hashtable();
+    	try 
+    	{
+    		singleRecordData.put("ACCESSNUMBER",rs.getString("ABN"));
+	    	if(rs.getString("CDT")!=null)
+	    	{
+	    		singleRecordData.put("DATESORT", rs.getString("CDT"));
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("COPYRIGHT")!=null)
+	    	{
+	    		singleRecordData.put("COPYRIGHT", dictionary.AlphaEntitysToNumericEntitys(rs.getString("COPYRIGHT")));
+	    	}
+	    	
+	    	
+	    	if(rs.getString("DOI")!=null)
+	    	{
+	    		singleRecordData.put("DOI",rs.getString("DOI"));
+	    	}
+	    	
+	    	if(rs.getString("PUI")!=null)
+	    	{
+	    		singleRecordData.put("PUI", rs.getString("PUI"));
+	    	}
+	    	
+	    	if(rs.getString("DATABASE")!=null)
+	    	{
+	    		singleRecordData.put("DATABASE",rs.getString("DATABASE"));
+	    	}
+	    	*/
+	    	
+	    	if(rs.getString("DOC")!=null)
+	    	{
+	    		singleRecordData.put("CITTYPE",rs.getString("DOC"));
+	    	}
+	    	
+	    	if(rs.getString("LAN")!=null)
+	    	{
+	    		singleRecordData.put("CITATIONLANGUAGE",rs.getString("LAN"));
+	    	}
+	    	
+	    	if(rs.getString("ATL")!=null)
+	    	{
+	    		singleRecordData.put("CITATIONTITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ATL")));
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("AUTHORKEYWORDS")!=null)
+	    	{
+	    		singleRecordData.put("AUTHORKEYWORDS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHORKEYWORDS")));
+	    	}
+	    	
+	    	if(rs.getString("AUTHOR")!=null)
+	    	{
+	    		singleRecordData.put("AUTHOR",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHOR")));
+	    	}
+	    	
+	    	if(rs.getString("AUTHOR_1")!=null)
+	    	{
+	    		singleRecordData.put("AUTHOR_1",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHOR_1")));
+	    	}
+	    	
+	    	if(rs.getString("AFFILIATION")!=null)
+	    	{
+	    		singleRecordData.put("AFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AFFILIATION")));
+	    	}
+	    	
+	    	if(rs.getString("AFFILIATION_1")!=null)
+	    	{
+	    		singleRecordData.put("AFFILIATION_1",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AFFILIATION_1")));
+	    	}
+	    	
+	    	if(rs.getString("CORRESPONDENCENAME")!=null)
+	    	{
+	    		singleRecordData.put("CORRESPONDENCENAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CORRESPONDENCENAME")));
+	    	}
+	    	
+	    	if(rs.getString("correspondenceaffiliation")!=null)
+	    	{
+	    		singleRecordData.put("CORRESPONDENCEAFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("correspondenceaffiliation")));
+	    	}
+	    	
+	    	if(rs.getString("CORRESPONDENCEEADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("CORRESPONDENCEEADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CORRESPONDENCEEADDRESS")));
+	    	}
+	    	
+	    	if(rs.getString("GRANTLIST")!=null)
+	    	{
+	    		singleRecordData.put("GRANTLIST",dictionary.AlphaEntitysToNumericEntitys(rs.getString("GRANTLIST")));
+	    	}
+	    	*/
+	    	if(rs.getString("ABS")!=null)
+	    	{
+	    		singleRecordData.put("ABSTRACTDATA",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABS")));
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("ABSTRACTORIGINAL")!=null)
+	    	{
+	    		singleRecordData.put("ABSTRACTORIGINAL",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABSTRACTORIGINAL")));
+	    	}
+	    	
+	    	if(rs.getString("ABSTRACTPERSPECTIVE")!=null)
+	    	{
+	    		singleRecordData.put("ABSTRACTPERSPECTIVE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABSTRACTPERSPECTIVE")));
+	    	}
+	    	*/
+	    	
+	    	if(rs.getString("SOURCE_TYPE")!=null)
+	    	{
+	    		singleRecordData.put("SOURCETYPE",rs.getString("SOURCE_TYPE"));
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("SOURCECOUNTRY")!=null)
+	    	{
+	    		singleRecordData.put("SOURCECOUNTRY",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCECOUNTRY")));
+	    	}
+	    	
+	    	if(rs.getString("SOURCEID")!=null)
+	    	{
+	    		singleRecordData.put("SOURCEID",rs.getString("SOURCEID"));
+	    	}
+	    	*/
+	    	
+	    	if(rs.getString("FJL")!=null)
+	    	{
+	    		singleRecordData.put("SOURCETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("FJL")));
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("SOURCETITLEABBREV")!=null)
+	    	{
+	    		singleRecordData.put("SOURCETITLEABBREV",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCETITLEABBREV")));
+	    	}
+	    	
+	    	if(rs.getString("TRANSLATEDSOURCETITLE")!=null)
+	    	{
+	    		singleRecordData.put("TRANSLATEDSOURCETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("TRANSLATEDSOURCETITLE")));
+	    	}
+	    	
+	    	if(rs.getString("VOLUMETITLE")!=null)
+	    	{
+	    		singleRecordData.put("VOLUMETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("VOLUMETITLE")));
+	    	}
+	    	
+	    	if(rs.getString("ISSUETITLE")!=null)
+	    	{
+	    		singleRecordData.put("ISSUETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ISSUETITLE")));
+	    	}
+	    	*/
+	    	
+	    	if( rs.getString("ISN")!=null)
+	    	{
+	    		singleRecordData.put("ISSN",rs.getString("ISN"));
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("EISSN")!=null)
+	    	{
+	    		singleRecordData.put("EISSN",rs.getString("EISSN"));
+	    	}
+	    	
+	    	if(rs.getString("ISBN")!=null)
+	    	{
+	    		singleRecordData.put("ISBN",rs.getString("ISBN"));
+	    	}
+	    	*/
+	    	
+	    	if(rs.getString("CDN")!=null)
+	    	{
+	    		singleRecordData.put("CODEN",rs.getString("CDN"));
+	    	}
+	    	
+	    	if(rs.getString("VOL")!=null)
+	    	{
+	    		singleRecordData.put("VOLUME",rs.getString("VOL"));
+	    	}
+	    	
+	    	if(rs.getString("ISS")!=null)
+	    	{
+	    		singleRecordData.put("ISSUE",rs.getString("ISS"));
+	    	}
+	    	
+	    	if(rs.getString("PAG")!=null)
+	    	{
+	    		singleRecordData.put("PAGE",rs.getString("PAG"));
+	    	}
+	    	/*
+	    	if(rs.getString("PAGECOUNT")!=null)
+	    	{
+	    		singleRecordData.put("PAGECOUNT",rs.getString("PAGECOUNT"));
+	    	}
+	    	
+	    	if(rs.getString("ARTICLENUMBER")!=null)
+	    	{
+	    		singleRecordData.put("ARTICLENUMBER",rs.getString("ARTICLENUMBER"));
+	    	}
+	    	*/
+	    	
+	    	if(rs.getString("PBD")!=null)
+	    	{
+	    		singleRecordData.put("PUBLICATIONDATEDATETEXT",rs.getString("PBD"));
+	    	}
+	    	
+	    	
+	    	if(rs.getString("PBN")!=null)
+	    	{
+	    		singleRecordData.put("PUBLICATIONDATE",rs.getString("PBN"));
+	    	}
+	    	
+	    	if(rs.getString("AVL")!=null)
+	    	{
+	    		singleRecordData.put("SOURCEWEBSITE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AVL")));
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("CONTRIBUTOR")!=null)
+	    	{
+	    		singleRecordData.put("CONTRIBUTOR",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTRIBUTOR")));
+	    	}
+	    	
+	    	if(rs.getString("CONTRIBUTORAFFILIATION")!=null)
+	    	{
+	    		singleRecordData.put("CONTRIBUTORAFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTRIBUTORAFFILIATION")));
+	    	}
+	    	
+	    	if(rs.getString("EDITORS")!=null)
+	    	{
+	    		singleRecordData.put("EDITORS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("EDITORS")));
+	    	}
+	    	
+	    	
+	    	if(rs.getString("PUBLISHERNAME")!=null)
+	    	{
+	    		singleRecordData.put("PUBLISHERNAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERNAME")));
+	    	}
+	    	
+	    	if(rs.getString("PUBLISHERADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("PUBLISHERADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERADDRESS")));
+	    	}
+	    	
+	    	if(rs.getString("PUBLISHERELECTRONICADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("PUBLISHERELECTRONICADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERELECTRONICADDRESS")));
+	    	}
+	    	
+	    	if(rs.getString("REPORTNUMBER")!=null)
+	    	{
+	    		singleRecordData.put("REPORTNUMBER",dictionary.AlphaEntitysToNumericEntitys(rs.getString("REPORTNUMBER")));
+	    	}
+	    	
+	    	if(rs.getString("CONFNAME")!=null)
+	    	{
+	    		singleRecordData.put("CONFNAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFNAME")));
+	    	}
+	    	
+	    	if(rs.getString("CONFCATNUMBER")!=null)
+	    	{
+	    		singleRecordData.put("CONFCATNUMBER",rs.getString("CONFCATNUMBER"));
+	    	}
+	    	
+	    	if(rs.getString("CONFCODE")!=null)
+	    	{
+	    		singleRecordData.put("CONFCODE",rs.getString("CONFCODE"));
+	    	}
+	    	
+	    	if(rs.getString("CONFLOCATION")!=null)
+	    	{
+	    		singleRecordData.put("CONFLOCATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFLOCATION")));
+	    	}
+	    	
+	    	if(rs.getString("CONFDATE")!=null)
+	    	{
+	    		singleRecordData.put("CONFDATE",rs.getString("CONFDATE"));
+	    	}
+	    	
+	    	if(rs.getString("CONFSPONSORS")!=null)
+	    	{
+	    		singleRecordData.put("CONFSPONSORS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFSPONSORS")));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEPARTNUMBER")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEPARTNUMBER",rs.getString("CONFERENCEPARTNUMBER"));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEPAGERANGE")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEPAGERANGE",rs.getString("CONFERENCEPAGERANGE"));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEPAGECOUNT")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEPAGECOUNT",rs.getString("CONFERENCEPAGECOUNT"));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEEDITOR")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEEDITOR",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEEDITOR")));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEORGANIZATION")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEORGANIZATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEORGANIZATION")));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEEDITORADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEEDITORADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEEDITORADDRESS"))); 
+	    	}
+	    	
+	    	if(rs.getString("CONTROLLEDTERM")!=null)
+	    	{
+	    		singleRecordData.put("CONTROLLEDTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTROLLEDTERM")));   
+	    	}
+	    	
+	    	if(rs.getString("UNCONTROLLEDTERM")!=null)
+	    	{
+	    		singleRecordData.put("UNCONTROLLEDTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("UNCONTROLLEDTERM"))); 
+	    	}
+	    	
+	    	if(rs.getString("MAINHEADING")!=null)
+	    	{
+	    		singleRecordData.put("MAINHEADING",dictionary.AlphaEntitysToNumericEntitys(rs.getString("MAINHEADING")));      
+	    	}
+
+	    	if(rs.getString("SPECIESTERM")!=null)
+	    	{
+	    		singleRecordData.put("SPECIESTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SPECIESTERM"))); 
+	    	}
+	    	
+	    	if(rs.getString("REGIONALTERM")!=null)
+	    	{	    		
+	    		singleRecordData.put("REGIONALTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("REGIONALTERM")));    
+	    	}
+	    	
+	    	if(rs.getString("TREATMENTCODE")!=null)
+	    	{
+	    		singleRecordData.put("TREATMENTCODE",rs.getString("TREATMENTCODE")); 
+	    	}
+	    	*/
+	    	
+	    	if(rs.getString("SCC")!=null)
+	    	{
+	    		singleRecordData.put("CBNBGEOCLASSIFICATIONCODE",rs.getString("SCC")); 
+	    	}
+	    	
+	    	
+	    	if(rs.getString("SCT")!=null)
+	    	{
+	    		singleRecordData.put("CBNBGEOCLASSIFICATIONDESC",rs.getString("SCT"));    
+	    	}
+	    	
+	    	if(rs.getString("SIC")!=null)
+	    	{
+	    		singleRecordData.put("CBNBSICCLASSIFICATIONDESC",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SIC")));
+	    	}
+	    	
+	    	if(rs.getString("GIC")!=null)
+	    	{
+	    		singleRecordData.put("CBNBSECTORCLASSIFICATIONCODE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("GIC")));
+	    	}
+	    	
+	    	if(rs.getString("GID")!=null)
+	    	{
+	    		singleRecordData.put("CBNBSECTORCLASSIFICATIONDESC",dictionary.AlphaEntitysToNumericEntitys(rs.getString("GID")));
+	    	}
+	    	
+	    	if(rs.getString("SRC")!=null)
+	    	{
+	    		singleRecordData.put("CBETERM",rs.getString("SRC"));
+	    	}
+	    	
+	    	if(rs.getString("EBT")!=null)
+	    	{
+	    		singleRecordData.put("CBBTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("EBT")));
+	    	}
+	    	
+	    	if(rs.getString("CIN")!=null)
+	    	{
+	    		singleRecordData.put("CBCTERM",rs.getString("CIN"));
+	    	}
+	    	
+	    	if(rs.getString("REG")!=null)
+	    	{
+	    		singleRecordData.put("CNCTERM",rs.getString("REG"));
+	    	}
+	    	
+	    	if(rs.getString("CVM")!=null)
+	    	{
+	    		singleRecordData.put("CBATERM",rs.getString("CVM"));
+	    	}
+	    	
+	    	if(rs.getString("OTL")!=null)
+	    	{
+	    		singleRecordData.put("CBNBFOREIGNTITLE",rs.getString("OTL"));
+	    	}
+	    	/*
+	    	if(rs.getString("ISOPENACESS")!=null)
+	    	{
+	    		singleRecordData.put("ISOPENACESS",rs.getString("ISOPENACESS"));
+	    	}
+	    	
+	    	if(rs.getString("SOURCEBIBTEXT")!=null)
+	    	{
+	    		singleRecordData.put("SOURCEBIBTEXT",rs.getString("SOURCEBIBTEXT"));
+	    	}
+	    	
+	    	if(rs.getString("GRANTTEXT")!=null)
+	    	{
+	    		singleRecordData.put("GRANTTEXT",rs.getString("GRANTTEXT"));
+	    	}
+	    	*/
+    	}
+    	catch(Exception e)
+    	{
+    		e.printStackTrace();
+    	}
+    
+		return singleRecordData;
+	}
+    
+    public Hashtable getBDDataFromDatabase(ResultSet rs)
+    {
+    	Hashtable singleRecordData = new Hashtable();
+    	try 
+    	{
+    		singleRecordData.put("ACCESSNUMBER",rs.getString("ACCESSNUMBER"));
+	    	if(rs.getString("DATESORT")!=null)
+	    	{
+	    		singleRecordData.put("DATESORT", rs.getString("DATESORT"));
+	    	}
+	    	
+	    	if(rs.getString("COPYRIGHT")!=null)
+	    	{
+	    		singleRecordData.put("COPYRIGHT", dictionary.AlphaEntitysToNumericEntitys(rs.getString("COPYRIGHT")));
+	    	}
+	    	
+	    	if(rs.getString("DOI")!=null)
+	    	{
+	    		singleRecordData.put("DOI",rs.getString("DOI"));
+	    	}
+	    	
+	    	if(rs.getString("PUI")!=null)
+	    	{
+	    		singleRecordData.put("PUI", rs.getString("PUI"));
+	    	}
+	    	
+	    	if(rs.getString("DATABASE")!=null)
+	    	{
+	    		singleRecordData.put("DATABASE",rs.getString("DATABASE"));
+	    	}
+	    	
+	    	if(rs.getString("CITTYPE")!=null)
+	    	{
+	    		singleRecordData.put("CITTYPE",rs.getString("CITTYPE"));
+	    	}
+	    	
+	    	if(rs.getString("CITATIONLANGUAGE")!=null)
+	    	{
+	    		singleRecordData.put("CITATIONLANGUAGE",rs.getString("CITATIONLANGUAGE"));
+	    	}
+	    	
+	    	if(rs.getString("CITATIONTITLE")!=null)
+	    	{
+	    		singleRecordData.put("CITATIONTITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CITATIONTITLE")));
+	    	}
+	    	
+	    	if(rs.getString("AUTHORKEYWORDS")!=null)
+	    	{
+	    		singleRecordData.put("AUTHORKEYWORDS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHORKEYWORDS")));
+	    	}
+	    	
+	    	if(rs.getString("AUTHOR")!=null)
+	    	{
+	    		singleRecordData.put("AUTHOR",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHOR")));
+	    	}
+	    	
+	    	if(rs.getString("AUTHOR_1")!=null)
+	    	{
+	    		singleRecordData.put("AUTHOR_1",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHOR_1")));
+	    	}
+	    	
+	    	if(rs.getString("AFFILIATION")!=null)
+	    	{
+	    		singleRecordData.put("AFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AFFILIATION")));
+	    	}
+	    	
+	    	if(rs.getString("AFFILIATION_1")!=null)
+	    	{
+	    		singleRecordData.put("AFFILIATION_1",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AFFILIATION_1")));
+	    	}
+	    	
+	    	if(rs.getString("CORRESPONDENCENAME")!=null)
+	    	{
+	    		singleRecordData.put("CORRESPONDENCENAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CORRESPONDENCENAME")));
+	    	}
+	    	
+	    	if(rs.getString("correspondenceaffiliation")!=null)
+	    	{
+	    		singleRecordData.put("CORRESPONDENCEAFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("correspondenceaffiliation")));
+	    	}
+	    	
+	    	if(rs.getString("CORRESPONDENCEEADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("CORRESPONDENCEEADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CORRESPONDENCEEADDRESS")));
+	    	}
+	    	
+	    	if(rs.getString("GRANTLIST")!=null)
+	    	{
+	    		singleRecordData.put("GRANTLIST",dictionary.AlphaEntitysToNumericEntitys(rs.getString("GRANTLIST")));
+	    	}
+	    	
+	    	if(rs.getString("ABSTRACTDATA")!=null)
+	    	{
+	    		singleRecordData.put("ABSTRACTDATA",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABSTRACTDATA")));
+	    	}
+	    	
+	    	if(rs.getString("ABSTRACTORIGINAL")!=null)
+	    	{
+	    		singleRecordData.put("ABSTRACTORIGINAL",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABSTRACTORIGINAL")));
+	    	}
+	    	
+	    	if(rs.getString("ABSTRACTPERSPECTIVE")!=null)
+	    	{
+	    		singleRecordData.put("ABSTRACTPERSPECTIVE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABSTRACTPERSPECTIVE")));
+	    	}
+	    	
+	    	if(rs.getString("SOURCETYPE")!=null)
+	    	{
+	    		singleRecordData.put("SOURCETYPE",rs.getString("SOURCETYPE"));
+	    	}
+	    	
+	    	if(rs.getString("SOURCECOUNTRY")!=null)
+	    	{
+	    		singleRecordData.put("SOURCECOUNTRY",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCECOUNTRY")));
+	    	}
+	    	
+	    	if(rs.getString("SOURCEID")!=null)
+	    	{
+	    		singleRecordData.put("SOURCEID",rs.getString("SOURCEID"));
+	    	}
+	    	
+	    	if(rs.getString("SOURCETITLE")!=null)
+	    	{
+	    		singleRecordData.put("SOURCETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCETITLE")));
+	    	}
+	    	
+	    	if(rs.getString("SOURCETITLEABBREV")!=null)
+	    	{
+	    		singleRecordData.put("SOURCETITLEABBREV",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCETITLEABBREV")));
+	    	}
+	    	
+	    	if(rs.getString("TRANSLATEDSOURCETITLE")!=null)
+	    	{
+	    		singleRecordData.put("TRANSLATEDSOURCETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("TRANSLATEDSOURCETITLE")));
+	    	}
+	    	
+	    	if(rs.getString("VOLUMETITLE")!=null)
+	    	{
+	    		singleRecordData.put("VOLUMETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("VOLUMETITLE")));
+	    	}
+	    	
+	    	if(rs.getString("ISSUETITLE")!=null)
+	    	{
+	    		singleRecordData.put("ISSUETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ISSUETITLE")));
+	    	}
+	    	
+	    	if( rs.getString("ISSN")!=null)
+	    	{
+	    		singleRecordData.put("ISSN",rs.getString("ISSN"));
+	    	}
+	    	
+	    	if(rs.getString("EISSN")!=null)
+	    	{
+	    		singleRecordData.put("EISSN",rs.getString("EISSN"));
+	    	}
+	    	
+	    	if(rs.getString("ISBN")!=null)
+	    	{
+	    		singleRecordData.put("ISBN",rs.getString("ISBN"));
+	    	}
+	    	
+	    	if(rs.getString("CODEN")!=null)
+	    	{
+	    		singleRecordData.put("CODEN",rs.getString("CODEN"));
+	    	}
+	    	
+	    	if(rs.getString("VOLUME")!=null)
+	    	{
+	    		singleRecordData.put("VOLUME",rs.getString("VOLUME"));
+	    	}
+	    	
+	    	if(rs.getString("ISSUE")!=null)
+	    	{
+	    		singleRecordData.put("ISSUE",rs.getString("ISSUE"));
+	    	}
+	    	
+	    	if(rs.getString("PAGE")!=null)
+	    	{
+	    		singleRecordData.put("PAGE",rs.getString("PAGE"));
+	    	}
+	    	
+	    	if(rs.getString("PAGECOUNT")!=null)
+	    	{
+	    		singleRecordData.put("PAGECOUNT",rs.getString("PAGECOUNT"));
+	    	}
+	    	
+	    	if(rs.getString("ARTICLENUMBER")!=null)
+	    	{
+	    		singleRecordData.put("ARTICLENUMBER",rs.getString("ARTICLENUMBER"));
+	    	}
+	    	
+	    	if(rs.getString("PUBLICATIONYEAR")!=null)
+	    	{
+	    		singleRecordData.put("PUBLICATIONYEAR",rs.getString("PUBLICATIONYEAR"));
+	    	}
+	    	
+	    	if(rs.getString("PUBLICATIONDATE")!=null)
+	    	{
+	    		singleRecordData.put("PUBLICATIONDATE",rs.getString("PUBLICATIONDATE"));
+	    	}
+	    	
+	    	if(rs.getString("SOURCEWEBSITE")!=null)
+	    	{
+	    		singleRecordData.put("SOURCEWEBSITE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCEWEBSITE")));
+	    	}
+	    	
+	    	if(rs.getString("CONTRIBUTOR")!=null)
+	    	{
+	    		singleRecordData.put("CONTRIBUTOR",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTRIBUTOR")));
+	    	}
+	    	
+	    	if(rs.getString("CONTRIBUTORAFFILIATION")!=null)
+	    	{
+	    		singleRecordData.put("CONTRIBUTORAFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTRIBUTORAFFILIATION")));
+	    	}
+	    	
+	    	if(rs.getString("EDITORS")!=null)
+	    	{
+	    		singleRecordData.put("EDITORS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("EDITORS")));
+	    	}
+	    	
+	    	if(rs.getString("PUBLISHERNAME")!=null)
+	    	{
+	    		singleRecordData.put("PUBLISHERNAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERNAME")));
+	    	}
+	    	
+	    	if(rs.getString("PUBLISHERADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("PUBLISHERADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERADDRESS")));
+	    	}
+	    	
+	    	if(rs.getString("PUBLISHERELECTRONICADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("PUBLISHERELECTRONICADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERELECTRONICADDRESS")));
+	    	}
+	    	
+	    	if(rs.getString("REPORTNUMBER")!=null)
+	    	{
+	    		singleRecordData.put("REPORTNUMBER",dictionary.AlphaEntitysToNumericEntitys(rs.getString("REPORTNUMBER")));
+	    	}
+	    	
+	    	if(rs.getString("CONFNAME")!=null)
+	    	{
+	    		singleRecordData.put("CONFNAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFNAME")));
+	    	}
+	    	
+	    	if(rs.getString("CONFCATNUMBER")!=null)
+	    	{
+	    		singleRecordData.put("CONFCATNUMBER",rs.getString("CONFCATNUMBER"));
+	    	}
+	    	
+	    	if(rs.getString("CONFCODE")!=null)
+	    	{
+	    		singleRecordData.put("CONFCODE",rs.getString("CONFCODE"));
+	    	}
+	    	
+	    	if(rs.getString("CONFLOCATION")!=null)
+	    	{
+	    		singleRecordData.put("CONFLOCATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFLOCATION")));
+	    	}
+	    	
+	    	if(rs.getString("CONFDATE")!=null)
+	    	{
+	    		singleRecordData.put("CONFDATE",rs.getString("CONFDATE"));
+	    	}
+	    	
+	    	if(rs.getString("CONFSPONSORS")!=null)
+	    	{
+	    		singleRecordData.put("CONFSPONSORS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFSPONSORS")));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEPARTNUMBER")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEPARTNUMBER",rs.getString("CONFERENCEPARTNUMBER"));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEPAGERANGE")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEPAGERANGE",rs.getString("CONFERENCEPAGERANGE"));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEPAGECOUNT")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEPAGECOUNT",rs.getString("CONFERENCEPAGECOUNT"));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEEDITOR")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEEDITOR",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEEDITOR")));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEORGANIZATION")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEORGANIZATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEORGANIZATION")));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEEDITORADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEEDITORADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEEDITORADDRESS"))); 
+	    	}
+	    	
+	    	if(rs.getString("CONTROLLEDTERM")!=null)
+	    	{
+	    		singleRecordData.put("CONTROLLEDTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTROLLEDTERM")));   
+	    	}
+	    	
+	    	if(rs.getString("UNCONTROLLEDTERM")!=null)
+	    	{
+	    		singleRecordData.put("UNCONTROLLEDTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("UNCONTROLLEDTERM"))); 
+	    	}
+	    	
+	    	if(rs.getString("MAINHEADING")!=null)
+	    	{
+	    		singleRecordData.put("MAINHEADING",dictionary.AlphaEntitysToNumericEntitys(rs.getString("MAINHEADING")));      
+	    	}
+	    	
+	    	if(rs.getString("SPECIESTERM")!=null)
+	    	{
+	    		singleRecordData.put("SPECIESTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SPECIESTERM"))); 
+	    	}
+	    	
+	    	if(rs.getString("REGIONALTERM")!=null)
+	    	{	    		
+	    		singleRecordData.put("REGIONALTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("REGIONALTERM")));    
+	    	}
+	    	
+	    	if(rs.getString("TREATMENTCODE")!=null)
+	    	{
+	    		singleRecordData.put("TREATMENTCODE",rs.getString("TREATMENTCODE")); 
+	    	}
+	    	
+	    	if(rs.getString("CLASSIFICATIONCODE")!=null)
+	    	{
+	    		singleRecordData.put("CLASSIFICATIONCODE",rs.getString("CLASSIFICATIONCODE")); 
+	    	}
+	    	
+	    	if(rs.getString("REFCOUNT")!=null)
+	    	{
+	    		singleRecordData.put("REFCOUNT",rs.getString("REFCOUNT"));    
+	    	}
+	    	
+	    	if(rs.getString("MANUFACTURER")!=null)
+	    	{
+	    		singleRecordData.put("MANUFACTURER",dictionary.AlphaEntitysToNumericEntitys(rs.getString("MANUFACTURER")));
+	    	}
+	    	
+	    	if(rs.getString("TRADENAME")!=null)
+	    	{
+	    		singleRecordData.put("TRADENAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("TRADENAME")));
+	    	}
+	    	
+	    	if(rs.getString("SEQUENCEBANKS")!=null)
+	    	{
+	    		singleRecordData.put("SEQUENCEBANKS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SEQUENCEBANKS")));
+	    	}
+	    	
+	    	if(rs.getString("CASREGISTRYNUMBER")!=null)
+	    	{
+	    		singleRecordData.put("CASREGISTRYNUMBER",rs.getString("CASREGISTRYNUMBER"));
+	    	}
+	    	
+	    	if(rs.getString("CHEMICALTERM")!=null)
+	    	{
+	    		singleRecordData.put("CHEMICALTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CHEMICALTERM")));
+	    	}
+	    	
+	    	if(rs.getString("REFERENCE_FLAG")!=null)
+	    	{
+	    		singleRecordData.put("REFERENCE_FLAG",rs.getString("REFERENCE_FLAG"));
+	    	}
+	    	
+	    	if(rs.getString("STANDARDID")!=null)
+	    	{
+	    		singleRecordData.put("STANDARDID",rs.getString("STANDARDID"));
+	    	}
+	    	
+	    	if(rs.getString("STANDARDDESIGNATION")!=null)
+	    	{
+	    		singleRecordData.put("STANDARDDESIGNATION",rs.getString("STANDARDDESIGNATION"));
+	    	}
+	    	
+	    	if(rs.getString("NORMSTANDARDID")!=null)
+	    	{
+	    		singleRecordData.put("NORMSTANDARDID",rs.getString("NORMSTANDARDID"));
+	    	}
+	    	
+	    	if(rs.getString("ISOPENACESS")!=null)
+	    	{
+	    		singleRecordData.put("ISOPENACESS",rs.getString("ISOPENACESS"));
+	    	}
+	    	
+	    	if(rs.getString("SOURCEBIBTEXT")!=null)
+	    	{
+	    		singleRecordData.put("SOURCEBIBTEXT",rs.getString("SOURCEBIBTEXT"));
+	    	}
+	    	
+	    	if(rs.getString("GRANTTEXT")!=null)
+	    	{
+	    		singleRecordData.put("GRANTTEXT",rs.getString("GRANTTEXT"));
+	    	}
+    	}
+    	catch(Exception e)
+    	{
+    		e.printStackTrace();
+    	}
+    	return singleRecordData;
+    }
+    
   
-    public void writeRecord(ResultSet rs, FileWriter file) throws Exception
+    public void writeRecord(Hashtable rs, FileWriter file) throws Exception
     {
     	
     	Calendar calendar = Calendar.getInstance();
     	int year= calendar.get(Calendar.YEAR);
     	int month = calendar.get(Calendar.MONTH);
-    	int day = calendar.get(Calendar.DATE);
+    	int day = calendar.get(Calendar.DATE);    	
     	String time = calendar.getTime().toString();
-    	String dateSort = rs.getString("DATESORT");
-    	String accessnumber = rs.getString("ACCESSNUMBER");
+    	String dateSort = (String)rs.get("DATESORT");
+    	String accessnumber = (String)rs.get("ACCESSNUMBER");
     	this.accessnumber=accessnumber;
-    	String copyright = dictionary.AlphaEntitysToNumericEntitys(rs.getString("COPYRIGHT"));
-    	String doi = rs.getString("DOI");
-    	String pui = rs.getString("PUI");
-    	String database = rs.getString("DATABASE");
-    	String documentType = rs.getString("CITTYPE");
-    	String citationLanguage = rs.getString("CITATIONLANGUAGE");
-    	String citationTitle = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CITATIONTITLE"));
+    	String copyright = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("COPYRIGHT"));
+    	String doi = (String)rs.get("DOI");
+    	String pui = (String)rs.get("PUI");
+    	String database = (String)rs.get("DATABASE");
+    	String documentType = (String)rs.get("CITTYPE");
+    	String citationLanguage = (String)rs.get("CITATIONLANGUAGE");
+    	String citationTitle = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CITATIONTITLE"));
     	//System.out.println("AUTHORKEYWORD1 "+rs.getString("AUTHORKEYWORDS"));
-    	String authorKeyword = dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHORKEYWORDS"));
+    	String authorKeyword = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("AUTHORKEYWORDS"));
     	//System.out.println("AUTHORKEYWORD1 "+authorKeyword);
-    	String authorString = dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHOR"));
-    	String author1String = dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHOR_1"));
-    	String affiliationString = dictionary.AlphaEntitysToNumericEntitys(rs.getString("AFFILIATION"));
-    	String affiliation1String = dictionary.AlphaEntitysToNumericEntitys(rs.getString("AFFILIATION_1"));
-    	String correspondencename = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CORRESPONDENCENAME"));
-    	String correspondenceaffiliation = dictionary.AlphaEntitysToNumericEntitys(rs.getString("correspondenceaffiliation"));
-    	String correspondenceeaddress = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CORRESPONDENCEEADDRESS"));
-    	String grantlist = dictionary.AlphaEntitysToNumericEntitys(rs.getString("GRANTLIST"));
-    	String abstractdata = dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABSTRACTDATA"));
-    	String abstract_original = dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABSTRACTORIGINAL"));
-    	String abstract_perspective = dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABSTRACTPERSPECTIVE"));
-    	String sourcetype = rs.getString("SOURCETYPE");
-    	String sourcecountry = dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCECOUNTRY"));
-    	String sourceid = rs.getString("SOURCEID");
-    	String sourcetitle = dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCETITLE"));
-    	String sourcetitleabbrev = dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCETITLEABBREV"));
-    	String translatedsourcetitle = dictionary.AlphaEntitysToNumericEntitys(rs.getString("TRANSLATEDSOURCETITLE"));
-    	String volumetitle = dictionary.AlphaEntitysToNumericEntitys(rs.getString("VOLUMETITLE"));
-    	String issuetitle = dictionary.AlphaEntitysToNumericEntitys(rs.getString("ISSUETITLE"));
-    	String issn = rs.getString("ISSN");
-    	String eissn = rs.getString("EISSN");
-    	String isbnString = rs.getString("ISBN");
-    	String coden = rs.getString("CODEN");
-    	String volume = rs.getString("VOLUME");
-    	String issue = rs.getString("ISSUE");
-    	String page = rs.getString("PAGE");
-    	String pagecount = rs.getString("PAGECOUNT");
-    	String articlenumber = rs.getString("ARTICLENUMBER");
-    	String publicationyear = rs.getString("PUBLICATIONYEAR");
-    	String publicationdate = rs.getString("PUBLICATIONDATE");
-    	String sourcewebsite = dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCEWEBSITE"));
-    	String contributor = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTRIBUTOR"));
-    	String contributoraffiliation = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTRIBUTORAFFILIATION"));
-    	String editors = dictionary.AlphaEntitysToNumericEntitys(rs.getString("EDITORS"));
-    	String publishername = dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERNAME"));
-    	String publisheraddress = dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERADDRESS"));
-    	String publisherelectronicaddress = dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERELECTRONICADDRESS"));
-    	String reportnumber = dictionary.AlphaEntitysToNumericEntitys(rs.getString("REPORTNUMBER"));
-    	String confname =  dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFNAME"));
-    	String confcatnumber =  rs.getString("CONFCATNUMBER");
-    	String confcode =  rs.getString("CONFCODE");
-    	String conflocation =  dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFLOCATION"));
-    	String confdate =  rs.getString("CONFDATE");
-    	String confsponsors =  dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFSPONSORS"));
-    	String confencepartnumber = rs.getString("CONFERENCEPARTNUMBER");
-    	String confercepagerange = rs.getString("CONFERENCEPAGERANGE");
-    	String confencepagecount = rs.getString("CONFERENCEPAGECOUNT");
-    	String confenceeditor = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEEDITOR"));
-    	String conferenceorganization = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEORGANIZATION"));
-    	String conferenceeditoraddress = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEEDITORADDRESS")); 	
-    	String controlledterm = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTROLLEDTERM"));                  
-    	String uncontrolledterm = dictionary.AlphaEntitysToNumericEntitys(rs.getString("UNCONTROLLEDTERM"));               
-    	String mainheading = dictionary.AlphaEntitysToNumericEntitys(rs.getString("MAINHEADING"));                     
-    	String speciesterm = dictionary.AlphaEntitysToNumericEntitys(rs.getString("SPECIESTERM"));                     
-    	String regionalterm = dictionary.AlphaEntitysToNumericEntitys(rs.getString("REGIONALTERM"));                    
-    	String treatmentcode = rs.getString("TREATMENTCODE");                   
-    	String classificationcode = rs.getString("CLASSIFICATIONCODE");              
-    	String refcount = rs.getString("REFCOUNT");                        
-    	String manufacturer = dictionary.AlphaEntitysToNumericEntitys(rs.getString("MANUFACTURER"));
-    	String tradename = dictionary.AlphaEntitysToNumericEntitys(rs.getString("TRADENAME"));
-    	String sequencebank = dictionary.AlphaEntitysToNumericEntitys(rs.getString("SEQUENCEBANKS"));
-    	String casregistrynumber = rs.getString("CASREGISTRYNUMBER");
-    	String chemicalterm = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CHEMICALTERM"));
-    	String referenceflag = rs.getString("REFERENCE_FLAG");
-    	String standardid = rs.getString("STANDARDID");
-    	String standarddesignation = rs.getString("STANDARDDESIGNATION");
-    	String normstandardid = rs.getString("NORMSTANDARDID");
-    	String isopenaccess = rs.getString("ISOPENACESS");
-    	String sourcebibtext = rs.getString("SOURCEBIBTEXT");
-    	String granttext = rs.getString("GRANTTEXT");
+    	String authorString = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("AUTHOR"));
+    	String author1String = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("AUTHOR_1"));
+    	String affiliationString = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("AFFILIATION"));
+    	String affiliation1String = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("AFFILIATION_1"));
+    	String correspondencename = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CORRESPONDENCENAME"));
+    	String correspondenceaffiliation = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("correspondenceaffiliation"));
+    	String correspondenceeaddress = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CORRESPONDENCEEADDRESS"));
+    	String grantlist = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("GRANTLIST"));
+    	String abstractdata = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("ABSTRACTDATA"));
+    	String abstract_original = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("ABSTRACTORIGINAL"));
+    	String abstract_perspective = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("ABSTRACTPERSPECTIVE"));
+    	String sourcetype = (String)rs.get("SOURCETYPE");
+    	String sourcecountry = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("SOURCECOUNTRY"));
+    	String sourceid = (String)rs.get("SOURCEID");
+    	String sourcetitle = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("SOURCETITLE"));
+    	String sourcetitleabbrev = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("SOURCETITLEABBREV"));
+    	String translatedsourcetitle = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("TRANSLATEDSOURCETITLE"));
+    	String volumetitle = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("VOLUMETITLE"));
+    	String issuetitle = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("ISSUETITLE"));
+    	String issn = (String)rs.get("ISSN");
+    	String eissn = (String)rs.get("EISSN");
+    	String isbnString = (String)rs.get("ISBN");
+    	String coden = (String)rs.get("CODEN");
+    	String volume = (String)rs.get("VOLUME");
+    	String issue = (String)rs.get("ISSUE");
+    	String page = (String)rs.get("PAGE");
+    	String pagecount = (String)rs.get("PAGECOUNT");
+    	String articlenumber = (String)rs.get("ARTICLENUMBER");
+    	String publicationyear = (String)rs.get("PUBLICATIONYEAR");
+    	String publicationdate = (String)rs.get("PUBLICATIONDATE");
+    	String sourcewebsite = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("SOURCEWEBSITE"));
+    	String contributor = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONTRIBUTOR"));
+    	String contributoraffiliation = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONTRIBUTORAFFILIATION"));
+    	String editors = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("EDITORS"));
+    	String publishername = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("PUBLISHERNAME"));
+    	String publisheraddress = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("PUBLISHERADDRESS"));
+    	String publisherelectronicaddress = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("PUBLISHERELECTRONICADDRESS"));
+    	String reportnumber = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("REPORTNUMBER"));
+    	String confname =  dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONFNAME"));
+    	String confcatnumber =  (String)rs.get("CONFCATNUMBER");
+    	String confcode =  (String)rs.get("CONFCODE");
+    	String conflocation =  dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONFLOCATION"));
+    	String confdate =  (String)rs.get("CONFDATE");
+    	String confsponsors =  dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONFSPONSORS"));
+    	String confencepartnumber = (String)rs.get("CONFERENCEPARTNUMBER");
+    	String confercepagerange = (String)rs.get("CONFERENCEPAGERANGE");
+    	String confencepagecount = (String)rs.get("CONFERENCEPAGECOUNT");
+    	String confenceeditor = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONFERENCEEDITOR"));
+    	String conferenceorganization = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONFERENCEORGANIZATION"));
+    	String conferenceeditoraddress = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONFERENCEEDITORADDRESS")); 	
+    	String controlledterm = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONTROLLEDTERM"));                  
+    	String uncontrolledterm = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("UNCONTROLLEDTERM"));               
+    	String mainheading = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("MAINHEADING"));                     
+    	String speciesterm = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("SPECIESTERM"));                     
+    	String regionalterm = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("REGIONALTERM"));                    
+    	String treatmentcode = (String)rs.get("TREATMENTCODE");                   
+    	String classificationcode = (String)rs.get("CLASSIFICATIONCODE");              
+    	String refcount = (String)rs.get("REFCOUNT");                        
+    	String manufacturer = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("MANUFACTURER"));
+    	String tradename = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("TRADENAME"));
+    	String sequencebank = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("SEQUENCEBANKS"));
+    	String casregistrynumber = (String)rs.get("CASREGISTRYNUMBER");
+    	String chemicalterm = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CHEMICALTERM"));
+    	String referenceflag = (String)rs.get("REFERENCE_FLAG");
+    	String standardid = (String)rs.get("STANDARDID");
+    	String standarddesignation = (String)rs.get("STANDARDDESIGNATION");
+    	String normstandardid = (String)rs.get("NORMSTANDARDID");
+    	String isopenaccess = (String)rs.get("ISOPENACESS");
+    	String sourcebibtext = (String)rs.get("SOURCEBIBTEXT");
+    	String granttext = (String)rs.get("GRANTTEXT");
     	
  	
     	file.write("<item>\n");
