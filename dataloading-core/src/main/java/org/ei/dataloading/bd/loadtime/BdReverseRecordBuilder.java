@@ -231,7 +231,7 @@ public class BdReverseRecordBuilder
              stmt = con.createStatement();
              if(databaseName.equalsIgnoreCase("cbn"))
              {
-            	 rs = stmt.executeQuery("select *  from cbn_master where loadnumber="+loadN);
+            	 rs = stmt.executeQuery("select *  from cbn_master where load_number="+loadN);
              }
              else
              {
@@ -343,6 +343,8 @@ public class BdReverseRecordBuilder
     	try 
     	{
     		singleRecordData.put("ACCESSNUMBER",rs.getString("ABN"));
+    		singleRecordData.put("DATABASE","CBNB");
+    		
 	    	if(rs.getString("CDT")!=null)
 	    	{
 	    		singleRecordData.put("DATESORT", rs.getString("CDT"));
@@ -373,7 +375,20 @@ public class BdReverseRecordBuilder
 	    	
 	    	if(rs.getString("DOC")!=null)
 	    	{
-	    		singleRecordData.put("CITTYPE",rs.getString("DOC"));
+	    		String cittype=rs.getString("DOC");
+	    		if(cittype.equalsIgnoreCase("book"))
+	    		{
+	    			cittype="br";
+	    		}
+	    		else if(cittype.equalsIgnoreCase("press release"))
+	    		{
+	    			cittype="pr";
+	    		}
+	    		else if(cittype.equalsIgnoreCase("journal"))
+	    		{
+	    			cittype="ar";
+	    		}
+	    		singleRecordData.put("CITTYPE",cittype);
 	    	}
 	    	
 	    	if(rs.getString("LAN")!=null)
@@ -503,12 +518,12 @@ public class BdReverseRecordBuilder
 	    	{
 	    		singleRecordData.put("EISSN",rs.getString("EISSN"));
 	    	}
-	    	
-	    	if(rs.getString("ISBN")!=null)
-	    	{
-	    		singleRecordData.put("ISBN",rs.getString("ISBN"));
-	    	}
 	    	*/
+	    	if(rs.getString("IBN")!=null)
+	    	{
+	    		singleRecordData.put("ISBN",rs.getString("IBN"));
+	    	}
+	    	
 	    	
 	    	if(rs.getString("CDN")!=null)
 	    	{
@@ -731,9 +746,9 @@ public class BdReverseRecordBuilder
 	    		singleRecordData.put("CNCTERM",rs.getString("REG"));
 	    	}
 	    	
-	    	if(rs.getString("CVM")!=null)
+	    	if(rs.getString("CYM")!=null)
 	    	{
-	    		singleRecordData.put("CBATERM",rs.getString("CVM"));
+	    		singleRecordData.put("CBATERM",rs.getString("CYM"));
 	    	}
 	    	
 	    	if(rs.getString("OTL")!=null)

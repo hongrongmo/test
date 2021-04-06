@@ -78,7 +78,7 @@ public class CBNBBaseTableWriter
         xmlprops.setProperty("LAN", "CITATIONLANGUAGE");
         xmlprops.setProperty("VOL", "VOLUME");
         xmlprops.setProperty("ISS", "ISSUE");
-        xmlprops.setProperty("IBN", "");
+        xmlprops.setProperty("IBN", "ISBN");//added by hmo at 4/5/2021
         xmlprops.setProperty("PBR", "");
         xmlprops.setProperty("PAD", "");
         xmlprops.setProperty("PAG", "PAGE");
