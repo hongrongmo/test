@@ -122,12 +122,12 @@ public class BdParser
 
 	public void setWeekNumber(String weekNumber)
 	{
-		this.weekNumber = weekNumber;
+		BdParser.weekNumber = weekNumber;
 	}
 
 	public String getWeekNumber()
 	{
-		return this.weekNumber;
+		return BdParser.weekNumber;
 	}
 	
 	public void setUpdateNumber(String updatenumber)
@@ -153,7 +153,7 @@ public class BdParser
 	public void setAccessNumber(String accessNumber)
 	{
 		this.accessNumber = accessNumber;
-		this.accessNumberS=accessNumber;
+		BdParser.accessNumberS=accessNumber;
 	}
 
 	public String getAccessNumber()
@@ -359,7 +359,7 @@ public class BdParser
 								right = copyright.getAttributeValue("type");
 								//System.out.println("COPYRIGHT_TYPE is not null "+right);
 							}
-							record.put("COPYRIGHT",dictionary.mapEntity(right));
+							record.put("COPYRIGHT",DataLoadDictionary.mapEntity(right));
 							//System.out.println("COPYRIGHT"+copyright.getTextTrim());
 						}
 
@@ -514,7 +514,7 @@ public class BdParser
 												{
 													authorKeywordBuffer.append(Constants.IDDELIMITER);
 												}
-												authorKeywordBuffer.append(dictionary.mapEntity(authorKeywordString));
+												authorKeywordBuffer.append(DataLoadDictionary.mapEntity(authorKeywordString));
 											}
 										}
 									}
@@ -579,7 +579,7 @@ public class BdParser
 										if(cittextelm.getContent()!=null)
 										{
 											
-											cittext.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
+											cittext.append(DataLoadDictionary.mapEntity(getMixData(cittextelm.getContent())));
 											//cittext.append(getMixData(cittextelm.getContent()));
 										}
 										cittext.append(Constants.IDDELIMITER);
@@ -597,7 +597,7 @@ public class BdParser
 												{
 													cbnbForeignTitle.append(";");
 												}
-												cbnbForeignTitle.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
+												cbnbForeignTitle.append(DataLoadDictionary.mapEntity(getMixData(cittextelm.getContent())));
 												
 											}
 											cittext.append(cittextelm.getAttributeValue("lang",xmlNamespace));
@@ -634,15 +634,23 @@ public class BdParser
 								{
 									String abstractCopyRight=null;
 									String abstractPerspective=null;
+									String abstractlanguage=null;
+									
 									Element abstractData = (Element)abstractDatas.get(f);
 									if(	abstractData.getChild("publishercopyright",noNamespace)!=null)
 									{							
-									 	abstractCopyRight= dictionary.mapEntity(abstractData.getChildTextTrim("publishercopyright",noNamespace));
+									 	abstractCopyRight= DataLoadDictionary.mapEntity(abstractData.getChildTextTrim("publishercopyright",noNamespace));
 										//System.out.println("COPYRIGHT="+ abstractCopyRight);
 									}
 	
-									// abstract data
-	
+									// abstract data									
+									
+									if(abstractData.getAttributeValue("lang",xmlNamespace) != null)
+									{
+										//System.out.println("ABSTRACT_Language "+abstractData.getAttributeValue("lang",xmlNamespace));
+										abstractlanguage=abstractData.getAttributeValue("lang",xmlNamespace);
+									}
+									
 									if(abstractData.getAttributeValue("original") != null)
 									{
 										//System.out.println("ABSTRACT_original "+abstractData.getAttributeValue("original"));
@@ -661,18 +669,17 @@ public class BdParser
 									{
 										
 										//String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));															
-										//System.out.println("ABSTRACT1="+getAbstractMixData(abstractData.getChildren("para",ceNamespace)));
-										String abstractString = dictionary.mapEntity(getAbstractMixData(abstractData.getChildren("para",ceNamespace)));
-										
-										//added by hmo at 3/25/2021 to capture multiple abstract
-										if(record.get("ABSTRACTDATA")!=null)
+									
+										String 	abstractString = DataLoadDictionary.mapEntity(getAbstractMixData(abstractData.getChildren("para",ceNamespace)));
+										if(abstractlanguage==null || abstractlanguage.equalsIgnoreCase("eng"))
 										{
-											abstractString = record.get("ABSTRACTDATA")+"<br/><br/>"+abstractString;
-											if(abstractString.indexOf("<br/><br/><br/>")>-1)
-											{
-												abstractString = abstractString.replaceAll("<br/><br/><br/>", "<br/><br/>");
-											}
+											abstractString = "<div data-language=\"eng\" data-ev-field=\"abstract\">"+abstractString+"</div>";
 										}
+										else
+										{
+											abstractString = "<div data-language=\""+abstractlanguage+"\" data-ev-field=\"abstract\">"+abstractString+"</div>";
+										}
+																				
 										//System.out.println("ABSTRACT2="+ abstractString);
 										if(this.databaseName.equalsIgnoreCase("elt"))
 										{
@@ -800,7 +807,7 @@ public class BdParser
 																Element el = (Element)apicc.get(i);
 																if(el!=null)
 																{
-																	apiccterms.append(dictionary.mapEntity((String)el.getTextTrim()));
+																	apiccterms.append(DataLoadDictionary.mapEntity((String)el.getTextTrim()));
 																}
 																if(i<(apicc.size()-1) )
 																{
@@ -855,14 +862,14 @@ public class BdParser
 													String term = (String)el.getTextTrim();
 													if ( pref != null && pref.length() > 0)
 													{
-														termbuf.append(dictionary.mapEntity(pref)).append("-");
+														termbuf.append(DataLoadDictionary.mapEntity(pref)).append("-");
 													}if(term!=null)
 													{
-														termbuf.append(dictionary.mapEntity(term));
+														termbuf.append(DataLoadDictionary.mapEntity(term));
 													}
 													if ( postf != null && postf.length() > 0)
 													{
-														termbuf.append("-").append(dictionary.mapEntity(postf));
+														termbuf.append("-").append(DataLoadDictionary.mapEntity(postf));
 													}
 													if(apict.length() < 3000)
 													{
@@ -923,15 +930,15 @@ public class BdParser
 																String term = (String)el.getTextTrim();
 																if ( pref != null && pref.length() > 0)
 																{
-																	termbuf.append(dictionary.mapEntity(pref)).append("-");
+																	termbuf.append(DataLoadDictionary.mapEntity(pref)).append("-");
 																}
 																if(term!=null)
 																{
-																	termbuf.append(dictionary.mapEntity(term));
+																	termbuf.append(DataLoadDictionary.mapEntity(term));
 																}
 																if ( postf != null && postf.length() > 0)
 																{
-																	termbuf.append("-").append(dictionary.mapEntity(postf));
+																	termbuf.append("-").append(DataLoadDictionary.mapEntity(postf));
 																}
 																if(apiterms.length() < 3000)
 																{
@@ -976,7 +983,7 @@ public class BdParser
 											if(apiams.getChild("API-term",noNamespace)!= null)
 											{
 												Element ams = apiams.getChild("API-term",noNamespace);
-												apiamsbuf.append(dictionary.mapEntity(ams.getTextTrim()));
+												apiamsbuf.append(DataLoadDictionary.mapEntity(ams.getTextTrim()));
 											}
 											record.put("APIAMS",apiamsbuf.toString());
 										}
@@ -996,7 +1003,7 @@ public class BdParser
 													Element el = (Element)l.get(i);
 													if(el != null)
 													{
-														apiapcbuf.append(dictionary.mapEntity(el.getTextTrim()));
+														apiapcbuf.append(DataLoadDictionary.mapEntity(el.getTextTrim()));
 													}
 													apiapcbuf.append(Constants.IDDELIMITER);
 												}
@@ -1037,7 +1044,7 @@ public class BdParser
 
 													}
 													apicrnbuf.append(Constants.AUDELIMITER);
-													apicrnbuf.append(dictionary.mapEntity(el.getTextTrim()));
+													apicrnbuf.append(DataLoadDictionary.mapEntity(el.getTextTrim()));
 													apicrnbuf.append(Constants.IDDELIMITER);
 												}
 											}
@@ -1201,39 +1208,39 @@ public class BdParser
 									
 									if(funding.getChildText("funding-agency-acronym",xocsNamespace)!=null)
 									{
-										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-acronym",xocsNamespace)));
+										grantBuffer.append(DataLoadDictionary.mapEntity(funding.getChildText("funding-agency-acronym",xocsNamespace)));
 									}
 									
 									grantBuffer.append(Constants.IDDELIMITER);
 									
 									if(funding.getChildText("funding-agency",xocsNamespace)!=null)
 									{
-										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency",xocsNamespace)));
+										grantBuffer.append(DataLoadDictionary.mapEntity(funding.getChildText("funding-agency",xocsNamespace)));
 									}
 									
 									grantBuffer.append(Constants.IDDELIMITER);
 									
 									if(funding.getChildText("funding-agency-id",xocsNamespace)!=null)
 									{
-										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-id",xocsNamespace)));
+										grantBuffer.append(DataLoadDictionary.mapEntity(funding.getChildText("funding-agency-id",xocsNamespace)));
 									}
 									else if(funding.getChildText("funding-agency-ids",xocsNamespace)!=null)
 									{
-										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-ids",xocsNamespace)));
+										grantBuffer.append(DataLoadDictionary.mapEntity(funding.getChildText("funding-agency-ids",xocsNamespace)));
 									}
 									
 									grantBuffer.append(Constants.IDDELIMITER);
 									
 									if(funding.getChildText("funding-agency-country",xocsNamespace)!=null)
 									{
-										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-country",xocsNamespace)));
+										grantBuffer.append(DataLoadDictionary.mapEntity(funding.getChildText("funding-agency-country",xocsNamespace)));
 									}
 									
 									grantBuffer.append(Constants.IDDELIMITER);
 									
 									if(funding.getChildText("funding-agency-matched-string",xocsNamespace)!=null)
 									{
-										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-country",xocsNamespace)));
+										grantBuffer.append(DataLoadDictionary.mapEntity(funding.getChildText("funding-agency-country",xocsNamespace)));
 									}
 																		 
 									if(i<fundinggroup.size()-1)
@@ -1255,7 +1262,7 @@ public class BdParser
 									for (int j = 0; j < fundingTextList.size(); j++)
 									{
 										Element fundingText =(Element) fundingTextList.get(j);
-										fundingTextBuffer.append(dictionary.mapEntity(fundingText.getTextTrim()));
+										fundingTextBuffer.append(DataLoadDictionary.mapEntity(fundingText.getTextTrim()));
 										if(j<fundingTextList.size()-1)
 										{
 											fundingTextBuffer.append(Constants.AUDELIMITER);
@@ -1282,13 +1289,13 @@ public class BdParser
 									
 									if(grant.getChildText("grant-acronym",noNamespace)!=null)
 									{
-										grantBuffer.append(dictionary.mapEntity(grant.getChildText("grant-acronym",noNamespace)));
+										grantBuffer.append(DataLoadDictionary.mapEntity(grant.getChildText("grant-acronym",noNamespace)));
 									}
 									grantBuffer.append(Constants.IDDELIMITER);
 									
 									if(grant.getChildText("grant-agency",noNamespace)!=null)
 									{
-										grantBuffer.append(dictionary.mapEntity(grant.getChildText("grant-agency",noNamespace)));
+										grantBuffer.append(DataLoadDictionary.mapEntity(grant.getChildText("grant-agency",noNamespace)));
 									}
 									if(i<grantgroup.size()-1)
 									{
@@ -1306,7 +1313,7 @@ public class BdParser
 								if(record.get("GRANTTEXT")==null && grantlist.getChild("grant-text",noNamespace)!=null)
 								{
 									String grantText =  grantlist.getChildText("grant-text",noNamespace);
-									record.put("GRANTTEXT",dictionary.mapEntity(grantText));
+									record.put("GRANTTEXT",DataLoadDictionary.mapEntity(grantText));
 									//System.out.println(eid+" get fundingText from grantlist");
 								}
 								
@@ -1503,7 +1510,7 @@ public class BdParser
 							Element refTitletextElement = (Element)refTitletextList.get(j);
 							if(refTitletextElement!=null)
 							{
-								String  refTitletext = dictionary.mapEntity(getMixData(refTitletextElement.getContent()));
+								String  refTitletext = DataLoadDictionary.mapEntity(getMixData(refTitletextElement.getContent()));
 								//System.out.println("REFTITLE="+refTitletext);
 								if(	refTitletext!=null)
 								{
@@ -1546,7 +1553,7 @@ public class BdParser
 					Element refSourceTitle = (Element) refInfo.getChild("ref-sourcetitle",noNamespace);
 					if(	refSourceTitle !=null)
 					{
-						String  refSourceTitleText = dictionary.mapEntity(getMixData(refSourceTitle.getContent()));
+						String  refSourceTitleText = DataLoadDictionary.mapEntity(getMixData(refSourceTitle.getContent()));
 						//change to deal with non-roman characters @08/10/2018
 						//referenceSourcetitle.put(referenceID,dictionary.mapEntity(refSourceTitleText));
 						referenceSourcetitle.put(referenceID,refSourceTitleText);
@@ -1622,7 +1629,7 @@ public class BdParser
 					if(refText!=null)
 					{
 
-						String  refTextValue = dictionary.mapEntity(getMixData(refText.getContent()));
+						String  refTextValue = DataLoadDictionary.mapEntity(getMixData(refText.getContent()));
 						
 						//change to deal with non-roman characters @08/10/2018
 						
@@ -2317,7 +2324,7 @@ public class BdParser
 					cittext.append(Constants.IDDELIMITER);
 					if(cittextelm.getContent()!=null)
 					{
-						cittext.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
+						cittext.append(DataLoadDictionary.mapEntity(getMixData(cittextelm.getContent())));
 					}
 					cittext.append(Constants.IDDELIMITER);
 					if(cittextelm.getAttribute("original")!=null)
@@ -2461,7 +2468,7 @@ public class BdParser
 
 							if(	tradename != null && tradename.length()>0)
 							{
-								tradenamegroupBuffer.append(dictionary.mapEntity(tradename));
+								tradenamegroupBuffer.append(DataLoadDictionary.mapEntity(tradename));
 							}
 
 							tradenamegroupBuffer.append(Constants.IDDELIMITER);
@@ -2509,7 +2516,7 @@ public class BdParser
 							String country = manufacturerElement.getAttributeValue("country");
 							if(country!=null)
 							{
-								manufacturergroupBuffer.append(dictionary.mapEntity(country));
+								manufacturergroupBuffer.append(DataLoadDictionary.mapEntity(country));
 							}
 
 							manufacturergroupBuffer.append(Constants.GROUPDELIMITER);
@@ -2518,7 +2525,7 @@ public class BdParser
 
 							if(	manufacturer != null && manufacturer.length()>0)
 							{
-								manufacturergroupBuffer.append(dictionary.mapEntity(manufacturer));
+								manufacturergroupBuffer.append(DataLoadDictionary.mapEntity(manufacturer));
 							}
 
 							manufacturergroupBuffer.append(Constants.IDDELIMITER);
@@ -2556,7 +2563,7 @@ public class BdParser
 						String sequencebankName = sequencebank.getAttributeValue("name");
 						if(sequencebankName!=null)
 						{
-							sequencebanksBuffer.append(dictionary.mapEntity(sequencebankName));
+							sequencebanksBuffer.append(DataLoadDictionary.mapEntity(sequencebankName));
 						}
 
 						sequencebanksBuffer.append(Constants.IDDELIMITER);
@@ -2616,7 +2623,7 @@ public class BdParser
 
 							if(	chemical_name != null)
 							{
-								chemicalgroupBuffer.append(dictionary.mapEntity(chemical_name));
+								chemicalgroupBuffer.append(DataLoadDictionary.mapEntity(chemical_name));
 							}
 
 							chemicalgroupBuffer.append(Constants.GROUPDELIMITER);
@@ -2728,7 +2735,7 @@ public class BdParser
 
 			if(sourceCountry != null)
 			{
-				record.put("SOURCECOUNTRY", dictionary.mapEntity(sourceCountry));
+				record.put("SOURCECOUNTRY", DataLoadDictionary.mapEntity(sourceCountry));
 				//System.out.println("Country type::"+sourceCountry.getValue());
 			}
 
@@ -2748,7 +2755,7 @@ public class BdParser
 
 			if(sourcetitle != null)
 			{
-				record.put("SOURCETITLE", dictionary.mapEntity(getMixData(sourcetitle.getContent())));
+				record.put("SOURCETITLE", DataLoadDictionary.mapEntity(getMixData(sourcetitle.getContent())));
 				//System.out.println("sourcetitle::"+sourcetitle.getText());
 				//System.out.println("sourcetitle1::"+getMixData(sourcetitle.getText()));
 			}
@@ -2758,7 +2765,7 @@ public class BdParser
 			Element sourcetitleabbrev = (Element)source.getChild("sourcetitle-abbrev",noNamespace);
 			if(sourcetitleabbrev != null)
 			{
-				record.put("SOURCETITLEABBREV", dictionary.mapEntity(getMixData(sourcetitleabbrev.getContent())));
+				record.put("SOURCETITLEABBREV", DataLoadDictionary.mapEntity(getMixData(sourcetitleabbrev.getContent())));
 				//System.out.println("sourcetitleabbrev::"+sourcetitleabbrev.getText());
 			}
 
@@ -2774,7 +2781,7 @@ public class BdParser
 						ttBuffer.append((Constants.AUDELIMITER));
 					}
 					Element translateTitle = (Element)translatedsourcetitle.get(i);
-					ttBuffer.append(dictionary.mapEntity(getMixData(translateTitle.getContent())));
+					ttBuffer.append(DataLoadDictionary.mapEntity(getMixData(translateTitle.getContent())));
 				}
 				record.put("TRANSLATEDSOURCETITLE", (ttBuffer.toString()));
 				//System.out.println("translatedsourcetitle::"+ttBuffer.toString());
@@ -2784,7 +2791,7 @@ public class BdParser
 			Element volumetitle = (Element)source.getChild("volumetitle",noNamespace);
 			if(volumetitle != null)
 			{
-				record.put("VOLUMETITLE", dictionary.mapEntity(getMixData(volumetitle.getContent())));
+				record.put("VOLUMETITLE", DataLoadDictionary.mapEntity(getMixData(volumetitle.getContent())));
 				//System.out.println("volumetitle::"+volumetitle.getText());
 			}
 
@@ -2792,7 +2799,7 @@ public class BdParser
 			Element issuetitle = (Element)source.getChild("issuetitle",noNamespace);
 			if(issuetitle != null)
 			{
-				record.put("ISSUETITLE", dictionary.mapEntity(getMixData(issuetitle.getContent())));
+				record.put("ISSUETITLE", DataLoadDictionary.mapEntity(getMixData(issuetitle.getContent())));
 				//System.out.println("issuetitle::"+issuetitle.getText());
 			}
 
@@ -3024,15 +3031,15 @@ public class BdParser
 				String publicationdateDateText = publicationdate.getChildTextTrim("date-text",noNamespace);
 				if(publicationdateDateText!=null)
 				{
-					record.put("PUBLICATIONDATE",dictionary.mapEntity(publicationdateDateText));
-					record.put("PUBLICATIONDATEDATETEXT",dictionary.mapEntity(publicationdateDateText));
+					record.put("PUBLICATIONDATE",DataLoadDictionary.mapEntity(publicationdateDateText));
+					record.put("PUBLICATIONDATEDATETEXT",DataLoadDictionary.mapEntity(publicationdateDateText));
 				}
 				else
 				{
 					dateString = getDateString(publicationdateYear,publicationdateMonth,publicationdateDay);
 					if(dateString != null)
 					{
-						record.put("PUBLICATIONDATE",dictionary.mapEntity(dateString));
+						record.put("PUBLICATIONDATE",DataLoadDictionary.mapEntity(dateString));
 					}
 				}
 			}//added for AIP
@@ -3049,7 +3056,7 @@ public class BdParser
 					}
 					if(dateString != null)
 					{
-						record.put("PUBLICATIONDATE",dictionary.mapEntity(dateString));
+						record.put("PUBLICATIONDATE",DataLoadDictionary.mapEntity(dateString));
 					}
 			}
 			
@@ -3364,7 +3371,7 @@ public class BdParser
 					{
 						pnBuffer.append((Constants.AUDELIMITER));
 					}
-					pnBuffer.append(dictionary.mapEntity(publisherName));
+					pnBuffer.append(DataLoadDictionary.mapEntity(publisherName));
 				}
 
 				String publisheraddress = publisher.getChildTextTrim("publisheraddress",noNamespace);
@@ -3374,7 +3381,7 @@ public class BdParser
 					{
 						paBuffer.append((Constants.AUDELIMITER));
 					}
-					paBuffer.append(dictionary.mapEntity(publisheraddress));
+					paBuffer.append(DataLoadDictionary.mapEntity(publisheraddress));
 				}
 				else if(publisher.getChild("affiliation",noNamespace)!=null)
 				{
@@ -3482,7 +3489,7 @@ public class BdParser
 					
 					if(confname!= null)
 					{
-						record.put("CONFNAME",dictionary.mapEntity(getMixData(confname.getContent())));
+						record.put("CONFNAME",DataLoadDictionary.mapEntity(getMixData(confname.getContent())));
 					}
 					
 					if(confseriestitle!= null)
@@ -3586,7 +3593,7 @@ public class BdParser
 								confsponsorsBuffer.append(confsponsor.getTextTrim());
 							}
 						}
-						record.put("CONFSPONSORS",dictionary.mapEntity(confsponsorsBuffer.toString()));
+						record.put("CONFSPONSORS",DataLoadDictionary.mapEntity(confsponsorsBuffer.toString()));
 					}
 				}
 
@@ -3632,7 +3639,7 @@ public class BdParser
 				if(editor != null)
 				{
 					//System.out.println("editor "+editor);
-					record.put("CONFERENCEEDITOR",dictionary.mapEntity(editor));
+					record.put("CONFERENCEEDITOR",DataLoadDictionary.mapEntity(editor));
 				}
 			}
 
@@ -3640,14 +3647,14 @@ public class BdParser
 			if(editororganization != null)
 			{
 				//System.out.println("editororganization "+editororganization);
-				record.put("CONFERENCEORGANIZATION",dictionary.mapEntity(editororganization));
+				record.put("CONFERENCEORGANIZATION",DataLoadDictionary.mapEntity(editororganization));
 			}
 
 			String editoraddress = confeditors.getChildTextTrim("editoraddress",noNamespace);
 			if(editoraddress != null)
 			{
 				//System.out.println("editoraddress "+editoraddress);
-				record.put("CONFERENCEEDITORADDRESS",dictionary.mapEntity(editoraddress));
+				record.put("CONFERENCEEDITORADDRESS",DataLoadDictionary.mapEntity(editoraddress));
 			}
 
 		}
@@ -3675,13 +3682,13 @@ public class BdParser
 
 			if(venue!= null)
 			{
-				affBuffer.append(dictionary.mapEntity(venue.getTextTrim()));
+				affBuffer.append(DataLoadDictionary.mapEntity(venue.getTextTrim()));
 			}
 			affBuffer.append(Constants.IDDELIMITER);
 
 			if(afElem!=null)
 			{
-			    affBuffer.append(dictionary.mapEntity(getMixData(afElem.getContent())));
+			    affBuffer.append(DataLoadDictionary.mapEntity(getMixData(afElem.getContent())));
 			}
 			
 			if(afString!=null && afString.trim().length()>0)
@@ -3708,7 +3715,7 @@ public class BdParser
 						{
 							organizationBuffer.append("; ");
 						}
-						organizationBuffer.append(dictionary.mapEntity(getMixData(organization.getContent())));
+						organizationBuffer.append(DataLoadDictionary.mapEntity(getMixData(organization.getContent())));
 					}
 				}
 			}
@@ -3717,7 +3724,7 @@ public class BdParser
 
 			if(affiliation.getChild("address-part",noNamespace)!=null)
 			{
-				affBuffer.append(dictionary.mapEntity(getMixData(affiliation.getChild("address-part",noNamespace).getContent())));
+				affBuffer.append(DataLoadDictionary.mapEntity(getMixData(affiliation.getChild("address-part",noNamespace).getContent())));
 			}
 
 			affBuffer.append(Constants.IDDELIMITER);
@@ -3735,7 +3742,7 @@ public class BdParser
 
 				if(city != null)
 				{
-					cityGroupBuffer.append(dictionary.mapEntity(city));
+					cityGroupBuffer.append(DataLoadDictionary.mapEntity(city));
 					if(state != null || postalCode != null)
 					{
 						cityGroupBuffer.append(", ");
@@ -3744,11 +3751,11 @@ public class BdParser
 
 				if(state != null)
 				{
-					cityGroupBuffer.append(dictionary.mapEntity(state)+" ");
+					cityGroupBuffer.append(DataLoadDictionary.mapEntity(state)+" ");
 				}
 				if(postalCode != null)
 				{
-					cityGroupBuffer.append(dictionary.mapEntity(postalCode));
+					cityGroupBuffer.append(DataLoadDictionary.mapEntity(postalCode));
 				}
 			}
 
@@ -3761,7 +3768,7 @@ public class BdParser
 
 			if(affiliation.getAttributeValue("country")!=null)
 			{
-				affBuffer.append(dictionary.mapEntity(affiliation.getAttributeValue("country")));
+				affBuffer.append(DataLoadDictionary.mapEntity(affiliation.getAttributeValue("country")));
 			}
 			
 			///*use for CAFE data
@@ -3803,13 +3810,13 @@ public class BdParser
 
 			if(venue!= null)
 			{
-				affBuffer.append(dictionary.mapEntity(venue.getTextTrim()));
+				affBuffer.append(DataLoadDictionary.mapEntity(venue.getTextTrim()));
 			}
 			affBuffer.append(Constants.IDDELIMITER);
 
 			if(afElem!=null)
 			{
-				affBuffer.append(dictionary.mapEntity(getMixData(afElem.getContent())));
+				affBuffer.append(DataLoadDictionary.mapEntity(getMixData(afElem.getContent())));
 			}
 			else
 			{
@@ -3828,7 +3835,7 @@ public class BdParser
 							{
 								organizationBuffer.append("; ");
 							}
-							organizationBuffer.append(dictionary.mapEntity(getMixData(organization.getContent())));
+							organizationBuffer.append(DataLoadDictionary.mapEntity(getMixData(organization.getContent())));
 						}
 					}
 				}
@@ -3837,7 +3844,7 @@ public class BdParser
 
 				if(affiliation.getChild("address-part",noNamespace)!=null)
 				{
-					affBuffer.append(dictionary.mapEntity(getMixData(affiliation.getChild("address-part",noNamespace).getContent())));
+					affBuffer.append(DataLoadDictionary.mapEntity(getMixData(affiliation.getChild("address-part",noNamespace).getContent())));
 				}
 
 				affBuffer.append(Constants.GROUPDELIMITER);
@@ -3845,7 +3852,7 @@ public class BdParser
 				StringBuffer cityGroupBuffer = new StringBuffer();
 				if(affiliation.getChild("city-group",noNamespace)!=null)
 				{
-					cityGroupBuffer.append(dictionary.mapEntity(affiliation.getChildTextTrim("city-group",noNamespace)));
+					cityGroupBuffer.append(DataLoadDictionary.mapEntity(affiliation.getChildTextTrim("city-group",noNamespace)));
 				}
 				else
 				{
@@ -3855,7 +3862,7 @@ public class BdParser
 
 					if(city != null)
 					{
-						cityGroupBuffer.append(dictionary.mapEntity(city));
+						cityGroupBuffer.append(DataLoadDictionary.mapEntity(city));
 						if(state != null || postalCode != null)
 						{
 							cityGroupBuffer.append(", ");
@@ -3864,11 +3871,11 @@ public class BdParser
 
 					if(state != null)
 					{
-						cityGroupBuffer.append(dictionary.mapEntity(state)+" ");
+						cityGroupBuffer.append(DataLoadDictionary.mapEntity(state)+" ");
 					}
 					if(postalCode != null)
 					{
-						cityGroupBuffer.append(dictionary.mapEntity(postalCode));
+						cityGroupBuffer.append(DataLoadDictionary.mapEntity(postalCode));
 					}
 				}
 
@@ -3881,7 +3888,7 @@ public class BdParser
 
 				if(affiliation.getAttributeValue("country")!=null)
 				{
-					affBuffer.append(dictionary.mapEntity(affiliation.getAttributeValue("country")));
+					affBuffer.append(DataLoadDictionary.mapEntity(affiliation.getAttributeValue("country")));
 				}
 			}
 				
@@ -3930,12 +3937,12 @@ public class BdParser
 			editorBuffer.append(Constants.IDDELIMITER);
 			if(editor.getChildTextTrim("initials",ceNamespace)!=null)
 			{
-				editorBuffer.append(dictionary.mapEntity(editor.getChildTextTrim("initials",ceNamespace)));
+				editorBuffer.append(DataLoadDictionary.mapEntity(editor.getChildTextTrim("initials",ceNamespace)));
 			}
 			editorBuffer.append(Constants.IDDELIMITER);
 			if(editor.getChild("indexed-name",ceNamespace)!=null)
 			{
-				editorBuffer.append(dictionary.mapEntity(getMixData(editor.getChild("indexed-name",ceNamespace).getContent())));
+				editorBuffer.append(DataLoadDictionary.mapEntity(getMixData(editor.getChild("indexed-name",ceNamespace).getContent())));
 			}
 			editorBuffer.append(Constants.IDDELIMITER);
 			if(editor.getChildTextTrim("degrees",ceNamespace)!=null)
@@ -3945,12 +3952,12 @@ public class BdParser
 			editorBuffer.append(Constants.IDDELIMITER);
 			if(editor.getChild("surname",ceNamespace)!=null)
 			{
-				editorBuffer.append(dictionary.mapEntity(getMixData(editor.getChild("surname",ceNamespace).getContent())));
+				editorBuffer.append(DataLoadDictionary.mapEntity(getMixData(editor.getChild("surname",ceNamespace).getContent())));
 			}
 			editorBuffer.append(Constants.IDDELIMITER);
 			if(editor.getChild("given-name",ceNamespace)!=null)
 			{
-				editorBuffer.append(dictionary.mapEntity(getMixData(editor.getChild("given-name",ceNamespace).getContent())));
+				editorBuffer.append(DataLoadDictionary.mapEntity(getMixData(editor.getChild("given-name",ceNamespace).getContent())));
 			}
 			editorBuffer.append(Constants.IDDELIMITER);
 			if(editor.getChildTextTrim("suffix",ceNamespace)!=null)
@@ -3960,12 +3967,12 @@ public class BdParser
 			editorBuffer.append(Constants.IDDELIMITER);
 			if(editor.getChild("nametext",noNamespace)!=null)
 			{
-				editorBuffer.append(dictionary.mapEntity(getMixData(editor.getChild("nametext",noNamespace).getContent())));
+				editorBuffer.append(DataLoadDictionary.mapEntity(getMixData(editor.getChild("nametext",noNamespace).getContent())));
 			}
 			editorBuffer.append(Constants.IDDELIMITER);
 			if(editor.getChild("text",ceNamespace)!=null)
 			{
-				editorBuffer.append(dictionary.mapEntity(getMixData(editor.getChild("text",ceNamespace).getContent())));
+				editorBuffer.append(DataLoadDictionary.mapEntity(getMixData(editor.getChild("text",ceNamespace).getContent())));
 			}
 		}
 
@@ -4026,25 +4033,25 @@ public class BdParser
 			Element addresspart =(Element) affiliation.getChild("address-part",noNamespace);
 			if(addresspart != null)
 			{
-				aff.setAffAddressPart(dictionary.mapEntity(getMixData(addresspart.getContent())));
+				aff.setAffAddressPart(DataLoadDictionary.mapEntity(getMixData(addresspart.getContent())));
 			}
 			
 			Element citygroup = (Element) affiliation.getChild("city-group",noNamespace);
 			if(citygroup != null)
 			{
-				aff.setAffCityGroup(dictionary.mapEntity(getMixData(citygroup.getContent())));
+				aff.setAffCityGroup(DataLoadDictionary.mapEntity(getMixData(citygroup.getContent())));
 			}
 			
 			Element city = (Element) affiliation.getChild("city",noNamespace);
 			if(city != null)
 			{
-				aff.setAffCity(dictionary.mapEntity(getMixData(city.getContent())));
+				aff.setAffCity(DataLoadDictionary.mapEntity(getMixData(city.getContent())));
 			}
 			
 			Element state = (Element) affiliation.getChild("state",noNamespace);
 			if(state != null)
 			{
-				aff.setAffState(dictionary.mapEntity(state.getText()));
+				aff.setAffState(DataLoadDictionary.mapEntity(state.getText()));
 			}
 			
 			List postalcode = affiliation.getChildren("postal-code",noNamespace);
@@ -4069,7 +4076,7 @@ public class BdParser
 					String zipvalue=elmpostalcode.getTextTrim();
 					if(zipvalue!=null)
 					{			        	
-						zipbuf.append(dictionary.mapEntity(zipvalue));
+						zipbuf.append(DataLoadDictionary.mapEntity(zipvalue));
 						 if(i < postalcode.size()-1)
 					   {
 					          zipbuf.append(", ");
@@ -4081,13 +4088,13 @@ public class BdParser
 			
 			if(zipbuf.length() > 0)
 			{			
-				aff.setAffPostalCode(dictionary.mapEntity(dictionary.mapEntity(zipbuf.toString())));
+				aff.setAffPostalCode(DataLoadDictionary.mapEntity(DataLoadDictionary.mapEntity(zipbuf.toString())));
 			}
 			
 			Element text = (Element) affiliation.getChild("text",ceNamespace);
 			if(text != null)
 			{
-				aff.setAffText(dictionary.mapEntity(getMixData(text.getContent())));
+				aff.setAffText(DataLoadDictionary.mapEntity(getMixData(text.getContent())));
 			}
 			
 			// organization  - mulity element
@@ -4095,7 +4102,7 @@ public class BdParser
 			for (int i = 0; i < organization.size(); i++)
 			{
 				Element oe = (Element) organization.get(i);
-				aff.addAffOrganization(dictionary.mapEntity(getMixData(oe.getContent())));
+				aff.addAffOrganization(DataLoadDictionary.mapEntity(getMixData(oe.getContent())));
 				//System.out.println("AffOrganization="+oe.getText());
 			}
 			
@@ -4143,13 +4150,13 @@ public class BdParser
 				Element indexedName = collaboration.getChild("indexed-name",ceNamespace );
 				if(indexedName != null)
 				{
-					aus.setSurname(dictionary.mapEntity(getMixData(indexedName.getContent())));
+					aus.setSurname(DataLoadDictionary.mapEntity(getMixData(indexedName.getContent())));
 				}
 				
 				Element textName = collaboration.getChild("text",ceNamespace );
 				if(textName != null)
 				{
-					aus.setGivenName(dictionary.mapEntity(getMixData(textName.getContent())));
+					aus.setGivenName(DataLoadDictionary.mapEntity(getMixData(textName.getContent())));
 				}
 			}
 			else
@@ -4188,13 +4195,13 @@ public class BdParser
 				
 				if(initials != null)
 				{
-					aus.setInitials(dictionary.mapEntity(initials.getText()));
+					aus.setInitials(DataLoadDictionary.mapEntity(initials.getText()));
 				}
 				
 				Element degrees = author.getChild("degrees", ceNamespace);
 				if(degrees != null)
 				{
-					aus.setDegrees(dictionary.mapEntity(degrees.getText()));
+					aus.setDegrees(DataLoadDictionary.mapEntity(degrees.getText()));
 				
 				}
 			
@@ -4203,7 +4210,7 @@ public class BdParser
 				if(surname != null)
 				{
 					//System.out.println("surname="+surname.getText());
-					aus.setSurname(dictionary.mapEntity(getMixData(surname.getContent())));
+					aus.setSurname(DataLoadDictionary.mapEntity(getMixData(surname.getContent())));
 				}
 				
 				Element givenName = author.getChild("given-name", ceNamespace);
@@ -4211,20 +4218,20 @@ public class BdParser
 				if(givenName != null)
 				{
 					//System.out.println("given-name="+givenName.getText());
-					aus.setGivenName(dictionary.mapEntity(getMixData(givenName.getContent())));
+					aus.setGivenName(DataLoadDictionary.mapEntity(getMixData(givenName.getContent())));
 					//System.out.println("given-name1="+dictionary.mapEntity(getMixData(givenName.getContent())));
 				}
 				
 				Element suffix = author.getChild("suffix",ceNamespace);
 				if(suffix != null)
 				{
-					aus.setSuffix(dictionary.mapEntity(suffix.getText()));
+					aus.setSuffix(DataLoadDictionary.mapEntity(suffix.getText()));
 				}
 				
 				Element nametext= author.getChild("text", ceNamespace);
 				if(nametext != null)
 				{
-					aus.setNametext(dictionary.mapEntity(getMixData(nametext.getContent())));
+					aus.setNametext(DataLoadDictionary.mapEntity(getMixData(nametext.getContent())));
 				}
 				
 				Element prefferedName= author.getChild("preffered-name", ceNamespace);
@@ -4236,32 +4243,32 @@ public class BdParser
 					Element prefferedNameInitials = prefferedName.getChild("initials",ceNamespace);
 					if(prefferedNameInitials != null)
 					{
-						aus.setPrefnameInitials(dictionary.mapEntity(getMixData(prefferedNameInitials.getContent())));
+						aus.setPrefnameInitials(DataLoadDictionary.mapEntity(getMixData(prefferedNameInitials.getContent())));
 					}
 					
 					Element prefferedNameIndexedname = prefferedName.getChild("indexed_name",ceNamespace);
 					if(prefferedNameIndexedname != null)
 					{
 					
-						aus.setPrefnameIndexedname(dictionary.mapEntity(getMixData(prefferedNameIndexedname.getContent())));
+						aus.setPrefnameIndexedname(DataLoadDictionary.mapEntity(getMixData(prefferedNameIndexedname.getContent())));
 					}
 					
 					Element prefferedNameDegrees = prefferedName.getChild("degree", ceNamespace);
 					if(prefferedNameDegrees != null)
 					{
-						aus.setPrefnameDegrees(dictionary.mapEntity(prefferedNameDegrees.getText()));
+						aus.setPrefnameDegrees(DataLoadDictionary.mapEntity(prefferedNameDegrees.getText()));
 					}
 					
 					Element prefferedNameSurname = prefferedName.getChild("surname", ceNamespace);
 					if(prefferedNameSurname != null)
 					{
-						aus.setPrefnameSurname(dictionary.mapEntity(getMixData(prefferedNameSurname.getContent())));
+						aus.setPrefnameSurname(DataLoadDictionary.mapEntity(getMixData(prefferedNameSurname.getContent())));
 					}
 					Element prefferedNameGivenname = prefferedName.getChild("given-name", ceNamespace);
 					
 					if(prefferedNameGivenname != null)
 					{
-						aus.setPrefnameGivenname(dictionary.mapEntity(getMixData(prefferedNameGivenname.getContent())));
+						aus.setPrefnameGivenname(DataLoadDictionary.mapEntity(getMixData(prefferedNameGivenname.getContent())));
 					}
 				}
 				// end of prefferedName block
@@ -4284,7 +4291,7 @@ public class BdParser
 				Element altName = author.getChild("alt-name", ceNamespace);
 				if(altName != null)
 				{
-					aus.setAltName(dictionary.mapEntity(altName.getTextTrim()));
+					aus.setAltName(DataLoadDictionary.mapEntity(altName.getTextTrim()));
 					//System.out.println(this.accessNumber+" altName1= "+altName.getTextTrim());
 				}
 				
@@ -4338,25 +4345,25 @@ public class BdParser
 			Element addresspart =(Element) affiliation.getChild("address-part",noNamespace);
 			if(addresspart != null)
 			{
-				aff.setAffAddressPart(dictionary.mapEntity(getMixData(addresspart.getContent())));
+				aff.setAffAddressPart(DataLoadDictionary.mapEntity(getMixData(addresspart.getContent())));
 			}
 
 			Element citygroup = (Element) affiliation.getChild("city-group",noNamespace);
 			if(citygroup != null)
 			{
-			    aff.setAffCityGroup(dictionary.mapEntity(getMixData(citygroup.getContent())));
+			    aff.setAffCityGroup(DataLoadDictionary.mapEntity(getMixData(citygroup.getContent())));
 			}
 
 			Element city = (Element) affiliation.getChild("city",noNamespace);
 			if(city != null)
 			{
-			    aff.setAffCity(dictionary.mapEntity(getMixData(city.getContent())));
+			    aff.setAffCity(DataLoadDictionary.mapEntity(getMixData(city.getContent())));
 			}
 
 			Element state = (Element) affiliation.getChild("state",noNamespace);
 			if(state != null)
 			{
-				aff.setAffState(dictionary.mapEntity(state.getText()));
+				aff.setAffState(DataLoadDictionary.mapEntity(state.getText()));
 			}
 
 			List postalcode = affiliation.getChildren("postal-code",noNamespace);
@@ -4381,7 +4388,7 @@ public class BdParser
 			        String zipvalue=elmpostalcode.getTextTrim();
 			        if(zipvalue!=null)
 			        {			        	
-			        	zipbuf.append(dictionary.mapEntity(zipvalue));
+			        	zipbuf.append(DataLoadDictionary.mapEntity(zipvalue));
 			        	 if(i < postalcode.size()-1)
 				         {
 				                zipbuf.append(", ");
@@ -4393,13 +4400,13 @@ public class BdParser
 			if(zipbuf.length() > 0)
 			{
 				
-			    aff.setAffPostalCode(dictionary.mapEntity(dictionary.mapEntity(zipbuf.toString())));
+			    aff.setAffPostalCode(DataLoadDictionary.mapEntity(DataLoadDictionary.mapEntity(zipbuf.toString())));
 			}
 
 			Element text = (Element) affiliation.getChild("text",ceNamespace);
 			if(text != null)
 			{
-				aff.setAffText(dictionary.mapEntity(getMixData(text.getContent())));
+				aff.setAffText(DataLoadDictionary.mapEntity(getMixData(text.getContent())));
 			}
 
 			// organization  - mulity element
@@ -4407,7 +4414,7 @@ public class BdParser
 			for (int i = 0; i < organization.size(); i++)
 			{
 				Element oe = (Element) organization.get(i);
-				aff.addAffOrganization(dictionary.mapEntity(getMixData(oe.getContent())));
+				aff.addAffOrganization(DataLoadDictionary.mapEntity(getMixData(oe.getContent())));
 			}
 			
 			this.affid = this.affid+1;
@@ -4476,19 +4483,19 @@ public class BdParser
 		    Element indexedName = author.getChild("indexed-name",ceNamespace );
 		    if(indexedName != null)
 		    {
-		        aus.setIndexedName(dictionary.mapEntity(getMixData(indexedName.getContent())));
+		        aus.setIndexedName(DataLoadDictionary.mapEntity(getMixData(indexedName.getContent())));
 		    }
 
 		    Element initials = author.getChild("initials",ceNamespace );
 		    if(initials != null)
 		    {
-			    aus.setInitials(dictionary.mapEntity(initials.getText()));
+			    aus.setInitials(DataLoadDictionary.mapEntity(initials.getText()));
 		    }
 
 		    Element degrees = author.getChild("degrees", ceNamespace);
 		    if(degrees != null)
 		    {
-		        aus.setDegrees(dictionary.mapEntity(degrees.getText()));
+		        aus.setDegrees(DataLoadDictionary.mapEntity(degrees.getText()));
 
 		    }
 
@@ -4497,7 +4504,7 @@ public class BdParser
 		    {
 		    	String sureNameString = getMixData(surname.getContent());
 		    	//outputIntoCharNumber(sureNameString);	
-		        aus.setSurname(dictionary.mapEntity(getMixData(surname.getContent())));
+		        aus.setSurname(DataLoadDictionary.mapEntity(getMixData(surname.getContent())));
 		    	//aus.setSurname(getMixData(surname.getContent()));
 		    }
 
@@ -4506,20 +4513,20 @@ public class BdParser
 		    {
 		    	String givenNameString = getMixData(givenName.getContent());
 		    	//outputIntoCharNumber(givenNameString);		
-		        aus.setGivenName(dictionary.mapEntity(getMixData(givenName.getContent())));
+		        aus.setGivenName(DataLoadDictionary.mapEntity(getMixData(givenName.getContent())));
 		    	//aus.setGivenName(getMixData(givenName.getContent()));
 		    }
 
 		    Element suffix = author.getChild("suffix",ceNamespace);
 		    if(suffix != null)
 		    {
-		        aus.setSuffix(dictionary.mapEntity(suffix.getText()));
+		        aus.setSuffix(DataLoadDictionary.mapEntity(suffix.getText()));
 		    }
 
 		    Element nametext= author.getChild("nametext", ceNamespace);
 		    if(nametext != null)
 		    {
-		        aus.setNametext(dictionary.mapEntity(getMixData(nametext.getContent())));
+		        aus.setNametext(DataLoadDictionary.mapEntity(getMixData(nametext.getContent())));
 		    }
 
 		    Element prefferedName= author.getChild("preffered-name", ceNamespace);
@@ -4531,32 +4538,32 @@ public class BdParser
 		       Element prefferedNameInitials = prefferedName.getChild("initials",ceNamespace);
 		       if(prefferedNameInitials != null)
 		       {
-		           aus.setPrefnameInitials(dictionary.mapEntity(getMixData(prefferedNameInitials.getContent())));
+		           aus.setPrefnameInitials(DataLoadDictionary.mapEntity(getMixData(prefferedNameInitials.getContent())));
 		       }
 
 		       Element prefferedNameIndexedname = prefferedName.getChild("indexed_name",ceNamespace);
 		       if(prefferedNameIndexedname != null)
 		       {
 
-		           aus.setPrefnameIndexedname(dictionary.mapEntity(getMixData(prefferedNameIndexedname.getContent())));
+		           aus.setPrefnameIndexedname(DataLoadDictionary.mapEntity(getMixData(prefferedNameIndexedname.getContent())));
 		       }
 
 		       Element prefferedNameDegrees = prefferedName.getChild("degree", ceNamespace);
 		       if(prefferedNameDegrees != null)
 		       {
-		           aus.setPrefnameDegrees(dictionary.mapEntity(prefferedNameDegrees.getText()));
+		           aus.setPrefnameDegrees(DataLoadDictionary.mapEntity(prefferedNameDegrees.getText()));
 		       }
 
 		       Element prefferedNameSurname = prefferedName.getChild("surname", ceNamespace);
 		       if(prefferedNameSurname != null)
 		       {
-		           aus.setPrefnameSurname(dictionary.mapEntity(getMixData(prefferedNameSurname.getContent())));
+		           aus.setPrefnameSurname(DataLoadDictionary.mapEntity(getMixData(prefferedNameSurname.getContent())));
 		       }
 		       Element prefferedNameGivenname = prefferedName.getChild("given-name", ceNamespace);
 
 		       if(prefferedNameGivenname != null)
 		       {
-		           aus.setPrefnameGivenname(dictionary.mapEntity(getMixData(prefferedNameGivenname.getContent())));
+		           aus.setPrefnameGivenname(DataLoadDictionary.mapEntity(getMixData(prefferedNameGivenname.getContent())));
 		       }
 		    }
 		    // end of prefferedName block
@@ -4579,7 +4586,7 @@ public class BdParser
 		    Element altName = author.getChild("alt-name", ceNamespace);
 		    if(altName != null)
 		    {
-		        aus.setAltName(dictionary.mapEntity(altName.getTextTrim()));
+		        aus.setAltName(DataLoadDictionary.mapEntity(altName.getTextTrim()));
 		        //System.out.println(this.accessNumber+" altName1= "+altName.getTextTrim());
 		    }
 		    
@@ -4990,7 +4997,7 @@ public class BdParser
 						for(int j=0;j<descriptorList.size();j++)
 						{
 							Element descriptor = (Element)descriptorList.get(j);
-							String mainterm = dictionary.mapEntity(getMixData(descriptor.getChild("mainterm",noNamespace).getContent()));
+							String mainterm = DataLoadDictionary.mapEntity(getMixData(descriptor.getChild("mainterm",noNamespace).getContent()));
 							if(mhBuffer.length()>0)
 							{
 								mhBuffer.append(Constants.AUDELIMITER);

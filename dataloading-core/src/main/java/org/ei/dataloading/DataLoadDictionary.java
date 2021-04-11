@@ -929,7 +929,8 @@ public class DataLoadDictionary
     					case 993 :sb.append("&#x03E1");break; //GREEK SMALL LETTER SAMPI Ï¡
     					
     					//New Cyrillic (Russian) Alphabetic Entities in HTML 5
-    					
+    					/*//remove russian translation by hmo at 04/10/2021, using the number
+    					 
     					case 1025 :sb.append("&IOcy;");break; 	//Cyrillic capital IO, like capital E umlaut
     					case 1026 :sb.append("&DJcy;");break; 	//Cyrillic capital letter DJ
     					case 1027 :sb.append("&GJcy;");break; 	//Cyrillic capital letter GJ
@@ -1022,7 +1023,7 @@ public class DataLoadDictionary
     					case 1116 :sb.append("&kjcy;");break; 	//Cyrillic small letter kj
     					case 1118 :sb.append("&ubrcy;");break; 	//Cyrillic small letter u breve
     					case 1119 :sb.append("&dzcy;");break; 	//Cyrillic small letter dz
-    					
+    					*/
     					
     					case 1488 :sb.append("&aleph;");break; 	//hebrew aleph
     					case 2155 :sb.append("&#2155;");break; 	//Fraction one fifth

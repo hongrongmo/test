@@ -17,6 +17,8 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
 import org.ei.util.kafka.*;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
 import org.ei.dataloading.*;
 import org.ei.dataloading.georef.loadtime.*;
 import org.ei.dataloading.lookup.LookupEntry;
@@ -29,6 +31,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ConcurrentHashMap;
 import java.text.*;
+import java.io.*;
+import org.jdom2.*; 
 //import java.math.*;
 
 public class XmlCombiner extends CombinerTimestamp {
@@ -729,6 +733,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     String abString = getStringFromClob(rs.getClob("ABSTRACTDATA"));
                     if (abString != null)
                     {
+                    	abString = getAbstract(abString);
                         rec.put(EVCombinedRec.ABSTRACT, abString);
                     }
 
@@ -1503,10 +1508,49 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
         	}
         	
         
-        }
-	}//try
-    
-}
+	        }
+		}//try
+	    
+	}
+	
+	private String getAbstract(String abstractData) throws Exception
+	{
+		String abstractContent=null;
+		if(abstractData.indexOf("<div")<0)
+		{
+			return abstractData;
+		}
+		abstractData="<abstract>"+abstractData.replaceAll("&", "&amp;")+"</abstract>";
+		InputStream inputStream = new ByteArrayInputStream(abstractData.getBytes());
+		SAXBuilder builder = new SAXBuilder();
+		builder.setExpandEntities(false);
+		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+		Document doc = builder.build(inputStream);
+		Element abstractRoot = doc.getRootElement();
+		List lt = abstractRoot.getChildren("div");
+		boolean gotAbstract = false;
+		for (int i = 0; i < lt.size(); i++)
+		{
+			Element oe = (Element) lt.get(i);
+			String abstractLanguage = oe.getAttributeValue("data-language");
+			//System.out.println("ELEMENT NAME="+oe.getName());
+			//System.out.println("ELEMENT Value="+oe.getTextTrim());
+			//System.out.println("ELEMENT LANGUAGE="+abstractLanguage);
+			if(!gotAbstract)
+			{
+				abstractContent=oe.getTextTrim();
+				if(abstractLanguage.equalsIgnoreCase("eng"))
+				{
+					gotAbstract=true;
+					continue;
+				}
+			}
+			
+		}
+		//System.out.println("ABSTRACT CONTENT="+abstractContent);
+		return abstractContent;
+	}
+	
 	private String prepareStandardDesignation(String input) {
 		String output = null;
 		if (input != null) {
