@@ -123,7 +123,6 @@ public class SharedSearchSearch {
 					logger.info("ProcessResponse finish.....");
 				}
 					
-				
 				finishTime = System.currentTimeMillis() - finishTime;
 				//System.out.println("Time to processResponse: " + finishTime);			// only for debugging
 			}
