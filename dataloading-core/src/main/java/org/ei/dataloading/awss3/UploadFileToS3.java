@@ -80,7 +80,6 @@ public class UploadFileToS3 {
 
 		uploadDirToS3Bucket();
 
-
 	}
 
 	public static void uploadDirToS3Bucket() throws AmazonClientException,AmazonServiceException
