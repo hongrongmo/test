@@ -6566,7 +6566,7 @@ public class NewDataTesting
 		try {
 			s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
 			//object = s3Client.getObject( new GetObjectRequest("hmoroger", "midFromFast_DR.out"));
-			object = s3Client.getObject( new GetObjectRequest("hmoroger", key));
+			object = s3Client.getObject( new GetObjectRequest("sccontent-ani-xml-prod", key));
 			InputStream objectData = object.getObjectContent();
 			 System.out.println("Content-Type: "  + 
 					 object.getObjectMetadata().getContentType());
@@ -6608,7 +6608,7 @@ public class NewDataTesting
 			breader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(breader.readLine().replaceAll("><", ">\n<").getBytes())));
 
 			//File file = new File(s3Dir.getName()+"/"+key+".xml");
-			File file = new File("./testS3/"+key);
+			File file = new File("./testS3/"+key+".xml");
 
 			if (!file.exists()) 
 			{

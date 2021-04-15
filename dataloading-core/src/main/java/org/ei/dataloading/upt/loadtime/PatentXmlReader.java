@@ -1773,15 +1773,17 @@ public class PatentXmlReader
 				
 				if(description.length()>clobSize)
 				{
-					System.out.println("Size of description of patent number "+patentNumber+" is "+description.length());
+					//System.out.println("Size of description of patent number "+patentNumber+" is "+description.length());
 					description=trimStringToLength(description,clobSize);
 					
 				}
 				out.print(substituteChars(description));
+				
 				//out.print(substituteChars((String)singleRecord.get("DESCRIPTION")));
 				//System.out.println("DESCRIPTION= "+substituteChars((String)singleRecord.get("DESCRIPTION")));
 			}
-						
+			
+			
 			out.print(DELIM);
 			
 			if(singleRecord.get("MODIFIED_DATE_OF_PUBLIC")!=null)
@@ -1789,7 +1791,7 @@ public class PatentXmlReader
 				out.print((String)singleRecord.get("MODIFIED_DATE_OF_PUBLIC"));
 				//System.out.println("MODIFIED_DATE_OF_PUBLIC= "+(String)singleRecord.get("MODIFIED_DATE_OF_PUBLIC"));
 			}
-			//*/ -- end of VTW project
+			// -- end of VTW project
 			
 			out.print(DELIM);
 			//DOCDB-STATUS
@@ -2369,10 +2371,14 @@ public class PatentXmlReader
 				//description
 				//Element description = rec.getChild("description");
 				//modify to capture all descriptions
-				List description = rec.getChildren("description");
-				if(description != null)
+				List descriptionsgroup = rec.getChildren("description");
+				if(descriptionsgroup != null)
 				{				
-					setDescription(record,description); //OK
+					//setDescription(record,description); //OK change by hmo at 4/12/2021
+					StringBuffer descriptionbuffer = new StringBuffer();				
+					descriptionbuffer.append(getMixData(descriptionsgroup,new StringBuffer()));
+					record.put("DESCRIPTION", descriptionbuffer.toString());
+					
 				}
 				
 				//claims
