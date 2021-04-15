@@ -1220,6 +1220,11 @@ public class BdReverseRecordBuilder
     	String grantlist = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("GRANTLIST"));
     	String abstractdata = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("ABSTRACTDATA"));
     	String abstract_original = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("ABSTRACTORIGINAL"));
+		if(abstract_original==null)
+		{
+		   abstract_original="y";
+		}
+		
     	String abstract_perspective = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("ABSTRACTPERSPECTIVE"));
     	String sourcetype = (String)rs.get("SOURCETYPE");
     	String sourcecountry = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("SOURCECOUNTRY"));
@@ -1859,6 +1864,7 @@ public class BdReverseRecordBuilder
 			}
 			else
 			{
+				file.write("<titletext>"+cleanBadCharacters(ctitle)+"</titletext>\n");
 				//System.out.println("record "+accessnumber+" citation-title format is wrong");
 			}
 			
