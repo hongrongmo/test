@@ -97,6 +97,7 @@ import com.amazonaws.services.sqs.model.DeleteQueueRequest;
 import com.amazonaws.services.sqs.model.Message;
 import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.SendMessageRequest;
+import com.amazonaws.SdkClientException;
 import org.apache.commons.text.StringEscapeUtils;
 
 import org.elasticsearch.action.index.IndexResponse;
@@ -130,6 +131,7 @@ import org.ei.util.kafka.*;
 import org.ei.dataloading.awss3.AmazonS3Service;
 import org.ei.dataloading.awss3.UploadFileToS3;
 import org.ei.dataloading.awss3.UploadFileToS3Thread;
+
 
 
 public class NewDataTesting
@@ -443,6 +445,10 @@ public class NewDataTesting
 		else if(action.contentEquals("comparedatabasees"))
 		{
 			test.runDatabaseTOES(updateNumber, tableName1, database, server, tableName);
+		}
+		else if(action.contentEquals("testS3"))
+		{
+			test.testS3(updateNumber);
 		}
 		else
 		{
@@ -6444,6 +6450,44 @@ public class NewDataTesting
 		    }
 		}
 	}
+	
+	public static void testS3(String fileObjKeyName) throws IOException {
+        Regions clientRegion = Regions.US_EAST_1;
+        String bucketName = "ev-datasets-cert/cpx/";
+        String stringObjKeyName = "testS3String";
+        //String fileObjKeyName = "*** File object key name ***";
+        //String fileName = "*** Path to file to upload ***";
+        String fileName = fileObjKeyName;
+
+        try {
+            //This code expects that you have AWS credentials set up per:
+            // https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html
+            AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
+                    .withRegion(clientRegion)
+                    .build();
+
+            // Upload a text string as a new object.
+            s3Client.putObject(bucketName, stringObjKeyName, "Uploaded String Object");
+
+            // Upload a file as a new object with ContentType and title specified.
+            PutObjectRequest request = new PutObjectRequest(bucketName, fileObjKeyName, new File(fileName));
+            ObjectMetadata metadata = new ObjectMetadata();
+            metadata.setContentType("text/xml");
+            metadata.addUserMetadata("title", "someTitle");
+            request.setMetadata(metadata);
+            s3Client.putObject(request);
+        } catch (AmazonServiceException e) {
+            // The call was transmitted successfully, but Amazon S3 couldn't process 
+            // it, so it returned an error response.
+            e.printStackTrace();
+        } catch (SdkClientException e) {
+            // Amazon S3 couldn't be contacted for a response, or the client
+            // couldn't parse the response from Amazon S3.
+            e.printStackTrace();
+        } catch (Exception e) {
+        	e.printStackTrace();
+        }
+    }
 	
 	/*
 	private void testS3(String currDir)
