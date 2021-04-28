@@ -104,7 +104,7 @@ public class CafeLoading
             for(int i=0;i<cafekeyList.size();i++)
             {
             	String cafeKey = (String)cafekeyList.get(i);
-            	String cafeDoc = getCafeDocFromS3(cafeKey);
+            	String cafeDoc = c.getCafeDocFromS3(cafeKey);
             }
         }
         catch(Exception e)

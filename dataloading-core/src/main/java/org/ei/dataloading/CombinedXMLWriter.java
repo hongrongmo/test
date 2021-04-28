@@ -4695,14 +4695,14 @@ public class CombinedXMLWriter
             }  
             
            //VIDEO_PUBLISHERNAME
-            System.out.println("VIDEO_PUBLISHERNAME="+rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME));
+            //System.out.println("VIDEO_PUBLISHERNAME="+rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME));
             if(rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME)!=null && rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME).length()>0)
             {          	
  	            contentObject.put("VIDEO_PUBLISHERNAME".toLowerCase(),rec.getString(EVCombinedRec.VIDEO_PUBLISHERNAME));       
             } 
             
             //VIDEOLOCATION
-            System.out.println("VIDEO_LOCATION="+rec.getString(EVCombinedRec.VIDEO_LOCATION));
+            //System.out.println("VIDEO_LOCATION="+rec.getString(EVCombinedRec.VIDEO_LOCATION));
             if(rec.getString(EVCombinedRec.VIDEO_LOCATION)!=null && rec.getString(EVCombinedRec.VIDEO_LOCATION).length()>0)
             {          	
  	            contentObject.put("VIDEOLOCATION".toLowerCase(),rec.getString(EVCombinedRec.VIDEO_LOCATION));       

@@ -1520,34 +1520,54 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 		{
 			return abstractData;
 		}
-		abstractData="<abstract>"+abstractData.replaceAll("&", "&amp;")+"</abstract>";
-		InputStream inputStream = new ByteArrayInputStream(abstractData.getBytes());
-		SAXBuilder builder = new SAXBuilder();
-		builder.setExpandEntities(false);
-		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
-		Document doc = builder.build(inputStream);
-		Element abstractRoot = doc.getRootElement();
-		List lt = abstractRoot.getChildren("div");
-		boolean gotAbstract = false;
-		for (int i = 0; i < lt.size(); i++)
+		
+		//for resolving JDOMParser mapping for tags like <p>,..
+		abstractData=abstractData.replaceAll("&", "&amp;");
+		abstractData=abstractData.replaceAll("<","&lt;").replaceAll(">", "&gt;");
+		abstractData=abstractData.replaceAll("&lt;div","<div").replaceAll("abstract\"&gt;","abstract\">");
+		abstractData=abstractData.replaceAll("&lt;/div&gt;","</div>");
+		
+		abstractData="<abstract>"+abstractData+"</abstract>";
+		
+		//HH added only for debugging of issue of elemnt type "p"
+		//System.out.println("AbstractData: " + abstractData);
+		try
 		{
-			Element oe = (Element) lt.get(i);
-			String abstractLanguage = oe.getAttributeValue("data-language");
-			//System.out.println("ELEMENT NAME="+oe.getName());
-			//System.out.println("ELEMENT Value="+oe.getTextTrim());
-			//System.out.println("ELEMENT LANGUAGE="+abstractLanguage);
-			if(!gotAbstract)
+			InputStream inputStream = new ByteArrayInputStream(abstractData.getBytes());
+			SAXBuilder builder = new SAXBuilder();
+			builder.setExpandEntities(false);
+			builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+			Document doc = builder.build(inputStream);
+			Element abstractRoot = doc.getRootElement();
+			List lt = abstractRoot.getChildren("div");
+			boolean gotAbstract = false;
+			for (int i = 0; i < lt.size(); i++)
 			{
-				abstractContent=oe.getTextTrim();
-				if(abstractLanguage.equalsIgnoreCase("eng"))
+				Element oe = (Element) lt.get(i);
+				String abstractLanguage = oe.getAttributeValue("data-language");
+				//System.out.println("ELEMENT NAME="+oe.getName());
+				//System.out.println("ELEMENT Value="+oe.getTextTrim());
+				//System.out.println("ELEMENT LANGUAGE="+abstractLanguage);
+				if(!gotAbstract)
 				{
-					gotAbstract=true;
-					continue;
+					abstractContent=oe.getTextTrim();
+					if(abstractLanguage.equalsIgnoreCase("eng"))
+					{
+						gotAbstract=true;
+						continue;
+					}
 				}
+				
 			}
-			
+			//System.out.println("ABSTRACT CONTENT="+abstractContent);
 		}
-		//System.out.println("ABSTRACT CONTENT="+abstractContent);
+		catch(Exception e)
+		{
+			System.out.println("Exception in parsing abstractdata?!");
+			System.out.println("Record's accessnumber: " + EVCombinedRec.ACCESSION_NUMBER);
+			e.printStackTrace();
+		}
+		
 		return abstractContent;
 	}
 	
