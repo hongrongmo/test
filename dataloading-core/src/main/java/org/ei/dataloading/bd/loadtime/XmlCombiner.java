@@ -1515,12 +1515,17 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 	
 	private String getAbstract(String abstractData) throws Exception
 	{
-		String abstractContent=null;
+		String abstractContent=null;		
 		if(abstractData.indexOf("<div")<0)
 		{
 			return abstractData;
 		}
-		abstractData="<abstract>"+abstractData.replaceAll("&", "&amp;")+"</abstract>";
+		abstractData=abstractData.replaceAll("&", "&amp;");		
+		abstractData=abstractData.replaceAll("<","&lt;").replaceAll(">", "&gt;");
+		abstractData=abstractData.replaceAll("&lt;div","<div").replaceAll("abstract\"&gt;","abstract\">");
+		abstractData=abstractData.replaceAll("&lt;/div&gt;","</div>");
+		abstractData="<abstract>"+abstractData+"</abstract>";
+		
 		InputStream inputStream = new ByteArrayInputStream(abstractData.getBytes());
 		SAXBuilder builder = new SAXBuilder();
 		builder.setExpandEntities(false);
