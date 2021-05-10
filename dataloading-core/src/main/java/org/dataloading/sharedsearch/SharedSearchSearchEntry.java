@@ -30,8 +30,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
-
-
+import org.apache.log4j.PropertyConfigurator;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -180,15 +179,15 @@ public class SharedSearchSearchEntry {
 		
 		// For localhost
 		
-		String log4jFile = System.getProperty("user.dir") + File.separator + "src" + File.separator + "resources"
+		/*String log4jFile = System.getProperty("user.dir") + File.separator + "src" + File.separator + "resources"
 				+ File.separator + "log4j.properties";
 		
-		
+		*/
 		//For EC2/Prod
-		/*
+		
 		String log4jFile = "/data/loading/shared" + File.separator + "resources" + File.separator + "log4j.properties";
 		PropertyConfigurator.configure(log4jFile);
-		*/
+		
 
 	}
 	/* to support calling from other Weekly CPX IDS classes */
@@ -208,7 +207,7 @@ public class SharedSearchSearchEntry {
 	
 	/*to support lookup check*/
 	public SharedSearchSearchEntry(String sharedSearchURL ) {
-		
+		this();
 		sharedSearchurl = sharedSearchURL;
 		logger = Logger.getLogger(SharedSearchSearchEntry.class);
 	}
