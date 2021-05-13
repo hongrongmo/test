@@ -315,6 +315,7 @@
 		</dependency>
 		
 		<!-- HH: 02/18/2016 for Amazon Lambda -->
+		
 		 <dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk-lambda</artifactId>
@@ -336,7 +337,7 @@
  			<artifactId>aws-lambda-java-log4j</artifactId>
   			<version>1.0.0</version>
   		 </dependency>
-  		 
+  	 
   		 <!-- HH 10/12/2016 added for VTW to skip Byte Order Marker "BOM" from Patent XML file -->
 		<dependency>
     		<groupId>commons-io</groupId>
