@@ -1318,10 +1318,10 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     {
                         rec.put(EVCombinedRec.ISOPENACESS, rs.getString("ISOPENACESS"));                        
                     }
-                    else
-                    {
-                    	 rec.put(EVCombinedRec.ISOPENACESS, "0");
-                    }
+                    //else //remove 0 from open access as EVOPS-1055 @05/12/2021 by hmo
+                    //{
+                    //	 rec.put(EVCombinedRec.ISOPENACESS, "0");
+                    //}
                     
                     //FREETOREADSTATUS
                     //blocked ISOPENACESS 10/24/2018
