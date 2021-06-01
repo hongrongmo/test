@@ -267,8 +267,8 @@ public class BdParser
 						{
 							Element oaArticleStatus = openAccess.getChild("oa-article-status",xocsNamespace);
 							
-							//String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this only use for testing "free-to-read-status" for now
-							String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//this is used for production for now at 1/20/2021
+							String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this is used for production for now at 5/12/2021
+							//String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//remove from production for now at 5/12/2021
 							//String freeToReadStatus = oaArticleStatus.getAttributeValue("free-to-read-status");
 							if(isOpenAccess!=null)
 							{
@@ -4015,7 +4015,7 @@ public class BdParser
 
 	}
 	
-	private void setCollaborationAndAffs(BdAuthors collaborationMap,
+	public void setCollaborationAndAffs(BdAuthors collaborationMap,
 			  BdAffiliations affs,
 			  Element aelement)
 	{
@@ -4317,7 +4317,7 @@ public class BdParser
 		}
 	}
 	
-	private void setAuthorAndAffs(BdAuthors ausmap,
+	public void setAuthorAndAffs(BdAuthors ausmap,
 								  BdAffiliations affs,
 								  Element aelement)
 	{
@@ -4599,7 +4599,7 @@ public class BdParser
 	
 	
 
-	private String auffToStringBuffer(BdAffiliations aufflist,
+	public String auffToStringBuffer(BdAffiliations aufflist,
 		        					  StringBuffer secondAffGroup)
 	{
 		StringBuffer bufaffiliations = new StringBuffer();
@@ -4703,7 +4703,7 @@ public class BdParser
 		return null;
 	}
 
-	private String auToStringBuffer(BdAuthors auslist)
+	public String auToStringBuffer(BdAuthors auslist)
 	{
 			StringBuffer bufauthor = new StringBuffer();
 			StringBuffer returnbuf = new StringBuffer();
@@ -4833,7 +4833,7 @@ public class BdParser
 
 
 
-	private String auToStringBuffer(BdAuthors auslist,
+	public String auToStringBuffer(BdAuthors auslist,
 						        	StringBuffer secondAuGroup)
 	{
 		StringBuffer bufauthor = new StringBuffer();
