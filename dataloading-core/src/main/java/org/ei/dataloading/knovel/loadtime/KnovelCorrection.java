@@ -17,6 +17,7 @@ import org.ei.dataloading.bd.loadtime.BdCorrection;
 import org.ei.dataloading.bd.loadtime.XmlCombiner;
 import org.ei.query.base.FastQueryWriter;
 import org.ei.util.GUID;
+import org.ei.util.kafka.KafkaService;
 
 public class KnovelCorrection {
 
@@ -1021,6 +1022,41 @@ public class KnovelCorrection {
 					}
 					c.writeRecs(rs);
 				}
+				
+				//HH added for Knovel deletion
+				if(action != null && action.equalsIgnoreCase("extractdelete"))
+				{
+					System.out.println("Running the query...");
+					writer.setOperation("delete");
+					
+					String deleteString = "select m_id from hh_temp_mid ";
+	                System.out.println("Deleting SQL String="+deleteString);
+	                
+	                rs = stmt.executeQuery(deleteString);
+	               
+	                List<String> deleteRecords = new ArrayList<>();
+	                while (rs.next())
+	                {
+	                	if(rs.getString(1) != null && !(rs.getString(1).isEmpty()))
+	                	{
+	                		deleteRecords.add(rs.getString(1));
+	                	}
+	                }
+	                if(deleteRecords.size() >0)
+	                {                		               
+	                	
+		                if(this.propertyFileName!=null)
+		                {
+		                	sendDeleteToKafka(deleteRecords);
+		                }
+		                //writer.zipBatch(); //no need to zip a delete file after switch to ES modified by hmo @10/29/2020
+		                
+	                }
+	                else
+	                {
+	                	System.out.println("the records needed to delete is not in the database");
+	                }
+				}
 				else
 				{
 					System.out.println("unknown action");
@@ -1432,5 +1468,46 @@ public class KnovelCorrection {
 
 	}
 
+	//HH added 08/02/2021 for Knovel deletion from ES 
+	
+    private void sendDeleteToKafka(List rs)
+    {
+    	//KafkaService kafka = new KafkaService();
+    	long processTime = System.currentTimeMillis();
+    	String processInfo=processTime+"_"+this.database+"_"+updateNumber;
+    	KafkaService kafka = new KafkaService(processInfo, this.propertyFileName); //use it for ES extraction
+    	try
+    	{
+	    	String eid="";
+	    	for (int i=0;i<rs.size();i++)
+            {
+	    		eid=(String)rs.get(i);
+                if(eid != null)
+                {                   
+                    kafka.runProducer("{}",eid,0,new HashMap());
+                    System.out.println("EID="+eid);
+                }
+            }
+	    	
+    	}
+    	catch(Exception e)
+        {
+        	e.printStackTrace();
+        }
+        finally
+        {
+        	try
+        	{
+		        if(kafka!=null)
+		        { 	        		        
+		        	kafka.close();        
+		        }
+        	}
+        	catch(Exception e)
+            {
+            	e.printStackTrace();
+            }
+        }      
+    }
 
 }
