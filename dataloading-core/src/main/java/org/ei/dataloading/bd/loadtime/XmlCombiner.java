@@ -1,5 +1,7 @@
 package org.ei.dataloading.bd.loadtime;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,6 +19,9 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
 import org.ei.util.kafka.*;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
 import org.ei.dataloading.*;
 import org.ei.dataloading.georef.loadtime.*;
 import org.ei.dataloading.lookup.LookupEntry;
@@ -625,6 +630,10 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                         
                         rec.put(EVCombinedRec.AUTHOR, prepareBdAuthor(authorString));
                         //use this to deal with author alias
+                        
+                        //added for first author  EVOPS-1193 @8/31/2021
+                        rec.put(EVCombinedRec.FIRST_AUTHOR, getFirstAuthor(authorString));
+                        
                         rec.put(EVCombinedRec.TRANSLATOR, prepareBdAuthorWithAlias(authorString));
                         
                         //if(rs.getString("authorid")==null && rs.getString("cafe_author")!=null)
@@ -702,7 +711,13 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 
                     if (rs.getString("EDITORS") != null)
                     {
-                        rec.put(EVCombinedRec.EDITOR, prepareEditor(rs.getString("EDITORS")));
+                        //rec.put(EVCombinedRec.EDITOR, prepareEditor(rs.getString("EDITORS")));
+                    	String[] editors = prepareEditor(rs.getString("EDITORS"));
+ 	                    rec.put(EVCombinedRec.EDITOR, editors);
+	                    if(rec.getString(EVCombinedRec.FIRST_AUTHOR)==null)
+						{
+							rec.put(EVCombinedRec.FIRST_AUTHOR,editors[0]);
+						}
                     }
 
                     if (rs.getString("CITATIONTITLE") != null)
@@ -729,6 +744,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     String abString = getStringFromClob(rs.getClob("ABSTRACTDATA"));
                     if (abString != null)
                     {
+                    	abString = getAbstract(abString);
                         rec.put(EVCombinedRec.ABSTRACT, abString);
                     }
 
@@ -1317,17 +1333,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     {
                     	 rec.put(EVCombinedRec.ISOPENACESS, "0");
                     }
-                    
-                    //FREETOREADSTATUS
-                    //blocked ISOPENACESS 10/24/2018
-                    /*
-                    if(rs.getString("FREETOREADSTATUS") != null)
-                    {
-                        rec.put(EVCombinedRec.FREETOREADSTATUS, rs.getString("FREETOREADSTATUS"));                        
-                    }
-                    */
-                    
-                                                      
+                                                           
                     //due to bd_master table structure change, we have to handle the missed column exception
                     try
                     {
@@ -1342,14 +1348,13 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     	//System.out.println("missing eid column");
                     	//do nothing
                     }
-                    
-                    
+                  
                    //*
                    // * use for numerical index
-                    if(pui!=null && pui.length()>0 && isCpx)
-                    {
+                   if(pui!=null && pui.length()>0 && isCpx)
+                   {
                     	populateNumericalIndex(pui,rec,con);                 
-                    }
+                   }
                    // */
                     
                     try
@@ -1500,13 +1505,54 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
         	catch(Exception ex) 
         	{
         		ex.printStackTrace();
-        	}
-        	
-        
+        	}        	       
         }
 	}//try
     
 }
+	private String getAbstract(String abstractData) throws Exception
+	{
+		String abstractContent=null;
+		if(abstractData.indexOf("<div")<0)
+		{
+			return abstractData;
+		}
+		abstractData=abstractData.replaceAll("&", "&amp;");		
+		abstractData=abstractData.replaceAll("<","&lt;").replaceAll(">", "&gt;");
+		abstractData=abstractData.replaceAll("&lt;div","<div").replaceAll("abstract\"&gt;","abstract\">");
+		abstractData=abstractData.replaceAll("&lt;/div&gt;","</div>");
+		abstractData="<abstract>"+abstractData+"</abstract>";
+		//System.out.println("abstractData2="+abstractData);
+		InputStream inputStream = new ByteArrayInputStream(abstractData.getBytes());
+		SAXBuilder builder = new SAXBuilder();
+		builder.setExpandEntities(false);
+		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+		Document doc = builder.build(inputStream);
+		Element abstractRoot = doc.getRootElement();
+		List lt = abstractRoot.getChildren("div");
+		boolean gotAbstract = false;
+		for (int i = 0; i < lt.size(); i++)
+		{
+			Element oe = (Element) lt.get(i);
+			String abstractLanguage = oe.getAttributeValue("data-language");
+			//System.out.println("ELEMENT NAME="+oe.getName());
+			//System.out.println("ELEMENT Value="+oe.getTextTrim());
+			//System.out.println("ELEMENT LANGUAGE="+abstractLanguage);
+			if(!gotAbstract)
+			{
+				abstractContent=oe.getTextTrim();
+				if(abstractLanguage.equalsIgnoreCase("eng"))
+				{
+					gotAbstract=true;
+					continue;
+				}
+			}
+			
+		}
+		//System.out.println("ABSTRACT CONTENT="+abstractContent);
+		return abstractContent;
+	}
+	
 	private String prepareStandardDesignation(String input) {
 		String output = null;
 		if (input != null) {
@@ -1901,6 +1947,16 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 		}
 
 		return (String[]) list.toArray(new String[1]);
+	}
+	
+	public String getFirstAuthor(String bdAuthor) throws Exception
+	{
+		String firstAuthor=null;
+		if (bdAuthor != null && !bdAuthor.trim().equals("")) {
+			BdAuthors aus = new BdAuthors(bdAuthor);
+			firstAuthor = aus.getFirstAuthor();		
+		}		
+		return firstAuthor;
 	}
 
 	private String[] prepareCitationTitle(String citationTitle) throws Exception {
@@ -2559,6 +2615,8 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 							}
 
 							rec.put(EVCombinedRec.AUTHOR, prepareBdAuthor(authorString));
+							rec.put(EVCombinedRec.FIRST_AUTHOR, getFirstAuthor(authorString));
+							
 							// use this to deal with author alias
 							rec.put(EVCombinedRec.TRANSLATOR, prepareBdAuthorWithAlias(authorString));
 
