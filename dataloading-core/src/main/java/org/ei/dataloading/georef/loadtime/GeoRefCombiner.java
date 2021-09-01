@@ -431,8 +431,10 @@ public void writeRecs(ResultSet rs)
 					// AUS
 					String aString = rs.getString("PERSON_ANALYTIC");
 					if(aString != null)
-					{				  
-					  rec.put(EVCombinedRec.AUTHOR, aString.split(AUDELIMITER));
+					{
+					  String[] authors = aString.split(AUDELIMITER);
+					  rec.put(EVCombinedRec.AUTHOR, authors);
+					  rec.put(EVCombinedRec.FIRST_AUTHOR,authors[0]);
 					}
 	
 					// EDS
@@ -444,7 +446,12 @@ public void writeRecs(ResultSet rs)
 					  {
 						eString = eString.concat(AUDELIMITER).concat(otherEditors);
 					  }
-					  rec.put(EVCombinedRec.EDITOR, eString.split(AUDELIMITER));
+					  String[] editors = eString.split(AUDELIMITER);
+					  rec.put(EVCombinedRec.EDITOR,editors);
+					  if(rec.getString(EVCombinedRec.FIRST_AUTHOR)==null)
+					  {
+						  rec.put(EVCombinedRec.FIRST_AUTHOR,editors[0]);
+					  }
 					}
 	
 					// AFF
@@ -1304,8 +1311,10 @@ private class LocalErrorHandler implements ErrorHandler {
 
 					// AUS
 					String aString = rs.getString("PERSON_ANALYTIC");
-					if (aString != null) {
-						rec.put(EVCombinedRec.AUTHOR, aString.split(AUDELIMITER));
+					if (aString != null) {						
+						String[] auhorGroup=aString.split(AUDELIMITER);
+						rec.put(EVCombinedRec.AUTHOR,auhorGroup);
+						rec.put(EVCombinedRec.FIRST_AUTHOR,auhorGroup[0]);
 					}
 
 					// EDS
@@ -1315,7 +1324,13 @@ private class LocalErrorHandler implements ErrorHandler {
 						if (otherEditors != null) {
 							eString = eString.concat(AUDELIMITER).concat(otherEditors);
 						}
-						rec.put(EVCombinedRec.EDITOR, eString.split(AUDELIMITER));
+						//rec.put(EVCombinedRec.EDITOR, eString.split(AUDELIMITER));
+						String[] editors = eString.split(AUDELIMITER);
+						rec.put(EVCombinedRec.EDITOR,editors);
+						if(rec.getString(EVCombinedRec.FIRST_AUTHOR)==null)
+						{
+							  rec.put(EVCombinedRec.FIRST_AUTHOR,editors[0]);
+						}
 					}
 
 					// AFF
