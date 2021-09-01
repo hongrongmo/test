@@ -59,6 +59,36 @@ public class BdAuthors
 	    bdAuthorsMap = new LinkedHashMap();
 	    parseData(bdAuthors);
 	}
+    
+    public String getFirstAuthor() throws Exception
+    {   	
+    	String fAuthor=null;
+    	if (bdAuthorsMap != null && bdAuthorsMap.size() > 0)
+		{
+			Iterator auenum = bdAuthorsMap.keySet().iterator();
+			int i=0;
+			while (auenum.hasNext())
+			{				
+				BdAuthor nextau = (BdAuthor) auenum.next();	
+				String sequence = nextau.getSec();
+				
+				
+				if(i==0)
+				{
+					fAuthor = nextau.getSearchValue();
+					i++;
+				}
+				
+				if(sequence!=null && sequence.equals("1"))
+				{
+					fAuthor = nextau.getSearchValue();
+					return fAuthor;
+				}				
+			}			
+		}
+
+    	return fAuthor;
+    }
 
     public void parseData(String bdAuthors)
     {
