@@ -425,10 +425,18 @@ public class INSPECCombiner
 	                    }
 	
 	                    rec.put(EVCombinedRec.AUTHOR,prepareAuthor(aus.toString()));
+	                    
+	                    //added for first author  EVOPS-1193 @8/31/2021 
+	                    rec.put(EVCombinedRec.FIRST_AUTHOR,prepareFirstAuthor(aus.toString()));
 	                }
 	                else if(rs.getString("eds") != null)
 	                {
-	                    rec.put(EVCombinedRec.EDITOR, prepareAuthor(rs.getString("eds")));
+	                	String[] editors = prepareAuthor(rs.getString("eds"));
+	                    rec.put(EVCombinedRec.EDITOR, editors);
+	                    if(rec.getString(EVCombinedRec.FIRST_AUTHOR)==null)
+						{
+							rec.put(EVCombinedRec.FIRST_AUTHOR,editors[0]);
+						}
 	                }
 	
 	
@@ -1572,6 +1580,35 @@ public class INSPECCombiner
         }
         return buf.toString();
     }
+    
+    public String prepareFirstAuthor(String aString)
+	        throws Exception
+    {
+
+        ArrayList list = new ArrayList();
+        StringTokenizer st = new StringTokenizer(aString, Constants.AUDELIMITER);
+        String s=null;
+
+        while (st.hasMoreTokens())
+        {
+            s = st.nextToken().trim();
+            if(s.length() > 0)
+            {
+                if(s.indexOf(Constants.IDDELIMITER) > -1)
+                {
+                     int i = s.indexOf(Constants.IDDELIMITER);
+                      s = s.substring(0,i);
+                }
+                s = s.trim();
+
+                break;
+            }
+
+        }
+
+        return s;
+
+    }
 
     private String getDiscipline(String dis)
     {
@@ -1795,6 +1832,7 @@ public class INSPECCombiner
 							}
 
 							rec.put(EVCombinedRec.AUTHOR, prepareAuthor(aus.toString()));
+							rec.put(EVCombinedRec.FIRST_AUTHOR,prepareFirstAuthor(aus.toString()));
 						}
 
 						// AFFILIATION
