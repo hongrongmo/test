@@ -510,8 +510,10 @@ public class EVCombinedRec {
 
 	//added by hmo @2020-12-09
 	public static final String FREETOREADSTATUS = "378";
-	 //*/
-
+	
+	//added by hmo @2021-09-01
+	public static final String FIRST_AUTHOR = "384";
+	
 	private Hashtable h = new Hashtable();
 
 	public boolean containsKey(String key)
