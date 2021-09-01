@@ -13,13 +13,20 @@ import java.io.InputStreamReader;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
+
+import javax.xml.XMLConstants;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
+
 import java.util.*;
 
 import org.ei.common.bd.*;
 import org.apache.commons.text.StringEscapeUtils;
 import org.ei.common.Constants;
-
-
 
 //import org.ei.data.LoadNumber;
 //import org.ei.dataloading.bd.*;
@@ -29,6 +36,8 @@ import org.ei.common.Constants;
 import org.ei.common.bd.BdAuthors;
 import org.ei.dataloading.DataLoadDictionary;
 import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 import org.ei.data.compendex.runtime.*;
 
 public class BdReverseRecordBuilder
@@ -135,6 +144,7 @@ public class BdReverseRecordBuilder
          int count = 0;
          boolean checkResult = false;
          FileWriter file = null;
+         String xsdFileName="ani512.dtd";
          try
          {
              stmt = con.createStatement();
@@ -148,7 +158,8 @@ public class BdReverseRecordBuilder
              }
              file.write("</bibdataset>");
              file.close();
-             zipBatchFile(filename,databaseName);
+             if(validatedXml(filename,xsdFileName))
+            	 zipBatchFile(filename,databaseName);
          }
          catch (Exception e)
          {
@@ -170,6 +181,41 @@ public class BdReverseRecordBuilder
          }
     	
     }
+    
+    private boolean validatedXml(String filename,String xsdFileName) throws Exception
+	{
+		// parse an XML document into a DOM tree
+		 javax.xml.parsers.DocumentBuilder parser =  javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		 Document document = parser.parse(new File(filename));
+
+		// create a SchemaFactory capable of understanding WXS schemas
+		//SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		 SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+
+		// load a WXS schema, represented by a Schema instance
+		//Source schemaFile = new StreamSource(new File("ani512.xsd"));
+		Source schemaFile = new StreamSource(new File(xsdFileName));
+		Schema schema = factory.newSchema(schemaFile);
+
+		// create a Validator instance, which can be used to validate an instance document
+		Validator validator = schema.newValidator();
+
+		// validate the DOM tree
+		try {
+		   //validator.validate(new DOMSource(document));
+			validator.validate(new StreamSource(new File(filename)));
+			
+		    System.out.println(filename+" is valid!");
+		    return true;
+		} catch (SAXException e) {
+			System.out.println(filename+" is invalid!");
+			e.printStackTrace();
+			return false;
+		    // instance document is invalid!
+		}
+		
+	}
+    
   
     public void writeRecord(ResultSet rs, FileWriter file) throws Exception
     {

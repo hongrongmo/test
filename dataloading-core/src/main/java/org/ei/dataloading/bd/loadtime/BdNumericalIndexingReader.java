@@ -45,6 +45,7 @@ public class BdNumericalIndexingReader {
     private static String username = "ba_loading";
     private static String password = "";
 	
+    
 	public BdNumericalIndexingReader(int loadN,String databaseName)
 	{
 	    this.loadNumber = loadN;
@@ -57,6 +58,11 @@ public class BdNumericalIndexingReader {
 	    this.loadNumber = loadN;
 	    this.databaseName = databaseName;
 	    this.action = action;
+	}
+	
+	public BdNumericalIndexingReader() 
+	{				
+		System.out.println("In here");
 	}
 	
 	public static void main(String args[]) throws Exception
@@ -251,7 +257,7 @@ public class BdNumericalIndexingReader {
 
     }
 	
-	private String getNodeValue(NodeList parentNodes)
+	public String getNodeValue(NodeList parentNodes)
 	{
 		StringBuffer nodeValue = new StringBuffer();
 		if(parentNodes!=null)
@@ -433,7 +439,7 @@ public class BdNumericalIndexingReader {
         return mid;
 	}
 	
-	 protected Connection getConnection(String connectionURL,
+	 public Connection getConnection(String connectionURL,
              String driver,
              String username,
              String password)
