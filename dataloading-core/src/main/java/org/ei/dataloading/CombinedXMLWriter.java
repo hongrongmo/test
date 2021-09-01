@@ -1135,7 +1135,7 @@ public class CombinedXMLWriter
             if(author!=null && author.length>0 )
             {
             	elementArrayObject = formJsonArray(removeExtraSpace(author),"AUTHOR");          
-            	contentObject.put("AUTHOR".toLowerCase(),elementArrayObject);
+            	contentObject.put("AUTHOR".toLowerCase(),elementArrayObject);           	
             }
             
             String[] authorID=rec.getStrings(EVCombinedRec.AUTHORID);
@@ -1956,6 +1956,12 @@ public class CombinedXMLWriter
             {
 	            elementArrayObject = formJsonArray(tableofcontent,"TABLEOFCONTENT");          
 	            contentObject.put("TABLEOFCONTENT".toLowerCase(),elementArrayObject);
+            }
+            
+            String firstAuthor=rec.getString(EVCombinedRec.FIRST_AUTHOR);
+            if(firstAuthor!=null && firstAuthor.length()>0)
+            {     
+	            contentObject.put("FIRSTAUTHOR".toLowerCase(),removeSpace(firstAuthor));                     
             }
             
             //************************************************ added for numericalIndex ******************************************************//
@@ -2972,6 +2978,11 @@ public class CombinedXMLWriter
             {
             	elementArrayObject = formJsonArray(removeExtraSpace(author),"AUTHOR");          
             	contentObject.put("AUTHOR".toLowerCase(),elementArrayObject);
+            	String firstAuthor=rec.getString(EVCombinedRec.FIRST_AUTHOR);
+                if(firstAuthor!=null && firstAuthor.length()>0)
+                {     
+     	            contentObject.put("FIRSTAUTHOR".toLowerCase(),removeSpace(firstAuthor));                     
+                }
             }
             
             String[] authorID=rec.getStrings(EVCombinedRec.AUTHORID);
@@ -3790,6 +3801,12 @@ public class CombinedXMLWriter
             {
 	            elementArrayObject = formJsonArray(tableofcontent,"TABLEOFCONTENT");          
 	            contentObject.put("TABLEOFCONTENT".toLowerCase(),elementArrayObject);
+            }
+            
+            String firstAuthor=rec.getString(EVCombinedRec.FIRST_AUTHOR);
+            if(firstAuthor!=null && firstAuthor.length()>0)
+            {     
+	            contentObject.put("FIRSTAUTHOR".toLowerCase(),removeSpace(firstAuthor));                     
             }
             
             //************************************************ added for numericalIndex ******************************************************//
@@ -4846,7 +4863,7 @@ public class CombinedXMLWriter
     	}
     	return output;
     }
-    
+       
     public String[] removeSpace(String[] input)
     {
     	String[] output=null;
@@ -4872,6 +4889,26 @@ public class CombinedXMLWriter
     			
     			j++;
     		}
+    		
+    	}
+    	return output;
+    }
+    
+    public String removeSpace(String input)
+    {
+    	String output=null;
+    	
+    	if(input!=null)
+    	{
+    		
+			output=input.replaceAll(",","");
+			
+			output=output.replaceAll("\\."," ");
+			
+			output=output.replaceAll("\\s{2,}"," ");
+			
+			output=output.replaceAll("\\s{0,}-\\s{0,}","-");   
+			output= removeExtraSpace(output);    		   		
     		
     	}
     	return output;
