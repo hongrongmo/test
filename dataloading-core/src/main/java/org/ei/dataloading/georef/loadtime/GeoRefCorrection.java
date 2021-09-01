@@ -1440,7 +1440,7 @@ private void processResponse(String value, String response, BufferedWriter bw) t
                 if(eid != null)
                 {                   
                     kafka.runProducer("{}",eid,0,new HashMap());
-                    System.out.println("EID="+eid);
+                    //System.out.println("EID="+eid);
                 }
             }
 	    	

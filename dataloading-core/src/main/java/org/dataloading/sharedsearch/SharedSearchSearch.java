@@ -123,7 +123,6 @@ public class SharedSearchSearch {
 					logger.info("ProcessResponse finish.....");
 				}
 					
-				
 				finishTime = System.currentTimeMillis() - finishTime;
 				//System.out.println("Time to processResponse: " + finishTime);			// only for debugging
 			}
@@ -151,11 +150,20 @@ public class SharedSearchSearch {
 				
 			}
 		}
+		catch(IOException ex)
+		{
+			System.out.println(query);
+			System.out.println("httpCon getInputStream exception!!" + " wx message " + ex.getMessage());
+			logger.info(query);
+			logger.error("httpCon getInputStream exception!!" + " wx message " + ex.getMessage());
+			
+		}
 		catch(Exception e)
 		{
 			logger.error("Exception runing ES Query!!!");
 			logger.error(e.getMessage());
 			logger.error(query);
+			System.out.println(query);
 			result = "";
 			e.printStackTrace();
 			

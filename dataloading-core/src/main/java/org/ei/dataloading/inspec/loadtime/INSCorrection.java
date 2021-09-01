@@ -387,7 +387,7 @@ public class INSCorrection
             {
 
                 doFastExtract(updateNumber,database,action);
-                System.out.println(database+" "+updateNumber+" fast extract is done.");
+                System.out.println(database+" "+updateNumber+" extraction is done.");
             }        
             else
             {

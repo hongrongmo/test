@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import com.amazonaws.AmazonClientException;
@@ -14,11 +16,14 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.ListObjectsRequest;
 import com.amazonaws.services.s3.model.ObjectListing;
+import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.amazonaws.services.s3.transfer.MultipleFileUpload;
+import com.amazonaws.services.s3.transfer.ObjectMetadataProvider;
 import com.amazonaws.services.s3.transfer.TransferManager;
+import com.amazonaws.services.s3.transfer.TransferManagerBuilder;
 import com.amazonaws.services.s3.transfer.Upload;
 
 /**
@@ -74,7 +79,6 @@ public class UploadFileToS3 {
 		}
 
 		uploadDirToS3Bucket();
-
 
 	}
 
@@ -174,6 +178,115 @@ public class UploadFileToS3 {
 	}
 
 
+	// In order to only upload only updated files
+	
+	public void uploadDirToS3Bucket(String dir, AmazonS3 s3Client, String bucketName, String database, String key,
+			List<File> filesList) throws AmazonClientException,AmazonServiceException
+	{
+		try
+		{
+			//tmanager = new TransferManager(s3Client);   //original, replaced by tmbuilder
+			
+			TransferManagerBuilder tm = TransferManagerBuilder.standard();
+			tm.setS3Client(s3Client);
+			tmanager = tm.build();
+			
+
+			File fileDir = new File(dir);
+
+			if(!(fileDir.exists()))
+			{
+				throw new FileNotFoundException();
+			}
+
+			//Check if Dir isNotEmpty (contains file), otherwise skip upload to S3
+			if(!(isEmptyDir(fileDir)))
+			{
+				System.out.println("Uploading only updated ------> " + filesList.size() + " in Dir: " + fileDir.getName() + " to S3 Bucket");
+
+				// upload whole dir to S3
+				//MultipleFileUpload uploadFile = tmanager.uploadDirectory(bucketName, key, fileDir, true);
+				
+				
+				ObjectMetadataProvider metadataProvider = new ObjectMetadataProvider() {
+					
+					@Override
+					public void provideObjectMetadata(File file, ObjectMetadata metadata) {
+						//Add metadata to each object
+						metadata.setContentType("text/xml");
+						metadata.getUserMetadata().put("filename", file.getName());
+						metadata.getUserMetadata().put("loadNumber",  fileDir.getName());
+						metadata.getUserMetadata().put("createDateTime",  new Date().toString());
+						
+					}
+				};
+				// ONly upload updated files, even if loadnumber dir have old files
+				MultipleFileUpload uploadFile = tmanager.uploadFileList(bucketName, database + "/" + key, 
+						new File(fileDir.getName()), filesList, metadataProvider);
+
+			
+				uploadFile.addProgressListener(new ProgressListener()
+				{
+					@Override
+					public void progressChanged(ProgressEvent progressEvent)
+					{
+						//System.out.println("Transfer: " + progressEvent.getBytesTransferred());
+					}
+				}	);
+				
+				// block the current thread and wait for the transfer to complete. if transfer fails; this method will throw 
+				//AmazonClientException or AmazonServiceException 
+				uploadFile.waitForCompletion();
+				
+
+			}
+			else
+			{
+				System.out.println("Dir is Empty!");
+				System.exit(1);
+			}
+
+
+		}
+		catch(AmazonServiceException ase)
+		{
+			System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
+					"to Amazon S3, but was rejected with an error response" +
+					" for some reason.");
+			System.out.println("Error Message:    " + ase.getMessage());
+			System.out.println("HTTP Status Code: " + ase.getStatusCode());
+			System.out.println("AWS Error Code:   " + ase.getErrorCode());
+			System.out.println("Error Type:       " + ase.getErrorType());
+			System.out.println("Request ID:       " + ase.getRequestId());
+		}
+		catch(AmazonClientException ace)
+		{
+			System.out.println("Caught an AmazonClientException, which " +
+					"means the client encountered " +
+					"an internal error while trying to " +
+					"communicate with S3, " +
+					"such as not being able to access the network.");
+			System.out.println("Error Message: " + ace.getMessage());
+			System.out.println("HTTP Status Code: " + ace.getCause());
+		}
+		catch(InterruptedException ex)
+		{
+			ex.printStackTrace();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		finally
+		{
+			if(tmanager !=null)
+			{
+				//after download is complete, call shutdownNow to release resources
+				tmanager.shutdownNow(false);  
+			}
+
+		}
+	}
 	public static boolean isEmptyDir(File dir)
 	{
 		boolean empty = true;
@@ -183,7 +296,7 @@ public class UploadFileToS3 {
 		{
 			if(fileNames !=null && fileNames.length >0)
 			{
-				System.out.println("Total zip files to upload to S3: " +  fileNames.length);
+				System.out.println("Total files in dir: " + dir.getName()+ "------> " + fileNames.length);
 				empty = false;
 			}
 		}

@@ -1773,15 +1773,17 @@ public class PatentXmlReader
 				
 				if(description.length()>clobSize)
 				{
-					System.out.println("Size of description of patent number "+patentNumber+" is "+description.length());
+					//System.out.println("Size of description of patent number "+patentNumber+" is "+description.length());
 					description=trimStringToLength(description,clobSize);
 					
 				}
 				out.print(substituteChars(description));
+				
 				//out.print(substituteChars((String)singleRecord.get("DESCRIPTION")));
 				//System.out.println("DESCRIPTION= "+substituteChars((String)singleRecord.get("DESCRIPTION")));
 			}
-						
+			
+			
 			out.print(DELIM);
 			
 			if(singleRecord.get("MODIFIED_DATE_OF_PUBLIC")!=null)
@@ -1789,7 +1791,7 @@ public class PatentXmlReader
 				out.print((String)singleRecord.get("MODIFIED_DATE_OF_PUBLIC"));
 				//System.out.println("MODIFIED_DATE_OF_PUBLIC= "+(String)singleRecord.get("MODIFIED_DATE_OF_PUBLIC"));
 			}
-			//*/ -- end of VTW project
+			// -- end of VTW project
 			
 			out.print(DELIM);
 			//DOCDB-STATUS
@@ -2369,15 +2371,20 @@ public class PatentXmlReader
 				//description
 				//Element description = rec.getChild("description");
 				//modify to capture all descriptions
-				List description = rec.getChildren("description");
-				if(description != null)
+				List descriptionsgroup = rec.getChildren("description");
+				if(descriptionsgroup != null)
 				{				
-					setDescription(record,description); //OK
+					//setDescription(record,description); //OK change by hmo at 4/12/2021
+					StringBuffer descriptionbuffer = new StringBuffer();				
+					descriptionbuffer.append(getMixData(descriptionsgroup,new StringBuffer()));
+					record.put("DESCRIPTION", descriptionbuffer.toString());
+					
 				}
 				
 				//claims
 				//Element claims = rec.getChild("claims");
 				//there are more than one claims elemnt in vtw file, modified to capture all of them by hmo at 10/13/2016
+				
 				List claims = rec.getChildren("claims");
 				if(claims != null)
 				{				
@@ -3111,7 +3118,8 @@ public class PatentXmlReader
 				Element claim = (Element)claimList.get(i);
 				if(claim != null && claim.getChildText("claim-text")!=null)
 				{					
-					claimbuffer.append(claim.getChildText("claim-text"));					
+					claimbuffer.append(claim.getChildText("claim-text"));
+					System.out.println("CLAIM3="+claim.getChildText("claim-text"));
 				}
 				claimbuffer.append(Constants.IDDELIMITER);		
 			}
@@ -3123,7 +3131,7 @@ public class PatentXmlReader
 
 	private void setClaims(HashMap record,List claimsgroup) throws Exception
 	{
-
+		
 		StringBuffer claimbuffer = new StringBuffer();
 		for(int j=0;j<claimsgroup.size();j++)
 		{
@@ -3138,12 +3146,15 @@ public class PatentXmlReader
 				String country = claims.getAttributeValue("country");
 				String doc_number = claims.getAttributeValue("doc-number");
 				String kind = claims.getAttributeValue("kind");
+				
+				/*//comment this out to capture non english claims by hmo @4/7/2021
 				if(lang!=null && !lang.equals("eng"))
 				{
 					//System.out.println("currently we don't capture non english claims, claim language detect "+lang);
 				}
 				else
 				{
+				*/
 					if(id!=null)
 					{
 						claimbuffer.append(id);
@@ -3159,7 +3170,7 @@ public class PatentXmlReader
 						claimbuffer.append(format);
 					}
 					claimbuffer.append(Constants.AUDELIMITER);
-					if(claimbuffer!=null)
+					if(generated!=null)
 					{
 						claimbuffer.append(generated);
 					}
@@ -3183,14 +3194,29 @@ public class PatentXmlReader
 					for(int i=0;i<claimList.size();i++)
 					{
 						Element claim = (Element)claimList.get(i);
-						if(claim != null && claim.getChildText("claim-text")!=null)
-						{					
-							claimbuffer.append(claim.getChildText("claim-text"));					
+						if(claim != null && claim.getChild("claim-text")!=null)
+						{	
+							List claimTextList = claim.getChildren("claim-text");
+							for(int k=0;k<claimTextList.size();k++)
+							{
+								Element claimText = (Element)claimTextList.get(k);
+								if(claimText.getTextTrim()!=null)
+								{
+									claimbuffer.append("<p>"+getMixData(claimText.getContent(),new StringBuffer())+"</p>");
+								}
+								if(claimText.getChildText("claim-text")!=null)
+								{
+									claimbuffer.append("<p>"+claimText.getChildText("claim-text")+"</p>");	
+								}
+								//System.out.println("CLAIM0="+claimText.getTextTrim());
+								//System.out.println("CLAIM1="+claimText.getChildText("claim-text"));
+								//System.out.println("CLAIM2="+getMixData(claimText.getContent(),new StringBuffer()));
+							}
 						}
 						claimbuffer.append(Constants.IDDELIMITER);		
 					}
 				}
-			}
+			//}
 				
 			record.put("CLAIMS", claimbuffer.toString());
 		}

@@ -1267,31 +1267,31 @@ public class BDDocBuilder implements DocumentBuilder {
              String strReplace = (String) badCharacterMap.get(strMatch);
              if(strReplace == null)
              {
-   			Pattern accentregex1 = Pattern.compile("(&\\w+;)");
-   			Matcher m1 = accentregex1.matcher(strMatch);
-   			boolean result1 = m1.find();
-   			while(result1)
-   			{
-             		String strMatch1 = m1.group();
-   				//System.out.println("MATCH1= " +Entity.prepareString(strMatch1));
-   				if(Entity.prepareString(strMatch1)!=null && Entity.prepareString(strMatch1).length()>0)
-   				{
-   				  //good entity, do nothing
-   				   strReplace  =strMatch;
-   				}
-   				else
-   			    {
-   					//bad Entity
-   					// if there is no map, just replace with the intial character
-   					// i.e. a,S,Z without the trailing entity so it will at least look cleaner
-   					strReplace = m.group(1);
-   					// do not strip off trailing &, < or > !  i.e. A&amp; will just remain A&amp;
-   					if(m.group(2).equals("&amp;") || m.group(2).equals("&gt;") || m.group(2).equals("&lt;")) {
-   					  strReplace = m.group();
-   					}
-   				}
-   				result1 = m1.find();
-   			}
+				Pattern accentregex1 = Pattern.compile("(&\\w+;)");
+				Matcher m1 = accentregex1.matcher(strMatch);
+				boolean result1 = m1.find();
+				while(result1)
+				{
+				 	String strMatch1 = m1.group();
+					//System.out.println("MATCH1= " +Entity.prepareString(strMatch1));
+					if(Entity.prepareString(strMatch1)!=null && Entity.prepareString(strMatch1).length()>0)
+					{
+					  //good entity, do nothing
+					   strReplace  =strMatch;
+					}
+					else
+				    {
+						//bad Entity
+						// if there is no map, just replace with the intial character
+						// i.e. a,S,Z without the trailing entity so it will at least look cleaner
+						strReplace = m.group(1);
+						// do not strip off trailing &, < or > !  i.e. A&amp; will just remain A&amp;
+						if(m.group(2).equals("&amp;") || m.group(2).equals("&gt;") || m.group(2).equals("&lt;")) {
+						  strReplace = m.group();
+						}
+					}
+					result1 = m1.find();
+				}
              }
               // The appendReplacement method appends everything up to the next match and the replacement for that match.
              m.appendReplacement(sb, strReplace);

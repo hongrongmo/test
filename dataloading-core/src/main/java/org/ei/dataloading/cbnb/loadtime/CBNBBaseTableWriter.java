@@ -70,7 +70,7 @@ public class CBNBBaseTableWriter
         xmlprops.setProperty("M_ID", "M_ID");
         xmlprops.setProperty("ABN", "ACCESSNUMBER");
         xmlprops.setProperty("CDT", "DELIVERYDATE");
-        xmlprops.setProperty("DOC", "SOURCETYPE");
+        xmlprops.setProperty("DOC", "CITTYPE");
         xmlprops.setProperty("SCO", "CBNBSCOPECLASSIFICATIONDESC");
         xmlprops.setProperty("FJL", "SOURCETITLE");
         xmlprops.setProperty("ISN", "ISSN");
@@ -78,7 +78,7 @@ public class CBNBBaseTableWriter
         xmlprops.setProperty("LAN", "CITATIONLANGUAGE");
         xmlprops.setProperty("VOL", "VOLUME");
         xmlprops.setProperty("ISS", "ISSUE");
-        xmlprops.setProperty("IBN", "");
+        xmlprops.setProperty("IBN", "ISBN");//added by hmo at 4/5/2021
         xmlprops.setProperty("PBR", "");
         xmlprops.setProperty("PAD", "");
         xmlprops.setProperty("PAG", "PAGE");
@@ -102,6 +102,8 @@ public class CBNBBaseTableWriter
         xmlprops.setProperty("ABS", "ABSTRACTDATA");
         xmlprops.setProperty("PYR", "");
         xmlprops.setProperty("LOAD_NUMBER", "LOADNUMBER");
+        xmlprops.setProperty("SOURCE_TYPE", "SOURCETYPE");
+        xmlprops.setProperty("CIT_TYPE", "CITTYPE");
 
     }
 
@@ -199,7 +201,7 @@ public class CBNBBaseTableWriter
                 String valueS = null;
                 if(value != null)
                 {
-                	if((xmlprops.getProperty(bf).trim().equals("CITATIONTITLE") || xmlprops.getProperty(bf).trim().equals("SOURCEWEBSITE")))
+                	if((xmlprops.getProperty(bf).equals("CITATIONTITLE") || xmlprops.getProperty(bf).trim().equals("SOURCEWEBSITE")))
                 	{
                 		String[] vArray = value.split(Constants.IDDELIMITER,-1);
                 		if(vArray.length>1)
@@ -208,17 +210,18 @@ public class CBNBBaseTableWriter
                 		}
                 		//valueS = perl.substitute("s/\\t/     /g", value);
                 	}
-                	else if(xmlprops.getProperty(bf).trim().equals("SOURCETYPE"))
+                	//else if(xmlprops.getProperty(bf).trim().equals("SOURCETYPE"))
+                	else if(bf.equals("DOC"))
                 	{
-                		if(value.equals("j"))
+                		if(value.equals("ar"))
                 		{
                 			value = "Journal";
                 		}
-                		else if(value.equals("l"))
+                		else if(value.equals("pr"))
                 		{                			
                 			value = "Press Release";              			
                 		}
-                		else if(value.equals("b"))
+                		else if(value.equals("bk") ||value.equals("ch"))
                 		{
                 			value = "Book";
                 		}

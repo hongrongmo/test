@@ -1,5 +1,0 @@
-java.util.Calendar cal2 = new java.util.GregorianCalendar();
-java.util.Date trial = new java.util.Date();
-cal2.setTime(trial);
-int yearweek = cal2.get(java.util.Calendar.WEEK_OF_YEAR);
-yearweek

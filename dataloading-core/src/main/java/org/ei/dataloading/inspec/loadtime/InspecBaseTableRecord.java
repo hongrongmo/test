@@ -237,7 +237,13 @@ public class InspecBaseTableRecord
 									"MATID1",	// added on 20201222 by hmo for EVOPS-1068
 									"RTNAME",	// added on 20201222 by hmo for EVOPS-1068
 									"FUNDG",	// added on 20201222 by hmo for EVOPS-1068
+<<<<<<< HEAD
 									"ACCESS"	// added on 20201222 by hmo for EVOPS-1068
+=======
+									"ACCESS",	// added on 20201222 by hmo for EVOPS-1068
+									"VIDEOG",	// added on 20201222 by hmo for EVOPS-1068
+									"REPOSG"	// added on 20201222 by hmo for EVOPS-1068
+>>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
 									};
 
 

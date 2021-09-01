@@ -206,88 +206,93 @@ public class archiveEVCafeRefeed {
 							msgVisibilityReq = new ChangeMessageVisibilityRequest(myQueueUrl, msgReciptHandle, MESSAGE_VISIBILITY_TIME_OUT_SECONDS);
 							
 							//System.out.println("SQS Message: " +  messageBody);
-							
-							//parse SQS Message Fields& determine whether it is "ANI" message & belongs to dbcollcodes *|CPX|*
-							if(obj.ParseSQSMessage(messageBody))   
+						
+							//Added 06/07/2021 due to recent issues as wrong SQS messages looks like (SQS Message: "pui") Check if it is at least a valid SQS message
+							if(messageBody.startsWith("{") && messageBody.endsWith("}") && messageBody.contains("bucket"))
 							{
-								bucketName = obj.getMessageField("bucket");
-								if(!(bucketName.isEmpty()) && bucketName.contains("ani"))
+								//parse SQS Message Fields& determine whether it is "ANI" message & belongs to dbcollcodes *|CPX|*
+								if(obj.ParseSQSMessage(messageBody))   
 								{
-									document_type = "ani";
+									bucketName = obj.getMessageField("bucket");
+									if(!(bucketName.isEmpty()) && bucketName.contains("ani"))
+									{
+										document_type = "ani";
+									}
+									else if (!(bucketName.isEmpty()) && bucketName.contains("apr"))
+									{
+										document_type = "apr";
+									}
+									else if (!(bucketName.isEmpty()) && bucketName.contains("ipr"))
+									{
+										document_type = "ipr";
+									}
+									
+									//Key
+									if(obj.getMessageField("key") !=null)
+									{
+										recordBuf.append(obj.getMessageField("key"));
+									}
+									recordBuf.append(FIELDDELIM);
+									
+									//epoch
+									if(obj.getMessageField("epoch") !=null)
+									{
+										recordBuf.append(obj.getMessageField("epoch"));
+									}
+									recordBuf.append(FIELDDELIM);
+									
+									//pui
+									if(obj.getMessageField("pui") !=null)
+									{
+										recordBuf.append(obj.getMessageField("pui"));
+									}
+									recordBuf.append(FIELDDELIM);
+									
+									//action
+									if(obj.getMessageField("action") !=null)
+									{
+										recordBuf.append(obj.getMessageField("action"));
+									}
+									recordBuf.append(FIELDDELIM);
+									
+									//Bucket Name
+									if(obj.getMessageField("bucket") !=null)
+									{
+										recordBuf.append(obj.getMessageField("bucket"));
+									}
+									recordBuf.append(FIELDDELIM);
+									
+									
+									//Document_type
+									
+									if(!(document_type.isEmpty()))
+									{
+										recordBuf.append(document_type);
+									}
+									recordBuf.append(FIELDDELIM);
+									
+									
+									//Archive_Date, Date when message was read from SQS & archived
+									recordBuf.append(msgSentDateFormat.format(new Date()));
+									recordBuf.append(FIELDDELIM);
+									
+									//Body
+									recordBuf.append(messageBody);
+									recordBuf.append(FIELDDELIM);
+		
+									
+									//Sent (the time when the message was sent to the queue )
+									if(msgAttributes !=null && ! (msgAttributes.isEmpty()))
+									{	
+										recordBuf.append(msgSentDateFormat.format(new Date(Long.parseLong(msgAttributes.get("SentTimestamp")))).toString());
+									}
+									
+									
+									// write the message to out file
+									out.println(recordBuf.toString().trim());
 								}
-								else if (!(bucketName.isEmpty()) && bucketName.contains("apr"))
-								{
-									document_type = "apr";
-								}
-								else if (!(bucketName.isEmpty()) && bucketName.contains("ipr"))
-								{
-									document_type = "ipr";
-								}
-								
-								//Key
-								if(obj.getMessageField("key") !=null)
-								{
-									recordBuf.append(obj.getMessageField("key"));
-								}
-								recordBuf.append(FIELDDELIM);
-								
-								//epoch
-								if(obj.getMessageField("epoch") !=null)
-								{
-									recordBuf.append(obj.getMessageField("epoch"));
-								}
-								recordBuf.append(FIELDDELIM);
-								
-								//pui
-								if(obj.getMessageField("pui") !=null)
-								{
-									recordBuf.append(obj.getMessageField("pui"));
-								}
-								recordBuf.append(FIELDDELIM);
-								
-								//action
-								if(obj.getMessageField("action") !=null)
-								{
-									recordBuf.append(obj.getMessageField("action"));
-								}
-								recordBuf.append(FIELDDELIM);
-								
-								//Bucket Name
-								if(obj.getMessageField("bucket") !=null)
-								{
-									recordBuf.append(obj.getMessageField("bucket"));
-								}
-								recordBuf.append(FIELDDELIM);
-								
-								
-								//Document_type
-								
-								if(!(document_type.isEmpty()))
-								{
-									recordBuf.append(document_type);
-								}
-								recordBuf.append(FIELDDELIM);
-								
-								
-								//Archive_Date, Date when message was read from SQS & archived
-								recordBuf.append(msgSentDateFormat.format(new Date()));
-								recordBuf.append(FIELDDELIM);
-								
-								//Body
-								recordBuf.append(messageBody);
-								recordBuf.append(FIELDDELIM);
-	
-								
-								//Sent (the time when the message was sent to the queue )
-								if(msgAttributes !=null && ! (msgAttributes.isEmpty()))
-								{	
-									recordBuf.append(msgSentDateFormat.format(new Date(Long.parseLong(msgAttributes.get("SentTimestamp")))).toString());
-								}
-								
-								
-								// write the message to out file
-								out.println(recordBuf.toString().trim());
 							}
+
 							
 							// delete the message
 							deleteMessage(msgReciptHandle);

@@ -2,6 +2,7 @@ package org.ei.util.kafka;
 
 
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -15,9 +16,13 @@ import java.util.Iterator;
 
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.OffsetAndTimestamp;
 import org.apache.kafka.clients.producer.*;
+import org.apache.kafka.common.*;
 import org.ei.util.kafka.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.time.*;
+import java.time.temporal.ChronoUnit;
 
 public class KafkaService {
 	public String KAFKA_BROKERS="localhost:9092";
@@ -41,7 +46,7 @@ public class KafkaService {
     {
     	this.propertyFileName = "./lib/config.properties";
     	this.logFileName = "MyLogFile.log";
-    	init(logFileName,propertyFileName);
+    	//init(logFileName,propertyFileName);
     }
     
     public KafkaService(String processInfo) 
@@ -90,7 +95,25 @@ public class KafkaService {
     	}
     	else if (args!=null && args[0].equals("consumer"))
 		{
-			kTest.runConsumer();
+    		System.out.println("length="+args.length);
+    		if(args.length>2)
+    		{
+    			System.out.println("2");
+    			String offset = args[1];
+    			String flag = args[2];
+    			kTest.runConsumer(offset,flag);
+    		}
+    		else if(args.length>1)
+    		{
+    			System.out.println("1");
+    			String offset = args[1];
+    			kTest.runConsumer(offset);
+    		}
+    		else
+    		{
+    			System.out.println("0");
+    			kTest.runConsumer();
+    		}
 		}
 		else
 		{
@@ -98,6 +121,76 @@ public class KafkaService {
 			System.out.println("please enter either producer or consumer");
 		}
     }
+    
+    public void runConsumer(String offset,String f) 
+    {
+        Consumer<String, String> consumer = ConsumerCreator.createConsumer();
+        int noMessageFound = 0;
+        boolean flag = true;
+        while (true) 
+        {
+            ConsumerRecords<String, String> consumerRecords = consumer.poll(1000);
+            // 1000 is the time in milliseconds consumer will wait if no record is found at broker.
+            if(flag) 
+            {
+                consumer.seek(new TopicPartition("ev-producer", 0), Integer.parseInt(offset));
+                flag = false;
+            }
+
+            //print each record.
+            consumerRecords.forEach(record -> {
+                System.out.println("Record Key " + record.key());
+                System.out.println("Record value " + record.value());
+                System.out.println("Record partition " + record.partition());
+                System.out.println("Record offset " + record.offset());
+                saveIntoFile(record.key(),record.value());
+            });
+            // commits the offset of record to broker.
+            consumer.commitAsync();
+        }
+        //consumer.close();
+    }
+    
+    public void runConsumer(String offsetTime) 
+    {
+        Consumer<String, String> consumer = ConsumerCreator.createConsumer();
+        int noMessageFound = 0;
+        boolean flag = true;
+        while (true) 
+        {
+            ConsumerRecords<String, String> consumerRecords = consumer.poll(1000);
+            // 1000 is the time in milliseconds consumer will wait if no record is found at broker.
+            if(flag) 
+            {
+                Map<TopicPartition, Long> query = new HashMap<>();
+                query.put(
+                        new TopicPartition("ev-producer", 0),
+                        Instant.now().minus(Long.parseLong(offsetTime), ChronoUnit.MINUTES).toEpochMilli());
+
+                Map<TopicPartition, OffsetAndTimestamp> result = consumer.offsetsForTimes(query);
+
+                result.entrySet()
+                        .stream()
+                        .forEach(entry -> consumer.seek(entry.getKey(), entry.getValue().offset()));
+
+                flag = false;
+            }
+
+            //print each record.
+            consumerRecords.forEach(record -> {
+                System.out.println("Record Key " + record.key());
+                System.out.println("Record value " + record.value());
+                System.out.println("Record partition " + record.partition());
+                System.out.println("Record offset " + record.offset());
+                saveIntoFile(record.key(),record.value());
+            });
+            // commits the offset of record to broker.
+            consumer.commitAsync();
+        }
+        //consumer.close();
+    }
+   
+    
     public void runConsumer() {
         Consumer<String, String> consumer = ConsumerCreator.createConsumer();
         int noMessageFound = 0;
@@ -118,11 +211,41 @@ public class KafkaService {
                 System.out.println("Record value " + record.value());
                 System.out.println("Record partition " + record.partition());
                 System.out.println("Record offset " + record.offset());
+                saveIntoFile(record.key(),record.value());
             });
             // commits the offset of record to broker.
             consumer.commitAsync();
         }
         consumer.close();
+    }
+    
+    private void saveIntoFile(String key, String value) 
+    {
+    	FileWriter out = null;
+    	try
+    	{
+	    	 out = new FileWriter(key+".json");
+	    	 out.write(value);
+	    	 out.flush();
+    	}
+    	catch(IOException e)
+    	{
+    		e.printStackTrace();
+    	}
+    	finally
+    	{
+    		if(out!=null)
+    		{
+    			try
+    			{
+    				out.close();
+    			}
+    			catch(Exception er)
+    	    	{
+    	    		er.printStackTrace();
+    	    	}
+    		}
+    	}
     }
     public void runProducer() {
         Producer<String, String> producer = ProducerCreator.createProducer(this.KAFKA_BROKERS);
@@ -274,8 +397,9 @@ public class KafkaService {
 					//else
 					if(exception != null)
 					{
-						logger.info("Resend record "+key+ " for "+reSending+1+" times because Exception"+exception);
-						if(reSending>4)
+						logger.info("Resend record "+key+ " for "+(reSending+1)+" times because Exception"+exception);
+						//if(reSending>4)
+						if(reSending>-1)//skip sending again
 						{
 							problemRecords.put(key, recordString);
 						}

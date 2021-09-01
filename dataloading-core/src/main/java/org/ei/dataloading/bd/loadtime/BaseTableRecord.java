@@ -145,6 +145,12 @@ public class BaseTableRecord
 	public static final BaseTableRecord UPDATENUMBER = new BaseTableRecord("UPDATENUMBER", new Integer(10000), "cpx");
 	public static final BaseTableRecord UPDATERESOURCE= new BaseTableRecord("UPDATERESOURCE", new Integer(4000), "cpx");   //HH 04/05/2016 for Cafe
 	public static final BaseTableRecord ISOPENACESS= new BaseTableRecord("ISOPENACESS", new Integer(10), "cpx");   //HMO added 10/15/2017
+	//public static final BaseTableRecord CONFSERIESTITLE= new BaseTableRecord("CONFSERIESTITLE", new Integer(4000), "cpx");   //HMO added 2/03/2021
+	//public static final BaseTableRecord CONFNUMBER= new BaseTableRecord("CONFNUMBER", new Integer(4000), "cpx");   //HMO added 2/03/2021
+	//public static final BaseTableRecord CONFTHEME= new BaseTableRecord("CONFTHEME", new Integer(4000), "cpx");   //HMO added 2/03/2021
+	//public static final BaseTableRecord CONFORGANIZATIONE= new BaseTableRecord("CONFORGANIZATIONE", new Integer(4000), "cpx");   //HMO added 2/03/2021
+	//public static final BaseTableRecord CONFURL= new BaseTableRecord("CONFURL", new Integer(4000), "cpx");   //HMO added 2/03/2021
+	
 	
 	public static final BaseTableRecord REFERENCE= new BaseTableRecord("REFERENCE", new Integer(500000), "cpx");
 	public static final BaseTableRecord REFERENCETITLE= new BaseTableRecord("REFERENCETITLE", new Integer(4000), "cpx");
@@ -287,10 +293,16 @@ public class BaseTableRecord
 	    bdTableColumns.add(SEQ_NUM);
 	    bdTableColumns.add(SOURCEWEBSITE);
 	    bdTableColumns.add(GRANTLIST);
-	    bdTableColumns.add(EID);
-	    bdTableColumns.add(UPDATENUMBER);
+	    bdTableColumns.add(UPDATENUMBER);	   
+	    bdTableColumns.add(EID);	    
 	    bdTableColumns.add(UPDATERESOURCE);	  //HH 04/05/2016 for cafe	   
-	    //bdTableColumns.add(DEDUPKEY);	  //HMO 01/30/2017
+	//   bdTableColumns.add(ISOPENACESS);	  //HMO 01/30/2017
+	//    bdTableColumns.add(CONFSERIESTITLE);	  //HMO 02/08/2021
+	//   bdTableColumns.add(CONFNUMBER);	  //HMO 02/08/2021
+	//    bdTableColumns.add(CONFTHEME);	  //HMO 02/08/2021
+	//    bdTableColumns.add(CONFORGANIZATIONE);	  //HMO 02/08/2021
+	//    bdTableColumns.add(CONFURL);	  //HMO 02/08/2021
+	    
 	    
 
 		//ADDED FOR REFERENCE

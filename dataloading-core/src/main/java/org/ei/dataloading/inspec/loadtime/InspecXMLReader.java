@@ -258,8 +258,15 @@ public class InspecXMLReader extends FilterReader
 			// CPC
 			if(idxGroup.getChild("cpcg")!=null)
 			{
+<<<<<<< HEAD
 				record.put("CPC",getIndexing(idxGroup.getChild("cpcg"),"cc"));
 				//System.out.println("CPC="+getIndexing(idxGroup.getChild("cpcg"),"cc"));
+=======
+				Element cpcGroup = idxGroup.getChild("cpcg");
+				//record.put("CPC",getIndexing(idxGroup.getChild("cpcg"),"cc"));
+				record.put("CPC",new StringBuffer(getMixData("cpcg",cpcGroup.getContent())));
+				System.out.println("CPCG="+getMixData("cpcg",cpcGroup.getContent()));
+>>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
 			}
 			
 			if(idxGroup.getChild("ucindg")!=null)
@@ -281,8 +288,15 @@ public class InspecXMLReader extends FilterReader
 			Element fundGroup = article.getChild("fundg");
 			if(fundGroup!=null)
 			{
+<<<<<<< HEAD
 				record.put("FUNDG",getFungs(fundGroup));
 				//System.out.println("FUNDG="+getFungs(fundGroup).toString());
+=======
+				//record.put("FUNDG",getFungs(fundGroup));
+				//record.put("FUNDG",getFungs(fundGroup));
+				record.put("FUNDG",new StringBuffer(getMixData("fundg",fundGroup.getContent())));
+				System.out.println("FUNDG="+getMixData("fundg",fundGroup.getContent()));
+>>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
 			}			
 			
 			
@@ -293,8 +307,14 @@ public class InspecXMLReader extends FilterReader
 			Element linkGroup = article.getChild("linkg");
 			if(linkGroup!=null)
 			{
+<<<<<<< HEAD
 				record.put("LINKG",getLinkgs(linkGroup));
 				//System.out.println("LINKG="+getLinkgs(linkGroup).toString());
+=======
+				//record.put("LINKG",getLinkgs(linkGroup));
+				record.put("LINKG",new StringBuffer(getMixData("linkg",linkGroup.getContent())));
+				System.out.println("LINKG="+getMixData("linkg",linkGroup.getContent()));
+>>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
 			}
 
 			// sortdate
@@ -322,6 +342,29 @@ public class InspecXMLReader extends FilterReader
 
 			    record.put("SRTDATE",sDate);
 
+			}
+			
+			
+			/*
+			Video Group
+			 */
+			//added by hmo @1/28/2021 for EVOPS-1068
+			Element videoGroup = bibGroup.getChild("videog");
+			if(videoGroup!=null)
+			{			
+				record.put("VIDEOG",new StringBuffer(getMixData("videog",videoGroup.getContent())));
+				System.out.println("VIDEOG="+getMixData("videog",videoGroup.getContent()));
+			}
+			
+			/*
+			Repository Group
+			 */
+			//added by hmo @1/28/2021 for EVOPS-1068
+			Element reposGroup = bibGroup.getChild("reposg");
+			if(reposGroup!=null)
+			{			
+				record.put("REPOSG",new StringBuffer(getMixData("reposg",reposGroup.getContent())));
+				System.out.println("REPOSG="+getMixData("reposg",reposGroup.getContent()));
 			}
 
 			/*
@@ -1079,6 +1122,66 @@ public class InspecXMLReader extends FilterReader
 		return dateB.toString();
 	}
 	*/
+	
+	private  String getMixData(String name, List l)
+    {
+		Iterator it = l.iterator();
+		String content="";
+       
+        content=getMixData(l, content);
+          
+		content="<"+name+">"+content.trim()+"</"+name+">";
+		return content;
+    }
+	
+	private  String getMixData(List l, String content)
+    {
+		Iterator it = l.iterator();		
+        while(it.hasNext())
+        {
+            Object o = it.next();
+
+            if(o instanceof Text )
+            {
+
+				String text=((Text)o).getText();
+				text= perl.substitute("s/&/&amp;/g",text);
+				text= perl.substitute("s/</&lt;/g",text);
+				text= perl.substitute("s/>/&gt;/g",text);
+				text= perl.substitute("s/\n//g",text);
+				text= perl.substitute("s/\r//g",text);
+
+				content=content.trim()+text.trim();
+
+            }
+            else if(o instanceof EntityRef)
+            {
+  				if(inabstract)
+  						entity.add(((EntityRef)o).getName());
+
+                  content=content.trim()+("&")+(((EntityRef)o).getName())+";";
+            }
+            else if(o instanceof Element)
+            {
+                Element e = (Element)o;
+                content=content+"<"+e.getName();
+                List ats = e.getAttributes();
+                if(!ats.isEmpty())
+                {	Iterator at = ats.iterator();
+					while(at.hasNext())
+        			{
+						Attribute a = (Attribute)at.next();
+					   	content=content.trim()+" "+a.getName()+"=\""+a.getValue()+"\"";
+					}
+				}
+                content=content.trim()+">";
+                content=getMixData(e.getContent(), content.trim());
+               content=content.trim()+"</"+e.getName()+">";
+            }
+        }
+		//content=content.trim()+"</"+name+">";
+		return content;
+    }
 	
     private  StringBuffer getMixData(List l, StringBuffer b)
     {

@@ -17,6 +17,7 @@ public class ConsumerCreator {
         Properties props = new Properties();
         String kafkaBroker=null;
         String topicName = null;
+        String groupID = IKafkaConstants.GROUP_ID_CONFIG;
         System.out.println("getting config file");
     	try (InputStream input = new FileInputStream("./lib/config.properties")) 
     	{
@@ -27,6 +28,11 @@ public class ConsumerCreator {
             prop.load(input);
             kafkaBroker=prop.getProperty("KAFKA_BROKERS");           
 	        topicName=prop.getProperty("TOPIC_NAME");
+	        if(prop.getProperty("GROUP_ID")!=null)
+	        {
+	        	groupID=prop.getProperty("GROUP_ID");
+	        	System.out.println("GROUP_ID="+groupID);
+	        }
             //kafkaBroker = kafka_brokers;
             // get the property value and print it out
             System.out.println("KAFKA_BROKERS="+kafkaBroker);
@@ -37,12 +43,13 @@ public class ConsumerCreator {
         }
         //props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, IKafkaConstants.KAFKA_BROKERS);
     	props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaBroker);
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, IKafkaConstants.GROUP_ID_CONFIG);
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, groupID);
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         props.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, IKafkaConstants.MAX_POLL_RECORDS);
-        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
-        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, IKafkaConstants.OFFSET_RESET_EARLIER);
+        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+        //props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, IKafkaConstants.OFFSET_RESET_EARLIER);
+        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
         Consumer<String, String> consumer = new KafkaConsumer<>(props);
         consumer.subscribe(Collections.singletonList(topicName));
         return consumer;

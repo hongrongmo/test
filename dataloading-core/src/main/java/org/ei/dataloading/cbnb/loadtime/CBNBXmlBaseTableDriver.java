@@ -260,7 +260,7 @@ public class CBNBXmlBaseTableDriver
         }
         catch(Exception e)
         {
-            throw new Exception(e);
+           e.printStackTrace();
         }
         finally
         {

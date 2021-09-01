@@ -71,10 +71,16 @@ import org.ei.dataloading.awss3.AmazonS3Service;
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
+import com.amazonaws.event.ProgressEvent;
+import com.amazonaws.event.ProgressListener;
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
+import com.amazonaws.services.s3.transfer.MultipleFileUpload;
+import com.amazonaws.services.s3.transfer.TransferManager;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectResult;
 import com.amazonaws.services.s3.model.PutObjectRequest;
@@ -91,6 +97,7 @@ import com.amazonaws.services.sqs.model.DeleteQueueRequest;
 import com.amazonaws.services.sqs.model.Message;
 import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.SendMessageRequest;
+import com.amazonaws.SdkClientException;
 import org.apache.commons.text.StringEscapeUtils;
 
 import org.elasticsearch.action.index.IndexResponse;
@@ -121,6 +128,10 @@ import com.google.gson.JsonElement;
 import com.google.gson.GsonBuilder;
 import com.google.gson.Gson;
 import org.ei.util.kafka.*;
+import org.ei.dataloading.awss3.AmazonS3Service;
+import org.ei.dataloading.awss3.UploadFileToS3;
+import org.ei.dataloading.awss3.UploadFileToS3Thread;
+
 
 
 public class NewDataTesting
@@ -230,6 +241,10 @@ public class NewDataTesting
 		{
 			System.out.println("sending records to Kafka for deleting");
 			test.deleteESRecord(database);
+		}
+		else if(action.equals("testKafkaConsumer"))
+		{
+			test.testKafkaConsumer(test.tableName);
 		}
 		else if(action.equals("fast"))
 		{
@@ -430,6 +445,10 @@ public class NewDataTesting
 		else if(action.contentEquals("comparedatabasees"))
 		{
 			test.runDatabaseTOES(updateNumber, tableName1, database, server, tableName);
+		}
+		else if(action.contentEquals("testS3"))
+		{
+			test.testS3(updateNumber);
 		}
 		else
 		{
@@ -644,6 +663,38 @@ public class NewDataTesting
                      }
                  }
              }        
+           
+        }
+        finally
+        {
+        	try
+        	{
+		        if(kafka!=null)
+		        { 	        		        
+		        	kafka.close();        
+		        }
+        	}
+        	catch(Exception e)
+            {
+            	e.printStackTrace();
+            }
+          
+        }
+    }
+	 
+	 private void testKafkaConsumer(String infile) throws Exception
+	 {
+		//KafkaService kafka = new KafkaService();
+		long processTime = System.currentTimeMillis();
+		String propertyFileName="lib/config.properties";
+		KafkaService kafka = new KafkaService(processTime+"delete"+infile, propertyFileName);
+		BufferedReader deleteFileStream;
+		
+		
+		String eid=null;
+        try
+        {
+        	
            
         }
         finally
@@ -6400,6 +6451,134 @@ public class NewDataTesting
 		}
 	}
 	
+	public static void testS3(String fileObjKeyName) throws IOException {
+        Regions clientRegion = Regions.US_EAST_1;
+        String bucketName = "ev-datasets-cert/cpx/";
+        String stringObjKeyName = "testS3String";
+        //String fileObjKeyName = "*** File object key name ***";
+        //String fileName = "*** Path to file to upload ***";
+        String fileName = fileObjKeyName;
+
+        try {
+            //This code expects that you have AWS credentials set up per:
+            // https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html
+            AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
+                    .withRegion(clientRegion)
+                    .build();
+
+            // Upload a text string as a new object.
+            s3Client.putObject(bucketName, stringObjKeyName, "Uploaded String Object");
+
+            // Upload a file as a new object with ContentType and title specified.
+            PutObjectRequest request = new PutObjectRequest(bucketName, fileObjKeyName, new File(fileName));
+            ObjectMetadata metadata = new ObjectMetadata();
+            metadata.setContentType("text/xml");
+            metadata.addUserMetadata("title", "someTitle");
+            request.setMetadata(metadata);
+            s3Client.putObject(request);
+        } catch (AmazonServiceException e) {
+            // The call was transmitted successfully, but Amazon S3 couldn't process 
+            // it, so it returned an error response.
+            e.printStackTrace();
+        } catch (SdkClientException e) {
+            // Amazon S3 couldn't be contacted for a response, or the client
+            // couldn't parse the response from Amazon S3.
+            e.printStackTrace();
+        } catch (Exception e) {
+        	e.printStackTrace();
+        }
+    }
+	
+	/*
+	private void testS3(String currDir)
+	{
+		try
+		{
+			AmazonS3 s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
+			TransferManager tmanager = new TransferManager(s3Client);
+			
+			File zipsDir = new File(currDir);
+
+			if(!(zipsDir.exists()))
+			{
+				throw new FileNotFoundException();
+			}
+
+			//Check if Dir isNotEmpty (contains file), otherwise skip upload to S3
+			if(zipsDir.isDirectory() && zipsDir.list().length>0)
+			{
+				
+				System.out.println("Uploading Dir: " + zipsDir.getAbsolutePath() + " to S3 Bucket");
+
+				// upload vtw zip dir to S3
+				MultipleFileUpload uploadFile = tmanager.uploadDirectory(bucketName, key, zipsDir, true);
+
+				// check transfer's status to check its progress
+			
+				uploadFile.addProgressListener(new ProgressListener()
+				{
+					@Override
+					public void progressChanged(ProgressEvent progressEvent)
+					{
+						System.out.println("Transfer: " + progressEvent.getBytesTransferred());
+					}
+				}	);
+				
+				// block the current thread and wait for the transfer to complete. if transfer fails; this method will throw 
+				//AmazonClientException or AmazonServiceException 
+				uploadFile.waitForCompletion();
+				
+
+			}
+			else
+			{
+				System.out.println("Dir is Empty!");
+				System.exit(1);
+			}
+
+
+		}
+		catch(AmazonServiceException ase)
+		{
+			System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
+					"to Amazon S3, but was rejected with an error response" +
+					" for some reason.");
+			System.out.println("Error Message:    " + ase.getMessage());
+			System.out.println("HTTP Status Code: " + ase.getStatusCode());
+			System.out.println("AWS Error Code:   " + ase.getErrorCode());
+			System.out.println("Error Type:       " + ase.getErrorType());
+			System.out.println("Request ID:       " + ase.getRequestId());
+		}
+		catch(AmazonClientException ace)
+		{
+			System.out.println("Caught an AmazonClientException, which " +
+					"means the client encountered " +
+					"an internal error while trying to " +
+					"communicate with S3, " +
+					"such as not being able to access the network.");
+			System.out.println("Error Message: " + ace.getMessage());
+			System.out.println("HTTP Status Code: " + ace.getCause());
+		}
+		catch(InterruptedException ex)
+		{
+			ex.printStackTrace();
+		}
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		finally
+		{
+			if(tmanager !=null)
+			{
+				//after download is complete, call shutdownNow to release resources
+				tmanager.shutdownNow(false);  
+			}
+
+		}
+	}
+*/
 	private void testPutAWSS3(String key_name)
 	{
 		//AmazonS3 s3Client = new AmazonS3Client(new ProfileCredentialsProvider());
@@ -6416,7 +6595,7 @@ public class NewDataTesting
 			md.setContentType("text/xml");
 			//md.setContentLength(bytes.length);
 			System.out.println("total length " + bytes.length); 
-			PutObjectResult response = s3Client.putObject(new PutObjectRequest("hmoroger", key_name, new File(file_path)));	
+			PutObjectResult response = s3Client.putObject(new PutObjectRequest("ev-datasets-cert/cpx/", key_name, new File(file_path)));	
 			System.out.println("Key: " + key_name + " successfully uploaded to S3, Etag: " + response.getETag());
 	        }catch(Exception e){
 	        	System.out.println("Other Error Message: " + e.getMessage());
@@ -6431,7 +6610,7 @@ public class NewDataTesting
 		try {
 			s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
 			//object = s3Client.getObject( new GetObjectRequest("hmoroger", "midFromFast_DR.out"));
-			object = s3Client.getObject( new GetObjectRequest("hmoroger", key));
+			object = s3Client.getObject( new GetObjectRequest("sccontent-ani-xml-prod", key));
 			InputStream objectData = object.getObjectContent();
 			 System.out.println("Content-Type: "  + 
 					 object.getObjectMetadata().getContentType());
@@ -6473,7 +6652,7 @@ public class NewDataTesting
 			breader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(breader.readLine().replaceAll("><", ">\n<").getBytes())));
 
 			//File file = new File(s3Dir.getName()+"/"+key+".xml");
-			File file = new File("./testS3/"+key);
+			File file = new File("./testS3/"+key+".xml");
 
 			if (!file.exists()) 
 			{
