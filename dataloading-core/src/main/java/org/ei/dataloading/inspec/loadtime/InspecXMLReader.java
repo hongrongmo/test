@@ -258,15 +258,10 @@ public class InspecXMLReader extends FilterReader
 			// CPC
 			if(idxGroup.getChild("cpcg")!=null)
 			{
-<<<<<<< HEAD
-				record.put("CPC",getIndexing(idxGroup.getChild("cpcg"),"cc"));
-				//System.out.println("CPC="+getIndexing(idxGroup.getChild("cpcg"),"cc"));
-=======
 				Element cpcGroup = idxGroup.getChild("cpcg");
 				//record.put("CPC",getIndexing(idxGroup.getChild("cpcg"),"cc"));
 				record.put("CPC",new StringBuffer(getMixData("cpcg",cpcGroup.getContent())));
-				System.out.println("CPCG="+getMixData("cpcg",cpcGroup.getContent()));
->>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
+				//System.out.println("CPCG="+getMixData("cpcg",cpcGroup.getContent()));
 			}
 			
 			if(idxGroup.getChild("ucindg")!=null)
@@ -288,15 +283,10 @@ public class InspecXMLReader extends FilterReader
 			Element fundGroup = article.getChild("fundg");
 			if(fundGroup!=null)
 			{
-<<<<<<< HEAD
-				record.put("FUNDG",getFungs(fundGroup));
-				//System.out.println("FUNDG="+getFungs(fundGroup).toString());
-=======
 				//record.put("FUNDG",getFungs(fundGroup));
 				//record.put("FUNDG",getFungs(fundGroup));
 				record.put("FUNDG",new StringBuffer(getMixData("fundg",fundGroup.getContent())));
-				System.out.println("FUNDG="+getMixData("fundg",fundGroup.getContent()));
->>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
+				//System.out.println("FUNDG="+getMixData("fundg",fundGroup.getContent()));
 			}			
 			
 			
@@ -307,14 +297,9 @@ public class InspecXMLReader extends FilterReader
 			Element linkGroup = article.getChild("linkg");
 			if(linkGroup!=null)
 			{
-<<<<<<< HEAD
-				record.put("LINKG",getLinkgs(linkGroup));
-				//System.out.println("LINKG="+getLinkgs(linkGroup).toString());
-=======
 				//record.put("LINKG",getLinkgs(linkGroup));
 				record.put("LINKG",new StringBuffer(getMixData("linkg",linkGroup.getContent())));
 				System.out.println("LINKG="+getMixData("linkg",linkGroup.getContent()));
->>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
 			}
 
 			// sortdate
