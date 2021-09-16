@@ -1185,11 +1185,14 @@ public class CombinedXMLWriter
 	            contentObject.put("ABSTRACT".toLowerCase(),removeExtraSpace(rec.getString(EVCombinedRec.ABSTRACT)));	           
             }
            
+            //remove OTHERABSTRACT from KY per EVOPS-1195 by hmo at 09/16/2021
+            /*           
             if(rec.getString(EVCombinedRec.OTHER_ABSTRACT)!=null && rec.getString(EVCombinedRec.OTHER_ABSTRACT).trim().length()>0)
             {
             	contentObject.put("OTHERABSTRACT".toLowerCase(),rec.getString(EVCombinedRec.OTHER_ABSTRACT));           	    
             }
-           
+            */
+            
             String[] editor=removeSpace(reverseSigns(rec.getStrings(EVCombinedRec.EDITOR)));
             if(editor!=null && editor.length>0 )
             {
@@ -3032,11 +3035,14 @@ public class CombinedXMLWriter
 	            contentObject.put("ABSTRACT".toLowerCase(),removeExtraSpace(rec.getString(EVCombinedRec.ABSTRACT)));	           
             }
            
+            //remove OTHERABSTRACT from KY per EVOPS-1195 by hmo at 09/16/2021
+            /*           
             if(rec.getString(EVCombinedRec.OTHER_ABSTRACT)!=null && rec.getString(EVCombinedRec.OTHER_ABSTRACT).trim().length()>0)
             {
             	contentObject.put("OTHERABSTRACT".toLowerCase(),rec.getString(EVCombinedRec.OTHER_ABSTRACT));           	    
             }
-           
+            */
+            
             String[] editor=removeSpace(reverseSigns(rec.getStrings(EVCombinedRec.EDITOR)));
             if(editor!=null && editor.length>0 )
             {
