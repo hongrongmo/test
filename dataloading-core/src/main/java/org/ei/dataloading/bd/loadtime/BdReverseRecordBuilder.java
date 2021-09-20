@@ -5030,13 +5030,6 @@ public class BdReverseRecordBuilder
          badCharacterMap.put("&mellip;","&#8943;");
          badCharacterMap.put("&ldquo;","&#8220;");
          badCharacterMap.put("&rdquo;","&#8221;");
-         
-   
-         
-       
-        
-         
-     }
-
-	    
+  
+     }  
 }
