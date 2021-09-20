@@ -21,10 +21,7 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
 import java.util.*;
 
 import org.ei.common.bd.*;
@@ -39,10 +36,9 @@ import org.ei.common.Constants;
 import org.ei.common.bd.BdAuthors;
 import org.ei.dataloading.DataLoadDictionary;
 import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
-<<<<<<< HEAD
-=======
+
 import org.ei.xml.Entity;
->>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
+
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import org.ei.data.compendex.runtime.*;
@@ -1234,7 +1230,6 @@ public class BdReverseRecordBuilder
     	}
     	return singleRecordData;
     }
->>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
     
   
     public void writeRecord(Hashtable rs, FileWriter file) throws Exception

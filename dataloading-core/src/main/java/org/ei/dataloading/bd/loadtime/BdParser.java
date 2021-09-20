@@ -267,13 +267,12 @@ public class BdParser
 						{
 							Element oaArticleStatus = openAccess.getChild("oa-article-status",xocsNamespace);
 							
-<<<<<<< HEAD
-							//String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this only use for testing "free-to-read-status" for now
-							String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//this is used for production for now at 1/20/2021
-=======
+			//String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this only use for testing "free-to-read-status" for now
+							//String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//this is used for production for now at 1/20/2021
+
 							String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this is used for production for now at 5/12/2021
 							//String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//remove from production for now at 5/12/2021
->>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
+
 							//String freeToReadStatus = oaArticleStatus.getAttributeValue("free-to-read-status");
 							if(isOpenAccess!=null)
 							{
