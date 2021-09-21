@@ -1329,10 +1329,12 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     {
                         rec.put(EVCombinedRec.ISOPENACESS, rs.getString("ISOPENACESS"));                        
                     }
+                    /*
                     else
                     {
                     	 rec.put(EVCombinedRec.ISOPENACESS, "0");
                     }
+                    */
                                                            
                     //due to bd_master table structure change, we have to handle the missed column exception
                     try
