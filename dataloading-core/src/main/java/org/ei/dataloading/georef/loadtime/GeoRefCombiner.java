@@ -432,9 +432,12 @@ public void writeRecs(ResultSet rs)
 					String aString = rs.getString("PERSON_ANALYTIC");
 					if(aString != null)
 					{
-					  String[] authors = aString.split(AUDELIMITER);
-					  rec.put(EVCombinedRec.AUTHOR, authors);
-					  rec.put(EVCombinedRec.FIRST_AUTHOR,authors[0]);
+					  String[] authors = aString.split(AUDELIMITER);	
+					  if(authors!=null && authors.length>0)	
+					  {
+						  rec.put(EVCombinedRec.AUTHOR, authors);					 
+						  rec.put(EVCombinedRec.FIRST_AUTHOR,authors[0]);
+					  }
 					}
 	
 					// EDS
