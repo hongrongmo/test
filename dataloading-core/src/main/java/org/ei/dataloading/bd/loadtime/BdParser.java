@@ -267,13 +267,19 @@ public class BdParser
 						{
 							Element oaArticleStatus = openAccess.getChild("oa-article-status",xocsNamespace);
 							
-							//String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this only use for testing "free-to-read-status" for now
-							String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//this is used for production for now at 1/20/2021
+			//String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this only use for testing "free-to-read-status" for now
+							//String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//this is used for production for now at 1/20/2021
+
+							String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this is used for production for now at 5/12/2021
+							//String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//remove from production for now at 5/12/2021
+
 							//String freeToReadStatus = oaArticleStatus.getAttributeValue("free-to-read-status");
 							if(isOpenAccess!=null)
 							{
 								record.put("ISOPENACESS",isOpenAccess);
-							}							
+							}
+							//record.put("FREETOREADSTATUS",freeToReadStatus);
+							//System.out.println("freeToReadStatus="+freeToReadStatus);
 						}
 						
 					}
@@ -482,7 +488,14 @@ public class BdParser
 										{																			 
 											docType = cititype;
 										}
-										
+										//*/
+										//docType = cititype;
+										/*
+										if(!cittypeList.contains(docType.toLowerCase()))
+										{
+											sendNotisfication(pui,docType);
+										}
+										*/
 										record.put("CITTYPE",docType);
 										//System.out.println("STAGE="+record.get("STAGE")+"TYPE= "+cititype+"DOCTYPE= "+docType);
 									}
@@ -5320,7 +5333,6 @@ public class BdParser
     	
     	return outputString;
     }
-    
-    
+
 
 }

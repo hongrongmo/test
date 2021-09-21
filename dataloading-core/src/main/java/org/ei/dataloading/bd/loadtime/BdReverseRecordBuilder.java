@@ -21,21 +21,27 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-import org.w3c.dom.Document;
 
 import java.util.*;
-import java.sql.*;
-import org.xml.sax.SAXException;
+
+import org.ei.common.bd.*;
 import org.apache.commons.text.StringEscapeUtils;
+import org.ei.common.Constants;
+
+//import org.ei.data.LoadNumber;
+//import org.ei.dataloading.bd.*;
+import java.sql.*;
 
 import org.ei.common.Constants;
 import org.ei.common.bd.BdAuthors;
-import org.ei.common.bd.BdAuthor;
-import org.ei.xml.Entity;
 import org.ei.dataloading.DataLoadDictionary;
 import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
-import org.ei.data.compendex.runtime.*;
 
+import org.ei.xml.Entity;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+import org.ei.data.compendex.runtime.*;
 
 public class BdReverseRecordBuilder
 {
@@ -151,6 +157,100 @@ public class BdReverseRecordBuilder
    
     }
     
+    /* this one is used for generate a file per loadnumber 
+    public void writeFile(Connection con,int loadN,String databaseName, String tableName)
+            throws Exception
+    {
+    	StringBuffer initialString = new StringBuffer("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+    	initialString.append("<bibdataset xsi:schemaLocation=\"http://www.elsevier.com/xml/ani/ani http://www.elsevier.com/xml/ani/ani512.xsd\" ");
+    	initialString.append("xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ");
+    	initialString.append("xmlns:ait=\"http://www.elsevier.com/xml/ani/ait\" ");
+    	initialString.append("xmlns:ce=\"http://www.elsevier.com/xml/ani/common\" ");
+    	initialString.append("xmlns=\"http://www.elsevier.com/xml/ani/ani\">\n");
+    	 Statement stmt = null;
+         ResultSet rs = null;
+         int count = 0;
+         boolean checkResult = false;
+         FileWriter file = null;
+<<<<<<< HEAD
+         String xsdFileName="ani512.dtd";
+=======
+         String xsdFileName="ani515/ani515.xsd";
+>>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
+         try
+         {
+             stmt = con.createStatement();
+             String filename = databaseName+"_"+loadN+".xml";
+             file = new FileWriter(filename);
+             file.write(initialString.toString());
+             rs = stmt.executeQuery("select *  from bd_master where loadnumber="+loadN+" and database='"+databaseName+"'");
+             while (rs.next())
+             {
+                 writeRecord(rs,file);
+             }
+             file.write("</bibdataset>");
+             file.close();
+             if(validatedXml(filename,xsdFileName))
+            	 zipBatchFile(filename,databaseName);
+         }
+         catch (Exception e)
+         {
+        	 System.out.println("problem with accessnumber="+this.accessnumber);
+        	 e.printStackTrace();
+             System.exit(1);
+         }
+         finally
+         {
+             if(rs != null)
+             {
+                 rs.close();
+             }
+             
+             if(file != null)
+             {
+            	 file.close();
+             }
+         }
+    	
+    }
+<<<<<<< HEAD
+    
+    private boolean validatedXml(String filename,String xsdFileName) throws Exception
+	{
+		// parse an XML document into a DOM tree
+		 javax.xml.parsers.DocumentBuilder parser =  javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		 Document document = parser.parse(new File(filename));
+
+		// create a SchemaFactory capable of understanding WXS schemas
+		//SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		 SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+
+		// load a WXS schema, represented by a Schema instance
+		//Source schemaFile = new StreamSource(new File("ani512.xsd"));
+		Source schemaFile = new StreamSource(new File(xsdFileName));
+		Schema schema = factory.newSchema(schemaFile);
+
+		// create a Validator instance, which can be used to validate an instance document
+		Validator validator = schema.newValidator();
+
+		// validate the DOM tree
+		try {
+		   //validator.validate(new DOMSource(document));
+			validator.validate(new StreamSource(new File(filename)));
+			
+		    System.out.println(filename+" is valid!");
+		    return true;
+		} catch (SAXException e) {
+			System.out.println(filename+" is invalid!");
+			e.printStackTrace();
+			return false;
+		    // instance document is invalid!
+		}
+		
+	}
+=======
+    */
+    
     //this one is used for a record for each xml file
     public void writeFile(Connection con,int loadN,String databaseName, String tableName)
             throws Exception
@@ -252,6 +352,8 @@ public class BdReverseRecordBuilder
 		 javax.xml.parsers.DocumentBuilder parser =  javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		 Document document = parser.parse(new File(filename));
 
+		// create a SchemaFactory capable of understanding WXS schemas
+		//SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 		 SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 
 		// load a WXS schema, represented by a Schema instance
@@ -289,7 +391,30 @@ public class BdReverseRecordBuilder
 	    	if(rs.getString("CDT")!=null)
 	    	{
 	    		singleRecordData.put("DATESORT", rs.getString("CDT"));
-	    	}	    		    	
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("COPYRIGHT")!=null)
+	    	{
+	    		singleRecordData.put("COPYRIGHT", dictionary.AlphaEntitysToNumericEntitys(rs.getString("COPYRIGHT")));
+	    	}
+	    	
+	    	
+	    	if(rs.getString("DOI")!=null)
+	    	{
+	    		singleRecordData.put("DOI",rs.getString("DOI"));
+	    	}
+	    	
+	    	if(rs.getString("PUI")!=null)
+	    	{
+	    		singleRecordData.put("PUI", rs.getString("PUI"));
+	    	}
+	    	
+	    	if(rs.getString("DATABASE")!=null)
+	    	{
+	    		singleRecordData.put("DATABASE",rs.getString("DATABASE"));
+	    	}
+	    	*/
 	    	
 	    	if(rs.getString("DOC")!=null)
 	    	{
@@ -318,27 +443,125 @@ public class BdReverseRecordBuilder
 	    	{
 	    		singleRecordData.put("CITATIONTITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ATL")));
 	    	}
-	    		   
+	    	
+	    	/*
+	    	if(rs.getString("AUTHORKEYWORDS")!=null)
+	    	{
+	    		singleRecordData.put("AUTHORKEYWORDS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHORKEYWORDS")));
+	    	}
+	    	
+	    	if(rs.getString("AUTHOR")!=null)
+	    	{
+	    		singleRecordData.put("AUTHOR",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHOR")));
+	    	}
+	    	
+	    	if(rs.getString("AUTHOR_1")!=null)
+	    	{
+	    		singleRecordData.put("AUTHOR_1",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AUTHOR_1")));
+	    	}
+	    	
+	    	if(rs.getString("AFFILIATION")!=null)
+	    	{
+	    		singleRecordData.put("AFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AFFILIATION")));
+	    	}
+	    	
+	    	if(rs.getString("AFFILIATION_1")!=null)
+	    	{
+	    		singleRecordData.put("AFFILIATION_1",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AFFILIATION_1")));
+	    	}
+	    	
+	    	if(rs.getString("CORRESPONDENCENAME")!=null)
+	    	{
+	    		singleRecordData.put("CORRESPONDENCENAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CORRESPONDENCENAME")));
+	    	}
+	    	
+	    	if(rs.getString("correspondenceaffiliation")!=null)
+	    	{
+	    		singleRecordData.put("CORRESPONDENCEAFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("correspondenceaffiliation")));
+	    	}
+	    	
+	    	if(rs.getString("CORRESPONDENCEEADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("CORRESPONDENCEEADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CORRESPONDENCEEADDRESS")));
+	    	}
+	    	
+	    	if(rs.getString("GRANTLIST")!=null)
+	    	{
+	    		singleRecordData.put("GRANTLIST",dictionary.AlphaEntitysToNumericEntitys(rs.getString("GRANTLIST")));
+	    	}
+	    	*/
 	    	if(rs.getString("ABS")!=null)
 	    	{
 	    		singleRecordData.put("ABSTRACTDATA",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABS")));
-	    	}	    	
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("ABSTRACTORIGINAL")!=null)
+	    	{
+	    		singleRecordData.put("ABSTRACTORIGINAL",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABSTRACTORIGINAL")));
+	    	}
+	    	
+	    	if(rs.getString("ABSTRACTPERSPECTIVE")!=null)
+	    	{
+	    		singleRecordData.put("ABSTRACTPERSPECTIVE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ABSTRACTPERSPECTIVE")));
+	    	}
+	    	*/
 	    	
 	    	if(rs.getString("SOURCE_TYPE")!=null)
 	    	{
 	    		singleRecordData.put("SOURCETYPE",rs.getString("SOURCE_TYPE"));
-	    	}	    		    	
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("SOURCECOUNTRY")!=null)
+	    	{
+	    		singleRecordData.put("SOURCECOUNTRY",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCECOUNTRY")));
+	    	}
+	    	
+	    	if(rs.getString("SOURCEID")!=null)
+	    	{
+	    		singleRecordData.put("SOURCEID",rs.getString("SOURCEID"));
+	    	}
+	    	*/
 	    	
 	    	if(rs.getString("FJL")!=null)
 	    	{
 	    		singleRecordData.put("SOURCETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("FJL")));
-	    	}	    	
+	    	}
+	    	
+	    	/*
+	    	if(rs.getString("SOURCETITLEABBREV")!=null)
+	    	{
+	    		singleRecordData.put("SOURCETITLEABBREV",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SOURCETITLEABBREV")));
+	    	}
+	    	
+	    	if(rs.getString("TRANSLATEDSOURCETITLE")!=null)
+	    	{
+	    		singleRecordData.put("TRANSLATEDSOURCETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("TRANSLATEDSOURCETITLE")));
+	    	}
+	    	
+	    	if(rs.getString("VOLUMETITLE")!=null)
+	    	{
+	    		singleRecordData.put("VOLUMETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("VOLUMETITLE")));
+	    	}
+	    	
+	    	if(rs.getString("ISSUETITLE")!=null)
+	    	{
+	    		singleRecordData.put("ISSUETITLE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("ISSUETITLE")));
+	    	}
+	    	*/
 	    	
 	    	if( rs.getString("ISN")!=null)
 	    	{
 	    		singleRecordData.put("ISSN",rs.getString("ISN"));
 	    	}
-	    		    	
+	    	
+	    	/*
+	    	if(rs.getString("EISSN")!=null)
+	    	{
+	    		singleRecordData.put("EISSN",rs.getString("EISSN"));
+	    	}
+	    	*/
 	    	if(rs.getString("IBN")!=null)
 	    	{
 	    		singleRecordData.put("ISBN",rs.getString("IBN"));
@@ -363,7 +586,18 @@ public class BdReverseRecordBuilder
 	    	if(rs.getString("PAG")!=null)
 	    	{
 	    		singleRecordData.put("PAGE",rs.getString("PAG"));
-	    	}	    
+	    	}
+	    	/*
+	    	if(rs.getString("PAGECOUNT")!=null)
+	    	{
+	    		singleRecordData.put("PAGECOUNT",rs.getString("PAGECOUNT"));
+	    	}
+	    	
+	    	if(rs.getString("ARTICLENUMBER")!=null)
+	    	{
+	    		singleRecordData.put("ARTICLENUMBER",rs.getString("ARTICLENUMBER"));
+	    	}
+	    	*/
 	    	
 	    	if(rs.getString("PBD")!=null)
 	    	{
@@ -380,7 +614,134 @@ public class BdReverseRecordBuilder
 	    	{
 	    		singleRecordData.put("SOURCEWEBSITE",dictionary.AlphaEntitysToNumericEntitys(rs.getString("AVL")));
 	    	}
-	    		    	
+	    	
+	    	/*
+	    	if(rs.getString("CONTRIBUTOR")!=null)
+	    	{
+	    		singleRecordData.put("CONTRIBUTOR",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTRIBUTOR")));
+	    	}
+	    	
+	    	if(rs.getString("CONTRIBUTORAFFILIATION")!=null)
+	    	{
+	    		singleRecordData.put("CONTRIBUTORAFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTRIBUTORAFFILIATION")));
+	    	}
+	    	
+	    	if(rs.getString("EDITORS")!=null)
+	    	{
+	    		singleRecordData.put("EDITORS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("EDITORS")));
+	    	}
+	    	
+	    	
+	    	if(rs.getString("PUBLISHERNAME")!=null)
+	    	{
+	    		singleRecordData.put("PUBLISHERNAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERNAME")));
+	    	}
+	    	
+	    	if(rs.getString("PUBLISHERADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("PUBLISHERADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERADDRESS")));
+	    	}
+	    	
+	    	if(rs.getString("PUBLISHERELECTRONICADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("PUBLISHERELECTRONICADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("PUBLISHERELECTRONICADDRESS")));
+	    	}
+	    	
+	    	if(rs.getString("REPORTNUMBER")!=null)
+	    	{
+	    		singleRecordData.put("REPORTNUMBER",dictionary.AlphaEntitysToNumericEntitys(rs.getString("REPORTNUMBER")));
+	    	}
+	    	
+	    	if(rs.getString("CONFNAME")!=null)
+	    	{
+	    		singleRecordData.put("CONFNAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFNAME")));
+	    	}
+	    	
+	    	if(rs.getString("CONFCATNUMBER")!=null)
+	    	{
+	    		singleRecordData.put("CONFCATNUMBER",rs.getString("CONFCATNUMBER"));
+	    	}
+	    	
+	    	if(rs.getString("CONFCODE")!=null)
+	    	{
+	    		singleRecordData.put("CONFCODE",rs.getString("CONFCODE"));
+	    	}
+	    	
+	    	if(rs.getString("CONFLOCATION")!=null)
+	    	{
+	    		singleRecordData.put("CONFLOCATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFLOCATION")));
+	    	}
+	    	
+	    	if(rs.getString("CONFDATE")!=null)
+	    	{
+	    		singleRecordData.put("CONFDATE",rs.getString("CONFDATE"));
+	    	}
+	    	
+	    	if(rs.getString("CONFSPONSORS")!=null)
+	    	{
+	    		singleRecordData.put("CONFSPONSORS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFSPONSORS")));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEPARTNUMBER")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEPARTNUMBER",rs.getString("CONFERENCEPARTNUMBER"));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEPAGERANGE")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEPAGERANGE",rs.getString("CONFERENCEPAGERANGE"));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEPAGECOUNT")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEPAGECOUNT",rs.getString("CONFERENCEPAGECOUNT"));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEEDITOR")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEEDITOR",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEEDITOR")));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEORGANIZATION")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEORGANIZATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEORGANIZATION")));
+	    	}
+	    	
+	    	if(rs.getString("CONFERENCEEDITORADDRESS")!=null)
+	    	{
+	    		singleRecordData.put("CONFERENCEEDITORADDRESS",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONFERENCEEDITORADDRESS"))); 
+	    	}
+	    	
+	    	if(rs.getString("CONTROLLEDTERM")!=null)
+	    	{
+	    		singleRecordData.put("CONTROLLEDTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTROLLEDTERM")));   
+	    	}
+	    	
+	    	if(rs.getString("UNCONTROLLEDTERM")!=null)
+	    	{
+	    		singleRecordData.put("UNCONTROLLEDTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("UNCONTROLLEDTERM"))); 
+	    	}
+	    	
+	    	if(rs.getString("MAINHEADING")!=null)
+	    	{
+	    		singleRecordData.put("MAINHEADING",dictionary.AlphaEntitysToNumericEntitys(rs.getString("MAINHEADING")));      
+	    	}
+
+	    	if(rs.getString("SPECIESTERM")!=null)
+	    	{
+	    		singleRecordData.put("SPECIESTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("SPECIESTERM"))); 
+	    	}
+	    	
+	    	if(rs.getString("REGIONALTERM")!=null)
+	    	{	    		
+	    		singleRecordData.put("REGIONALTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("REGIONALTERM")));    
+	    	}
+	    	
+	    	if(rs.getString("TREATMENTCODE")!=null)
+	    	{
+	    		singleRecordData.put("TREATMENTCODE",rs.getString("TREATMENTCODE")); 
+	    	}
+	    	*/
 	    	
 	    	if(rs.getString("SCC")!=null)
 	    	{
@@ -437,7 +798,22 @@ public class BdReverseRecordBuilder
 	    	{
 	    		singleRecordData.put("CBNBFOREIGNTITLE",rs.getString("OTL"));
 	    	}
+	    	/*
+	    	if(rs.getString("ISOPENACESS")!=null)
+	    	{
+	    		singleRecordData.put("ISOPENACESS",rs.getString("ISOPENACESS"));
+	    	}
 	    	
+	    	if(rs.getString("SOURCEBIBTEXT")!=null)
+	    	{
+	    		singleRecordData.put("SOURCEBIBTEXT",rs.getString("SOURCEBIBTEXT"));
+	    	}
+	    	
+	    	if(rs.getString("GRANTTEXT")!=null)
+	    	{
+	    		singleRecordData.put("GRANTTEXT",rs.getString("GRANTTEXT"));
+	    	}
+	    	*/
     	}
     	catch(Exception e)
     	{
@@ -854,6 +1230,7 @@ public class BdReverseRecordBuilder
     	}
     	return singleRecordData;
     }
+    
   
     public void writeRecord(Hashtable rs, FileWriter file) throws Exception
     {
@@ -1272,9 +1649,71 @@ public class BdReverseRecordBuilder
 					String[] confdateArr = confdate.split("-",-1);
 					String[] dateString = null;
 					file.write("<confdate>\n");
-					file.write("<date-text>"+confdate+"</date-text>");					
+					file.write("<date-text>"+confdate+"</date-text>");
+					/*
+					for(int j=0;j<confdateArr.length;j++)
+					{
+						if(j==0)
+						{
+							file.write("<startdate");
+						}
+						else
+						{
+							file.write("<enddate");
+						}
+						
+						if(confdateArr[j].indexOf(",")>-1)
+						{
+							String cYear=confdateArr[j].substring(confdateArr[j].indexOf(",")+1);
+							file.write(" year=\""+cYear.trim()+"\"");	
+							if(confdateArr[j].trim().indexOf(" ")>-1) 
+							{
+								String confdateA = confdateArr[j].trim();
+								String cMonth = confdateA.substring(0,confdateA.indexOf(" "));
+								String cDay =null;
+								if(confdateA.indexOf(",")>0)
+								{
+									cDay = confdateA.substring(confdateA.indexOf(" "),confdateA.indexOf(","));
+								}
+								file.write(" month=\""+cMonth.trim()+"\"");
+								if(cDay!=null)
+									file.write(" day=\""+cDay.replaceAll(",", "").trim()+"\"");
+							}
+						}
+						else
+						{
+							dateString = confdateArr[j].split("\\s",-1);
+							System.out.println("DATESTRING LENGTH="+dateString.length);
+							if(dateString.length>2)
+							{
+								String cMonth=dateString[0];
+								String cDay=dateString[1];
+								String cYear=dateString[2];
+								file.write(" year=\""+cYear.trim()+"\"");	
+								file.write(" month=\""+cMonth.trim()+"\"");
+								file.write(" day=\""+cDay.replaceAll(",", "").trim()+"\"");
+							}
+							else if (dateString.length>1)  
+							{
+								String cMonth=dateString[0];								
+								String cYear=dateString[1];
+								file.write(" year=\""+cYear.trim()+"\"");	
+								file.write(" month=\""+cMonth.trim()+"\"");							
+							}
+							else if (dateString.length>0)  
+							{														
+								String cYear=dateString[0];
+								file.write(" year=\""+cYear.trim()+"\"");												
+							}
+						}
+						
+						
+						file.write(" />\n");
+					}
+					*/
 					file.write("</confdate>\n");
-				
+					//file.write("<confdate>\n<date-text>"+confdate+"</date-text>\n</confdate>\n");
+					//System.out.println("c-confdate="+confdate);
 				}
 				
 				if(confcatnumber!=null && confcatnumber.length()>0)
@@ -2027,7 +2466,23 @@ public class BdReverseRecordBuilder
 	    			
 	    			if(affCityGroup!=null && affCityGroup.length()>0)
 	    			{
-	    				file.write("<city-group>"+cleanBadCharacters(affCityGroup)+"</city-group>\n"); 	    			
+	    				file.write("<city-group>"+cleanBadCharacters(affCityGroup)+"</city-group>\n"); 
+	    				/*
+	    				String[] cityGroupArr = cleanBadCharacters(affCityGroup).split(";");
+	    				if(cityGroupArr.length==1)
+	    				{
+	    					file.write("<city>"+cityGroupArr[0]+"</city>\n");
+	    				}
+	    				else if(cityGroupArr.length==2)
+	    				{
+	    					file.write("<city>"+cityGroupArr[0]+"</city>\n");
+	    					file.write("<postal-code>"+cityGroupArr[1].trim()+"</postal-code>\n");
+	    				}
+	    				else
+	    				{
+	    					System.out.println("affiliation city-group has wrong format");
+	    				}
+	    				*/
 	    			}
 	    			else
 	    			{
@@ -2307,7 +2762,29 @@ public class BdReverseRecordBuilder
 										if(city_group!=null && city_group.length()>0)
 										{
 											file.write("<city-group>"+cleanBadCharacters(city_group)+"</city-group>\n");
-										
+											/*
+											if(city_group.indexOf(",")>-1) 
+											{
+												String[] cityArr=city_group.split(",");
+												if(cityArr.length==1)
+												{
+													file.write("<city>"+cityArr[0]+"</city>\n");
+												}
+												else if(cityArr.length==2)
+												{
+													file.write("<city>"+cityArr[0].trim()+"</city>\n");
+													file.write("<postal-code>"+cityArr[1].trim()+"</postal-code>\n");
+												}
+												else
+												{
+													System.out.println("correspondence city-group has wrong format");
+												}
+											}
+											else
+											{
+												file.write("<city-group>"+cleanBadCharacters(city_group)+"</city-group>\n");
+											}
+											*/
 										}
 				   				
 									}
@@ -4553,9 +5030,6 @@ public class BdReverseRecordBuilder
          badCharacterMap.put("&mellip;","&#8943;");
          badCharacterMap.put("&ldquo;","&#8220;");
          badCharacterMap.put("&rdquo;","&#8221;");
-      
-         
-     }
-
-	    
+  
+     }  
 }
