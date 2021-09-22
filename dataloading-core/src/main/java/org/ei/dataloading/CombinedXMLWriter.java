@@ -2844,7 +2844,8 @@ public class CombinedXMLWriter
             {
             	String[] openaccessArray=openaccess.split(" ", -1);
             	elementArrayObject = formJsonArray(openaccessArray,"ISOPENACESS");    
-	            contentObject.put("ISOPENACESS".toLowerCase(),elementArrayObject);	          
+	            contentObject.put("ISOPENACESS".toLowerCase(),elementArrayObject);	
+	            //System.out.println(" in 2 "+openaccess+" length="+openaccess.length());
             }
  
             String[] grantText=rec.getStrings(EVCombinedRec.GRANTTEXT); 
@@ -4671,10 +4672,26 @@ public class CombinedXMLWriter
 	            contentObject.put("ORG_ID".toLowerCase(),elementArrayObject);
             }
            
-            
+            /*
             if(rec.getString(EVCombinedRec.ISOPENACESS)!=null && rec.getString(EVCombinedRec.ISOPENACESS).length()>0)
             {	                
 	            contentObject.put("ISOPENACESS".toLowerCase(),rec.getString(EVCombinedRec.ISOPENACESS));	          
+            }
+            */
+            
+            String isopenaccess=rec.getString(EVCombinedRec.ISOPENACESS);
+            String openaccess="";
+            if(isopenaccess!=null)
+            {
+            	openaccess=isopenaccess;
+            }
+            
+            if(openaccess!=null && openaccess.length()>0)
+            {
+            	String[] openaccessArray=openaccess.split(" ", -1);
+            	elementArrayObject = formJsonArray(openaccessArray,"ISOPENACESS");    
+	            contentObject.put("ISOPENACESS".toLowerCase(),elementArrayObject);	
+	            System.out.println(" in 1 "+openaccess+" length="+openaccess.length());
             }
  
             String[] grantText=rec.getStrings(EVCombinedRec.GRANTTEXT); 
