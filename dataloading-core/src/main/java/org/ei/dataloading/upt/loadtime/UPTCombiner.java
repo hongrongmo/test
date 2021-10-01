@@ -1677,11 +1677,14 @@ public class UPTCombiner extends CombinerTimestamp {
         {
             switch (kc.toUpperCase().charAt(0))
             {
-              case  'S': values.add("DP"); break;
-              case  'P': values.add("PP"); break;
-              case  'E': values.add("RE"); break;
-              case  'H': values.add("SR"); break;
-              //default: values.add("UT"); break;
+            	//change dcument type mapping per EVOPS-1209 by HMO at 10/01/2021
+            	//case  'S': values.add("DP"); break;
+            	//case  'P': values.add("PP"); break;
+            	case  'S': values.add("DES"); break;
+            	case  'P': values.add("PLP"); break;
+            	case  'E': values.add("RE"); break;
+            	case  'H': values.add("SR"); break;
+            	//default: values.add("UT"); break;
             }
         }
 
