@@ -4556,8 +4556,8 @@ public class PatentXmlReader
 					case 8211 :sb.append("&ndash;");break; 	//En dash
 					case 8212 :sb.append("&mdash;");break; 	//Em dash
 					case 8216 :sb.append("&lsquo;");break; 	//left single quotation
-					case 8217 :sb.append("&rsquo");break; 	//right single quotation
-					case 8218 :sb.append("&sbquo");break; 	//single low 9 quation mark
+					case 8217 :sb.append("&rsquo;");break; 	//right single quotation
+					case 8218 :sb.append("&sbquo;");break; 	//single low 9 quation mark
 					case 8220 :sb.append("&ldquo;");break; 	//left double quotation
 					case 8221 :sb.append("&rdquo;");break; 	//right double quotation
 					case 8222 :sb.append("&bdquo;");break; 	//Double low-9 quotation mark
