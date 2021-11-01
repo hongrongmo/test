@@ -404,8 +404,12 @@ public class BdParser
 								//pre frank request, add book record as cpx database by hmo at 11/10/2016
 								if((!database.equals("cpx") && !itemid_idtype.equals("CPX")) || itemid_idtype.equals("CBNB")|| ((database.equals("cpx") || database.equals("pch")) && (itemid_idtype.equals("CPX") || itemid_idtype.equals("SNBOOK"))))
 								{
-									record.put("ACCESSNUMBER",itemid);
-									setAccessNumber(itemid);
+									if(record.get("ACCESSNUMBER")==null) //added on 10/26/2021 for preprint
+									{
+										record.put("ACCESSNUMBER",itemid);
+										setAccessNumber(itemid);
+									}
+									
 									//System.out.println("DATABSE="+database+" ACCESSNUMBER= "+itemid);
 								}
 								
@@ -442,7 +446,13 @@ public class BdParser
 							{
 								String  standardid = itemidElement.getTextTrim();
 								record.put("STANDARDID",standardid);
-							}						
+							}
+							else if(itemid_idtype != null && itemid_idtype.equals("PREPRINT")) //added on 10/26/2021 && requested for EVOPS-1233,EVOPS-936, & EVOPS-1058
+							{
+								String itemid = itemidElement.getTextTrim();
+								record.put("ACCESSNUMBER",itemid);
+								setAccessNumber(itemid);
+							}
 							
 						}
 
