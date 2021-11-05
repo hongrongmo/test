@@ -463,6 +463,7 @@
 		<!-- HH added 03/24/2019 for resolving comilation error after migration to openjdk11 -->
 		 <maven.compiler.source>1.6</maven.compiler.source>
     	<maven.compiler.target>1.6</maven.compiler.target>
+	<maven.javadoc.skip>true</maven.javadoc.skip>
     
 	</properties>
 
