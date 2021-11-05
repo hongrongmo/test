@@ -5,7 +5,7 @@
   <groupId>org.ei.dataloading</groupId>
   <artifactId>dataloading-core</artifactId>
   <!-- <version>0.0.1-SNAPSHOT</version> -->
-  <version>3.0.0</version>
+  <version>3.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>dataloading-core</name>
@@ -14,14 +14,14 @@
 
 <distributionManagement>
 		<repository>
-			<id>nexus</id>
-			<name>nexus</name>
-			<url>http://nexus.elsst.com/content/repositories/elsevier-releases</url>
+			<id>rt-artifactory-engvillage-dataloading-releases</id>
+			<name>rt-artifactory-engvillage-dataloading-releases</name>
+			<url>https://rt.artifactory.tio.systems/artifactory/maven-engvillage-dataloading-releases-local</url>
 		</repository>
 		<snapshotRepository>
-			<id>nexus</id>
-			<name>nexus</name>
-			<url>http://nexus.elsst.com/content/repositories/elsevier-snapshots</url>
+			<id>rt-artifactory-engvillage-dataloading-snapshots</id>
+			<name>rt-artifactory-engvillage-dataloading-snapshots</name>
+			<url>https://rt.artifactory.tio.systems/artifactory/maven-engvillage-dataloading-snapshots-local</url>
 		</snapshotRepository>
 	</distributionManagement>
 	
