@@ -58,6 +58,7 @@ public class Language
 		iso639_language.put("IN","Indonesian");
 		iso639_language.put("IS","Icelandic");
 		iso639_language.put("IT","Italian");
+		iso639_language.put("IU","Inuktitut"); //added on 10/26/2021 requested by Frank
 		iso639_language.put("IW","Hebrew");
 		iso639_language.put("JA","Japanese");
 		iso639_language.put("JI","Yiddish");
