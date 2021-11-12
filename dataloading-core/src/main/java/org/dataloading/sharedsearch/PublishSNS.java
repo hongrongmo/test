@@ -206,7 +206,12 @@ public class PublishSNS{
 					}
 					if(diff != 0)
 						sb.append(db + "\t" + diff + "\n");
-				}		
+				}
+				//else means db only exist in one ES env 
+				else
+				{
+					sb.append(db + "\t" + esEnvsCounts.get(db) + "\n");
+				}
 			}
 		}
 		return sb.toString();
