@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.engineeringvillage</groupId>
+	<artifactId>ev-main-build</artifactId>
+	<packaging>pom</packaging>
+	<version>4.0.1-SNAPSHOT</version>
+	<name>Engineering Village dataloading Build Parent</name>
+	<description>Parent Project to build adhoclambda, AWS_SES, awsLambda, cafe-correction-lambda, dataloading-core, dl-correction-lambda modules as needed</description>
+
+	<distributionManagement>
+			<repository>
+			<id>rt-artifactory-engvillage-dataloading-releases</id>
+			<name>rt-artifactory-engvillage-dataloading-releases</name>
+			<url>https://rt.artifactory.tio.systems/artifactory/maven-engvillage-dataloading-releases-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>rt-artifactory-engvillage-dataloading-snapshots</id>
+			<name>rt-artifactory-engvillage-dataloading-snapshots</name>
+			<url>https://rt.artifactory.tio.systems/artifactory/maven-engvillage-dataloading-snapshots-local</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<scm>
+		<connection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</connection>
+		<developerConnection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</developerConnection>
+		<url>https://github.com/elsevier-research/engvillage-dataloading.git</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<profiles>
+		<profile>
+			<id>dorelease</id>
+			<modules>
+				<module>dataloading-core</module>
+			</modules>
+		</profile>
+
+		<profile>
+			<id>dataloadingcore</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+				<property>
+					<name>dataloadingcore.profile.enabled</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<modules>
+				<module>dataloading-core</module>
+			</modules>
+		</profile>
+	</profiles>
+</project>
+

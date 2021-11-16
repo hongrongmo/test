@@ -27,17 +27,16 @@
 		-->
 		
 		<!--  New Artifactory settings 10/28/2021 -->
-		<snapshotRepository>
-			<id>rt-artifactory-engvillage-dataloading-snapshots</id>
-			<name>rt-artifactory-engvillage-dataloading-snapshots</name>
-			<url>https://rt.artifactory.tio.systems/artifactory/maven-engvillage-dataloading-snapshots-local</url>
-		</snapshotRepository>
 		<repository>
 			<id>rt-artifactory-engvillage-dataloading-releases</id>
 			<name>rt-artifactory-engvillage-dataloading-releases</name>
 			<url>https://rt.artifactory.tio.systems/artifactory/maven-engvillage-dataloading-releases-local</url>
 		</repository>
-		
+		<snapshotRepository>
+			<id>rt-artifactory-engvillage-dataloading-snapshots</id>
+			<name>rt-artifactory-engvillage-dataloading-snapshots</name>
+			<url>https://rt.artifactory.tio.systems/artifactory/maven-engvillage-dataloading-snapshots-local</url>
+		</snapshotRepository>
 		
 	</distributionManagement>
 	
