@@ -1,0 +1,2 @@
+String timestamp = new java.text.SimpleDateFormat("MM-dd-yyyy_HH:mm:ss").format(java.util.Calendar.getInstance().getTime());
+timestamp

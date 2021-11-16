@@ -1,14 +1,3 @@
 String sharedSearchurl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/facets";
 sharedSearchurl = sharedSearchurl.replace("prod", "cert");
-System.out.println(sharedSearchurl) (No explicit return value)java.util.Date a = new java.util.Date();
-System.out.println(a);
-java.sql.Date b = new java.sql.Date(a.getTime());
-System.out.println(b);
-java.sql.Time c = new java.sql.Time(a.getTime());
-System.out.println(c);
-java.sql.Timestamp d=new java.sql.Timestamp(a.getTime());
-System.out.println(d);
-
-
-
-Syntax error on token ")", delete this tokenSimpleDateFormat cannot be resolved to a typejava.text.DateFormat.SimpleDateFormat cannot be resolved to a typeSystem.out.println(new java.sql.Date(new java.text.DateFormat.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date())));
+System.out.println(sharedSearchurl) (No explicit return value)
