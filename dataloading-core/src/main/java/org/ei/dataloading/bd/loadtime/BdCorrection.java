@@ -62,6 +62,10 @@ public class BdCorrection
     static String authorLookupIndexSqlldrFileName = "cafe_au_lookupindex.sh";
     static String AffLookupIndexSqlldrFileName = "cafe_af_lookupindex.sh";
     static String cafeFlag = null;
+    
+    //HH added 11/15/2021 to support adhoc deletion
+    static String adhocDelTableName;
+    
     public static final String AUDELIMITER = new String(new char[] {30});
     public static final String IDDELIMITER = new String(new char[] {31});
     public static final String GROUPDELIMITER = new String(new char[] {29});
@@ -130,6 +134,8 @@ public class BdCorrection
          {
              System.out.println("Does not have propertyFileName file");              
          }
+        
+      
         
         if(args.length>10)
         {
@@ -264,10 +270,23 @@ public class BdCorrection
 
 
         }
+        
         else
         {
             System.out.println("not enough parameters");
             System.exit(1);
+        }
+        
+        if(action != null && action.equalsIgnoreCase("adhocextractdelete") && args.length >12)
+        {
+        	adhocDelTableName = args[12];
+        	System.out.println("action: " + args[12]);
+        	System.out.println("Delete records from ES matching M_Id in table " + adhocDelTableName);
+        }
+        else
+        {
+        	System.out.println("table name for adhocextractdelete is not provided, exit");
+        	System.exit(1);
         }
         
         /*HT Added 09/21/2020 Move all work below to startCorrection instead*/
@@ -304,7 +323,11 @@ public class BdCorrection
 
           	
              con = getConnection(url,driver,username,password);
-             if(action!=null && !(action.equalsIgnoreCase("extractupdate")||action.equals("extractdelete") ||action.equalsIgnoreCase("lookupIndex")||action.equalsIgnoreCase("extractnumerical")||action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate")))
+             if(action!=null && !(action.equalsIgnoreCase("extractupdate")||action.equals("extractdelete") ||
+            		 action.equalsIgnoreCase("lookupIndex")||action.equalsIgnoreCase("extractnumerical")||
+            		 action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||
+            		 action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||
+            		 action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate") || action.equalsIgnoreCase("adhocextractdelete")))
              {
                  /**********delete all data from temp table *************/
 
@@ -500,7 +523,9 @@ public class BdCorrection
                  System.out.println("time for run lookup index along "+(endTime-midTime)/1000.0+" seconds");
                  System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
              }
-             else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete")||action.equalsIgnoreCase("extractnumerical")||action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate"))
+             else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete")||action.equalsIgnoreCase("extractnumerical")||
+            		 action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||
+            		 action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate") ||action.equalsIgnoreCase("adhocextractdelete"))
              {
 
                  doFastExtract(updateNumber,database,action, xmlcomb);
@@ -1194,6 +1219,18 @@ public class BdCorrection
                         deleteSize = rs.getInt("count");
                     }
                 }
+                
+                //HH added 11/15/2021 to handle resource leake issue
+                try
+           	 	{
+           		 	rs.close();
+           	 	}
+           	 	catch(SQLException  ex)
+           	 	{
+           	 		System.out.println("Failed to close RS for delete/extractdelete!");
+           	 		ex.printStackTrace();
+           	 	}
+                
                 if(deleteSize>0)
                 {                		               
                 	rs = stmt.executeQuery(deleteString);
@@ -1209,6 +1246,47 @@ public class BdCorrection
                 {
                 	System.out.println("the records needed to delete is not in the database");
                 }
+            }
+            //HH added 11/15/2021 for adhoc deletion requests (only for OBII/ not cafe)
+            else if(action.equalsIgnoreCase("adhocextractdelete"))
+            {
+            	 writer.setOperation("delete");
+            	 // check count first
+            	 String countQuery = "select count(*) as count from " + adhocDelTableName;
+            	 rs = stmt.executeQuery(countQuery);
+            	 int recCount = 0;
+            	 
+            	 //Fetch ID of records to be deleted from ES
+            	 String records_id = "select m_id from " + adhocDelTableName;
+            	 
+            	 while(rs.next())
+            	 {
+            		 if(rs.getInt("count") >0)
+            		 {
+            			recCount = rs.getInt("COUNT"); 
+            		 }
+            	 }
+            	 try
+            	 {
+            		 rs.close();
+            	 }
+            	 catch(SQLException  ex)
+            	 {
+            		 System.out.println("Failed to close RS for adhocdeletion!");
+            		 ex.printStackTrace();
+            	 }
+            	 if(recCount >0)
+            	 {
+            		 rs = stmt.executeQuery(records_id);
+            		 ArrayList<String> ids = new ArrayList<>();
+            		 while(rs.next())
+            			 ids.add(rs.getString("M_ID"));
+            		 if(propertyFileName!=null)
+ 	                {
+ 	                	sendDeleteToKafka(ids);
+ 	                }
+            		 
+            	 }
             }
             //c.writeRecs(rs,con,updateNumber,"bd_master_orig",dbname);
             writer.end();

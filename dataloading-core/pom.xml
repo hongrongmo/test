@@ -492,6 +492,14 @@
     
 	</properties>
 
+<!-- HH added 11/16/2021 for Jenkins Build and deploy using ARtifactory -->
+	<scm>
+		<connection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</connection>
+		<developerConnection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</developerConnection>
+		<url>https://github.com/elsevier-research/engvillage-dataloading.git</url>
+		<tag>HEAD</tag>
+	</scm>
+	
 	<build>
 		<finalName>eilib</finalName>
 		<plugins>
