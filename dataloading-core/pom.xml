@@ -40,6 +40,13 @@
 		
 	</distributionManagement>
 	
+	<!-- HH added 11/16/2021 for Jenkins Build and deploy using ARtifactory -->
+	<scm>
+		<connection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</connection>
+		<developerConnection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</developerConnection>
+		<url>https://github.com/elsevier-research/engvillage-dataloading.git</url>
+		<tag>HEAD</tag>
+	</scm>
 
 <dependencies>
 
@@ -482,7 +489,7 @@
 		
 	</dependencies>
 
-	<properties>
+<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- HH added 03/24/2019 for resolving comilation error after migration to openjdk11 -->
@@ -492,15 +499,9 @@
     
 	</properties>
 
-<!-- HH added 11/16/2021 for Jenkins Build and deploy using ARtifactory -->
-	<scm>
-		<connection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</connection>
-		<developerConnection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</developerConnection>
-		<url>https://github.com/elsevier-research/engvillage-dataloading.git</url>
-		<tag>HEAD</tag>
-	</scm>
+
 	
-	<build>
+<build>
 		<finalName>eilib</finalName>
 		<plugins>
 			<plugin>
