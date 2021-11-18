@@ -313,16 +313,30 @@ public class BaseTableWriter
 	    	//System.out.println("CSXTERM"+record.get("CSXTERM"));
 		}
 	    
-	   //added on 20201209 by hongrong for EVOPS 1055
-	    /*
+	    //added on 20211109 by hongrong for EVOPS 1244	    
 	    recordBuf.append(FIELDDELIM);
-	    if(record.get("FREETOREADSTATUS")!=null)
+	    if(record.get("MUDTERM")!=null)
 		{
-	    	recordBuf.append(record.get("FREETOREADSTATUS"));
-	    	//System.out.println("FREETOREADSTATUS"+record.get("FREETOREADSTATUS"));
+	    	recordBuf.append(record.get("MUDTERM"));
+	    	//System.out.println(" MUDTERM "+record.get("MUDTERM"));
 		}
 	    
-	    */
+	    //added on 20211109 by hongrong for EVOPS 1244	    
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("PREPRINTIDTYPE")!=null)
+		{
+	    	recordBuf.append(record.get("PREPRINTIDTYPE"));
+	    	//System.out.println(" MUDTERM "+record.get("MUDTERM"));
+		}	
+	    
+	    //added on 20211109 by hongrong for EVOPS 1244	    
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("PREPRINTID")!=null)
+		{
+	    	recordBuf.append(record.get("PREPRINTID"));
+	    	//System.out.println(" MUDTERM "+record.get("MUDTERM"));
+		}	
+	    
 	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
 	    {
