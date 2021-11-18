@@ -36,9 +36,8 @@ public class CafeTitleCheckWithBd {
 	
 	  private static Perl5Util perl = new Perl5Util();
 	  private static Properties etable = new Properties();
-	
-	  private static boolean inabstract = false;
-	  private static HashSet entity = null;
+
+
 	  
 	  public static final String IDDELIMITER = new String(new char[] {31});
 	  

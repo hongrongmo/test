@@ -2,6 +2,7 @@ package vtw.threads.vtw;
 
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.StringTokenizer;
@@ -375,7 +376,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 	
 	public Set<String> getMessageFieldKeys()
 	{
-		Set<String> keys= null;
+		Set<String> keys= new HashSet<>();
 		if(messageFieldKeys !=null && messageFieldKeys.size() >0)
 		{
 			for(String key: messageFieldKeys.keySet())
