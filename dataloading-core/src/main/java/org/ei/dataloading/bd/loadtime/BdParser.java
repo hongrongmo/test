@@ -447,14 +447,19 @@ public class BdParser
 								String  standardid = itemidElement.getTextTrim();
 								record.put("STANDARDID",standardid);
 							}
-							/*
 							else if(itemid_idtype != null && itemid_idtype.equals("PREPRINT")) //added on 10/26/2021 && requested for EVOPS-1233,EVOPS-936, & EVOPS-1058
 							{
 								String itemid = itemidElement.getTextTrim();
 								record.put("ACCESSNUMBER",itemid);
 								setAccessNumber(itemid);
 							}
-							*/
+							else if(itemid_idtype != null && (itemid_idtype.equals("ARXIV") || itemid_idtype.equals("SSRN"))) //added on 11/11/2021 && requested for EVOPS-1233,EVOPS-936, & EVOPS-1058
+							{							
+								String itemid = itemidElement.getTextTrim();
+								record.put("PREPRINTIDTYPE",itemid_idtype);
+								record.put("PREPRINTID",itemid);
+								//setAccessNumber(itemid);
+							}
 							
 						}
 
