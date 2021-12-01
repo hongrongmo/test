@@ -286,7 +286,7 @@ public class BdCorrection
         else
         {
         	System.out.println("table name for adhocextractdelete is not provided, exit");
-        	System.exit(1);
+        	//System.exit(1);
         }
         
         /*HT Added 09/21/2020 Move all work below to startCorrection instead*/

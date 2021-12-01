@@ -79,6 +79,7 @@ public class BdParser
 		descriptorsTypeTable.put("CFL","UNCONTROLLEDTERM");//CPX
 		descriptorsTypeTable.put("CLU","UNCONTROLLEDTERM");//CPX
 		descriptorsTypeTable.put("CSX","CSXTERM");//CPX //external Compendex Standards classification terms
+		descriptorsTypeTable.put("MUD","MUDTERM");//CPX //MUDTERM  added for EVOPS-1244 by hmo at 11/10/2021
 		
 		descriptorsTypeTable.put("CBE","CBETERM");//CBNB
 		descriptorsTypeTable.put("CBB","CBBTERM");//CBNB
@@ -404,11 +405,11 @@ public class BdParser
 								//pre frank request, add book record as cpx database by hmo at 11/10/2016
 								if((!database.equals("cpx") && !itemid_idtype.equals("CPX")) || itemid_idtype.equals("CBNB")|| ((database.equals("cpx") || database.equals("pch")) && (itemid_idtype.equals("CPX") || itemid_idtype.equals("SNBOOK"))))
 								{
-									//if(record.get("ACCESSNUMBER")==null) //added on 10/26/2021 for preprint
-									//{
+									if(record.get("ACCESSNUMBER")==null) //added on 10/26/2021 for preprint
+									{
 										record.put("ACCESSNUMBER",itemid);
 										setAccessNumber(itemid);
-									//}
+									}
 									
 									//System.out.println("DATABSE="+database+" ACCESSNUMBER= "+itemid);
 								}
@@ -446,15 +447,20 @@ public class BdParser
 							{
 								String  standardid = itemidElement.getTextTrim();
 								record.put("STANDARDID",standardid);
-							}
-							/*
+							}							
 							else if(itemid_idtype != null && itemid_idtype.equals("PREPRINT")) //added on 10/26/2021 && requested for EVOPS-1233,EVOPS-936, & EVOPS-1058
 							{
 								String itemid = itemidElement.getTextTrim();
 								record.put("ACCESSNUMBER",itemid);
 								setAccessNumber(itemid);
 							}
-							*/
+							else if(itemid_idtype != null && (itemid_idtype.equals("ARXIV") || itemid_idtype.equals("SSRN"))) //added on 11/11/2021 && requested for EVOPS-1233,EVOPS-936, & EVOPS-1058
+							{							
+								String itemid = itemidElement.getTextTrim();
+								record.put("PREPRINTIDTYPE",itemid_idtype);
+								record.put("PREPRINTID",itemid);
+								//setAccessNumber(itemid);
+							}
 							
 						}
 
@@ -5014,11 +5020,45 @@ public class BdParser
 						{
 							Element descriptor = (Element)descriptorList.get(j);
 							String mainterm = DataLoadDictionary.mapEntity(getMixData(descriptor.getChild("mainterm",noNamespace).getContent()));
+							//added link element for "<descriptors controlled="n" type="MUD">" EVOPS-1244 by hmo at 11/9/2021
+							String link=null;
+							String sublink=null;
+							String subsublink=null;
+							Element linkElement = descriptor.getChild("link",noNamespace);
+							if(linkElement!=null)
+							{
+								link = DataLoadDictionary.mapEntity(getMixData(linkElement.getContent()));
+								if(linkElement.getChild("sublnk",noNamespace)!=null)
+								{
+									sublink = DataLoadDictionary.mapEntity(getMixData(linkElement.getChild("sublink",noNamespace).getContent()));
+								}
+								
+								if(linkElement.getChild("subsublnk",noNamespace)!=null)
+								{
+									subsublink = DataLoadDictionary.mapEntity(getMixData(linkElement.getChild("subsublink",noNamespace).getContent()));
+								}
+								//System.out.println("******** link "+link);
+							}				
+							
 							if(mhBuffer.length()>0)
 							{
 								mhBuffer.append(Constants.AUDELIMITER);
 							}
 							mhBuffer.append(mainterm);
+							
+							//added link element for "<descriptors controlled="n" type="MUD">" EVOPS-1244 by hmo at 11/9/2021
+							if(link!=null)
+							{
+								mhBuffer.append(Constants.IDDELIMITER+link);
+								if(sublink!=null)
+								{
+									mhBuffer.append(Constants.GROUPDELIMITER+sublink);
+								}
+								if(subsublink!=null)
+								{
+									mhBuffer.append(Constants.GROUPDELIMITER+subsublink);
+								}
+							}
 						}
 						//System.out.print("*** "+descriptorsType+" "+mhBuffer.toString());
 						if(descriptorsType.equals("SPC") && mhBuffer.length()>4000)
@@ -5027,6 +5067,12 @@ public class BdParser
 							term2 = mhBuffer.substring(4000);
 							record.put("SPECIESTERM",term1);
 							record.put("SPECIESTERM2",term2);
+						}
+						//added link element for "<descriptors controlled="n" type="MUD">" by hmo at 11/9/2021
+						else if (descriptorsType.equals("MUD")&& mhBuffer.length()>0)
+						{							
+							//record.put("MUDTERM",mhBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));	
+							record.put("MUDTERM",mhBuffer.toString());
 						}
 						else if (descriptorsType.equals("CBE")&& mhBuffer.length()>0)
 						{							
