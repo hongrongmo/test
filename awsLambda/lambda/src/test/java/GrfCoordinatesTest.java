@@ -27,7 +27,6 @@ public class GrfCoordinatesTest {
 		{
 		  String strcoordinates = coordinates;
 		  String[] termcoordinate = strcoordinates.split(AUDELIMITER);
-		  List geoterms = new ArrayList();
 		  for(int j = 0; j < termcoordinate.length; j++)
 		  {
 			String[] termcoordinates = termcoordinate[j].split(IDDELIMITER);

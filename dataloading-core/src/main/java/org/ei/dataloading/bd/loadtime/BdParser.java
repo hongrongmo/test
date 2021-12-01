@@ -14,7 +14,6 @@ import org.xml.sax.InputSource;
 
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-import java.util.zip.ZipInputStream;
 
 import org.ei.common.Constants;
 import org.ei.common.bd.*;
@@ -45,7 +44,7 @@ public class BdParser
 	private DataLoadDictionary dictionary = new DataLoadDictionary();
 
     private Namespace aitNamespace=Namespace.getNamespace("ait","http://www.elsevier.com/xml/ait/dtd");
-	private Namespace ceNamespace=Namespace.getNamespace("ce","http://www.elsevier.com/xml/common/dtd");
+	private Namespace ceNamespace=Namespace.getNamespace("ce","http://www.elsevier.com/xml/ani/common");
 	private Namespace noNamespace=Namespace.getNamespace("","");
 	private Namespace aniNamespace;
 	private Namespace xmlNamespace=Namespace.getNamespace("xml","http://www.w3.org/XML/1998/namespace");
@@ -268,12 +267,8 @@ public class BdParser
 						{
 							Element oaArticleStatus = openAccess.getChild("oa-article-status",xocsNamespace);
 							
-			//String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this only use for testing "free-to-read-status" for now
-							//String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//this is used for production for now at 1/20/2021
-
-							String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this is used for production for now at 5/12/2021
-							//String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//remove from production for now at 5/12/2021
-
+							//String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this only use for testing "free-to-read-status" for now
+							String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//this is used for production for now at 1/20/2021
 							//String freeToReadStatus = oaArticleStatus.getAttributeValue("free-to-read-status");
 							if(isOpenAccess!=null)
 							{
@@ -410,8 +405,7 @@ public class BdParser
 										record.put("ACCESSNUMBER",itemid);
 										setAccessNumber(itemid);
 									}
-									
-									//System.out.println("DATABSE="+database+" ACCESSNUMBER= "+itemid);
+										//System.out.println("DATABSE="+database+" ACCESSNUMBER= "+itemid);
 								}
 								
 								
@@ -447,7 +441,7 @@ public class BdParser
 							{
 								String  standardid = itemidElement.getTextTrim();
 								record.put("STANDARDID",standardid);
-							}							
+							}
 							else if(itemid_idtype != null && itemid_idtype.equals("PREPRINT")) //added on 10/26/2021 && requested for EVOPS-1233,EVOPS-936, & EVOPS-1058
 							{
 								String itemid = itemidElement.getTextTrim();
@@ -461,6 +455,8 @@ public class BdParser
 								record.put("PREPRINTID",itemid);
 								//setAccessNumber(itemid);
 							}
+							
+							
 							
 						}
 
@@ -3322,7 +3318,7 @@ public class BdParser
 		//System.out.println("CONTRIBUTORAFFILIATION "+contributorAffiliationBuffer.toString());
 	}
 
-	private String getDateString(String year,String month, String day)
+	public String getDateString(String year,String month, String day)
 	{
 		StringBuffer dateBuffer = new StringBuffer();
 		String cMonth = null;
@@ -3684,7 +3680,7 @@ public class BdParser
 	}
 
 
-	private String getConfAffiliation(Element affiliation)
+	public String getConfAffiliation(Element affiliation)
 	{
 		StringBuffer affBuffer = new StringBuffer();
 
@@ -4209,9 +4205,7 @@ public class BdParser
 				{
 					aus.setAuid(authoridBuffer.toString());
 					//System.out.println("AUTHORID="+authoridBuffer.toString());
-				}
-				
-				
+				}								
 				
 				Element initials = author.getChild("initials",ceNamespace );			
 				
@@ -4508,11 +4502,13 @@ public class BdParser
 		        aus.setIndexedName(DataLoadDictionary.mapEntity(getMixData(indexedName.getContent())));
 		    }
 
-		    Element initials = author.getChild("initials",ceNamespace );
+		    Element initials = author.getChild("initials",ceNamespace);
 		    if(initials != null)
 		    {
+		    	//System.out.println("initials="+initials);
 			    aus.setInitials(DataLoadDictionary.mapEntity(initials.getText()));
 		    }
+		   
 
 		    Element degrees = author.getChild("degrees", ceNamespace);
 		    if(degrees != null)
@@ -4525,6 +4521,7 @@ public class BdParser
 		    if(surname != null)
 		    {
 		    	String sureNameString = getMixData(surname.getContent());
+		    	//System.out.println("sureNameString="+sureNameString);
 		    	//outputIntoCharNumber(sureNameString);	
 		        aus.setSurname(DataLoadDictionary.mapEntity(getMixData(surname.getContent())));
 		    	//aus.setSurname(getMixData(surname.getContent()));
@@ -5038,7 +5035,7 @@ public class BdParser
 									subsublink = DataLoadDictionary.mapEntity(getMixData(linkElement.getChild("subsublink",noNamespace).getContent()));
 								}
 								//System.out.println("******** link "+link);
-							}				
+							}												
 							
 							if(mhBuffer.length()>0)
 							{
@@ -5059,6 +5056,7 @@ public class BdParser
 									mhBuffer.append(Constants.GROUPDELIMITER+subsublink);
 								}
 							}
+							
 						}
 						//System.out.print("*** "+descriptorsType+" "+mhBuffer.toString());
 						if(descriptorsType.equals("SPC") && mhBuffer.length()>4000)
@@ -5234,7 +5232,7 @@ public class BdParser
 
 	}
 	
-	private String getAbstractMixData(List l)
+	public String getAbstractMixData(List l)
 	{
 		StringBuffer result = new StringBuffer();
 		for(int i=0;i<l.size();i++)
@@ -5245,14 +5243,14 @@ public class BdParser
 		return result.toString();
 	}
 
-	private String getMixData(List l)
+	public String getMixData(List l)
 	{
 		StringBuffer b = new StringBuffer();
 		StringBuffer result = getMixData(l,b);
 		return result.toString();
     }
 
-    private StringBuffer getMixData(List l, StringBuffer b)
+    public StringBuffer getMixData(List l, StringBuffer b)
     {
     	
         Iterator it = l.iterator();
@@ -5306,7 +5304,7 @@ public class BdParser
         return b;
     }
 
-    private  StringBuffer getMixCData(List l, StringBuffer b)
+    public  StringBuffer getMixCData(List l, StringBuffer b)
 	{
 		inabstract=true;
 		b=getMixData(l,b);
@@ -5314,7 +5312,7 @@ public class BdParser
 		return b;
 	}
     
-    private StringBuffer getMixData(Iterator it, StringBuffer b)
+    public StringBuffer getMixData(Iterator it, StringBuffer b)
     {
         
         while(it.hasNext())
@@ -5369,14 +5367,14 @@ public class BdParser
         return b;
     }
     
-    private String getMixData(Iterator l)
+    public String getMixData(Iterator l)
 	{
 		StringBuffer b = new StringBuffer();
 		StringBuffer result = getMixData(l,b);
 		return result.toString();
     }
     
-    private String trimStringToLength(String inputString,int StringSize)
+    public String trimStringToLength(String inputString,int StringSize)
     {
     	String outputString="";
     	if(inputString!=null && inputString.length()>StringSize)
@@ -5391,6 +5389,7 @@ public class BdParser
     	
     	return outputString;
     }
-
+    
+    
 
 }

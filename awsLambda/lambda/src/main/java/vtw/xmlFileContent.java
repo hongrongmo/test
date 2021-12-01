@@ -40,8 +40,7 @@ public class xmlFileContent {
 
 	public static void main(String[] args) throws Exception {
 
-		//URL url = new URL("https://acc-ucs-content-store-eu-west.s3-eu-west-1.amazonaws.com/content/pat%3AEP2818471A1/MAIN/application/xml/c86165c74cde6360867c5686d628a7be/EP2818471A1.xml?AWSAccessKeyId=AKIAJHXPHCI7MP3PAWLA&Expires=1476109395&Signature=htM5sZO9TFwCnesUpuJdBu6mXoc%3D");
-
+		
 		//String url = "https://acc.vtw.elsevier.com/asset/pat/EP2819320A1?fmt=application%2Fxml&type=MAIN&ver=cf86d1f8893066741448fdb57ed98450";
 
 		//String url = "https://acc.vtw.elsevier.com/asset/pat/EP1412624A2?fmt=application%2Fxml&type=MAIN&ver=68084274ea640e71e28923303531544d";

@@ -340,8 +340,8 @@ public class EMail {
     public static void main(String args[]) throws Exception
     {
     	String host = "email-smtp.us-east-1.amazonaws.com";
-    	String username = "AKIAISNCJA3QM32ZUFYA";
-        String Password = "AnYW09dHySrs6LT4Q7uf6LohcZuXFoSN++Mzi3MRllLu";
+    	String username = "";
+        String Password = "";
         //String from = "eiemailalert@elsevier.com";
         String from = args[0];
         String toAddress = "h.mo@elsevier.com";

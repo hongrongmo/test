@@ -258,6 +258,12 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 					System.out.println("NOT ANI SQS MSG " + messageFieldKeys.get("bucket"));
 					return ANIRecord && cpxdbCollection;
 			}
+			//HH added 11/17/2021 to capture deletion message though it is sent as dummy, but that what Harisha confirmed from cafe team
+			else if(bucketName !=null && bucketName.length() >0 && bucketName.contains("ani") && messageFieldKeys.get("action").equalsIgnoreCase("d"))
+			{
+				System.out.println("ANI SQS message but with action: " + messageFieldKeys.get("action"));
+				return true;
+			}
 			else if(ANIRecord)
 			{
 				System.out.println("NOT CPX ANI SQS MSG " + messageFieldKeys.get("dbcollcodes"));

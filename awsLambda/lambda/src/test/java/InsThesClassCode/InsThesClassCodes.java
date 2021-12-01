@@ -48,7 +48,7 @@ public class InsThesClassCodes {
 
 			Document document = builder.build(file);
 			Element rootNode = document.getRootElement();
-			List childNodesList = rootNode.getChildren("rec");
+			List<Element> childNodesList = rootNode.getChildren("rec");
 
 			for(int i=0; i<childNodesList.size();i++)
 			{
@@ -65,7 +65,7 @@ public class InsThesClassCodes {
 
 				if(node.getName().equalsIgnoreCase("hisg"))
 				{
-					List cNodeList = node.getChildren("hist");
+					List<Element> cNodeList = node.getChildren("hist");
 					for(int j=0; j<cNodeList.size();j++)
 					{
 
@@ -113,7 +113,7 @@ public class InsThesClassCodes {
 	}
 
 
-	private String getChildNode(List childs)
+	private String getChildNode(List<Element> childs)
 	{
 		StringBuffer childNodeText = new StringBuffer();
 		for(int j=0; j<childs.size();j++)
@@ -140,7 +140,7 @@ public class InsThesClassCodes {
 
 		if(node.getChildren().size() >0)
 		{
-			List tNodeList = node.getChildren();
+			List<Element> tNodeList = node.getChildren();
 
 			for(int k=0;k<tNodeList.size();k++)
 			{
@@ -151,7 +151,7 @@ public class InsThesClassCodes {
 					mainTermStringBuffer.append(": ");
 					if(((Element)tNodeList.get(k)).getChildren().size() >0)
 					{
-						List cNodeList = ((Element)tNodeList.get(k)).getChildren();
+						List<Element> cNodeList = ((Element)tNodeList.get(k)).getChildren();
 
 						for(int j = 0 ; j<cNodeList.size();j++)
 						{
