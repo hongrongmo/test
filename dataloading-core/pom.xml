@@ -1,11 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.ei.dataloading</groupId>
   <artifactId>dataloading-core</artifactId>
   <!-- <version>0.0.1-SNAPSHOT</version> -->
-  <version>4.0.2-SNAPSHOT</version>
+  <version>4.0.2</version>
   <packaging>jar</packaging>
 
   <name>dataloading-core</name>
@@ -49,7 +48,7 @@
 		<connection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</connection>
 		<developerConnection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</developerConnection>
 		<url>https://github.com/elsevier-research/engvillage-dataloading</url>
-		<tag>HEAD</tag>
+		<tag>dataloading-core-4.0.2</tag>
 	</scm>
 	
 
@@ -537,9 +536,9 @@
             <configuration>
                 <tasks>
                     <echo>Using env.test.properties</echo>
-                    <copy file="src/main/java/org/ei/dataloading/georef/loadtime/GeobaseToGeorefTerms.txt" tofile="${basedir}/target/classes/org/ei/data/georef/loadtime/GeobaseToGeorefTerms.txt"/>
-                    <copy file="src/main/java/org/ei/data/georef/runtime/GeoRefCoodinates.txt" tofile="${basedir}/target/classes/org/ei/data/georef/runtime/GeoRefCoodinates.txt"/>
-                    <copy file="src/main/java/org/ei/dataloading/georef/loadtime/EVROWSET.dtd" tofile="${basedir}/target/classes/org/ei/data/georef/loadtime/EVROWSET.dtd"/>
+                    <copy file="src/main/java/org/ei/dataloading/georef/loadtime/GeobaseToGeorefTerms.txt" tofile="${basedir}/target/classes/org/ei/data/georef/loadtime/GeobaseToGeorefTerms.txt" />
+                    <copy file="src/main/java/org/ei/data/georef/runtime/GeoRefCoodinates.txt" tofile="${basedir}/target/classes/org/ei/data/georef/runtime/GeoRefCoodinates.txt" />
+                    <copy file="src/main/java/org/ei/dataloading/georef/loadtime/EVROWSET.dtd" tofile="${basedir}/target/classes/org/ei/data/georef/loadtime/EVROWSET.dtd" />
                     </tasks>
                 </configuration>
             </execution>
