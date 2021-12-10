@@ -114,7 +114,8 @@ public class BdCitationTitle
 						//System.out.println("original="+singleCtObject[2]);
 						//System.out.println("language="+singleCtObject[3]);
 
-						if(singleCtObject[3].equalsIgnoreCase("eng")||singleCtObject[3].equalsIgnoreCase("en") )
+						if(singleCtObject[3].equalsIgnoreCase("eng")||singleCtObject[3].equalsIgnoreCase("en")
+								|| singleCtObject[3].isBlank())
 						{
 							citationTitleList.add(ct);
 						}
