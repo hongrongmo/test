@@ -42,6 +42,7 @@ public class ESTransportCleint {
 		//Client cleint = TransportClient.builder().settings(settings).build();  // for localhost
 		
 		//for prod
+		/*
 		Settings settings = Settings.settingsBuilder().put("cluster.name","230521890328:evcafeauaf")
 				.build();
 		
@@ -50,7 +51,8 @@ public class ESTransportCleint {
 
 		Client client = null;
 		try {
-
+*/
+		
 			/*client = TransportClient.builder().settings(settings).build()
 				.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("127.0.0.1"),9300));  //for localhost ES "localhost:9200"
 */			
@@ -63,6 +65,7 @@ public class ESTransportCleint {
 			
 			*/
 			
+		/*
 			client = TransportClient.builder().settings(settings).build()
 					.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com"),80));  //for localhost ES "localhost:9200"
 			
@@ -132,6 +135,7 @@ public class ESTransportCleint {
 				}
 			}
 		}
+		*/
 	}
 
 }

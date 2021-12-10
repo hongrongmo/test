@@ -26,7 +26,7 @@ import static org.elasticsearch.node.NodeBuilder.*;
 
 public class ESNodeClient {
 
-
+//HH 12/09/2021 due to compilation error with settings.settingsBuilder, I'll temp comment out till find solution
 
 	public static void main(String[] args) 
 	{
@@ -34,16 +34,17 @@ public class ESNodeClient {
 		/*Settings settings = Settings.settingsBuilder().put("cluster.name","230521890328:evcafeauaf")
 				.build();*/
 		
-		
+		/*
 		Settings settings = Settings.settingsBuilder().put("cluster.name","evcafeauaf").build();
 		
 		Node node = nodeBuilder().clusterName("evcafeauaf").node();
 		node.start();
-		Client client = node.client();
+		Client client = node.client();*/
 		
 		
 		//Client cleint = TransportClient.builder().settings(settings).build();  // for localhost
 
+		/*
 		try {
 
 			/*client = TransportClient.builder().settings(settings).build()
@@ -54,6 +55,7 @@ public class ESNodeClient {
 			
 			//create JSON Author Document
 
+		/*
 			Map<String,String> json_author = new HashMap<String, String>();
 			json_author.put("initials", "K.L.");
 			json_author.put("indexed-name", "Martin K.");
@@ -122,6 +124,6 @@ public class ESNodeClient {
 					e.printStackTrace();
 				}
 			}
-		}
+		}*/
 	}
 }

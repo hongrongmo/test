@@ -308,8 +308,8 @@ public class Entity {
             }          
             
             //block this line for Elastic Search
-            String newValue = match1; //use this line for elastic search
-            //String newValue = etable.getProperty(match1); //use this line for FAST
+            //String newValue = match1; //use this line for elastic search, UNCOMMENT WHEN FINISH JUDY ADHOC REQUEST IDENTIFY WHETHER RECORDS IN CSV ARE CPX
+            String newValue = etable.getProperty(match1); //use this line for FAST
 
             if (newValue == null) {
                 newValue = "";
