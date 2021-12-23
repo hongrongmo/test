@@ -1824,7 +1824,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 							}
 
 						} else {
-							System.out.println("no mapping found for " + unit + "_text");
+							//System.out.println("no mapping found for " + unit + "_text"); // HH 12/23/2021 commented to make log file readable
 						}
 
 					}

@@ -1,0 +1,20 @@
+{
+  "@id": "http://vtw.elsevier.com/message/id/Elsevier/Router/ac4eb464-c83f-49b0-8bc5-5e28b1b13cc1",
+  "@type": "msg:Message",
+  "@context": "http://vtw.elsevier.com/metadata/context.jsonld",
+  "msg:format": "http://vtw.elsevier.com/data/voc/Formats/MessageFormat-1",
+  "msg:type": "http://vtw.elsevier.com/data/voc/MessageTypes/EventNotification-1",
+  "msg:from": "http://vtw.elsevier.com/data/voc/Contributors/Elsevier/PatentBackflow",
+  "msg:to": "http://vtw.elsevier.com/data/voc/Contributors/E-Village",
+  "msg:event": {
+                          "@id": "http://vtw.elsevier.com/serviceCall/id/Elsevier/Router/021ff00f-8726-4de7-8052-2b03ed88b346",
+                          "@type": "msg:EventNotification",
+                          "evt:time": "2016-04-02T12:34:56Z",
+                          "evt:type": "http://vtw.elsevier.com/data/voc/Events/PatentAvailable",
+                          "evt:about": "http://vtw.elsevier.com/content/pat/EP2042829B1/",
+                          "evt:resource" : ["http://vtw.elsevier.com/content/pat/EP2042829B1/10"],
+                          "evt:details" : {
+                                                 "evt:signedAssetURL": "http://dev-ucs-content-store-eu-west.s3.amazonaws.com/content/pat3AAU2010281317A1/MAIN/application/xml/02d84460608e91d8510f8725fe109b7a/AU2010281317A1.xml?AWSAccessKeyId=AKIAIKW4U6PKMIE3KSLQ&Expires=1471522524&Signature=u1zyiRsWNXf5DlgT5d7zR9iadlY%3D"
+                                                }
+                        }
+}

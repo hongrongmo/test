@@ -82,6 +82,7 @@ public class SharedSearchSearch {
 			httpCon.setRequestMethod("POST");
 			httpCon.setRequestProperty("x-els-product", "engineering_village");
 			httpCon.setRequestProperty("x-els-diagnostics", "false");
+			httpCon.setRequestProperty("x-els-dataset", "ev_document");
 			httpCon.setRequestProperty("Content-Type", "application/json");
 			httpCon.setDoOutput(true);
 			logger.info("before outputstreamwriter....");
