@@ -66,6 +66,12 @@ public class CafeDocCountUpdate
 	PrintWriter out;
 	String updateddocCount_tempTable;
 
+	//HH Added Wed 12/29/2021
+	String cafePuiMasterTable = "cafe_pui_list_master";	
+	String lookupTable = "";
+	String lookupTable_columnName = "";
+	String profileColumnName;
+	AusAffDeletion ausAffDelObj;			
 
 	public static void main(String[] args) 
 	{
@@ -160,7 +166,6 @@ public class CafeDocCountUpdate
 					System.exit(1);
 				}
 			}
-
 		}
 		else
 		{
@@ -184,6 +189,37 @@ public class CafeDocCountUpdate
 
 	}
 
+	public CafeDocCountUpdate()
+	{
+		if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
+		{
+			ausAffDelObj.setLookupTable("cmb_au_lookup");   //prod
+			//lookupTable = "hh_test_au_lookup"; // for testing
+			ausAffDelObj.setLookupTable_columnName("AUTHOR_ID");
+
+			ausAffDelObj.setProfileTable("author_profile");
+			ausAffDelObj.setProfileColumnName("AUTHORID");
+
+		}
+
+		else if (doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
+		{
+			ausAffDelObj.setLookupTable("cmb_af_lookup");
+			ausAffDelObj.setLookupTable_columnName("INSTITUTE_ID");
+
+			ausAffDelObj.setProfileTable("institute_profile");
+			ausAffDelObj.setProfileColumnName("AFFID");
+		}
+
+
+		else
+		{
+			System.out.println("Invalid doc type!!! Re-try with apr or ipr");
+			System.exit(1);
+		}
+		
+		ausAffDelObj.setCafePuiMasterTable(cafePuiMasterTable);
+	}
 	public void init()
 	{
 
@@ -206,6 +242,7 @@ public class CafeDocCountUpdate
 		try
 		{
 			out = new PrintWriter(new File(docCountFileName));
+			ausAffDelObj = new AusAffDeletion();
 		}
 		catch(FileNotFoundException ex)
 		{
@@ -219,6 +256,8 @@ public class CafeDocCountUpdate
 		}
 
 	}
+
+	
 
 	public void getProfileIds()
 	{
@@ -424,6 +463,33 @@ public class CafeDocCountUpdate
 			{
 				// delete from ES
 				status = esIndexObj.createBulkDelete(doc_type, MID_deletion_list);
+				
+				/*HH added Wed 12/29/2021, wk[202201] copied over the same block from class AusAffDeletion to accurately delete profiles from ES by using count tables instead of lookup tables
+				 * originally we used to get profile count using lookup tables (au/af) but since we now build count tables using ES staging we can use the count tables insteas 
+				 * whenever we have cpx deletion or cafe deletion, we started to receive and porcess cafe deletion from this week [202201], Wed 12/29/2021
+				 * 
+				 * at this case we no longer need to run AusAffDeletion class sepaately by running subscript in freezingwindow
+				 * I will comment out the shell script calling AusAffDeletion class in freezingwindow start from this week
+				 */
+				
+				//updates ES_STATUS in profile table & delete from DB LKUP table
+				if(status!=0 && (status == 200 || status == 201 || status == 404))
+				{
+					System.out.println("UpdateESProfile ES_status, delete records from lookup matching cafe deletion and update lookup match for BD deletion");
+					ausAffDelObj.updateProfileEsStatus(profileIds.toString());     // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
+					ausAffDelObj.setDeletionTable("CAFE_WEEKLY_DELETION");
+					ausAffDelObj.DbBulkDelete();                                // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
+					ausAffDelObj.setDeletionTable("CPX_DELETED_WEEKLY");
+					ausAffDelObj.updateLookupStatus();
+
+				}
+				else
+				{
+					System.out.println("Error Occurred during ES Deletion, so no DB deletion");
+				}
+				// end of copied bulk from AusAffDeletion
+
+				
 			}
 		}
 		catch(Exception e)

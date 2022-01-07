@@ -492,27 +492,30 @@ public class SharedSearchSearchEntry {
 
 			for (String lookupItem : LookupMap.keySet()) 
 			{
-				lookupESQuery = sharedSearch.buildLookupESQuery(esSearchField + ":" + "\"" + lookupItem + "\" database:" + database); 
-				//System.out.println(lookupESQuery);			// only for local debugging
-				String esHitCount = sharedSearch.runESQuery(lookupItem, lookupESQuery, null, "");
-				String indexCount = String.valueOf(LookupMap.get(lookupItem));
-				if(esHitCount != null && !esHitCount.isEmpty())
-				{
-					if (indexCount != null && indexCount != ""
-							&& Integer.parseInt(indexCount) >= Integer.parseInt(esHitCount)) {
-						outputList.add(lookupItem);
+				if(!(lookupItem.trim().isBlank())) {
+					lookupESQuery = sharedSearch.buildLookupESQuery(esSearchField + ":" + "\"" + lookupItem + "\" database:" + database); 
+					//System.out.println(lookupESQuery);			// only for local debugging
+					String esHitCount = sharedSearch.runESQuery(lookupItem, lookupESQuery, null, "");
+					String indexCount = String.valueOf(LookupMap.get(lookupItem));
+					if(esHitCount != null && !esHitCount.isEmpty())
+					{
+						if (indexCount != null && indexCount != ""
+								&& Integer.parseInt(indexCount) >= Integer.parseInt(esHitCount)) {
+							outputList.add(lookupItem);
+						}
+						
+						//Commented out 10/30/2020 to keep log file readable, only uncomment for debugging
+						/*
+						 * else { System.out.println(lookupItem +
+						 * " db count < esHitCount, so no action " + indexCount + " < " + esHitCount); }
+						 */
 					}
-					
-					//Commented out 10/30/2020 to keep log file readable, only uncomment for debugging
-					/*
-					 * else { System.out.println(lookupItem +
-					 * " db count < esHitCount, so no action " + indexCount + " < " + esHitCount); }
-					 */
+					else
+					{
+						System.out.println("No esHitCount!");
+					}
 				}
-				else
-				{
-					System.out.println("No esHitCount!");
-				}
+				
 				
 			}
 		}
