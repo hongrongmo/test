@@ -65,6 +65,12 @@ import java.util.Set;
  *    
  *    Friday 07/26/2019, wk: [201931] due restricted Mapping type removal in ES 6.7, I have to modify all classes taking off the combined/multi type mapping index "cafe" and replace it
  * with the 2 new indices "author" , "affiliation"
+ * 
+ * 
+ * NOTE: start from Wednesday 12/29/2021, wk [202201], I shifted the part of updatingprofiletableESstatus and delete lookups functions to class
+ * CafeDocCountUpdate as we started to physically receive and process cafe deletion from this week. SO instead of duplicate work by running the 2 class
+ * AusAffDeletion and CafeDocCountUpdate in freezingwindow script will only use CafeDocCountUPdate, especially that we getting the doc_count of profiles
+ * from ES sharedsearch not from lookups.
  */
 public class AusAffDeletion {
 
@@ -79,14 +85,15 @@ public class AusAffDeletion {
 	static int recsPerEsbulk;
 	static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
 	static String esIndexName;		// added 05/10/2018 as ES 6.2 and up split types in separate indices
-	static String cafePuiMasterTable = "cafe_pui_list_master";		// added 03/29/2019
+	static String cafePuiMasterTableTemp = "cafe_pui_list_master";
+	String cafePuiMasterTable = "cafe_pui_list_master";		// added 03/29/2019
 
-
-
+	
 	AusAffESIndex esIndexObj = null;
 
 	Connection con = null;
 	String lookupTable = null;
+
 	String lookupTable_columnName = null;
 	String profileTable;
 	String profileColumnName;
@@ -182,8 +189,8 @@ public class AusAffDeletion {
 			
 			if(args[11] !=null)
 			{
-				cafePuiMasterTable = args[11];
-				System.out.println("Cafe Pui List table: " + cafePuiMasterTable);
+				cafePuiMasterTableTemp = args[11];
+				System.out.println("Cafe Pui List table: " + cafePuiMasterTableTemp);
 			}
 
 		}
@@ -228,22 +235,22 @@ public class AusAffDeletion {
 	{
 		if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
 		{
-			lookupTable = "cmb_au_lookup";   //prod
+			setLookupTable("cmb_au_lookup");   //prod
 			//lookupTable = "hh_test_au_lookup"; // for testing
-			lookupTable_columnName = "AUTHOR_ID";
+			setLookupTable_columnName("AUTHOR_ID");
 
-			profileTable = "author_profile";
-			profileColumnName = "AUTHORID";
+			setProfileTable("author_profile");
+			setProfileColumnName("AUTHORID");
 
 		}
 
 		else if (doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
 		{
-			lookupTable = "cmb_af_lookup";
-			lookupTable_columnName = "INSTITUTE_ID";
+			setLookupTable("cmb_af_lookup");
+			setLookupTable_columnName("INSTITUTE_ID");
 
-			profileTable = "institute_profile";
-			profileColumnName = "AFFID";
+			setProfileTable("institute_profile");
+			setProfileColumnName("AFFID");
 		}
 
 
@@ -252,11 +259,11 @@ public class AusAffDeletion {
 			System.out.println("Invalid doc type!!! Re-try with apr or ipr");
 			System.exit(1);
 		}
+		
+		setCafePuiMasterTable(cafePuiMasterTableTemp);
 	}
+	
 
-
-
-	// if deletion source is Cafe
 
 	public void getCafeProfilesToBeDeleted()
 	{
@@ -788,6 +795,73 @@ public class AusAffDeletion {
 
 	}
 
+	//HH override on Wed 12/29/2021 due to calling from CafeDocCountUpdate class
+	public void DbBulkDelete(String cafedeletionTable)
+	{
+
+		Statement stmt = null;
+		ResultSet rs = null;
+		String query = "";
+
+
+		try
+		{
+			//2. delete records match cafe ANI PUI from lookup tables
+			//query = "delete from " + lookupTable + " where pui in (select pui from " + deletionTable + ")" ;
+			
+			//Added 03/29/2019 new logic provided by Hongrong of matching based on cafe pui or all secondary puis using cafe_pui_list_master plus original deletion table
+			query = "delete from " + lookupTable + " where pui in (select puisecondary from "+ cafePuiMasterTable + 
+					" where pui in(select a.pui from " + cafePuiMasterTable + " a, " + cafedeletionTable + " b where a.puisecondary=b.pui))" ;
+			
+			System.out.println("Running query...." + query);
+
+			stmt = con.createStatement();
+			int count = stmt.executeUpdate(query);
+			con.commit();
+
+
+			System.out.println("Total Keys Deleted from: " + lookupTable + " :- " + count);
+
+		}
+		catch(SQLException ex)
+		{
+			System.out.println("Error to delete M_ID list from DB table: " + lookupTable + " error message: " + ex.getMessage());
+			ex.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+	
 	// when source is BD, only update lookup status for deleted AU/AF from ES from "cpx_deleted" back to "unmatched"
 	public void updateLookupStatus()
 	{
@@ -916,5 +990,53 @@ public class AusAffDeletion {
 	}
 
 
+	public String getLookupTable() {
+		return lookupTable;
+	}
 
+	public void setLookupTable(String lookupTable) {
+		this.lookupTable = lookupTable;
+	}
+
+	public String getLookupTable_columnName() {
+		return lookupTable_columnName;
+	}
+
+	public void setLookupTable_columnName(String lookupTable_columnName) {
+		this.lookupTable_columnName = lookupTable_columnName;
+	}
+	public String getProfileColumnName() {
+		return profileColumnName;
+	}
+
+	public void setProfileColumnName(String profileColumnName) {
+		this.profileColumnName = profileColumnName;
+	}
+	// if deletion source is Cafe
+
+		public String getProfileTable() {
+			return profileTable;
+		}
+
+		public void setProfileTable(String profileTable) {
+			this.profileTable = profileTable;
+		}
+
+		public String getDeletionTable() {
+			return deletionTable;
+		}
+
+		public void setDeletionTable(String deletionTable) {
+			AusAffDeletion.deletionTable = deletionTable;
+		}
+		public String getCafePuiMasterTable() {
+			return cafePuiMasterTable;
+		}
+
+		public void setCafePuiMasterTable(String cafePuiMasterTable) {
+			this.cafePuiMasterTable = cafePuiMasterTable;
+		}
+
+
+		
 }

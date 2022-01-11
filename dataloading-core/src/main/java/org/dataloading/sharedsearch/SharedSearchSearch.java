@@ -180,44 +180,48 @@ public class SharedSearchSearch {
 		String after = "";
 		String count = null;
 
-		if (!(response.toString().isEmpty())) {
+		if (!(response.toString().isBlank())) {
 			JSONParser parser = new JSONParser();
 			JSONObject json = (JSONObject) parser.parse(response);
-			JSONArray facetResults = (JSONArray) json.get("facetResults");
-			if (!facetResults.isEmpty()) {
-				@SuppressWarnings("unchecked")
-				ListIterator<JSONObject> facetItr = facetResults.listIterator();
-				if (facetItr != null) {
-					JSONObject att = facetItr.next();
-					if(att != null && att.get("after") != null)
-					{
-						after = att.get("after").toString();
-						count = att.get("count").toString();
+			if(json.get("facetResults") != null)
+			{
+				JSONArray facetResults = (JSONArray) json.get("facetResults");
+				if (!facetResults.isEmpty()) {
+					@SuppressWarnings("unchecked")
+					ListIterator<JSONObject> facetItr = facetResults.listIterator();
+					if (facetItr != null) {
+						JSONObject att = facetItr.next();
+						if(att != null && att.get("after") != null)
+						{
+							after = att.get("after").toString();
+							count = att.get("count").toString();
 
-						if (att.get("facetItems") != null) {
-							JSONArray facetItems = (JSONArray) att.get("facetItems");
-							@SuppressWarnings("unchecked")
-							ListIterator<JSONObject> itr = facetItems.listIterator();
-							while (itr.hasNext()) {
-								JSONObject item = itr.next();
-								if (item.containsKey("count") && item.containsKey("value")) {
-									/* As per Hawk info, only filter ids start with prefix for having right count*/
-									if(item.get("value").toString().startsWith(prefix))
-									{
-										bw.write(item.get("value") + "\t" + item.get("count"));
-										bw.newLine();
+							if (att.get("facetItems") != null) {
+								JSONArray facetItems = (JSONArray) att.get("facetItems");
+								@SuppressWarnings("unchecked")
+								ListIterator<JSONObject> itr = facetItems.listIterator();
+								while (itr.hasNext()) {
+									JSONObject item = itr.next();
+									if (item.containsKey("count") && item.containsKey("value")) {
+										/* As per Hawk info, only filter ids start with prefix for having right count*/
+										if(item.get("value").toString().startsWith(prefix))
+										{
+											bw.write(item.get("value") + "\t" + item.get("count"));
+											bw.newLine();
+										}
+										
 									}
-									
 								}
 							}
 						}
+						
 					}
-					
-				}
 
+				}
+				else
+					logger.info("Fetched all IDS, no more scrolls!");
 			}
-			else
-				logger.info("Fetched all IDS, no more scrolls!");
+	
 		}
 		return after;
 

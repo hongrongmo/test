@@ -43,14 +43,17 @@ public class BdParser
 	private String s3FileLoc = "";   //HH 04/05/2016 for Cafe
 	private DataLoadDictionary dictionary = new DataLoadDictionary();
 
-    private Namespace aitNamespace=Namespace.getNamespace("ait","http://www.elsevier.com/xml/ait/dtd");
-	private Namespace ceNamespace=Namespace.getNamespace("ce","http://www.elsevier.com/xml/ani/common");
-	private Namespace noNamespace=Namespace.getNamespace("","");
-	private Namespace aniNamespace;
-	private Namespace xmlNamespace=Namespace.getNamespace("xml","http://www.w3.org/XML/1998/namespace");
-	private Namespace xoeNamespace=Namespace.getNamespace("xoe","http://www.elsevier.com/xml/xoe/dtd");
-	private Namespace xocsNamespace=Namespace.getNamespace("xocs","http://www.elsevier.com/xml/xocs/dtd");
-	private Namespace aiiNamespace=Namespace.getNamespace("aii","http://www.elsevier.com/xml/ani/internal");
+	
+	  private Namespace aitNamespace = Namespace.getNamespace("ait", "http://www.elsevier.com/xml/ait/dtd");
+	  private Namespace ceNamespace = Namespace.getNamespace("ce", "http://www.elsevier.com/xml/common/dtd");	  
+	  private Namespace noNamespace = Namespace.getNamespace("", "");	  
+	  private Namespace aniNamespace;	  
+	  private Namespace xmlNamespace = Namespace.getNamespace("xml", "http://www.w3.org/XML/1998/namespace");	  
+	  private Namespace xoeNamespace = Namespace.getNamespace("xoe", "http://www.elsevier.com/xml/xoe/dtd");	  
+	  private Namespace xocsNamespace = Namespace.getNamespace("xocs", "http://www.elsevier.com/xml/xocs/dtd");	  
+	  private Namespace aiiNamespace = Namespace.getNamespace("aii", "http://www.elsevier.com/xml/ani/internal");
+	  
+	
 	public static String accessNumberS;
 	private int affid = 0;
 	private static Hashtable contributorRole = new Hashtable();
@@ -244,43 +247,24 @@ public class BdParser
 					//System.out.println("EID1="+eid);
 					
 					Element fundingList = cpxRoot.getChild("funding-list",xocsNamespace);					
-					Element openAccess = cpxRoot.getChild("open-access",xocsNamespace);
-					
-					if(openAccess!=null)
-					{
-						
-						if(openAccess.getChild("oa-access-effective-date",xocsNamespace)!=null)
-						{
-							String oaAcessEffectiveDate = openAccess.getChildText("oa-access-effective-date",xocsNamespace);
-							record.put("OAACCESSDATE",oaAcessEffectiveDate);
-							//System.out.println("oaAcessEffectiveDate="+oaAcessEffectiveDate);
-						}
-						
-						if(openAccess.getChild("oa-user-license",xocsNamespace)!=null)
-						{
-							String oaUserLicense = openAccess.getChildText("oa-user-license",xocsNamespace);
-							record.put("OAUSERLICENSE",oaUserLicense);
-							//System.out.println("oaUserLicense="+oaUserLicense);
-						}
-						
-						if(openAccess.getChild("oa-article-status",xocsNamespace)!=null)
-						{
-							Element oaArticleStatus = openAccess.getChild("oa-article-status",xocsNamespace);
-							
-							String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this only use for testing "free-to-read-status" for now
-							//String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//this is used for production for now at 1/20/2021
-							//String freeToReadStatus = oaArticleStatus.getAttributeValue("free-to-read-status");
-							if(isOpenAccess!=null)
-							{
-								record.put("ISOPENACESS",isOpenAccess);
-							}
-							//record.put("FREETOREADSTATUS",freeToReadStatus);
-							//System.out.println("freeToReadStatus="+freeToReadStatus);
-						}
-						
-					}
-					
-					
+					Element openAccess = cpxRoot.getChild("open-access", this.xocsNamespace);
+				          if (openAccess != null) {
+				            if (openAccess.getChild("oa-access-effective-date", this.xocsNamespace) != null) {
+				              String oaAcessEffectiveDate = openAccess.getChildText("oa-access-effective-date", this.xocsNamespace);
+				              record.put("OAACCESSDATE", oaAcessEffectiveDate);
+				            } 
+				            if (openAccess.getChild("oa-user-license", this.xocsNamespace) != null) {
+				              String oaUserLicense = openAccess.getChildText("oa-user-license", this.xocsNamespace);
+				              record.put("OAUSERLICENSE", oaUserLicense);
+				            } 
+				            if (openAccess.getChild("oa-article-status", this.xocsNamespace) != null) {
+				              Element oaArticleStatus = openAccess.getChild("oa-article-status", this.xocsNamespace);
+				              String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status");
+				              if (isOpenAccess != null)
+				                record.put("ISOPENACESS", isOpenAccess); 
+				            } 
+				          } 
+				          
 					
 					Element indexeddate = item.getChild("indexeddate",xocsNamespace);
 					if(indexeddate !=null)
