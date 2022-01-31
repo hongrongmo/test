@@ -45,7 +45,10 @@ public class ZipDonwloadedFiles {
 			System.exit(1);
 		}
 		System.out.println("Starting zip files in downloadDir:  " + downloadDir);
-		zipDownloads(201713,downloadDir,zipfileName,type);
+		if(type.equalsIgnoreCase("cafe"))
+			zipCafeDownloads(downloadDir);
+		else
+			zipDownloads(201713,downloadDir,zipfileName,type);
 	}
 	
 	public static void zipDownloads(int loadnumber, String downloadDirName, String zipfileName, String type) throws Exception
@@ -132,6 +135,76 @@ public class ZipDonwloadedFiles {
 	}
 
 
+	//HH added 01/10/2022 to zip downloaded Cafe ANI open access EID files to be pre-processed for bug fix occurred last week [202202]
+	
+	public static void zipCafeDownloads(String downloadDirName) throws Exception
+	{
+		int zipFileID = 1;
+		int curRecNum = 0;
+		int sequence = 1;
+
+		System.out.println("Zip downloaded files");
+
+		
+
+		String currDir = System.getProperty("user.dir");
+		File zipsDir = new File(currDir+"/zips");
+		if(!(zipsDir.exists()))
+		{
+			zipsDir.mkdir();
+		}
+
+		
+		
+
+		File downDir = new File(currDir + "/"+downloadDirName);
+
+		String[] xmlFiles = downDir.list();  
+		File[] xmlFilesToDelete = downDir.listFiles();
+		byte[] buf = new byte[1024];
+
+
+		// create zip files if any files were downloaded, otherwise no zip file should be created
+		if(xmlFiles.length >0)
+		{	
+			String zipFileName = zipsDir + "/ ani_s3Files_" + sequence + ".zip";
+			ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
+
+			for(int i=0; i<xmlFiles.length; i++)
+			{
+				// limit each single zip file to hold recsPerZipfile, otherwise split to multiple zip files
+				if(curRecNum >= 20000)
+				{
+					curRecNum = 0;
+					outZip.close();
+
+					zipFileID++;
+					sequence++;
+
+					zipFileName = zipsDir + "/" + sequence + ".zip";
+					outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
+				}
+				FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);
+				outZip.putNextEntry(new ZipEntry(xmlFiles[i]));
+
+				int length;
+				while((length = in.read(buf)) >0)
+				{
+					outZip.write(buf,0,length);
+				}
+				outZip.closeEntry();
+				in.close();
+				xmlFilesToDelete[i].delete();  // delete original xml file to save space
+
+				++curRecNum;
+			}
+
+			outZip.close();
+			downDir.delete();  
+		}
+
+
+	}
 
 
 }
