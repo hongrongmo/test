@@ -474,7 +474,7 @@ public class PatentXmlReader
 		//String patentNumber = "0";
 		if(!enoughData(singleRecord))
 		{
-			System.out.println("Patent not included due to lack of data:"+(String)singleRecord.get("PR_DOCID_DOC_NUMBER"));
+			System.out.println("Patent not included due to lack of data:"+(String)singleRecord.get("PR_DOCID_COUNTRY")+(String)singleRecord.get("PR_DOCID_DOC_NUMBER")+(String)singleRecord.get("PR_DOCID_KIND"));
 			return;
 		}
 
