@@ -159,7 +159,7 @@ public class OracleMap {
 			{
 				try
 				{
-					if rs!=null;
+					if (rs!=null)
 						rs.close();
 				}
 				catch(Exception e)
