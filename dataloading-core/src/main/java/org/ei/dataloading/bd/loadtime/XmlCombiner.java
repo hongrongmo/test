@@ -2495,14 +2495,14 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 			  sqlQuery =
 				  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER, null as affid, null as cafe_affiliation,"
 				  +
-				  "null as cafe_author, null as cafe_author1, m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION FROM "
+				  "null as cafe_author, null as cafe_author1, m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION,null as CAFE_CORRESPONDENCEAFFILIATION FROM "
 				  + tableName + " where LOADNUMBER='" + weekNumber +
 				  "' AND loadnumber != 0 and database='" + database + "'";
 		  else
 			  sqlQuery =
 			  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER,null as affid, null as cafe_affiliation, "
 			  +
-			  "null as cafe_author, null as cafe_author1, m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION FROM "
+			  "null as cafe_author, null as cafe_author1, m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION,null as CAFE_CORRESPONDENCEAFFILIATION FROM "
 			  + tableName + " where loadnumber != 0 and database='" + database + "'"; 
 	  }
 	  
