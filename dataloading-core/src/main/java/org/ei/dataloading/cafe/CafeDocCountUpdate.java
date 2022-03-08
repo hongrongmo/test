@@ -177,6 +177,8 @@ public class CafeDocCountUpdate
 		obj.esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, action, esIndexName);
 
 
+		
+		
 		obj.init();
 		obj.getProfileIds();
 
@@ -191,6 +193,9 @@ public class CafeDocCountUpdate
 
 	public CafeDocCountUpdate()
 	{
+		//initiate AusAffDeletion obj
+		ausAffDelObj = new AusAffDeletion(doc_type);
+				
 		if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
 		{
 			ausAffDelObj.setLookupTable("cmb_au_lookup");   //prod
@@ -222,7 +227,6 @@ public class CafeDocCountUpdate
 	}
 	public void init()
 	{
-
 		if(doc_type.equalsIgnoreCase("apr"))
 		{
 			column_name = "AUTHORID";
@@ -242,7 +246,7 @@ public class CafeDocCountUpdate
 		try
 		{
 			out = new PrintWriter(new File(docCountFileName));
-			ausAffDelObj = new AusAffDeletion();
+			
 		}
 		catch(FileNotFoundException ex)
 		{

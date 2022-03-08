@@ -264,6 +264,13 @@ public class AusAffDeletion {
 	}
 	
 
+	//Override constructor so can be called from CafeDocCountUpdate class 
+	
+	public AusAffDeletion(String doc_type)
+	{
+		System.out.println("Update/Delete " + doc_type + " Profile from ES/DB based on doc_count");
+	}
+	
 
 	public void getCafeProfilesToBeDeleted()
 	{

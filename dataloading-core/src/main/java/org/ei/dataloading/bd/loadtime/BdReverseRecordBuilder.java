@@ -278,7 +278,7 @@ public class BdReverseRecordBuilder
              }
              else
              {
-            	 rs = stmt.executeQuery("select *  from bd_master where loadnumber="+loadN+" and database='"+databaseName+"'");
+            	rs = stmt.executeQuery("select *  from bd_master where loadnumber="+loadN+" and database='"+databaseName+"'");
              }
              
              path=new File(databaseName);
