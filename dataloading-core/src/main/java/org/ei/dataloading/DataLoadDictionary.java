@@ -359,7 +359,8 @@ public class DataLoadDictionary
 	    entityMap.put("&Isaquo;", "&#8249;"); //single left-pointing angle quotation mark
 	    entityMap.put("&rsaquo;", "&#8250;"); //single right-pointing angle quotation mark
 	    entityMap.put("&oline;", "&#8254;");
-	    entityMap.put("&Hscr;", "&#8259;");  //script capital H
+	    entityMap.put("&Hscr;", "&#8459");  //script capital H  , HH fixed on 03/17/2022 that's the correct mapping
+	  
 	    entityMap.put("&frasl;", "&#8260;");	    
 	    entityMap.put("&Hdbl;", "&#8261;"); 
 	    entityMap.put("&plankv;", "&#8263;"); //planck constant over two pi
@@ -1061,7 +1062,8 @@ public class DataLoadDictionary
     					case 8249 :sb.append("&Isaquo;");break; //single left-pointing angle quotation mark
     					case 8250 :sb.append("&rsaquo;");break; //single right-pointing angle quotation mark
     					case 8254 :sb.append("&oline;");break;  //Overline, spacing overscore
-    					case 8259 :sb.append("&Hscr;");break;   //script capital H
+    					case 8459 :sb.append("&Hscr;");break;   //script capital H, HH fixed from 8259 to 8459 03/17/2022
+    					case 8259 :sb.append("&#8259;");break;   //hyphen bullet, HH added 03/17/2022 EVOPS-1273
     					case 8260 :sb.append("&frasl;");break; 	//Fraction slash
     					case 8261 :sb.append("&Hdbl;");break; 	//double-struck capital H
     					case 8263 :sb.append("&plankv;");break; //planck constant over two pi

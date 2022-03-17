@@ -243,7 +243,7 @@ public class AffiliationDeanDashboard
 			System.out.println("Running the query...");
 			
 			query = "select a.affid,a.PREFERED_NAME,a.NAME_VARIANT,b.doc_count from " + tableName + " a, " + afDocCount_tableName + " b "+
-					"where a.es_status='indexed' and a.quality>=99 and a.affid=b.INSTITUTE_ID and b.doc_count>=100" +
+					"where a.es_status='indexed' and a.quality>=99 and a.affid=b.INSTITUTE_ID and b.doc_count>=1000" +
 					"order by b.doc_count desc";
 			System.out.println(query);
 			rs = stmt.executeQuery(query);
@@ -369,8 +369,8 @@ public class AffiliationDeanDashboard
 		{
 			con = getConnection(url, driver, username, password);
 			
-			String query = "select INSTITUTION_ID, INSTITUTION_NAME , AFFILIATION_ID, AFFILIATION_NAME, PREFERED_NAME, NAME_VARIANT, DOC_COUNT, INSTITUTION_CONTINENT, "
-					+ "INSTITUTION_COUNTRY,INST_COUNT from hh_deandashboard_2020 where INST_COUNT >=? order by INSTITUTION_NAME asc";
+			String query = "select INSTITUTION_ID, INSTITUTION_NAME , INSTITUTION_ACRONYM, INSTITUTION_NAMEVAR1, INSTITUTION_NAMEVAR2, AFFILIATION_ID, AFFILIATION_NAME, PREFERED_NAME, NAME_VARIANT, DOC_COUNT, INSTITUTION_CONTINENT, "
+					+ "INSTITUTION_COUNTRY,INST_COUNT from hh_deandashboard_2022 where INST_COUNT >=? order by INSTITUTION_NAME asc";
 			pstmt = con.prepareStatement(query);
 			pstmt.setInt(1, 1000);
 			
@@ -400,6 +400,19 @@ public class AffiliationDeanDashboard
 					
 					if(rs.getString("INSTITUTION_NAME") != null)
 						instRec.setInstitutionName(rs.getString("INSTITUTION_NAME"));
+					
+					//03/11/2022, added 3 extra cols delivered in Scival 2022 version 
+					
+					if(rs.getString("INSTITUTION_ACRONYM") != null)
+						instRec.setInstitutionAcronym(rs.getString("INSTITUTION_ACRONYM"));
+					
+					if(rs.getString("INSTITUTION_NAMEVAR1") != null)
+						instRec.setInstitutionNameVar1(rs.getString("INSTITUTION_NAMEVAR1"));
+					
+					if(rs.getString("INSTITUTION_NAMEVAR2") != null)
+						instRec.setInstitutionNameVar2(rs.getString("INSTITUTION_NAMEVAR2"));
+					
+					
 					
 					if(rs.getInt("AFFILIATION_ID") != 0)
 						aff.setAffiliationId(rs.getInt("AFFILIATION_ID"));
@@ -470,7 +483,7 @@ public class AffiliationDeanDashboard
 		{
 			JSONObject institutionDetails = new JSONObject(); 
 			
-			try(BufferedWriter writer = new BufferedWriter(new FileWriter(new File("deandashboard_2020.json"))))
+			try(BufferedWriter writer = new BufferedWriter(new FileWriter(new File("deandashboard_2022.json"))))
 			{
 				for(Map.Entry<Integer, InstitutionRecord> entry: institutionsList.entrySet())
 				{
@@ -478,15 +491,28 @@ public class AffiliationDeanDashboard
 					InstitutionRecord instRec = entry.getValue();
 					int instId = instRec.getInstitution_ID();
 					String instName = instRec.getInstitutionName();
+					String instAcronym = instRec.getInstitutionAcronym();
+					String instNameVar1 = instRec.getInstitutionNameVar1();
+					String instNameVar2 = instRec.getInstitutionNameVar2();
 					int instDocCount = instRec.getInstitutionDocCount();
 					String instCountry = instRec.getCountry();
 					String instContinent = instRec.getContinent();
 					
+					System.out.println("InstId: " + instId);
 					if(instId != 0)
 						institution.put("institutionId", instId);
 					
 					if(!instName.isEmpty())
 						institution.put("institutionName", instName);
+					
+					if(!(instAcronym == null) && !instAcronym.equalsIgnoreCase("-"))
+						institution.put("institutionAcronym", instAcronym);
+					
+					if(!(instNameVar1 == null) && !instNameVar1.equalsIgnoreCase("-"))
+						institution.put("institutionNameVariant1", instNameVar1);
+					
+					if(!(instNameVar2 == null) && !instNameVar2.equalsIgnoreCase("-"))
+						institution.put("institutionNameVariant2", instNameVar2);
 					
 					if(instDocCount != 0)
 						institution.put("institutionDocCount", instDocCount);
@@ -635,6 +661,10 @@ class InstitutionRecord
 {
 	private Integer institution_ID;
 	private String institutionName;
+	//Added 03/11/2022 for Scival 2022 version
+	private String institutionAcronym;
+	private String institutionNameVar1;
+	private String institutionNameVar2;
 	private Integer institutionDocCount;
 	private String continent;
 	private String country;
@@ -668,6 +698,29 @@ class InstitutionRecord
 		this.institutionName = institutionName;
 	}
 
+	public String getInstitutionAcronym() {
+		return institutionAcronym;
+	}
+
+	public void setInstitutionAcronym(String institutionAcronym) {
+		this.institutionAcronym = institutionAcronym;
+	}
+
+	public String getInstitutionNameVar1() {
+		return institutionNameVar1;
+	}
+
+	public void setInstitutionNameVar1(String institutionNameVar1) {
+		this.institutionNameVar1 = institutionNameVar1;
+	}
+
+	public String getInstitutionNameVar2() {
+		return institutionNameVar2;
+	}
+
+	public void setInstitutionNameVar2(String institutionNameVar2) {
+		this.institutionNameVar2 = institutionNameVar2;
+	}
 
 	public Integer getInstitutionDocCount() {
 		return institutionDocCount;

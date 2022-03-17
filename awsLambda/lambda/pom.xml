@@ -88,12 +88,13 @@
 			<version>1.4</version>
 		</dependency>
 <!-- HH: added 01/31/2017 -->
+	<!-- 
 	<dependency>
     	<groupId>javax.jms</groupId>
     	<artifactId>jms</artifactId>
     	<version>1.1</version>
 	</dependency>
-	
+	 -->
 	<dependency>
     	<groupId>org.ei.dataloading</groupId>
     	<artifactId>dataloading-core</artifactId>
@@ -258,8 +259,23 @@
     	<version>3.9</version>
 	</dependency>
 	
-	
+	<!-- HH added 12/28/2020 for secretmanager -->
+	<dependency>
+    	<groupId>com.amazonaws</groupId>
+    	<artifactId>aws-java-sdk-core</artifactId>
+    	<version>1.11.926</version>
+	</dependency>
+
+
+		<dependency>
+    		<groupId>com.amazonaws</groupId>
+    		<artifactId>aws-java-sdk-secretsmanager</artifactId>
+    		<version>1.11.866</version>
+		</dependency>
 		
+		
+    
+    
   </dependencies>
   
   <build>

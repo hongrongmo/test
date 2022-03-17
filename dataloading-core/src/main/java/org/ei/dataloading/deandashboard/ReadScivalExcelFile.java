@@ -99,6 +99,9 @@ public class ReadScivalExcelFile {
 				int affiliationID = 0;
 				String affiliationName = "";
 				
+				//added 03/08/2022 to capture extra 3 columns provided [acronym, name variant 1, name variant 2
+				String acronym = "", name_variant1 = "", name_variant2 = "";
+				
 				// Iterate through columns in current row
 				Iterator<Cell> cellsIterator = row.cellIterator();
 				while(cellsIterator.hasNext())
@@ -123,28 +126,58 @@ public class ReadScivalExcelFile {
 							}
 								
 						}
-						
 							
 					}
 						
 					if(colIndex == 1)
 						instRec.setInstitutionName(cell.getStringCellValue());
+					
+					//START: read 3 extra columns added in 2022 here before affiliationID
 					if(colIndex == 2)
+					{
+
+						if(!cell.toString().isBlank())
+						{
+							acronym = cell.toString();
+							instRec.setInstitutionAcronym(acronym);
+						}
+							
+					}
+					if(colIndex == 3)
+					{
+						if(!cell.getStringCellValue().isBlank())
+						{
+							name_variant1 = cell.getStringCellValue();
+							instRec.setInstitution_NameVariant1(name_variant1);
+						}
+							
+					}
+					if(colIndex == 4)
+					{
+						if(!cell.getStringCellValue().isBlank())
+						{
+							name_variant2 = cell.getStringCellValue();
+							instRec.setInstitution_NameVariant2(name_variant2);
+						}
+							
+					}
+					// END of 3 extra columns added in 2022 here
+					if(colIndex == 5)
 					{
 						if(cell.getNumericCellValue() != 0)
 							affiliationID = (int)cell.getNumericCellValue();
 					}
-					if(colIndex == 3)
+					if(colIndex == 6)
 					{
 						if(!cell.getStringCellValue().isEmpty())
 							affiliationName = cell.getStringCellValue();
 					}
-					if(colIndex == 4)
+					if(colIndex == 7)
 					{
 						if(!cell.getStringCellValue().isEmpty())
 							instRec.setRegion(cell.getStringCellValue());
 					}
-					if(colIndex == 5)
+					if(colIndex == 8)
 					{
 						if(!cell.getStringCellValue().isEmpty())
 							instRec.setCountry(cell.getStringCellValue());
@@ -197,8 +230,8 @@ public class ReadScivalExcelFile {
 					//for each affiliation_ID add entry in out file
 					recordInfo.getAffiliationInfo().forEach((key,value) -> {
 						try {
-							writer.write(entry.getKey() + "," + recordInfo.getInstitutionName() + "," + key + "," + value
-									+ "," + recordInfo.getRegion() + "," + recordInfo.getCountry());
+							writer.write(entry.getKey() + "," + recordInfo.getInstitutionName() + "," + recordInfo.getInstitutionAcronym() + "," + recordInfo.getInstitution_NameVariant1() + "," + recordInfo.getInstitution_NameVariant2()
+							+ "," + value + "," + recordInfo.getRegion() + "," + recordInfo.getCountry());
 							writer.write("\n");
 						} catch (IOException e) {
 							
@@ -241,10 +274,13 @@ public class ReadScivalExcelFile {
 						Row row = sheet.createRow(rownum);
 						row.createCell(colIndx).setCellValue(entry.getKey());
 						row.createCell(colIndx+1).setCellValue(recordInfo.getInstitutionName());
-						row.createCell(colIndx+2).setCellValue(key);
-						row.createCell(colIndx+3).setCellValue(value);
-						row.createCell(colIndx+4).setCellValue(recordInfo.getRegion());
-						row.createCell(colIndx+5).setCellValue(recordInfo.getCountry());
+						row.createCell(colIndx+2).setCellValue(recordInfo.getInstitutionAcronym());
+						row.createCell(colIndx+3).setCellValue(recordInfo.getInstitution_NameVariant1());
+						row.createCell(colIndx+4).setCellValue(recordInfo.getInstitution_NameVariant2());
+						row.createCell(colIndx+5).setCellValue(key);
+						row.createCell(colIndx+6).setCellValue(value);
+						row.createCell(colIndx+7).setCellValue(recordInfo.getRegion());
+						row.createCell(colIndx+8).setCellValue(recordInfo.getCountry());
 						rownum++;
 					} 
 					catch (Exception e) 
@@ -292,6 +328,10 @@ public class ReadScivalExcelFile {
 	{
 		private int institution_ID;
 		private String institutionName;
+		private String institutionAcronym;
+		
+		private String institution_NameVariant1;
+		private String institution_NameVariant2;
 		private Map<Integer, String> affiliationInfo;
 		private String region;
 		private String country;
@@ -314,6 +354,26 @@ public class ReadScivalExcelFile {
 		public void setInstitutionName(String institution) {
 			this.institutionName = institution;
 		}
+		
+		public String getInstitutionAcronym() {
+			return institutionAcronym;
+		}
+		public void setInstitutionAcronym(String institutionAcronym) {
+			this.institutionAcronym = institutionAcronym;
+		}
+		public String getInstitution_NameVariant1() {
+			return institution_NameVariant1;
+		}
+		public void setInstitution_NameVariant1(String institution_NameVariant1) {
+			this.institution_NameVariant1 = institution_NameVariant1;
+		}
+		public String getInstitution_NameVariant2() {
+			return institution_NameVariant2;
+		}
+		public void setInstitution_NameVariant2(String institution_NameVariant2) {
+			this.institution_NameVariant2 = institution_NameVariant2;
+		}
+		
 		public Map<Integer,String> getAffiliationInfo() {
 			return affiliationInfo;
 		}
