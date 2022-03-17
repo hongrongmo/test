@@ -1779,6 +1779,8 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 					StringBuffer rangesBuffer = new StringBuffer();
 					if (rs.getString("UNIT") != null) {
 						unit = rs.getString("UNIT").toLowerCase();
+						//take care of space between numerical index term by hmo at 3/17/2022
+						unit = unit.replaceAll(" ", "_");
 						unitSet.add(unit);
 					} else {
 						System.out.println("no unit found for pui " + pui);
