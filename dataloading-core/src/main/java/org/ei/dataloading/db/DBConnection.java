@@ -12,6 +12,11 @@ import java.sql.SQLException;
  */
 public class DBConnection {
 
+	public DBConnection()
+	{
+		
+	}
+	
 	@SuppressWarnings("finally")
 	public Connection getConnection(String url, String driver, String username, String password) {
 		Connection con = null;
@@ -47,6 +52,28 @@ public class DBConnection {
 		
 		
 	}
+	
+	
+	// Signleton design for DBConnection
+	
+	private static DBConnection instance;
+	private Connection dbConnection;
+	
+	public static DBConnection getInstance(String url, String driver, String username, String password)
+	{
+		synchronized (DBConnection.class) {
+			if(instance == null)
+			{
+				instance = new DBConnection();
+				instance.dbConnection = instance.getConnection(url, driver, username, password);
+			}
+		}
+		return instance;
+	}
 
+	public Connection getDbConnection()
+	{
+		return dbConnection;
+	}
 
 }

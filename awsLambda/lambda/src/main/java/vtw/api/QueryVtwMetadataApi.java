@@ -1,7 +1,13 @@
 package vtw.api;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.http.HttpResponse;
@@ -14,6 +20,7 @@ import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.ei.dataloading.upt.loadtime.vtw.VTWAssetAPI;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -31,6 +38,9 @@ public class QueryVtwMetadataApi {
     
 
 	HttpClient client = null;
+	
+	//List of PatentID and AssetURL to download XML file
+	Map<String, String> patentIds = new HashMap<>();
 	
     public QueryVtwMetadataApi(){
         //client = getHttpClient();
@@ -83,6 +93,9 @@ public class QueryVtwMetadataApi {
     {
     	int max = Integer.MIN_VALUE;
     	Map<Integer, String> generations = new HashMap<>();
+    	int generation;
+    	String assetUrl;
+    	String patentId = "";
     	
     	try
     	{
@@ -90,19 +103,43 @@ public class QueryVtwMetadataApi {
         	{
         		//JSON Node to Pretty String
         		String prettyString = mapperJson.writerWithDefaultPrettyPrinter().writeValueAsString(metadataNode);
-        		System.out.println("Metadata: \\n" + prettyString);
+        		//System.out.println("Metadata: \\n" + prettyString);
+        		
         		
         		if(metadataNode.isObject())
         		{
+        			patentId = metadataNode.findValue("ecm:identifier").textValue().trim();
+        			patentId = patentId.substring(patentId.indexOf(":") +1, patentId.length());
+
         			Iterator<String> fieldNamesItr = metadataNode.fieldNames();
         			while(fieldNamesItr.hasNext())
         			{
         				String key = fieldNamesItr.next();
-        				if(key.equalsIgnoreCase("bam:generation"))
+        				
+        					
+        				
+        				if(key.equalsIgnoreCase("bam:hasGeneration"))
         				{
-        					max = Integer.parseInt(metadataNode.get(key).toString()) > max? Integer.parseInt(metadataNode.get(key).toString()): max;
+        					ArrayNode arrNode = (ArrayNode)metadataNode.get(key);
+        					for(int i=0; i< arrNode.size(); i++)
+        					{
+        						JsonNode arr = arrNode.get(i);
+            					
+            					List<JsonNode> bam_gen = arr.findValues("bam:generation");
+            	        		List<JsonNode> bam_asset = arr.findValues("bam:hasAsset");
+            	        		
+            	        		generation = Integer.parseInt(bam_gen.get(0).asText());
+            	        		ArrayNode assetArrNode = (ArrayNode)bam_asset.get(0);
+            	        		generations.put(generation, assetArrNode.get(0).textValue());
+            	        		max = (generation > max? generation: max);
+            	        		
+        					}
+        					
+        					/*max = Integer.parseInt(metadataNode.get(key).toString()) > max? Integer.parseInt(metadataNode.get(key).toString()): max;
         					generations.put(Integer.parseInt(metadataNode.get(key).toString()), "");
+        					*/
         				}
+        				/*
         				if(key.equalsIgnoreCase("bam:hasAsset"))
         				{
         					JsonNode value = metadataNode.get(key);
@@ -115,9 +152,11 @@ public class QueryVtwMetadataApi {
         					//recursive call
             				traverseMetadata(value);
         				}	
+        				*/
         			}
         		}
         		
+        		/*
         		// If it is an array
         		else if(metadataNode.isArray())
         		{
@@ -134,6 +173,19 @@ public class QueryVtwMetadataApi {
         		{
         			System.out.println("fieldName =" +  metadataNode.asText());
         		}
+        		*/
+        		
+        		generation = max;
+        		assetUrl = generations.get(generation);
+        		
+        		
+        		// Add patents with Only Generation > 10 to be downloaded and process
+        		if(generation > 10)
+        		{
+        			patentIds.put(patentId, assetUrl);
+        			
+        		}
+        		
         	}
     	}
     	catch(Exception e)
@@ -143,10 +195,31 @@ public class QueryVtwMetadataApi {
     		e.printStackTrace();
     	}
     }
-    public static void main(String[] args) throws Exception
+    
+    public void downloadPatents()
     {
-    	QueryVtwMetadataApi obj = new QueryVtwMetadataApi();
-    	ObjectNode node = obj.retrieveExistingMetadata("pat", "EP3933456A1");
-    	obj.traverseMetadata(node);
+    	DateFormat dateFormat = new SimpleDateFormat(
+				"E, MM/dd/yyyy-hh:mm:ss a");
+    	Date date;
+		try {
+			date = dateFormat.parse(dateFormat.format(new Date()));
+
+			Long epoch = date.getTime();
+
+			if (patentIds.size() > 0) {
+				// Call existing VTW downloadPatent function
+				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch), 2000, "thread0");
+				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(epoch), "thread0",
+						"forward");
+			}
+
+		} catch (Exception e) {
+			logger.error("Exception at downloading VTWAsset API, calling from class QueryVtwMetadata");
+			logger.error(e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
     }
+   
 }
