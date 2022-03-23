@@ -33,6 +33,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class AmazonRetrieveSecretManagerSecrets {
 	
 	Logger logger;
+	AWSSecretsManager client = null;
 	
 	Map<String, String> credentials = new HashMap<>();
 	
@@ -40,19 +41,26 @@ public class AmazonRetrieveSecretManagerSecrets {
 	public AmazonRetrieveSecretManagerSecrets()
 	{
 		logger = Logger.getLogger(AmazonRetrieveSecretManagerSecrets.class);
+		init();
+	}
+	public void init()
+	{
+		//initiate AwsSecretManager client to be created only once and be used from diff classes
+		 // Create aand get Secrets Manager client
+  		client = AmazonSecretManager.getInstance().getAmazonSecretManagerClient();
+  		
+    
 	}
 	// Use this code snippet in your app.
 	// If you need more information about configurations or implementing the sample code, visit the AWS docs:
 	// https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-samples.html#prerequisites
 
-	public void getSecret() {
+	public void getSecret(String secret_name) {
 
-	    String secretName = "arn:aws:secretsmanager:us-east-1:230521890328:secret:Prod/VTW/Credentials-w5kHZN";
+	    //String secretName = "arn:aws:secretsmanager:us-east-1:230521890328:secret:Prod/VTW/Credentials-w5kHZN";
+		String secretName = secret_name;
 	   
-	    // Create aand get Secrets Manager client
-	  		AWSSecretsManager client = AmazonSecretManager.getInstance().getAmazonSecretManagerClient();
-	  		
-	    
+	   
 	    // In this sample we only handle the specific exceptions for the 'GetSecretValue' API.
 	    // See https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
 	    // We rethrow the exception by default.
@@ -112,8 +120,8 @@ public class AmazonRetrieveSecretManagerSecrets {
 			try
 			{
 				secretsJson = objectMapper.readTree(secret);
-				credentials.put("userName", secretsJson.get("VTW_Uname").textValue());
-				credentials.put("password", secretsJson.get("VTW_Pwd").textValue());
+				credentials.put("username", secretsJson.get("username").textValue());
+				credentials.put("password", secretsJson.get("password").textValue());
 			}
 			catch(Exception e)
 			{

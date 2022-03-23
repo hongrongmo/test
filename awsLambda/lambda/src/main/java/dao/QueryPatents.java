@@ -34,11 +34,12 @@ public class QueryPatents {
 	{
 		try 
 		{
+			System.out.println("Time before query UPT_MASTER: " + System.currentTimeMillis());
 			String query = "select AC||PN||KC from upt_master where load_number=?";
 			stmt = con.prepareStatement(query);
 			stmt.setInt(1, loadNumber);
 			rs = stmt.executeQuery();
-			
+			System.out.println("Time after query UPT_MASTER: " + System.currentTimeMillis());
 		} 
 		catch (SQLException e) 
 		{

@@ -65,6 +65,8 @@ public class ConnectToVtwSearchApi {
 	//private final String VTW_API_HOST = "https://vtw.elsevier.com/search";
 	private final String VTW_API_HOST = "https://vtw.elsevier.com/search";
 	
+	private String secretArn = null;
+	
 	private String encodedUserName;
 	private String encodedPassword;
 	private URL url;
@@ -76,7 +78,8 @@ public class ConnectToVtwSearchApi {
 	{
 		AmazonRetrieveSecretManagerSecrets secretManagerObj = new AmazonRetrieveSecretManagerSecrets();
 		logger = secretManagerObj.getLogger();
-		secretManagerObj.getSecret();
+		secretArn = "arn:aws:secretsmanager:us-east-1:230521890328:secret:Prod/VTW/Credentials-w5kHZN";
+		secretManagerObj.getSecret(secretArn);
 		
 		
 		Map<String, String> credentials = secretManagerObj.getCredentials();

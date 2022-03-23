@@ -2,7 +2,9 @@ package vtw.api;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
@@ -17,38 +19,81 @@ import dao.QueryPatents;
 public class StartVtwMetadataApi {
 
 	
-	String url = "jdbc:oracle:thin:@localhost:1521:eid";
+	 String url = "jdbc:oracle:thin:@localhost:1521:eid";
 	 String driver = "oracle.jdbc.driver.OracleDriver";
-	 String userName = "ap_correction1";
-	 String passwd = "";
+	 String[] secretArns;
+	 QueryVtwMetadataApi apiObj = null;
 	 
+	 Map<String, String> credentials = new HashMap<>();
+
 	 List<String> patentIds = new ArrayList<>();
 	 
 	 public static void main(String[] args) throws Exception
 	    {
-		 
-			/*
-			 * List<String> patents = new ArrayList<>(); patents.add("EP3933456A1");
-			 * patents.add("EP3928993A4"); patents.add("US11192742B2");
-			 */
-	    
-	    		StartVtwMetadataApi startObj = new StartVtwMetadataApi();
-	    		startObj.run();
+
+		 //Minumum need to pass over DB Info, and secret credentials for both RDS & VTW
+		 	StartVtwMetadataApi startObj = new StartVtwMetadataApi();
+	    	startObj.parseInput(args);
+	    	startObj.run();
 	    }
 	 
+	 public void parseInput(String[] args)
+	 {
+		 if(args.length <3)
+		 {
+			 System.out.println("Not enough parameters");
+			 System.exit(1);
+		 }
+		 if(args[0] != null && !(args[0].isBlank()))
+		 {
+			 url = args[0];
+		 }
+		 if(args[1] != null && !(args[1].isBlank()))
+		 {
+			 driver = args[1];
+		 }
+		 if(args[2] != null && !(args[2].isBlank()))
+		 {
+			 if(args[2].contains(";"))
+			 {
+				secretArns = args[2].split(";"); 
+			 }
+		 }
+	 }
 	 public void run()
 	 {
 		 try
 	    	{
+			 apiObj = new QueryVtwMetadataApi();
+			 
+			 //retrieve AWS secret manager credentials for DB
+			 apiObj.retrieveCredentials(secretArns[0]);
+			 credentials = apiObj.getCredentials();
+			 
+			 long startTime = System.currentTimeMillis()/1000;
+			 	
 	    		fetchPatentIds();
-	    		QueryVtwMetadataApi obj = new QueryVtwMetadataApi();
+	    		
+	    		long endTime = System.currentTimeMillis()/1000 - startTime;
+	    		System.out.println("Total time It took to fetch PatentsIds from Oracle: " + endTime);
+	    		
+	    		
 		    	for(String patent: patentIds)
 		    	{
-		        	ObjectNode node = obj.retrieveExistingMetadata("pat", patent);
-		        	obj.traverseMetadata(node);
+		    		//retrieve AWS secret manager credentials for VTW MetadataAPI
+		    		apiObj.retrieveCredentials(secretArns[1]);
+		        	ObjectNode node = apiObj.retrieveExistingMetadata("pat", patent);
+		        	apiObj.traverseMetadata(node);
 		    	}
 		    	
-		    	obj.downloadPatents();
+		    	endTime = System.currentTimeMillis()/1000 - endTime;
+	    		System.out.println("Total time It took to retrieve VTW Metadata: " + endTime);
+	    		
+		    	apiObj.downloadPatents();
+		    	
+		    	endTime = System.currentTimeMillis()/1000 - endTime;
+	    		System.out.println("Total time It took to download patent XML files: " + endTime);
+	    		
 	    	}
 	    	catch(Exception e)
 	    	{
@@ -61,8 +106,9 @@ public class StartVtwMetadataApi {
 		 try
 		 {
 			 dbObj = new QueryPatents();
-			 dbObj.init(url, driver, userName, passwd);
-	 		ResultSet rs = dbObj.fetchPatents(202299);
+			 
+			 dbObj.init(url, driver, credentials.get("username"), credentials.get("password"));
+	 		 ResultSet rs = dbObj.fetchPatents(202299);
 	 		
 	 		while(rs.next())
 	 		{

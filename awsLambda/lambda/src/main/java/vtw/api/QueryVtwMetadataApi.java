@@ -37,6 +37,9 @@ public class QueryVtwMetadataApi {
     private String password = null;
     
 
+    Map<String, String> credentials = new HashMap<>();
+
+
 	HttpClient client = null;
 	
 	//List of PatentID and AssetURL to download XML file
@@ -46,23 +49,24 @@ public class QueryVtwMetadataApi {
         //client = getHttpClient();
     	logger = Logger.getLogger(QueryVtwMetadataApi.class);
     	logger.setLevel(Level.ERROR);
-    	retrieveCredentials();
+    	
     }
 
-    public void retrieveCredentials() {
+ 
+    public void retrieveCredentials(String secretARN) {
     	AmazonRetrieveSecretManagerSecrets secretManagerObj = new AmazonRetrieveSecretManagerSecrets();
 		
-		secretManagerObj.getSecret();
-		
-		
-		Map<String, String> credentials = secretManagerObj.getCredentials();
-		
-			userName = credentials.get("userName");
-			password = credentials.get("password");
+		secretManagerObj.getSecret(secretARN);
+		setCredentials(secretManagerObj.getCredentials());
+
+		userName = credentials.get("username");
+		password = credentials.get("password");
+
+		client = getHttpClient();
     }
     public ObjectNode retrieveExistingMetadata(String type, String identifier) throws Exception {
         ObjectNode existingMetadata = null;
-        client = getHttpClient();
+       
 
         String url = PROD_METADATA_URL + type + "/" + identifier + "?mode=full";
         HttpResponse response = sendHttpRequest(url);
@@ -82,6 +86,8 @@ public class QueryVtwMetadataApi {
 
     private HttpClient getHttpClient(){
        
+    
+		
         CredentialsProvider provider = new BasicCredentialsProvider();
         UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(userName, password);
 
@@ -102,7 +108,7 @@ public class QueryVtwMetadataApi {
     		if(metadataNode != null)
         	{
         		//JSON Node to Pretty String
-        		String prettyString = mapperJson.writerWithDefaultPrettyPrinter().writeValueAsString(metadataNode);
+        		//String prettyString = mapperJson.writerWithDefaultPrettyPrinter().writeValueAsString(metadataNode);
         		//System.out.println("Metadata: \\n" + prettyString);
         		
         		
@@ -221,5 +227,14 @@ public class QueryVtwMetadataApi {
 		
 		
     }
+    
+	public void setCredentials(Map<String, String> credentials) {
+		this.credentials = credentials;
+	}
+
+	public Map<String, String> getCredentials() {
+		return credentials;
+	}
+
    
 }
