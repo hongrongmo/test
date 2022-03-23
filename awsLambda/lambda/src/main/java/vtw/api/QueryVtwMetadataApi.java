@@ -74,6 +74,8 @@ public class QueryVtwMetadataApi {
         if (response.getStatusLine().getStatusCode() == 200) {
             existingMetadata = (ObjectNode) mapperJson.readTree(response.getEntity().getContent());
         }
+        else
+        	logger.error("Metadata response code: " + response.getStatusLine().getStatusCode());
         return existingMetadata;
     }
 

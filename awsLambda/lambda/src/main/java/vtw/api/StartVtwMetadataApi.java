@@ -118,6 +118,8 @@ public class StartVtwMetadataApi {
 	 			}
 	 		}
 	 		System.out.println("Total Number of PatentIds to download from VTW using VTWMetadataApi: " + patentIds.size());
+	 		//close result set
+	 		dbObj.closeResultSet();
 		 }
 			catch(Exception e)
 	    	{
