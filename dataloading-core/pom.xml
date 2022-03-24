@@ -4,7 +4,7 @@
   <groupId>org.ei.dataloading</groupId>
   <artifactId>dataloading-core</artifactId>
   <!-- <version>0.0.1-SNAPSHOT</version> -->
-  <version>4.0.9</version>
+  <version>4.0.8-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>dataloading-core</name>
   <url>http://maven.apache.org</url>
@@ -47,7 +47,8 @@
 		<connection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</connection>
 		<developerConnection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</developerConnection>
 		<url>https://github.com/elsevier-research/engvillage-dataloading</url>
-		<tag>v1.0.6</tag>
+		<!-- <tag>v1.0.6</tag> -->
+		<tag>HEAD</tag>
 	</scm>
 	
 
