@@ -42,15 +42,14 @@
 	</distributionManagement>
 	
 	<!-- HH added 11/16/2021 for Jenkins Build and deploy using ARtifactory -->
-	
+	<!--
 	<scm>
 		<connection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</connection>
 		<developerConnection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</developerConnection>
 		<url>https://github.com/elsevier-research/engvillage-dataloading</url>
-		<!-- <tag>v1.0.6</tag> -->
 		<tag>v1.0.6</tag>
 	</scm>
-	
+-->
 
 <dependencies>
 
