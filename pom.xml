@@ -4,7 +4,7 @@
 	<groupId>org.ei.dataloading</groupId>
 	<artifactId>dataloading</artifactId>
 	<packaging>pom</packaging>
-	<version>4.0.10-SNAPSHOT</version>
+	<version>4.0.10</version>
 	<name>Engineering Village dataloading Build Parent</name>
 	<description>Parent Project to build adhoclambda, AWS_SES, awsLambda, cafe-correction-lambda, dataloading-core, dl-correction-lambda modules as needed</description>
 
@@ -24,7 +24,8 @@
 		<connection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</connection>
 		<developerConnection>scm:git:git@github.com:elsevier-research/engvillage-dataloading.git</developerConnection>
 		<url>https://github.com/elsevier-research/engvillage-dataloading</url>
-	</scm>
+	  <tag>v1.0.6</tag>
+  </scm>
 
 	<profiles>
 		<profile>
