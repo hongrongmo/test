@@ -35,7 +35,7 @@ public class QueryPatents {
 		try 
 		{
 			System.out.println("Time before query UPT_MASTER: " + System.currentTimeMillis());
-			String query = "select AC||PN||KC from upt_master where load_number=? and rownum<21";
+			String query = "select AC||PN||KC from upt_master where load_number=?";
 			stmt = con.prepareStatement(query);
 			stmt.setInt(1, loadNumber);
 			rs = stmt.executeQuery();

@@ -27,25 +27,7 @@ import org.apache.log4j.Logger;
  * 
  * a. generation (will provide most recenet generation
  * b. 1st link in links array will include the download URL
- * 
- * "entries":{
-"entry":[
-{
-"id": "pat:US11225923B2",
-"unformattedidentifier": "pat:US11225923B2",
-"generation": "20:final:public",
-...
-....
-{"href": "https://vtw.elsevier.com/asset/pat/US11225923B2?fmt=application%2Fxml&type=MAIN&ver=205902191d6ccc6171e45b770535006d",…},
-
-
-
-[9:42 AM] Ganesan, Srikanth (ELS-CHN)
-https://vtw.elsevier.com/dashboardweb/dashboard.htm
-
-[9:42 AM] Ganesan, Srikanth (ELS-CHN)
-https://vtw.elsevier.com/search?query=identifier:pat:EP3933456A1
-
+ *
 
 Also can use VTW discopery API in order to verify the most recent generation of the record
 
