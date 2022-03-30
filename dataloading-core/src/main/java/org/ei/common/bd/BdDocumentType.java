@@ -37,6 +37,7 @@ public class BdDocumentType
     public static final String LETTER_CODE = "LE"; //added for standard code by hmo on 9/13/2017
     public static final String NOTE_CODE = "NO"; //added for standard code by hmo on 9/13/2017
     public static final String SHORT_SURVEY_CODE = "SH"; //added for standard code by hmo on 9/13/2017
+    public static final String PREPRINT = "PP"; //added for preprint code by hmo on 3/29/2022
 
     static
     {
@@ -77,6 +78,7 @@ public class BdDocumentType
       bdDocType.put("ip",ARTICLE_IN_PRESS);
       bdDocType.put("gi",IN_PROCESS);
       bdDocType.put("st",STANDARD_CODE);//added by hmo on 07/17/2017
+      bdDocType.put("pp",PREPRINT);//added by hmo on 03/29/2022
   }
 
     public static String getDocType(String doctype, boolean confCode)
