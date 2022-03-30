@@ -28,6 +28,7 @@ public class QueryPatents {
 	public void init(String url, String driver, String username, String password)
 	{
 		logger= Logger.getLogger(QueryPatents.class);
+		
 		con = DBConnection.getInstance(url, driver, username, password).getDbConnection();
 	}
 	public ResultSet fetchPatents(int loadNumber)
