@@ -546,7 +546,8 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
           
           String firstGUID = "";        
           int numCoords = 1;
-          int coordCount = 0;        
+          int coordCount = 0;  
+          accessNumber = rs.getString("ACCESSNUMBER");//move this one to the top of the loop to avoid missed placement of the accessnumber at 3/30/2022 by hmo
           if(rs.getString("DATABASE") != null)
           {
               if(rs.getString("DATABASE").equals("geo"))
@@ -1088,7 +1089,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     rec.put(EVCombinedRec.ISSUE, rs.getString("ISSUE"));
                     //rec.put(EVCombinedRec.STARTPAGE, getFirstPage(getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"), rs.getString("ISSN"))));
                     rec.put(EVCombinedRec.STARTPAGE, getPage(getFirstPage(rs.getString("PAGE")),rs.getString("ARTICLENUMBER")));
-                    accessNumber = rs.getString("ACCESSNUMBER");
+                    //accessNumber = rs.getString("ACCESSNUMBER");
 
                     rec.put(EVCombinedRec.ACCESSION_NUMBER,
                             rs.getString("ACCESSNUMBER"));
