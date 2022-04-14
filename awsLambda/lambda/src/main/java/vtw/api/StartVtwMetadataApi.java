@@ -22,6 +22,8 @@ public class StartVtwMetadataApi {
 	 String url = "jdbc:oracle:thin:@localhost:1521:eid";
 	 String driver = "oracle.jdbc.driver.OracleDriver";
 	 String[] secretArns;
+	 int loadNumber;
+	 
 	 QueryVtwMetadataApi apiObj = null;
 	 
 	 Map<String, String> credentials = new HashMap<>();
@@ -39,7 +41,7 @@ public class StartVtwMetadataApi {
 	 
 	 public void parseInput(String[] args)
 	 {
-		 if(args.length <3)
+		 if(args.length <4)
 		 {
 			 System.out.println("Not enough parameters");
 			 System.exit(1);
@@ -58,6 +60,11 @@ public class StartVtwMetadataApi {
 			 {
 				secretArns = args[2].split(";"); 
 			 }
+		 }
+		 if(args[3] != null && !args[3].isBlank())
+		 {
+			 loadNumber = Integer.parseInt(args[3]);
+			 System.out.println("LoadNumber: " + loadNumber);
 		 }
 	 }
 	 public void run()
@@ -108,7 +115,7 @@ public class StartVtwMetadataApi {
 			 dbObj = new QueryPatents();
 			 
 			 dbObj.init(url, driver, credentials.get("username"), credentials.get("password"));
-	 		 ResultSet rs = dbObj.fetchPatents(202299);
+	 		 ResultSet rs = dbObj.fetchPatents(loadNumber);
 	 		
 	 		while(rs.next())
 	 		{
