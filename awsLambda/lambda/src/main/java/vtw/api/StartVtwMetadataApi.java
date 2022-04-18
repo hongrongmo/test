@@ -85,10 +85,11 @@ public class StartVtwMetadataApi {
 	    		System.out.println("Total time It took to fetch PatentsIds from Oracle: " + endTime);
 	    		
 	    		
+	    		//retrieve AWS secret manager credentials for VTW MetadataAPI
+	    		apiObj.retrieveCredentials(secretArns[1]);
+	    		
 		    	for(String patent: patentIds)
 		    	{
-		    		//retrieve AWS secret manager credentials for VTW MetadataAPI
-		    		apiObj.retrieveCredentials(secretArns[1]);
 		        	ObjectNode node = apiObj.retrieveExistingMetadata("pat", patent);
 		        	apiObj.traverseMetadata(node);
 		    	}
@@ -119,9 +120,15 @@ public class StartVtwMetadataApi {
 	 		
 	 		while(rs.next())
 	 		{
-	 			if(rs.getString(1) != null)
+	 			
+	 			if(rs.getString(1) != null && rs.getString(2) != null && rs.getString(3) != null)
 	 			{
-	 				patentIds.add(rs.getString(1));
+	 				String pn = rs.getString("PN");
+	 				if(pn.startsWith("D"))
+	 					pn = pn.replace("D", "D0");
+	 				String patentId = rs.getString(1) + pn + rs.getString(3);
+	 				// check if patent start with "D" in this case need add "0" after D
+	 				patentIds.add(patentId);
 	 			}
 	 		}
 	 		System.out.println("Total Number of PatentIds to download from VTW using VTWMetadataApi: " + patentIds.size());
