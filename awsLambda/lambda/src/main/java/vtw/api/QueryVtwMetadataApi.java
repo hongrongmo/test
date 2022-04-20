@@ -219,7 +219,8 @@ public class QueryVtwMetadataApi {
 
 			if (patentIds.size() > 0) {
 				// Call existing VTW downloadPatent function
-				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch), 2000, "thread0", credentials);
+				//VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch), 2000, "thread0", credentials);
+				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch), 2000, "thread0");
 				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(epoch), "thread0",
 						"forward");
 			}
