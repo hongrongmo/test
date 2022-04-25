@@ -33,6 +33,15 @@
 			<version>1.11.23</version>
 		</dependency>
 		
+		<!-- AWS Java SDK V2.0, added 04/12/2022 -->
+		 <dependency>
+          <groupId>software.amazon.awssdk</groupId>
+          <artifactId>bom</artifactId>
+          <version>2.16.1</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+        
 		<!-- HH: 02/18/2016 for Amazon Lambda -->
 		<dependency>
 			<groupId>com.amazonaws</groupId>
@@ -161,8 +170,10 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.5.2</version>
-			<!-- <version>4.4.1</version> -->
+			<!-- <version>4.5.2</version> NEW-->
+			<!-- <version>4.4.1</version> OLD-->
+			<!-- HH added new version 04/12/2022 to work for patent download using VTW metadata URL (including most recent version) -->
+			<version>4.5.13</version>
 		</dependency>
 		
 		<!-- END HH 07/20/2016 -->

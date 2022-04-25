@@ -20,12 +20,14 @@ import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.ei.dataloading.upt.loadtime.vtw.VTWAssetAPI;
+//import org.ei.dataloading.upt.loadtime.vtw.VTWAssetAPI;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import vtw.VTWAssetAPI;
 
 public class QueryVtwMetadataApi {
 	
@@ -34,7 +36,7 @@ public class QueryVtwMetadataApi {
 	private final String PROD_METADATA_URL = "https://vtw.elsevier.com/metadata/";
 	private Logger logger;
 	private String userName = null;
-    private String password = null;
+	private String password = null;
     
 
     Map<String, String> credentials = new HashMap<>();
@@ -68,6 +70,7 @@ public class QueryVtwMetadataApi {
         ObjectNode existingMetadata = null;
        
 
+        System.out.println("Patent Identifier: " + identifier);
         String url = PROD_METADATA_URL + type + "/" + identifier + "?mode=full";
         HttpResponse response = sendHttpRequest(url);
 
@@ -216,6 +219,7 @@ public class QueryVtwMetadataApi {
 
 			if (patentIds.size() > 0) {
 				// Call existing VTW downloadPatent function
+				//VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch), 2000, "thread0", credentials);
 				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch), 2000, "thread0");
 				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(epoch), "thread0",
 						"forward");

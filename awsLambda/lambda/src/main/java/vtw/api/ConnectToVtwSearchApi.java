@@ -11,7 +11,18 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.http.HttpResponse;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.log4j.Logger;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 /**
  * 
  * @author TELEBH
@@ -46,6 +57,8 @@ public class ConnectToVtwSearchApi {
 
 	//private final String VTW_API_HOST = "https://vtw.elsevier.com/search";
 	private final String VTW_API_HOST = "https://vtw.elsevier.com/search";
+	private final ObjectMapper mapperJson = new ObjectMapper();
+
 	
 	private String secretArn = null;
 	
@@ -65,63 +78,62 @@ public class ConnectToVtwSearchApi {
 		
 		
 		Map<String, String> credentials = secretManagerObj.getCredentials();
-		//try {
-			//encodedUserName = URLEncoder.encode(credentials.get("userName"), StandardCharsets.UTF_8.toString());
-			//encodedPassword = URLEncoder.encode(credentials.get("password"), StandardCharsets.UTF_8.toString());
-			
-			encodedUserName = credentials.get("userName");
+		
+			encodedUserName = credentials.get("username");
 			encodedPassword = credentials.get("password");
 			
 			auth = encodedUserName + ":" + encodedPassword;
 			
-			System.out.println("Encoded VTW API UserName: " + encodedUserName);
-			System.out.println("Encoded VTW API Password: " + encodedPassword);
 			
-		//} 
-		/*catch (UnsupportedEncodingException e) 
-		{
-			System.out.println("Exception at encoding VTW API credentials");
-			e.printStackTrace();
-		}*/
-		
 		
 	}
 	public void SubmiteAPIGetRequest(String patentId)
 	{
-		String query = VTW_API_HOST + "?query=identifier:pat:" + "EP3933456A1";
 		
+		String url = "https://vtw.elsevier.com/search?query=identifier:pat:WO2012012496A2";
+			
+		//String url = VTW_API_HOST + "?query=identifier:pat:" + "WO2012012496A2";
+		ObjectNode existingMetadata = null;
+		HttpResponse response = null;
+		HttpClient client = null;
 		
+		int responseCode = 0;
 		try
 		{
 			byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.UTF_8));
 			String authHeader = "Basic " + new String(encodedAuth);
 			
+			CredentialsProvider provider = new BasicCredentialsProvider();
+	        UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(encodedUserName, encodedPassword);
+
+	        provider.setCredentials(AuthScope.ANY, credentials);
+	        
+	        client = HttpClientBuilder.create().setDefaultCredentialsProvider(provider).build();
+	        
+	       
+	       HttpGet request = new HttpGet(url);
+	        request.addHeader("accept", "application/json");
+	        request.addHeader("X-ELS-VTW-Version", "3.0");
+	        response = client.execute(request);
+
+	        if (response.getStatusLine().getStatusCode() == 200) {
+	        	existingMetadata  = (ObjectNode) mapperJson.readTree(response.getEntity().getContent());
+	        	System.out.println(mapperJson.writerWithDefaultPrettyPrinter().writeValueAsString(existingMetadata));
+	        	responseCode = response.getStatusLine().getStatusCode();
+	        }
 			
 			
-			url = new URL(query);
-			HttpURLConnection httpCon = (HttpURLConnection)url.openConnection();
-			httpCon.setRequestMethod("GET");
-			httpCon.setRequestProperty("Content-Type", "application/json");
-			httpCon.setRequestProperty("X-ELS-VTW-Version", "3.0");
-			 
-			httpCon.setRequestProperty("Authorization", authHeader);
-			//httpCon.setRequestProperty("Password", encodedPassword);
-			int responseCode = httpCon.getResponseCode();
-			System.out.println("Response Code: " + responseCode);
+	      
 			if(responseCode == HttpURLConnection.HTTP_OK)
 			{
-				int length = -1;
-				FileOutputStream out = new FileOutputStream(new File("EP3933456A1.xml"));
-				InputStream inStream = httpCon.getInputStream();
-				byte[] buffer = new byte[1024];
-				while((length = inStream.read(buffer)) > -1)
-				{
-					out.write(buffer,0,length);
-				}
-				
-				out.close();
-				inStream.close();
-				System.out.println("Downloaded the pdf file");
+				/*
+				 * int length = -1; FileOutputStream out = new FileOutputStream(new
+				 * File("WO2012012496A2.xml")); InputStream inStream = request. byte[] buffer =
+				 * new byte[1024]; while((length = inStream.read(buffer)) > -1) {
+				 * out.write(buffer,0,length); }
+				 * 
+				 * out.close(); inStream.close(); System.out.println("Downloaded the pdf file");
+				 */
 			}
 		}
 		catch(Exception e)
