@@ -439,6 +439,21 @@ public class BdParser
 								record.put("PREPRINTID",itemid);
 								//setAccessNumber(itemid);
 							}
+							else if(itemid_idtype != null && (itemid_idtype.equals("VORDOI"))) //added on 04/25/2022 && requested for EVOPS-1301
+							{							
+								String itemid = itemidElement.getTextTrim();
+								record.put("VORDOI",itemid);					
+							}
+							else if(itemid_idtype != null && (itemid_idtype.equals("EGI"))) //added on 04/25/2022 && requested for EVOPS-1301
+							{							
+								String itemid = itemidElement.getTextTrim();
+								record.put("EGI",itemid);					
+							}
+							else if(itemid_idtype != null && (itemid_idtype.equals("SSRNVERSION"))) //added on 04/25/2022 && requested for EVOPS-1301
+							{							
+								String itemid = itemidElement.getTextTrim();
+								record.put("SSRNVERSION",itemid);					
+							}
 							
 						}
 
