@@ -386,9 +386,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			if(operationType.equalsIgnoreCase("normal"))
 				updateCafeInventory();  //comment for localhost only, uncomment in prod, added condition of OPT 07/29/2020 
 
-			// close connection
-			flush();
-
+			
 			//get the list of keys to be deleted & delete from ES & DB
 			if(keys_to_be_deleted.size() >0)
 			{
@@ -401,6 +399,10 @@ public class CafeDownloadFileFromS3AllTypes {
 					deleteANIData();
 				}
 			}
+			
+			// close connection
+						flush();
+
 
 		} 
 		catch (Exception e) 
