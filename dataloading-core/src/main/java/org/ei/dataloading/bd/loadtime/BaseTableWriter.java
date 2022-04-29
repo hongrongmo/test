@@ -337,6 +337,27 @@ public class BaseTableWriter
 	    	//System.out.println(" MUDTERM "+record.get("MUDTERM"));
 		}	
 	    
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("EGI")!=null)
+		{
+	    	recordBuf.append(record.get("EGI"));
+	    	//System.out.println(" EGI "+record.get("EGI"));
+		}	
+	    
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("SSRNVERSION")!=null)
+		{
+	    	recordBuf.append(record.get("SSRNVERSION"));
+	    	//System.out.println(" SSRNVERSION "+record.get("SSRNVERSION"));
+		}	
+	    
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("VORDOI")!=null)
+		{
+	    	recordBuf.append(record.get("VORDOI"));
+	    	//System.out.println(" VORDOI "+record.get("VORDOI"));
+		}	
+	    
 	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
 	    {

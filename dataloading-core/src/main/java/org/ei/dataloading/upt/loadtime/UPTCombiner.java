@@ -1,5 +1,5 @@
 /*
- * Created on Feb 24, 2005
+` * Created on Feb 24, 2005
  *
  * To change the template for this generated file go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
@@ -108,7 +108,7 @@ public class UPTCombiner extends CombinerTimestamp {
             //stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,  ResultSet.CONCUR_READ_ONLY); //use for ES extraction only
             stmt = con.createStatement();
             //Prod
-            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER FROM "+Combiner.TABLENAME+" WHERE  LOAD_NUMBER = " + week;
+            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER,MAINHEADING,CONTROLLEDTERM FROM "+Combiner.TABLENAME+" WHERE  LOAD_NUMBER = " + week;
             
             // HH Temp for testing
             //String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC FROM "+Combiner.TABLENAME+" WHERE PN='9925573' and LOAD_NUMBER = " + week;
@@ -230,8 +230,8 @@ public class UPTCombiner extends CombinerTimestamp {
 
         	//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         	stmt = con.createStatement();
-        	 
-            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER FROM "+Combiner.TABLENAME+" WHERE  update_number="+timestamp+" and load_number!="+timestamp;
+        	//String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER FROM "+Combiner.TABLENAME+" WHERE  update_number="+timestamp+" and load_number!="+timestamp; for production at 05/17/2021
+            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER,MAINHEADING,CONTROLLEDTERM FROM "+Combiner.TABLENAME+" WHERE  update_number="+timestamp+" and load_number!="+timestamp; //modify to extract mainheading and controlledterm by hmo @5/17/2021
             System.out.println("Running the query..."+query);
 
             rs = stmt.executeQuery(query);
@@ -286,7 +286,7 @@ public class UPTCombiner extends CombinerTimestamp {
         	//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         	stmt = con.createStatement();
         	 
-            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER FROM " + Combiner.TABLENAME + " WHERE  PY = '" + year + "'";
+            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER,MAINHEADING,CONTROLLEDTERM FROM " + Combiner.TABLENAME + " WHERE  PY = '" + year + "'";
             System.out.println("Running the query..."+query);
             rs = stmt.executeQuery(query);
             //rs = stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number FROM " +Combiner.TABLENAME + " WHERE M_ID in ('upt_9f671b1194ed5ace833362061377553', 'upt_1bd0dd411759e6051dM78e82061377553', 'upt_1bd0dd411759e6051dM7fe42061377553', 'upt_1bd0dd411759e6051dM7c812061377553', 'upt_1bd0dd411759e6051dM7b7c2061377553', 'upt_1bd0dd411759e6051dM7e6c2061377553', 'upt_1bd0dd411759e6051dM79432061377553', 'upt_d70d7a11759deb7a8M77012061377553', 'upt_1bd0dd411759e6051dM7c1e2061377553', 'upt_b5f53a11759e3aa7cM7bd92061377553', 'upt_1bd0dd411759e6051dM790b2061377553', 'upt_1bd0dd411759e6051dM7f372061377553', 'upt_d70d7a11759deb7a8M74082061377553', 'upt_1bd0dd411759e6051dM77dc2061377553', 'upt_1bd0dd411759e6051dM7e082061377553', 'upt_1bd0dd411759e6051dM7e312061377553')");
@@ -494,8 +494,8 @@ public class UPTCombiner extends CombinerTimestamp {
 	
 	                    if (rs.getString("inv") != null) {
 	
-	                        if (rs.getString("asg") != null) {
-	
+	                        if (rs.getString("asg") != null) 
+	                        {	
 	                            List lstAsg = convertString2List(rs.getString("asg"));
 	                            List lstInv = convertString2List(rs.getString("inv"));
 	
@@ -512,12 +512,17 @@ public class UPTCombiner extends CombinerTimestamp {
 	                            }
 	
 	                            if (arrVals != null)
+	                            {
 	                                rec.put(EVCombinedRec.AUTHOR, arrVals);
+	                                rec.put(EVCombinedRec.FIRST_AUTHOR, arrVals[0]);
+	                            }
 	
 	                        }
-	                        else {
-	
-	                            rec.put(EVCombinedRec.AUTHOR, convert2Array(formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv")))))));
+	                        else 
+	                        {
+	                        	String[] authorGroup = convert2Array(formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv"))))));
+	                            rec.put(EVCombinedRec.AUTHOR,authorGroup);
+	                            rec.put(EVCombinedRec.AUTHOR,authorGroup[0]);
 	                        }
 	                    }
 	
@@ -886,7 +891,22 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    arrNames = (String[]) allNames.toArray(new String[1]);
 	                    arrNames[0] = replaceNull(arrNames[0]);
 	
-	                    rec.put(EVCombinedRec.NOTES, arrNames);	                 
+	                    rec.put(EVCombinedRec.NOTES, arrNames);	 
+	                    
+	                    ///*block new terms 7/20/2021
+	                    if(rs.getString("mainheading") != null)
+	                    {
+	                    	String mainheading = rs.getString("mainheading");
+	                    	rec.put(EVCombinedRec.MAIN_HEADING, mainheading);	
+	                    }	                 
+	                    
+	                    if(rs.getString("CONTROLLEDTERM") != null)
+	                    {
+	                    	String controlledterm = rs.getString("CONTROLLEDTERM");
+	                    	rec.put(EVCombinedRec.CONTROLLED_TERMS, controlledterm.split(";",-1));	
+	                    }
+	                    //*/
+	                    
 	                    if(this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	                    {
 	                    	writer.writeRec(rec);//use this line for FAST extraction
@@ -1677,14 +1697,14 @@ public class UPTCombiner extends CombinerTimestamp {
         {
             switch (kc.toUpperCase().charAt(0))
             {
-            	//change dcument type mapping per EVOPS-1209 by HMO at 10/01/2021
-            	//case  'S': values.add("DP"); break;
-            	//case  'P': values.add("PP"); break;
-            	case  'S': values.add("DES"); break;
-            	case  'P': values.add("PLP"); break;
-            	case  'E': values.add("RE"); break;
-            	case  'H': values.add("SR"); break;
-            	//default: values.add("UT"); break;
+              //change dcument type mapping per EVOPS-1209 by HMO at 9/14/2021
+              //case  'S': values.add("DP"); break;
+              //case  'P': values.add("PP"); break;
+              case  'S': values.add("DES"); break;
+              case  'P': values.add("PLP"); break;
+              case  'E': values.add("RE"); break;
+              case  'H': values.add("SR"); break;
+              //default: values.add("UT"); break;
             }
         }
 

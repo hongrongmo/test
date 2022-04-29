@@ -4691,7 +4691,7 @@ public class CombinedXMLWriter
             	String[] openaccessArray=openaccess.split(" ", -1);
             	elementArrayObject = formJsonArray(openaccessArray,"ISOPENACESS");    
 	            contentObject.put("ISOPENACESS".toLowerCase(),elementArrayObject);	
-	            System.out.println(" in 1 "+openaccess+" length="+openaccess.length());
+	            //System.out.println(" in 1 "+openaccess+" length="+openaccess.length());
             }
  
             String[] grantText=rec.getStrings(EVCombinedRec.GRANTTEXT); 
@@ -5405,7 +5405,7 @@ public class CombinedXMLWriter
                      int i = s.indexOf(Constants.IDDELIMITER);
                       code = s.substring(0,i);
                       name = s.substring(i+1);
-                      System.out.println("code="+code+"-"+Entity.prepareString(code)+" name="+name+"-"+Entity.prepareString(name)+" key="+key+" database"+getDatabase());
+                      //System.out.println("code="+code+"-"+Entity.prepareString(code)+" name="+name+"-"+Entity.prepareString(name)+" key="+key+" database"+getDatabase());
                       if(indexWriter==null)
                     	  System.out.println("indexWriter is null");
                       indexWriter.println(Entity.prepareString(code).toUpperCase().trim() + "\t" +Entity.prepareString(name).toUpperCase().trim() + "\t" + getDatabase().substring(0,3)+"\t");
@@ -5876,8 +5876,8 @@ public class CombinedXMLWriter
     	CombinedXMLWriter c = new CombinedXMLWriter(1,1,"cpx");
     	//String testString = "  check   comma  space ";
     	String testString = args[0];
-    	System.out.println("before= "+testString+"\n after="+c.removeExtraSpace(testString));
-    	System.out.println("after2="+StringEscapeUtils.unescapeHtml4(testString));
+    	//System.out.println("before= "+testString+"\n after="+c.removeExtraSpace(testString));
+    	//System.out.println("after2="+StringEscapeUtils.unescapeHtml4(testString));
    	
     }
     
