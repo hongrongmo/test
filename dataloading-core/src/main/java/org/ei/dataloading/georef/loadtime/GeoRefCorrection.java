@@ -2084,7 +2084,7 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 						stmt.setString(3,database);
 						stmt.executeUpdate();
 
-						con.commit();
+						//con.commit();
 						if(stmt != null)
 						{
 							stmt.close();
@@ -2092,7 +2092,7 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 					}
 				}
 			}
-			con.commit();
+			//con.commit();
 			if(stmt != null)
 			{
 				stmt.close();
