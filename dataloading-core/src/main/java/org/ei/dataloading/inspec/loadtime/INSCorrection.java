@@ -386,7 +386,7 @@ public class INSCorrection
             else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete")||action.equalsIgnoreCase("extractnumerical"))
             {
 
-                doFastExtract(updateNumber,database,action);
+                doFastExtract(updateNumber,database,action, inscomb);
                 System.out.println(database+" "+updateNumber+" extraction is done.");
             }        
             else
@@ -612,7 +612,7 @@ public class INSCorrection
 
     }
 
-    private void doFastExtract(int updateNumber,String dbname,String action) throws Exception
+    private void doFastExtract(int updateNumber,String dbname,String action, INSPECCombiner c) throws Exception
     {
         CombinedXMLWriter writer = new CombinedXMLWriter(50000,
                                                       updateNumber,
@@ -625,7 +625,8 @@ public class INSCorrection
         {
         	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			String sqlQuery = null;
-			INSPECCombiner c = new INSPECCombiner(writer,this.propertyFileName,this.updateNumber);
+			//HH 05/26/2022: Caused bug of generating empty lookups since Sep 17 2021, INSPECCombiner obj already created at startCorrection , comment this out
+			//INSPECCombiner c = new INSPECCombiner(writer,this.propertyFileName,this.updateNumber);
             if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate") || action.equalsIgnoreCase("ins") )
             {
                 System.out.println("Running the query...");

@@ -1932,7 +1932,8 @@ public class BdCorrection
                         stmt.setString(3,database);
                         stmt.executeUpdate();
 
-                        con.commit();
+                        //HH commented out on Thursday 05/26/2022, wk[202222] bc of raising exception "java.sql.SQLException: Could not commit with auto-commit set on"
+                        //con.commit();
                         if(stmt != null)
                         {
                             stmt.close();

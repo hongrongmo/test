@@ -849,7 +849,7 @@ public class INSPECCombiner
 		                
 		                //writer.writeRec(rec,kafka);
 		                
-	                	this.writer.writeRec(rec,kafka, batchData, missedData);
+	                	this.writer.writeRec(rec,kafka, batchData, missedData);																	
 	                	if(this.lookupObj!=null)
 	                		this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 			            if(counter<batchSize)

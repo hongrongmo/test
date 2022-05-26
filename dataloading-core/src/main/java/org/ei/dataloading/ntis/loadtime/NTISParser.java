@@ -6,6 +6,7 @@ import org.jdom2.*;               //HH: 12/24/2014 replace jdom by new jdom2
 import org.jdom2.input.*;		  // replace jdom by new jdom2
 import org.jdom2.output.*;        // replace jdom by new jdom2
 import org.ei.util.GUID;
+import org.ei.util.MixedData;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
 import java.util.zip.ZipEntry;
@@ -16,6 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.ei.data.ntis.runtime.*;
 import org.ei.common.Constants;
+import org.ei.dataloading.DataLoadDictionary;
 import org.ei.dataloading.bd.loadtime.*;
 
 public class NTISParser
@@ -41,6 +43,8 @@ public class NTISParser
 	private int affid = 0;
 
 
+	MixedData obj = new MixedData();
+	private DataLoadDictionary dataDictionary = new DataLoadDictionary();
 
 	public NTISParser()
 	{
@@ -61,6 +65,8 @@ public class NTISParser
 		this.articles = ntisRoot.getChildren();
 		this.rec=articles.iterator();
 
+		//HH added 04/22/2022 to check title against any special char to fix case Anna/Aaron reported N220004209 with right single quotation mark
+		obj = new MixedData();
 	}
 
 	public void setOutputWriter(PrintWriter out)
@@ -285,7 +291,9 @@ public class NTISParser
 					if(record.getChild("Title")!=null)
 					{
 						String title = record.getChild("Title").getTextTrim();
-						recordTable.put("Title",title);
+						//recordTable.put("Title", title);			// orig, HH commented out on 04/29/2022
+						//HH added 04/29/2022, parse Title for any special character i.e. right single quotation mark (html entity &#x2019;) reported by Anna on 04/28/2022 
+						recordTable.put("Title",dataDictionary.mapEntity(obj.getMixData(record.getChild("Title").getContent())));
 					}
 
 

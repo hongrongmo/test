@@ -1330,6 +1330,9 @@ public class DataLoadDictionary
     					case 125: sb.append("&#x0007D;");break;	  // unicode right curly bracket
     					case 92: sb.append("&#x0005C;");break;	  //reverse solidus or backslash
     					case 39: sb.append("&#x00027;");break;	  //apostroph
+    					
+    					//HH added 04/29/2022 for NTIS Right Single Quotation Mark
+    					case 2019: sb.append("&#x2019;");break;
     					//HH END
     					
     					
