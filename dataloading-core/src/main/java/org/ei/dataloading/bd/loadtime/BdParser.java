@@ -5019,8 +5019,10 @@ public class BdParser
 							String sublink=null;
 							String subsublink=null;
 							Element linkElement = descriptor.getChild("link",noNamespace);
-							if(linkElement!=null)
-							{
+							//if(linkElement!=null)
+							//only MUD term need to keep link element by hmo at 5/26/2022
+							if(descriptorsType.equalsIgnoreCase("MUD") && linkElement!=null)
+							{								
 								link = DataLoadDictionary.mapEntity(getMixData(linkElement.getContent()));
 								if(linkElement.getChild("sublnk",noNamespace)!=null)
 								{
