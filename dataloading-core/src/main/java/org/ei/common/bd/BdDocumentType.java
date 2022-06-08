@@ -38,7 +38,9 @@ public class BdDocumentType
     public static final String NOTE_CODE = "NO"; //added for standard code by hmo on 9/13/2017
     public static final String SHORT_SURVEY_CODE = "SH"; //added for standard code by hmo on 9/13/2017
     public static final String PREPRINT = "PP"; //added for preprint code by hmo on 3/29/2022
-
+    public static final String DATAPAPER = "DP"; //added for data paper(EVOPS-1360)  by hmo on 6/07/2022
+    public static final String TOMBSTONE = "TB"; //added for tombstone(EVOPS-1360)  by hmo on 6/07/2022
+    
     static
     {
       bdDocType.put("cp",CONFERENCE_ARTICLE_CODE);
@@ -79,6 +81,8 @@ public class BdDocumentType
       bdDocType.put("gi",IN_PROCESS);
       bdDocType.put("st",STANDARD_CODE);//added by hmo on 07/17/2017
       bdDocType.put("pp",PREPRINT);//added by hmo on 03/29/2022
+      bdDocType.put("dp",DATAPAPER);//added by hmo on 06/07/2022 (EVOPS-1360)
+      bdDocType.put("tb",TOMBSTONE);//added by hmo on 06/07/2022 (EVOPS-1360)
   }
 
     public static String getDocType(String doctype, boolean confCode)
