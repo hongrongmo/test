@@ -2185,10 +2185,16 @@ public class PatentXmlReader
 
 						if(non_patent_citation != null)
 						{
-
-
-							out.print(substituteChars(non_patent_citation));
-							//out.print(substituteChars("GB912066719910928GB920629519920323"));
+							//trim off over size data(EVOPS-1359) by hmo at 6/7/2022
+							String newString = substituteChars(non_patent_citation);
+							if(newString.length() >= 3900)
+							{
+								System.out.println("record "+prt_ac+prt_pn+prt_kc+" REF_RAW length is too large size="+newString.length());
+								int endPatentCitationMarker = getLastIndex(newString)+1;
+								newString = newString.substring(0, endPatentCitationMarker);									
+							}
+							out.print(substituteChars(newString));
+							
 						}
 						out.print(DELIM);
 
@@ -2225,6 +2231,21 @@ public class PatentXmlReader
 		}
 	}
 
+	private int getLastIndex(String inputString)
+	{
+		char[] endingChar = {';',' ',',','.'};
+		int endingIndex =0;
+		for(int i=0;i<endingChar.length;i++)
+		{
+			int lastIndex = inputString.lastIndexOf(endingChar[i],3900);
+			if(lastIndex>endingIndex)
+			{
+				endingIndex = lastIndex;
+			}
+		}
+		return endingIndex;
+	}
+	
 	public HashMap getRecord(Element rec)
 	{
 		HashMap record = null;
