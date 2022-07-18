@@ -1,7 +1,11 @@
 package org.ei.util.kafka;
 
 
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,7 +50,7 @@ public class KafkaService {
     {
     	this.propertyFileName = "./lib/config.properties";
     	this.logFileName = "MyLogFile.log";
-    	//init(logFileName,propertyFileName);
+    	init(logFileName,propertyFileName);
     }
     
     public KafkaService(String processInfo) 
@@ -91,7 +95,33 @@ public class KafkaService {
     	//kTest.getParameterFromPropertiesFile("./lib/config.properties");
     	if(args!=null && args[0].equals("producer"))
     	{
-    		kTest.runProducer();
+    		 //public void runProducer(String recordString, String key,int reSending, Map missedData) throws Exception
+    		 
+    		
+    		try
+    		{
+    			kTest.runProducer();				//original
+    		}
+    		 catch(Exception e)
+    		{
+    			 System.out.println("Failed to send message to ES");
+    			 e.printStackTrace();
+    		}
+    	}
+    	//HH added 06/16/2022, wk[202225] to index mock data to es dev for testing new fields (i.e. correspondingauthor, conferenceseriestitle, citationmetrics) as Hawk asked
+    	else if(args!=null && args[0].equals("producerWithStaticData"))
+    	{
+    		try
+    		{
+    			Map<String,String> recsData = kTest.readJsonRecordsFile();
+    			for(Map.Entry<String, String> entry: recsData.entrySet())
+    				kTest.runProducer(entry.getValue(),entry.getKey(),0,new HashMap<String,String>());
+    		}
+    		 catch(Exception e)
+    		{
+    			 System.out.println("Failed to send message to ES");
+    			 e.printStackTrace();
+    		}
     	}
     	else if (args!=null && args[0].equals("consumer"))
 		{
@@ -417,7 +447,7 @@ public class KafkaService {
 						
 						
 					}
-
+					
 				}
 			});
 		}		
@@ -477,6 +507,44 @@ public class KafkaService {
     	{
     		System.out.println("No problem record to resend");
     	}
+    }
+    
+    /**
+     * @Author: Telebh
+     * @Date: Thursday 06/16/2022, wk[202225]
+     * @Description: Send ready JSON records to ES using KafkaProducer, it was developed to send some mock data to ES Dev with new es fields (i.e. citationmetrics, sourcetype, correspondingauthor
+     */
+    
+    public Map<String,String> readJsonRecordsFile()
+    {
+    	Map<String, String> keyValuMap = new HashMap<>();
+    	
+    	try(BufferedReader br = new BufferedReader(new FileReader(new File("ev-json-recs.txt"))))
+    	{
+    		int recCount = 0;
+    		for(String line; (line = br.readLine())!= null;)
+    		{
+    			String[] keyVal = line.split("\t");
+    			if(keyVal.length ==2)
+    			{
+    				keyValuMap.put(keyVal[0], keyVal[1]);
+    			}
+    			recCount++;
+    		}
+    		System.out.println("Total recCount: " + recCount);
+    	} catch (FileNotFoundException e) {
+			System.out.println("Json File not exist");
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("Json File exception");
+			e.printStackTrace();
+		}
+    	catch(Exception e)
+    	{
+    		System.out.println("Json File exception");
+			e.printStackTrace();
+    	}
+    	return keyValuMap;
     }
     
 }
