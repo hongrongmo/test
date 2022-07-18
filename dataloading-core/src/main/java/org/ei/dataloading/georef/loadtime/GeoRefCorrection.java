@@ -789,7 +789,7 @@ public class GeoRefCorrection
 				con1 = getConnection(url,driver,username,password);
 			}
 			//added by hmo at 6/15/2022 to remove duplicate records
-			stmt = con1.prepareStatement("delete from georef_master_orig where id_number in (select id_number from georef_master_add");
+			stmt = con1.prepareStatement("delete from georef_master_orig where id_number in (select id_number from georef_master_add)");
 			stmt.executeUpdate();
 			System.out.println("run query 'delete from georef_master_orig where id_number in (select id_number from georef_master_add'");
 			stmt = con1.prepareStatement("select id_number from georef_master_add");
