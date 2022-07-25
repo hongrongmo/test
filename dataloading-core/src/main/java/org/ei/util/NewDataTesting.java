@@ -45,6 +45,7 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
+import org.dataloading.sharedsearch.SharedSearchSearchEntry;
 import org.ei.xml.Entity;
 
 import io.searchbox.client.JestClient;
@@ -73,6 +74,8 @@ import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.event.ProgressEvent;
 import com.amazonaws.event.ProgressListener;
+import com.amazonaws.regions.Region;
+//import com.amazonaws.http.HttpResponse;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
@@ -94,10 +97,15 @@ import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.services.sqs.AmazonSQSClient;
 import com.amazonaws.services.sqs.model.DeleteMessageRequest;
 import com.amazonaws.services.sqs.model.DeleteQueueRequest;
+import com.amazonaws.services.sqs.model.GetQueueUrlRequest;
+import com.amazonaws.services.sqs.model.GetQueueUrlResult;
 import com.amazonaws.services.sqs.model.Message;
 import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.SendMessageRequest;
-import com.amazonaws.SdkClientException;
+
+import org.apache.commons.httpclient.HttpException;
+import org.apache.commons.httpclient.NameValuePair;
+import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.text.StringEscapeUtils;
 
 import org.elasticsearch.action.index.IndexResponse;
@@ -111,16 +119,25 @@ import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.QueryBuilders.*;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
-
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.XML;
 //import org.json.JSONArray;
-//import org.json.XML;
+//import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import org.json.JSONException;
 
 import javax.json.*;
 import com.google.gson.JsonParser;
@@ -140,7 +157,7 @@ public class NewDataTesting
 	//public static String URL="jdbc:oracle:thin:@127.0.0.1:5523:EIA";
 	public static String URL="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	public static String driver="oracle.jdbc.driver.OracleDriver";
-	public static String username="ap_correction";
+	public static String username="ap_correction1";
 	public static String username1="ap_ev_search";
 	public static String password="ei3it";
 	public static String password1="";
@@ -228,14 +245,26 @@ public class NewDataTesting
 			System.out.println("please enter org.ei.util.NewDataTesting databse username password tablename updatenumber");
 		}
 
+		//action = "urlPost";
 		if(action.contentEquals("checkSize"))
 		{
 			test.checkColumnSize();
 		}
+		else if(action.equals("checkESTEST"))
+		{
+			System.out.println("doing testing Elastic Search Index");
+			test.checkESTEST("chen","AU","cpx");
+		}
+		
 		else if(action.equals("testES"))
 		{
 			System.out.println("doing testing Elastic Search Index");
 			test.testURL(updateNumber);
+		}
+		else if(action.equals("checkLookup"))
+		{
+			System.out.println("doing lookup optimize for table "+updateNumber);
+			test.checkLookupIndex(updateNumber);
 		}		
 		else if(action.equals("deleteElasticRecord"))
 		{
@@ -302,6 +331,10 @@ public class NewDataTesting
 		{
 			test.urlReader();
 		}
+		else  if(action.equals("urlPost"))
+		{
+			test.urlPostReader();
+		}		
 		else  if(action.equals("dedup"))
 		{
 			test.buildDedupkeyTable(updateNumber);
@@ -448,7 +481,7 @@ public class NewDataTesting
 		}
 		else if(action.contentEquals("testS3"))
 		{
-			test.testS3(updateNumber);
+			test.testS3fromCafeToEV(updateNumber);
 		}
 		else
 		{
@@ -998,6 +1031,25 @@ public class NewDataTesting
 
 	}
 	
+	private void checkESTEST(String value, String searchField, String database) throws Exception
+    {
+        List<String> outputList = new ArrayList();
+        Map inputMap = new HashMap();
+        inputMap.put("chen","1");
+        searchField="AU";
+        database="cpx";
+        
+        SharedSearchSearchEntry entry = new SharedSearchSearchEntry("https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result");
+        //SharedSearchSearchEntry entry = new SharedSearchSearchEntry("https://kd.prod.scopussearch.net/sharedsearch/v1");
+        outputList = entry.runESLookupCheck(inputMap,searchField,database);
+        System.out.println(outputList.size()+" records found");
+        for(int i=0;i<outputList.size();i++)
+        {
+        	System.out.println((String)outputList.get(i));
+        }
+
+    }
+	
 	private List getALLCPXMIDFromFastBYLOADNUMBER(String loadnumber, String URL)
 	{
 
@@ -1065,6 +1117,176 @@ public class NewDataTesting
 		return resultList;
 
 	}
+	
+	private void testS3fromCafeToEV(String loadnumber)
+	{
+		Connection con = null;		
+        try
+        {
+        	con = getConnection(this.URL,this.driver,this.username,this.password);
+        	Map<String,String> cafekeyMap = getCafeKeysMap(loadnumber,con);
+        	List cafekeyList = new ArrayList<String>(cafekeyMap.keySet());
+        	for(int i=0;i<cafekeyList.size();i++)
+            {            	
+             	String cafeKey = (String)cafekeyList.get(i);
+             	String cafeDoc = getCafeDocFromS3(cafeKey);
+             	String docid = cafekeyMap.get(cafeKey);
+             	upLoadToS3(docid,cafeDoc);
+            }
+        }
+        catch(Exception e)
+        {
+        	e.printStackTrace();
+        }
+	}
+	
+	private void upLoadToS3(String docid,String cafeDoc) throws Exception
+	{		
+		AmazonS3 s3Client;
+		S3Object object;				
+		s3Client = AmazonS3Service.getInstance().getAmazonS3Service();	
+			
+		try 
+		{			   	    
+			ObjectMetadata md;		
+			md = new ObjectMetadata();
+			md.setContentType("text/xml");					
+			byte[] bytes;
+			bytes = cafeDoc.getBytes();
+			md.setContentLength(bytes.length);
+			String bucketName = "ev-datasets-cert/cpx_/";
+			bucketName=bucketName+getFolderName(docid);
+			//System.out.println("FILENAME= "+bucketName+"/"+docid+".xml");			
+			PutObjectResult response = s3Client.putObject(new PutObjectRequest(bucketName, docid+".xml", new ByteArrayInputStream(cafeDoc.getBytes()), md));	
+			//System.out.println("Key: " + key_name + " successfully uploaded to S3, Etag: " + response.getETag());
+		
+        }catch(Exception e){
+        	System.out.println("Other Error Message: " + e.getMessage());
+        }
+	    
+	}
+	
+	 private String getCafeDocFromS3(String key)
+	    {
+	    	AmazonS3 s3Client;
+			S3Object object;
+			StringBuffer docString=new StringBuffer();
+			InputStream objectData=null;
+			try 
+			{
+				//Region usEast1 = Region.getRegion(Regions.US_EAST_1);
+				key = key.substring(key.lastIndexOf("-")+1);
+				//System.out.println("KEy="+key);
+				s3Client = AmazonS3Service.getInstance().getAmazonS3Service();			
+				object = s3Client.getObject(new GetObjectRequest("sccontent-ani-xml-prod", key));			
+				objectData = object.getObjectContent();
+				//docString = saveContentToFile(objectData,key);	
+				BufferedReader breader = new BufferedReader(new InputStreamReader(objectData));
+	
+				if(breader!=null)
+				{
+					
+					String line = null;
+					while ((line = breader.readLine()) !=null)
+					{
+						//out.println(line.replaceAll("><", ">\n<")+"\n");
+						docString.append(line.replaceAll("><", ">\n<")+"\n");
+					}
+				}
+				
+			 } 
+			catch (AmazonServiceException ase) 
+			{
+		            System.out.println("KEY "+key+" Caught an AmazonServiceException, which" +
+		            		" means your request made it " +
+		                    "to Amazon S3, but was rejected with an error response" +
+		                    " for some reason.");
+		            System.out.println("Error Message:    " + ase.getMessage());
+		            System.out.println("HTTP Status Code: " + ase.getStatusCode());
+		            System.out.println("AWS Error Code:   " + ase.getErrorCode());
+		            System.out.println("Error Type:       " + ase.getErrorType());
+		            System.out.println("Request ID:       " + ase.getRequestId());
+		            //throw ase;
+			} 
+			catch (AmazonClientException ace) 
+			{
+		            System.out.println("KEY "+key+" Caught an AmazonClientException, which means"+
+		            		" the client encountered " +
+		                    "an internal error while trying to " +
+		                    "communicate with S3, " +
+		                    "such as not being able to access the network.");
+		            System.out.println("Error Message: " + ace.getMessage());
+		            //throw ace;
+			}
+			catch(Exception ioe)
+			{
+				System.out.println("Other Error Message: " + ioe.getMessage());
+			}
+			finally
+			{
+				try
+				{
+					objectData.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+	    
+	    	return docString.toString();
+	    }
+	
+	 private Map getCafeKeysMap(String loadnumber,Connection con)
+	    {
+	    	Map cafeDataKeyMap = new HashMap<String,String>();
+	        Statement stmt = null;
+	        ResultSet rs = null;
+	        try
+	        {
+	            stmt = con.createStatement();                              
+	            String sqlQuery = "select a.eid eid,b.m_id m_id from cafe_master a, bd_master b where a.accessnumber = b.accessnumber and b.database='cpx' and b.loadnumber="+loadnumber;           
+	            System.out.println("SQLQUERY= "+sqlQuery);
+	            rs = stmt.executeQuery(sqlQuery);   
+	            int i=0;
+	            while(rs.next()) 
+	            {
+	            	cafeDataKeyMap.put(rs.getString("eid"),rs.getString("m_id"));          	
+	            } 
+	        }
+	        catch(Exception e)
+	        {
+	        	e.printStackTrace();
+	        }
+	        finally
+	        {
+
+	            if (rs != null)
+	            {
+	                try
+	                {
+	                    rs.close();
+	                }
+	                catch (Exception e)
+	                {
+	                    e.printStackTrace();
+	                }
+	            }
+
+	            if (stmt != null)
+	            {
+	                try
+	                {
+	                    stmt.close();
+	                }
+	                catch (Exception e)
+	                {
+	                    e.printStackTrace();
+	                }
+	            }
+	        }
+	    	return cafeDataKeyMap;
+	    }
 	
 	
 	private void runDatabaseTOES(String value, String searchfield,String database, String server,String tablename)
@@ -1828,7 +2050,7 @@ public class NewDataTesting
 			con = getConnection(this.URL,this.driver,this.username,this.password);
 			stmt = con.createStatement();
 			List loadNumberList = new ArrayList();
-	        URL chinese = new URL("http://www.wenxuecity.com/");
+	        URL chinese = new URL("http://ulrichsweb.serialssolutions.com/");
 	        in = new BufferedReader(new InputStreamReader(chinese.openStream(), "UTF-8"));
 	
 	        String inputLine;
@@ -1845,6 +2067,88 @@ public class NewDataTesting
 	        
 	        in.close();
 	        out.close();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	    
+	}
+	
+	public void urlPostReader() throws Exception
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		String sqlQuery = null;
+		FileWriter out = null;
+		BufferedReader in = null;
+		String url="https://ulrichsweb.serialssolutions.com/widget/search/";
+		
+		try
+		{
+			//out = new FileWriter("outputFromURL.out");
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			List loadNumberList = new ArrayList();	      
+	        
+			HttpClient httpclient;
+		    HttpPost httpPost;
+		    ArrayList<BasicNameValuePair> postParameters;
+		    httpclient = new DefaultHttpClient();
+		    httpPost = new HttpPost(url);
+
+
+		    postParameters = new ArrayList<BasicNameValuePair>();
+		    postParameters.add(new BasicNameValuePair("query", "00156639"));
+		    postParameters.add(new BasicNameValuePair("hiddenStartYearFrom", "1665"));
+		    postParameters.add(new BasicNameValuePair("hiddenStartYearTo", "2022"));
+		    postParameters.add(new BasicNameValuePair("hiddenEndYearFrom", "1665"));
+		    postParameters.add(new BasicNameValuePair("hiddenEndYearTo", "2022"));
+		    postParameters.add(new BasicNameValuePair("hiddenCirculationFrom", "1665"));
+		    postParameters.add(new BasicNameValuePair("hiddenCirculationTo", "2022"));		   
+		    postParameters.add(new BasicNameValuePair("protectedPage", ""));
+		    postParameters.add(new BasicNameValuePair("requestedLink", ""));
+		    
+		    
+		    httpPost.setEntity(new UrlEncodedFormEntity(postParameters, "UTF-8"));
+
+		    HttpResponse response = (HttpResponse) httpclient.execute(httpPost);
+	       
+		    HttpEntity entity = ((org.apache.http.HttpResponse) response).getEntity();
+		    String responseString = EntityUtils.toString(entity, "UTF-8");
+		    System.out.println(responseString);
+        
+	        //in.close();
+	        //out.close();
 		}
 		catch (Exception e)
 		{
@@ -1916,7 +2220,13 @@ public class NewDataTesting
 			int k = 0;
 			for(int i=0;i<loadNumberList.size();i++)
 			{
-				out = new FileWriter("C84_"+(String)loadNumberList.get(i)+".xml");
+				String loadNumber = (String)loadNumberList.get(i);
+				File file=new File(loadNumber);
+		    	if(!file.exists())
+		        {
+		            file.mkdir();
+		        }
+				out = new FileWriter(loadNumber+"/C84_"+(String)loadNumberList.get(i)+".xml");
 			
 				sqlQuery="select * from C84_master where load_number='"+(String)loadNumberList.get(i)+"'";															
 				System.out.println("QUERY= "+sqlQuery);
@@ -1934,7 +2244,8 @@ public class NewDataTesting
 						String name = rsmd.getColumnName(j);
 						m_id = rs.getString("m_id");
 						String value = rs.getString(name);
-						if(value!=null && !(name.equals("SU") || name.equals("PT") || name.equals("JJ") || name.equals("OA") || name.equals("PG")))
+						//if(value!=null && !(name.equals("SU") || name.equals("PT") || name.equals("JJ") || name.equals("OA") || name.equals("PG")))
+						if(value!=null && !(name.equals("MH") || name.equals("FLS") || name.equals("CVS") || name.equals("SU") || name.equals("PT") || name.equals("JJ") || name.equals("OA") || name.equals("PG")))//only block out MH,FLS, and CVS
 						{					
 							out.write("<COLUMN NAME=\""+name+"\"><![CDATA["+value+"]]></COLUMN>\n");
 						}
@@ -2883,9 +3194,12 @@ public class NewDataTesting
 	public String buildESQuery(String value) 
 	{	
 		JSONObject query = new JSONObject();
+		JSONObject queryObject = new JSONObject();
 		JSONObject queryString = new JSONObject();
-		queryString.put("queryString", value);
-		queryString.put("defaultOperator", "AND");
+		//queryString.put("queryString", value);
+		queryObject.put("query", value);
+		queryString.put("query_string", queryObject);
+		//queryString.put("defaultOperator", "AND");
 		query.put("query",queryString);
 		
 		JSONArray returnFields = new JSONArray();
@@ -2901,9 +3215,9 @@ public class NewDataTesting
 		return query.toJSONString();
 			
 	}
-	
+		
 	@SuppressWarnings("unchecked")
-	public String buildESQueryFacet(String value, String searchField, String prefix) {
+	public String buildESQueryFacet(String value, String searchField, String queryStr) {
 		
 		JSONObject query = new JSONObject();
 		JSONObject queryString = new JSONObject();
@@ -2911,7 +3225,7 @@ public class NewDataTesting
 		JSONObject mainfacet = new JSONObject();
 	
 		
-		queryString.put("queryString", "database:cpx AND " + searchField + ":" + prefix + "*");
+		queryString.put("queryString", queryStr);
 		
 		JSONObject facet = new JSONObject();
 		
@@ -2938,21 +3252,27 @@ public class NewDataTesting
 		return query.toJSONString();
 	
 			
-		}	
+	}	
 	
 	private void testURL(String inputValue) throws Exception
 	{
 			//String encodedQuery;
-			//String esUrl = "https://shared-search-service-api.prod.scopussearch.net/document/v1/query/result";
+			String esUrl = "https://shared-search-service-api.prod.scopussearch.net/document/v1/query/result";
 			//String esUrl = "https://shared-search-service-api.staging.scopussearch.net/document/v1/query/result";
 			//String esUrl = "https://shared-search-service-api.cert.scopussearch.net/sharedsearch/document/facets";
-			String esUrl = "https://shared-search-service-api.staging.scopussearch.net/sharedsearch/document/result";
+			//String esUrl = "https://shared-search-service-api.staging.scopussearch.net/sharedsearch/document/result";
 			URL urlObject;
 			String result = null;
-			String prefix ="99";
-			String query=buildESQuery(inputValue);
-			//String query=buildESQueryFacet("100","authorId",prefix);
-			System.out.println("ESQuery: " + query);
+			String prefix ="";
+			String outFileName="testES.out";
+			BufferedWriter bw = new BufferedWriter(new FileWriter(outFileName));
+			//String query=buildESQuery(inputValue);
+			String query=buildESQueryFacet("eup","database","loadNumber:202219");
+			/*
+			String query = sharedSearch.buildESQueryFacet(after,facetField, queryString);
+			after = sharedSearch.runESQuery("", query, bw, prefix);
+			*/
+			System.out.println("ESQuery1: " + query);
 			try
 			{
 								
@@ -2963,6 +3283,7 @@ public class NewDataTesting
 				httpCon.setRequestMethod("POST");
 				httpCon.setRequestProperty("x-els-product", "engineering_village");
 				httpCon.setRequestProperty("x-els-diagnostics", "false");
+				httpCon.setRequestProperty("x-els-dataset", "ev_document");
 				httpCon.setRequestProperty("Content-Type", "application/json");
 				httpCon.setDoOutput(true);
 				//logger.info("before outputstreamwriter....");
@@ -2972,7 +3293,7 @@ public class NewDataTesting
 				writer.close();
 				int responseCode = httpCon.getResponseCode();
 				
-				//logger.info("responseCode: " + responseCode);
+				System.out.println("responseCode: " + responseCode);
 				// Only read response if connection was successful
 				if(responseCode == HttpURLConnection.HTTP_OK)
 				{
@@ -3436,6 +3757,113 @@ public class NewDataTesting
 					e.printStackTrace();
 				}
 			}
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+						
+		}
+		
+	}
+	
+	private void checkLookupIndex(String tablename)
+	{
+		Statement stmt = null;
+		Statement updateStmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		FileWriter out = null;
+		FileWriter out1 = null;
+		String sqlQuery = "select accessnumber,chemicalterm from "+tablename+" where chemicalterm like '%"+Constants.IDDELIMITER+"%'";
+		System.out.println(sqlQuery);
+		try
+		{
+
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			updateStmt = con.createStatement();			 
+			StringBuffer buffer = new StringBuffer();
+			rs = stmt.executeQuery(sqlQuery);
+			int count=0;
+			while (rs.next())
+			{
+				StringBuffer chemtermBuffer = new StringBuffer();
+				String accessnumber = rs.getString("accessnumber");
+				String chemicalterm = rs.getString("chemicalterm");
+				String[] chemicalterms = chemicalterm.split(Constants.AUDELIMITER);
+		      
+
+		        for (int j = 0; j < chemicalterms.length; j++) 
+		        {
+		           String chemterm = chemicalterms[j];
+
+		           if(chemterm.indexOf(Constants.IDDELIMITER)>0)
+		           {	
+		            	chemterm = chemterm.substring(0,chemterm.indexOf(Constants.IDDELIMITER));		            	
+		           }
+		           if(chemterm.indexOf("'")>-1)
+		           {
+		        	   chemterm = chemterm.replaceAll("'", "''");
+		           }
+		           chemtermBuffer.append(chemterm);		           
+		           if(j<chemicalterms.length-1)
+		           {
+		            	chemtermBuffer.append(Constants.AUDELIMITER);
+		           }
+		        }		        
+		       
+				String updateQuery = "update "+tablename+" set chemicalterm='"+chemtermBuffer.toString()+"' where accessnumber='"+accessnumber+"'";
+				System.out.println(updateQuery);
+				updateStmt.addBatch(updateQuery);
+				if(count==1000)
+				{
+					updateStmt.executeBatch();
+					count=0;
+				} 
+				count++;
+					
+				
+			}
+		    updateStmt.executeBatch();						
+			
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
+			if (updateStmt != null) {
+				try {
+					updateStmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
 			if (con != null) {
 				try {
 					con.close();
@@ -6397,7 +6825,33 @@ public class NewDataTesting
 	
 	private void testGetSqs(String QUEUE_NAME)
 	{
-		AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+		String accountID = "790640479873";   // Prod US/EUP/WO 
+		
+		//String accountID = "461549540087";   // UAT Forward & Backfill WO
+		//AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+		AWSCredentialsProvider credentials = null;
+		try {
+			//credentials = new EnvironmentVariableCredentialsProvider();   // for localhost
+			credentials = new InstanceProfileCredentialsProvider();        // for dataloading EC2
+		} catch (Exception e) {
+			throw new AmazonClientException(
+					"Cannot load the credentials from the credential profiles file. " +
+							"Please make sure that your credentials file is at the correct " +
+							"location (~/.aws/credentials), and is in valid format.",
+							e);
+		}
+		AmazonSQS sqs = new AmazonSQSClient(credentials);
+		Region euWest2 = Region.getRegion(Regions.EU_WEST_1);
+		sqs.setRegion(euWest2);
+		GetQueueUrlRequest request = new GetQueueUrlRequest().withQueueName(QUEUE_NAME)
+				.withQueueOwnerAWSAccountId(accountID);
+
+		GetQueueUrlResult result = sqs.getQueueUrl(request);
+
+
+		System.out.println("  QueueUrl: " + result.getQueueUrl());
+		System.out.println();
+
 		String queue_url = sqs.getQueueUrl(QUEUE_NAME).getQueueUrl();
 		System.out.println("queue_url= "+queue_url);
 	}
@@ -6422,11 +6876,12 @@ public class NewDataTesting
 		}
 
 		
-
+		
 		AmazonSQS	sqs = new AmazonSQSClient(credentials);
+		//only use for set to different region
 		//Region euWest2 = Region.getRegion(Regions.EU_WEST_1);
 		//sqs.setRegion(euWest2);
-		//AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+		
 		ListQueuesResult lq_result = sqs.listQueues();
 		System.out.println("Your SQS Queue URLs:");
 		for (String url : lq_result.getQueueUrls()) {
@@ -6450,44 +6905,6 @@ public class NewDataTesting
 		    }
 		}
 	}
-	
-	public static void testS3(String fileObjKeyName) throws IOException {
-        Regions clientRegion = Regions.US_EAST_1;
-        String bucketName = "ev-datasets-cert/cpx/";
-        String stringObjKeyName = "testS3String";
-        //String fileObjKeyName = "*** File object key name ***";
-        //String fileName = "*** Path to file to upload ***";
-        String fileName = fileObjKeyName;
-
-        try {
-            //This code expects that you have AWS credentials set up per:
-            // https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html
-            AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
-                    .withRegion(clientRegion)
-                    .build();
-
-            // Upload a text string as a new object.
-            s3Client.putObject(bucketName, stringObjKeyName, "Uploaded String Object");
-
-            // Upload a file as a new object with ContentType and title specified.
-            PutObjectRequest request = new PutObjectRequest(bucketName, fileObjKeyName, new File(fileName));
-            ObjectMetadata metadata = new ObjectMetadata();
-            metadata.setContentType("text/xml");
-            metadata.addUserMetadata("title", "someTitle");
-            request.setMetadata(metadata);
-            s3Client.putObject(request);
-        } catch (AmazonServiceException e) {
-            // The call was transmitted successfully, but Amazon S3 couldn't process 
-            // it, so it returned an error response.
-            e.printStackTrace();
-        } catch (SdkClientException e) {
-            // Amazon S3 couldn't be contacted for a response, or the client
-            // couldn't parse the response from Amazon S3.
-            e.printStackTrace();
-        } catch (Exception e) {
-        	e.printStackTrace();
-        }
-    }
 	
 	/*
 	private void testS3(String currDir)
@@ -6588,18 +7005,51 @@ public class NewDataTesting
 			s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
 			//object = s3Client.getObject( new GetObjectRequest("hmoroger", "midFromFast_DR.out"));
 			String file_path = "./"+key_name;
-			ObjectMetadata md;
+			File file = new File(file_path);
+			//InputStream is = file.getInputStream();
+			ObjectMetadata md;		
+			md = new ObjectMetadata();
+			md.setContentType("text/xml");	
 			byte[] bytes;
 			bytes = file_path.getBytes();
-			md = new ObjectMetadata();
-			md.setContentType("text/xml");
-			//md.setContentLength(bytes.length);
-			System.out.println("total length " + bytes.length); 
-			PutObjectResult response = s3Client.putObject(new PutObjectRequest("ev-datasets-cert/cpx/", key_name, new File(file_path)));	
-			System.out.println("Key: " + key_name + " successfully uploaded to S3, Etag: " + response.getETag());
+			md.setContentLength(bytes.length);
+			String bucketName = "ev-datasets-cert/cpx/test/";
+			bucketName=bucketName+getFolderName(key_name);
+			System.out.println(bucketName+key_name);
+			//s3Client.createBucket(bucketName);
+			PutObjectResult response = s3Client.putObject(new PutObjectRequest(bucketName, key_name, new ByteArrayInputStream(file_path.getBytes()), md));	
+			//System.out.println("Key: " + key_name + " successfully uploaded to S3, Etag: " + response.getETag());
 	        }catch(Exception e){
 	        	System.out.println("Other Error Message: " + e.getMessage());
 	        }
+	}
+	
+	private String getFolderName(String file_name)
+	{
+		StringBuffer path = new StringBuffer();
+		String fileName = file_name;
+		if(fileName.indexOf("_")>0)
+		{
+			fileName=fileName.substring(fileName.indexOf("_")+1);
+		}
+		
+		if(fileName.indexOf(".")>0)
+		{
+			fileName=fileName.substring(0,fileName.indexOf("."));
+		}
+		
+		if(fileName!=null)
+		{
+			while(fileName.length()>2)
+			{
+				path.append(fileName.substring(0,2)+"/");
+				fileName=fileName.substring(2);
+				//System.out.println("PATH= "+path);
+				//System.out.println("fileName= "+fileName);
+			}
+			path.append(fileName);
+		}
+		return path.toString();
 	}
 	
 	private void testGetAWSS3(String key)
@@ -6734,7 +7184,7 @@ public class NewDataTesting
 		
 		JSONObject queryString = new JSONObject();
 		queryString.put("queryString", searchField + ":" + value + " AND database:" + database);
-		queryString.put("defaultOperator", "AND");
+		//queryString.put("defaultOperator", "AND");
 		query.put("query",queryString);
 		
 		JSONArray returnFields = new JSONArray();
@@ -6761,12 +7211,14 @@ public class NewDataTesting
 		}
 		else if (server.equalsIgnoreCase("cert"))
 		{
-			esUrl = "https://shared-search-service-api.cert.scopussearch.net/sharedsearch/document/result";
+			//esUrl = "https://shared-search-service-api.cert.scopussearch.net/sharedsearch/document/result";
+			esUrl = "https://shared-search-service-api.prod.scopussearch.net/document/v1/query/result";
 			System.out.println("using cert server: "+esUrl);
 		}
 		else if (server.equalsIgnoreCase("dev"))
 		{
-			esUrl = "https://shared-search-service-api.dev.scopussearch.net/sharedsearch/document/result";
+			//esUrl = "https://shared-search-service-api.dev.scopussearch.net/sharedsearch/document/result";
+			esUrl = "https://kd.prod.scopussearch.net/sharedsearch/v1";
 			System.out.println("using dev server: "+esUrl);
 		}
 		else
@@ -6797,7 +7249,7 @@ public class NewDataTesting
 			writer.close();
 			int responseCode = httpCon.getResponseCode();
 			
-			//logger.info("responseCode: " + responseCode);
+			System.out.println("responseCode: " + responseCode);
 			// Only read response if connection was successful
 			if(responseCode == HttpURLConnection.HTTP_OK)
 			{
@@ -6853,20 +7305,24 @@ public class NewDataTesting
 	
 	private int getESMID(String value, String searchfield,String database, String server)
 	{
-		String esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result";
+		//String esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result";
+		String esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/facets";
 		if(server.equalsIgnoreCase("prod"))
 		{
-			esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result";
+			//esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result";
+			esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/facets";
 			System.out.println("using prod server: "+esUrl);
 		}
 		else if (server.equalsIgnoreCase("cert"))
 		{
 			esUrl = "https://shared-search-service-api.cert.scopussearch.net/sharedsearch/document/result";
+			//esUrl = "https://shared-search-service-api.cert.scopussearch.net/sharedsearch/document/facets";
 			System.out.println("using cert server: "+esUrl);
 		}
 		else if (server.equalsIgnoreCase("dev"))
 		{
-			esUrl = "https://shared-search-service-api.dev.scopussearch.net/sharedsearch/document/result";
+			//esUrl = "https://shared-search-service-api.dev.scopussearch.net/sharedsearch/document/result";
+			esUrl = "https://shared-search-service-api.dev.scopussearch.net/sharedsearch/document/facets";
 			System.out.println("using dev server: "+esUrl);
 		}
 		else
@@ -6897,7 +7353,7 @@ public class NewDataTesting
 			writer.close();
 			int responseCode = httpCon.getResponseCode();
 			
-			//logger.info("responseCode: " + responseCode);
+			System.out.println("responseCode: " + responseCode);
 			// Only read response if connection was successful
 			if(responseCode == HttpURLConnection.HTTP_OK)
 			{
@@ -6911,7 +7367,7 @@ public class NewDataTesting
 					//if(line.equalsIgnoreCase("hits"))
 						//break;
 				}
-				//System.out.println("Response: " + response.toString());   // only for debugging
+				System.out.println("Response: " + response.toString());   // only for debugging
 				// close stream
 				in.close();
 				
