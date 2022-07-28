@@ -299,7 +299,7 @@ public class InspecXMLReader extends FilterReader
 			{
 				//record.put("LINKG",getLinkgs(linkGroup));
 				record.put("LINKG",new StringBuffer(getMixData("linkg",linkGroup.getContent())));
-				System.out.println("LINKG="+getMixData("linkg",linkGroup.getContent()));
+				//System.out.println("LINKG="+getMixData("linkg",linkGroup.getContent()));
 			}
 
 			// sortdate
@@ -338,7 +338,7 @@ public class InspecXMLReader extends FilterReader
 			if(videoGroup!=null)
 			{			
 				record.put("VIDEOG",new StringBuffer(getMixData("videog",videoGroup.getContent())));
-				System.out.println("VIDEOG="+getMixData("videog",videoGroup.getContent()));
+				//System.out.println("VIDEOG="+getMixData("videog",videoGroup.getContent()));
 			}
 			
 			/*
@@ -349,7 +349,7 @@ public class InspecXMLReader extends FilterReader
 			if(reposGroup!=null)
 			{			
 				record.put("REPOSG",new StringBuffer(getMixData("reposg",reposGroup.getContent())));
-				System.out.println("REPOSG="+getMixData("reposg",reposGroup.getContent()));
+				//System.out.println("REPOSG="+getMixData("reposg",reposGroup.getContent()));
 			}
 
 			/*
