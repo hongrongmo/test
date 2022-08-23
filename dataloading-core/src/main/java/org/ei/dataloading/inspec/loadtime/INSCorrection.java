@@ -1101,7 +1101,7 @@ public class INSCorrection
                     }
                 }
             }
-            con.commit();
+            //con.commit();
             if(stmt != null)
             {
                 stmt.close();
