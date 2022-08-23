@@ -9,6 +9,7 @@ import org.jdom2.*;
 import org.jdom2.input.*;
 import org.jdom2.output.*;
 import org.ei.common.*;
+import org.ei.dataloading.DataLoadDictionary;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
 
@@ -602,7 +603,7 @@ public class InspecXMLReader extends FilterReader
 						//citS.append("TITLE::"); //14
 						if(cite.getChild("brfti")!=null)
 						{
-							citS.append(cite.getChild("brfti").getTextTrim());
+							citS.append(mapEntity(cite.getChild("brfti").getTextTrim()));
 							//System.out.println("Title="+cite.getChild("brfti").getTextTrim());
 						}
 						
@@ -614,7 +615,7 @@ public class InspecXMLReader extends FilterReader
 						//citS.append("PUBLCATION_TITLE::"); //15
 						if(cite.getChild("brfpubti")!=null)
 						{
-							citS.append(cite.getChild("brfpubti").getTextTrim());
+							citS.append(mapEntity(cite.getChild("brfpubti").getTextTrim()));
 							//System.out.println("Publication  Title="+cite.getChild("brfpubti").getTextTrim());
 						}
 						
@@ -625,7 +626,7 @@ public class InspecXMLReader extends FilterReader
 						//citS.append("ABBR_JOURNAL_TITLE::"); //16
 						if(cite.getChild("brfajt")!=null)
 						{
-							citS.append(cite.getChild("brfajt").getTextTrim());
+							citS.append(mapEntity(cite.getChild("brfajt").getTextTrim()));
 							//System.out.println("Abbreviated journal title="+cite.getChild("brfajt").getTextTrim());
 						}
 						
@@ -636,7 +637,7 @@ public class InspecXMLReader extends FilterReader
 						//citS.append("PUBLISHER::"); //17
 						if(cite.getChild("brfpnm")!=null)
 						{
-							citS.append(cite.getChild("brfpnm").getTextTrim());
+							citS.append(mapEntity(cite.getChild("brfpnm").getTextTrim()));
 							//System.out.println("Publisher="+cite.getChild("brfpnm").getTextTrim());
 						}
 						
@@ -648,7 +649,7 @@ public class InspecXMLReader extends FilterReader
 						//citS.append("SERIES_TITLE::"); //18
 						if(cite.getChild("brfser")!=null)
 						{
-							citS.append(cite.getChild("brfser").getTextTrim());
+							citS.append(mapEntity(cite.getChild("brfser").getTextTrim()));
 							//System.out.println("Series title="+cite.getChild("brfser").getTextTrim());
 						}
 						
@@ -697,12 +698,12 @@ public class InspecXMLReader extends FilterReader
 							String orgCountry = "";
 							if(issuingOrg.getChild("orgn")!=null)
 							{
-								orgName = issuingOrg.getChild("orgn").getTextTrim();
+								orgName = mapEntity(issuingOrg.getChild("orgn").getTextTrim());
 							}
 							
 							if(issuingOrg.getChild("cntry")!=null)
 							{
-								orgCountry=issuingOrg.getChild("cntry").getTextTrim();								
+								orgCountry=mapEntity(issuingOrg.getChild("cntry").getTextTrim());								
 							}
 							citS.append(orgName+Constants.GROUPDELIMITER+orgCountry);
 						}
@@ -714,7 +715,7 @@ public class InspecXMLReader extends FilterReader
 						//citS.append("PUBLICATION_PLACE::"); //21
 						if(cite.getChild("brfloc")!=null)
 						{
-							citS.append(cite.getChild("brfloc").getTextTrim());
+							citS.append(mapEntity(cite.getChild("brfloc").getTextTrim()));
 							//System.out.println("Place of publication="+cite.getChild("brfloc").getTextTrim());
 						}
 						
@@ -724,7 +725,7 @@ public class InspecXMLReader extends FilterReader
 						//citS.append("COUNTRY::"); //22 // no data to test **************************
 						if(cite.getChild("brfcny")!=null)
 						{
-							citS.append(cite.getChild("brfcny").getTextTrim());
+							citS.append(mapEntity(cite.getChild("brfcny").getTextTrim()));
 							//System.out.println("Country="+cite.getChild("brfcny").getTextTrim());
 						}
 						
@@ -957,7 +958,7 @@ public class InspecXMLReader extends FilterReader
 			for (int k = 0; k < funds.size(); k++)
 			{
 				   Element fund = (Element)funds.get(k);
-				   String funder =fund.getChildText("funder");
+				   String funder =mapEntity(fund.getChildText("funder"));
 				   String doiAttr=fund.getAttributeValue("doi");
 				   System.out.println("DOI="+doiAttr);
 				   List awardids=fund.getChildren("awardid");
@@ -973,9 +974,9 @@ public class InspecXMLReader extends FilterReader
 					   {
 						   Element awardid = (Element)awardids.get(l);
 						   String awardidContent = awardid.getTextTrim();
-						   System.out.println("awardid"+awardidContent);
+						   //System.out.println("awardid"+awardidContent);
 						   if(awardidContent!=null)
-							   fundBuffer.append(awardidContent);
+							   fundBuffer.append(mapEntity(awardidContent));
 						   if(l<awardids.size()-1)
 							   fundBuffer.append(Constants.GROUPDELIMITER);
 					   }
@@ -1009,7 +1010,7 @@ public class InspecXMLReader extends FilterReader
 					   linkBuffer.append(linkAttr);
 				   linkBuffer.append(Constants.IDDELIMITER);
 				   if(linkContent!=null)
-					   linkBuffer.append(linkContent);
+					   linkBuffer.append(mapEntity(linkContent));
 				   if(k<links.size()-1)
 					   linkBuffer.append(Constants.AUDELIMITER);
 				   
@@ -1037,13 +1038,13 @@ public class InspecXMLReader extends FilterReader
 				citS.append("|");
 				if(nameEl.getChild("init")!=null)
 				{
-					citS.append(nameEl.getChild("init").getTextTrim());
+					citS.append(mapEntity(nameEl.getChild("init").getTextTrim()));
 				}
 				citS.append("|");
 
 			   if(nameEl.getChild("sfix")!=null)
 			   {
-				  citS.append(nameEl.getChild("sfix").getTextTrim());
+				  citS.append(mapEntity(nameEl.getChild("sfix").getTextTrim()));
 			   }
 			   citS.append("|");
 			   
@@ -1084,30 +1085,6 @@ public class InspecXMLReader extends FilterReader
 
 	}
 	
-	/*
-	private String getDate(Element e)
-	{
-		StringBuffer dateB = new StringBuffer();
-		if(e.getChild("mo")!=null)
-		{
-			dateB.append(e.getChild("mo").getTextTrim());
-			dateB.append("-");
-		}
-
-		if(e.getChild("day")!=null)
-		{
-			dateB.append(e.getChild("day").getTextTrim());
-			dateB.append("-");
-		}
-		
-		if(e.getChild("yr")!=null)
-		{
-			dateB.append(e.getChild("yr").getTextTrim());		
-		}
-		return dateB.toString();
-	}
-	*/
-	
 	private  String getMixData(String name, List l)
     {
 		Iterator it = l.iterator();
@@ -1136,7 +1113,7 @@ public class InspecXMLReader extends FilterReader
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
 
-				content=content.trim()+text.trim();
+				content=mapEntity(content.trim()+text.trim());
 
             }
             else if(o instanceof EntityRef)
@@ -1186,7 +1163,7 @@ public class InspecXMLReader extends FilterReader
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
 
-				b.append(text);
+				b.append(mapEntity(text));
 
             }
              else if(o instanceof EntityRef)
@@ -1239,8 +1216,9 @@ public class InspecXMLReader extends FilterReader
 
 		   Element n = (Element)pname.get(i);
 
-		   getMixData(n.getChild("snm").getContent(),name);
-
+		   //getMixData(n.getChild("snm").getContent(),name);
+		   name.append(mapEntity(n.getChild("snm").getTextTrim()));
+		   
 		   if(n.getChild("init")!=null)
 		   {
 			   name.append(", ");
@@ -1263,7 +1241,7 @@ public class InspecXMLReader extends FilterReader
 			   for (int k = 0; k < l.size(); k++)
 			   {
 				   Element el = (Element) l.get(k);
-				   name.append(el.getTextTrim());
+				   name.append(mapEntity(el.getTextTrim()));
 				   if(k < (l.size()-1))
 				   {
 					   name.append(", ");
@@ -1351,7 +1329,7 @@ public class InspecXMLReader extends FilterReader
 				}
 				//add country to AAFFMULTI, EAFFMULTI fields
 			
-				oneAffiliation.append(country);
+				oneAffiliation.append(mapEntity(country.toString()));
 			}
 
 	        // add new xml elements to aff.
@@ -1360,14 +1338,14 @@ public class InspecXMLReader extends FilterReader
 
 	        if(m.getChild("orgn")!= null)
 	        {
-	        	oneAffiliation.append(m.getChild("orgn").getTextTrim());
+	        	oneAffiliation.append(mapEntity(m.getChild("orgn").getTextTrim()));
 	        	
 	        }
 	        //dept
 	        oneAffiliation.append(Constants.IDDELIMITER);
 	        if(m.getChild("dept") != null)
 	        {
-	        	oneAffiliation.append(m.getChild("dept").getTextTrim());
+	        	oneAffiliation.append(mapEntity(m.getChild("dept").getTextTrim()));
 	        }
 	        //addressline - could be multy
 	        oneAffiliation.append(Constants.IDDELIMITER);
@@ -1386,14 +1364,14 @@ public class InspecXMLReader extends FilterReader
 					}
 			
 				}
-				oneAffiliation.append(addline);
+				oneAffiliation.append(mapEntity(addline.toString()));
 			}
 
 	        oneAffiliation.append(Constants.IDDELIMITER);
 	        //city
 	        if(m.getChild("city")!= null)
 	        {
-	        	oneAffiliation.append(m.getChild("city").getTextTrim());
+	        	oneAffiliation.append(mapEntity(m.getChild("city").getTextTrim()));
 
 	        }
 
@@ -1401,14 +1379,14 @@ public class InspecXMLReader extends FilterReader
 	        //state
 	        if(m.getChild("state") != null)
 	        {
-	        	oneAffiliation.append(m.getChild("state").getTextTrim());
+	        	oneAffiliation.append(mapEntity(m.getChild("state").getTextTrim()));
 	        }
 
 	        oneAffiliation.append(Constants.IDDELIMITER);
 	        //pcode
 	        if(m.getChild("pcode") != null)
 	        {
-	        	oneAffiliation.append(m.getChild("pcode").getTextTrim());
+	        	oneAffiliation.append(mapEntity(m.getChild("pcode").getTextTrim()));
 	        }
 
 	        oneAffiliation.append(Constants.IDDELIMITER);
@@ -2045,6 +2023,37 @@ public class InspecXMLReader extends FilterReader
 			}
 		}
 		return terms.delete(terms.lastIndexOf(Constants.AUDELIMITER),terms.length());
+	}
+	
+	private String mapEntity(String xml)
+	{
+		if(xml == null)
+		{
+			return null;
+		}
+		
+		StringBuffer sb = new StringBuffer();
+		
+		int[] xmlChars = DataLoadDictionary.toCodePointArray(xml);//use this method to take care of double digit characters
+		int len = xmlChars.length;
+		   				
+		int c;
+		
+
+		for (int i = 0; i < len; i++)
+		{
+			
+			c = xmlChars[i];
+			if((int) c >= 32 && (int) c <= 127)
+			{
+				sb.append((char)c);
+			}	
+			else
+			{
+				sb.append("&#"+(int)c+";");
+			}
+		}
+		return sb.toString();
 	}
 
 }
