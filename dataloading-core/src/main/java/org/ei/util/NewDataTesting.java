@@ -634,6 +634,7 @@ public class NewDataTesting
 		List databaseList =  new ArrayList<String>();
 		databaseList.add("cpx_");
 		databaseList.add("ins_");
+		databaseList.add("inspec_");
 		databaseList.add("upt_");
 		databaseList.add("grf_");
 		databaseList.add("pch_");
