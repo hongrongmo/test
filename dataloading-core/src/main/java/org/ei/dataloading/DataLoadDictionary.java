@@ -770,7 +770,7 @@ public class DataLoadDictionary
     					case 182 :sb.append("&para;");break; 	//pilcrow sign
     					case 183 :sb.append("&middot;");break; 	//middle dot
     					case 184 :sb.append("&cedil;");break; 	//cedilla
-    					case 185 :sb.append("&supl;");break; 	//superscript one
+    					case 185 :sb.append("&sup1;");break; 	//superscript one
     					case 186 :sb.append("&ordm;");break; 	//masculine ordinal indicator
     					case 187 :sb.append("&raquo;");break; 	//right-pointing double angle
     					case 188 :sb.append("&frac14;");break; 	//vulgar fraction one quarter
@@ -1335,7 +1335,34 @@ public class DataLoadDictionary
     					case 2019: sb.append("&#x2019;");break;
     					//HH END
     					
-    					
+    					//HMO added for NTIS for abstract @10/04/2022
+    					case 61607: sb.append("º");break;
+    					case 61656: sb.append("╪");break;
+    					case 61537: sb.append("a");break;
+    					case 61538: sb.append("b");break;
+    					case 61539: sb.append("c");break;
+    					case 61540: sb.append("d");break;
+    					case 61541: sb.append("e");break;
+    					case 61542: sb.append("f");break;
+    					case 61543: sb.append("g");break;
+    					case 61544: sb.append("h");break;
+    					case 61545: sb.append("i");break;
+    					case 61546: sb.append("j");break;
+    					case 61547: sb.append("k");break;
+    					case 61548: sb.append("l");break;
+    					case 61549: sb.append("m");break;
+    					case 61550: sb.append("n");break;
+    					case 61551: sb.append("o");break;
+    					case 61552: sb.append("p");break;
+    					case 61553: sb.append("q");break;
+    					case 61554: sb.append("r");break;
+    					case 61555: sb.append("s");break;
+    					case 61485: sb.append("-");break;
+    					case 61650: sb.append("╥");break;
+    					case 61623: sb.append("╖");break;
+    					case 61597: sb.append("¥");break;
+    					case 61508:	sb.append("D");break;
+   					
     					//updated on 5/26/2016
     					//something is wrong, remove this line by hmo at 10/26/2016
     					default:sb.append("&#"+(int)c+";");
