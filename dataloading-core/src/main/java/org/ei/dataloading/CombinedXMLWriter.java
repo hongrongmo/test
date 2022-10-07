@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.regex.Pattern;
 import java.util.Arrays;
 
 import org.apache.kafka.clients.producer.Producer;
@@ -1095,8 +1096,12 @@ public class CombinedXMLWriter
             }
             
             if(rec.getString(EVCombinedRec.PARENT_ID)!=null && rec.getString(EVCombinedRec.PARENT_ID).length()>0)
-            {            	
-            	contentObject.put("PARENTID".toLowerCase(),rec.getString(EVCombinedRec.PARENT_ID));
+            {
+            	//change the parentID datatype to long
+            	//contentObject.put("PARENTID".toLowerCase(),rec.getString(EVCombinedRec.PARENT_ID));
+            	String parentID=rec.getString(EVCombinedRec.PARENT_ID);
+            	if(isNumeric(parentID))
+            		contentObject.put("PARENTID".toLowerCase(),Long.parseLong(parentID));         	
             }
          
             if(rec.getString(EVCombinedRec.DEDUPKEY)!=null && rec.getString(EVCombinedRec.DEDUPKEY).length()>0)
@@ -1106,13 +1111,16 @@ public class CombinedXMLWriter
             
             contentObject.put(("database").toLowerCase(),rec.getString(EVCombinedRec.DATABASE));
             
+            //change the loadnumber datatype to int
             if(loadnumber.length()>6)
             {
-            	contentObject.put("LOADNUMBER".toLowerCase(),loadnumber.substring(0,6));
+            	if(isNumeric(loadnumber))
+            		contentObject.put("LOADNUMBER".toLowerCase(),Integer.parseInt(loadnumber.substring(0,6)));
             }
             else
             {
-            	contentObject.put("LOADNUMBER".toLowerCase(),loadnumber);
+            	if(isNumeric(loadnumber))
+            		contentObject.put("LOADNUMBER".toLowerCase(),Integer.parseInt(loadnumber));
             }
 
             if(rec.getString(EVCombinedRec.UPDATE_NUMBER)!=null && rec.getString(EVCombinedRec.UPDATE_NUMBER).length()>0)
@@ -1122,12 +1130,20 @@ public class CombinedXMLWriter
 
             if(rec.getString(EVCombinedRec.DATESORT)!=null && rec.getString(EVCombinedRec.DATESORT).length()>0)
             {
-            	contentObject.put("DATESORT".toLowerCase(),rec.getString(EVCombinedRec.DATESORT));
+            	//Chnage datesort datatype to long
+            	//contentObject.put("DATESORT".toLowerCase(),rec.getString(EVCombinedRec.DATESORT));
+            	String datesort=rec.getString(EVCombinedRec.DATESORT);
+            	if(isNumeric(datesort))
+            		contentObject.put("DATESORT".toLowerCase(),Long.parseLong(datesort));
             }
 
             if(rec.getString(EVCombinedRec.PUB_YEAR)!=null && rec.getString(EVCombinedRec.PUB_YEAR).length()>0)
             {
-            	contentObject.put("PUBYEAR".toLowerCase(),rec.getString(EVCombinedRec.PUB_YEAR));
+            	//change the publicationyear datatype to int
+            	//contentObject.put("PUBYEAR".toLowerCase(),rec.getString(EVCombinedRec.PUB_YEAR));
+            	String pubYear=rec.getString(EVCombinedRec.PUB_YEAR);
+            	if(isNumeric(pubYear))
+            		contentObject.put("PUBYEAR".toLowerCase(),Integer.parseInt(pubYear));
             }
                    
             contentObject.put("ACCESSIONNUMBER".toLowerCase(),rec.getString(EVCombinedRec.ACCESSION_NUMBER));
@@ -1876,7 +1892,11 @@ public class CombinedXMLWriter
             
             if(rec.getString(EVCombinedRec.PCITED)!=null && rec.getString(EVCombinedRec.PCITED).length()>0)
             {
-	            contentObject.put("PCITED".toLowerCase(),notNull(rec.getString(EVCombinedRec.PCITED)));
+	            //change the pcited datatype to int
+            	//contentObject.put("PCITED".toLowerCase(),notNull(rec.getString(EVCombinedRec.PCITED)));
+            	String pcited=rec.getString(EVCombinedRec.PCITED);
+            	if(isNumeric(pcited))
+            		contentObject.put("PCITED".toLowerCase(),Integer.parseInt(pcited));
             }
 
             String[] pcitedindex=rec.getStrings(EVCombinedRec.PCITEDINDEX);
@@ -1917,42 +1937,74 @@ public class CombinedXMLWriter
             
             if(rec.getString(EVCombinedRec.LAT_NW)!=null && rec.getString(EVCombinedRec.LAT_NW).length()>0)
             {
-	            contentObject.put("LAT_NW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_NW)));
+            	//change the LAT_NW to int
+	            //contentObject.put("LAT_NW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_NW)));
+	            String latitudeNorthWest=rec.getString(EVCombinedRec.LAT_NW);
+            	if(isNumeric(latitudeNorthWest))
+            		contentObject.put("LAT_NW".toLowerCase(),Integer.parseInt(latitudeNorthWest));
             }
             
             if(rec.getString(EVCombinedRec.LNG_NW)!=null && rec.getString(EVCombinedRec.LNG_NW).length()>0)
             {
-	            contentObject.put("LNG_NW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_NW)));
+            	//change the LNG_NW to int
+	            //contentObject.put("LNG_NW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_NW)));
+            	String longitudeNorthWest=rec.getString(EVCombinedRec.LNG_NW);
+            	if(isNumeric(longitudeNorthWest))
+            		contentObject.put("LNG_NW".toLowerCase(),Integer.parseInt(longitudeNorthWest));
             }
             
             if(rec.getString(EVCombinedRec.LAT_NE)!=null && rec.getString(EVCombinedRec.LAT_NE).length()>0)
             {
-	            contentObject.put("LAT_NE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_NE)));
+            	//change the LAT_NE to int
+	            //contentObject.put("LAT_NE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_NE)));
+            	String latitudeNorthEast=rec.getString(EVCombinedRec.LAT_NE);
+            	if(isNumeric(latitudeNorthEast))
+            		contentObject.put("LAT_NE".toLowerCase(),Integer.parseInt(latitudeNorthEast));
             }
             
             if(rec.getString(EVCombinedRec.LNG_NE)!=null && rec.getString(EVCombinedRec.LNG_NE).length()>0)
             {
-	            contentObject.put("LNG_NE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_NE)));
+            	//change the LNG_NE to int
+	            //contentObject.put("LNG_NE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_NE)));
+            	String longitudeNorthEast=rec.getString(EVCombinedRec.LNG_NE);
+            	if(isNumeric(longitudeNorthEast))
+            		contentObject.put("LNG_NE".toLowerCase(),Integer.parseInt(longitudeNorthEast));
             }
             
             if(rec.getString(EVCombinedRec.LAT_SW)!=null && rec.getString(EVCombinedRec.LAT_SW).length()>0)
             {
-	            contentObject.put("LAT_SW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_SW)));
+            	//change the LAT_SW to int
+	            //contentObject.put("LAT_SW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_SW)));
+            	String latitudeSouthWest=rec.getString(EVCombinedRec.LAT_SW);
+            	if(isNumeric(latitudeSouthWest))
+            		contentObject.put("LAT_SW".toLowerCase(),Integer.parseInt(latitudeSouthWest));
             }
             
             if(rec.getString(EVCombinedRec.LNG_SW)!=null && rec.getString(EVCombinedRec.LNG_SW).length()>0)
             {
-	            contentObject.put("LNG_SW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_SW)));
+            	//change the LNG_SW to int
+	            //contentObject.put("LNG_SW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_SW)));
+            	String longitudeSouthWest=rec.getString(EVCombinedRec.LNG_SW);
+            	if(isNumeric(longitudeSouthWest))
+            		contentObject.put("LNG_SW".toLowerCase(),Integer.parseInt(longitudeSouthWest));
             }
             
             if(rec.getString(EVCombinedRec.LAT_SE)!=null && rec.getString(EVCombinedRec.LAT_SE).length()>0)
             {
-	            contentObject.put("LAT_SE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_SE)));
+            	//change the LAT_SE to int
+	            //contentObject.put("LAT_SE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_SE)));
+            	String latitudeSouthEast=rec.getString(EVCombinedRec.LAT_SE);
+            	if(isNumeric(latitudeSouthEast))
+            		contentObject.put("LAT_SE".toLowerCase(),Integer.parseInt(latitudeSouthEast));
             }
                          
             if(rec.getString(EVCombinedRec.LNG_SE)!=null && rec.getString(EVCombinedRec.LNG_SE).length()>0)
             {
-	            contentObject.put("LNG_SE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_SE)));
+            	//change the LNG_SE to int
+	            //contentObject.put("LNG_SE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_SE)));
+            	String longitudeSouthEast=rec.getString(EVCombinedRec.LNG_SE);
+            	if(isNumeric(longitudeSouthEast))
+            		contentObject.put("LNG_SE".toLowerCase(),Integer.parseInt(longitudeSouthEast));
             }
             
             String[] tableofcontent=rec.getStrings(EVCombinedRec.TABLE_OF_CONTENT);
@@ -5941,5 +5993,14 @@ public class CombinedXMLWriter
         // Assuming indention using 2 spaces
         stringBuilder.append("  ");
       }
-    }           
+    }  
+    
+    public boolean isNumeric(String strNum) 
+    {
+    	Pattern pattern = Pattern.compile("\\d+");
+        if (strNum == null) {
+            return false; 
+        }
+        return pattern.matcher(strNum).matches();
+    }
 }
