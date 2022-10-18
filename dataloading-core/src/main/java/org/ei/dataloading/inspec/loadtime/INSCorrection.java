@@ -624,7 +624,10 @@ public class INSCorrection
         try
         {
         	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-			String sqlQuery = null;
+			//get inspec funding info added by hmo at 10/11/2022
+        	c.setInspecFundingInfo(con);
+        	
+        	String sqlQuery = null;
 			//HH 05/26/2022: Caused bug of generating empty lookups since Sep 17 2021, INSPECCombiner obj already created at startCorrection , comment this out
 			//INSPECCombiner c = new INSPECCombiner(writer,this.propertyFileName,this.updateNumber);
             if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate") || action.equalsIgnoreCase("ins") )
