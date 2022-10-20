@@ -1,6 +1,7 @@
 package org.ei.dataloading.ntis.loadtime;
 
 import java.io.ByteArrayInputStream;
+import java.io.StringReader;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -1403,7 +1404,10 @@ public class NTISCombiner
     	throws Exception
     {
         StringBuffer buf = new StringBuffer();
-        AuthorStream astream = new AuthorStream(new ByteArrayInputStream(aString.getBytes()));
+        //use AuthorReader to better handle unicode characters by hmo at 20221013
+        //AuthorStream astream = new AuthorStream(new ByteArrayInputStream(aString.getBytes()));
+        AuthorReader astream = new AuthorReader(new StringReader(aString));
+        
         String s = null;
         ArrayList list = new ArrayList();
         while ((s = astream.readAuthor()) != null)

@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
@@ -17,6 +18,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.ArrayList;
 import java.util.regex.*;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+
 import java.util.Arrays;
 
 import org.ei.domain.*;
@@ -26,6 +30,7 @@ import org.ei.dataloading.CombinedWriter;
 import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.dataloading.Combiner;
 import org.ei.util.GUID;
+import org.ei.util.db.DbConnection;
 import org.ei.common.*;
 import org.ei.common.inspec.*;
 import org.ei.dataloading.EVCombinedRec;
@@ -34,6 +39,15 @@ import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
 import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.dataloading.MessageSender;
 import org.ei.util.kafka.*;
+import org.jdom2.Element;
+import org.jdom2.Namespace;
+import org.jdom2.input.SAXBuilder;
+import org.xml.sax.InputSource;
+import org.jdom2.Document; 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.StringReader;
+import java.nio.charset.Charset;
 
 
 public class INSPECCombiner
@@ -49,6 +63,10 @@ public class INSPECCombiner
     /*HT added 09/21/2020 for lookup extraction to ES*/
     private String action = null;
     private LookupEntry lookupObj = null;
+    
+    //get funding Info added by Hmo at 09/13/2022
+    private static HashMap<String,String[]> fundingInfo = new HashMap<String,String[]>();
+    private Connection con;
 	
     public INSPECCombiner(CombinedWriter writer)
     {
@@ -66,6 +84,126 @@ public class INSPECCombiner
 		super(writer);
 		this.propertyFileName = propertyFileName;
 		Combiner.CURRENTDB = database;
+	}
+	
+	//Get funding data from database
+	HashMap populateFundingInfo(Connection con) throws Exception
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		HashMap<String,String[]> fundingMap = new HashMap<String,String[]>();
+		try
+		{
+		
+			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			System.out.println("Running the query...");
+			String sqlQuery = "select anum,content from ins_group";
+			System.out.println(sqlQuery);
+			rs = stmt.executeQuery(sqlQuery);
+			
+			System.out.println("Got records ...from ins_group");
+			while(rs.next())
+			{
+				String accessNumber=rs.getString("anum")     ;
+				String fundingContent=rs.getString("content");				
+				fundingMap.put(accessNumber,getFunding(fundingContent));
+			}
+			
+		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+		
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			return fundingMap;
+		}
+	}
+	
+	//Parsing Funding data
+	private String[] getFunding(String fundingContent) throws Exception
+	{		
+		String[] fundDetail = new String[2];
+		StringBuffer awardidBuffer = new StringBuffer();
+		StringBuffer funderBuffer = new StringBuffer();
+		SAXBuilder builder = new SAXBuilder();
+		try 
+		{
+			builder.setExpandEntities(false);
+			builder.setFeature( "http://xml.org/sax/features/namespaces", true );			
+			Document doc = builder.build(new StringReader(fundingContent));
+			Element fundRoot = doc.getRootElement();
+			List lt = fundRoot.getChildren();
+			for(int i=0;i<lt.size();i++)
+			{
+				Element awardgElement = (Element)lt.get(i);
+				Element funderElement = awardgElement.getChild("funder");
+				if(funderElement!=null)
+				{
+					if(funderBuffer.length()>0)
+					{
+						funderBuffer.append(Constants.IDDELIMITER);
+					}
+					funderBuffer.append(funderElement.getTextTrim());
+				}
+				List awardidGroup = awardgElement.getChildren("awardid");
+				for(int j=0;j<awardidGroup.size();j++)
+				{
+					Element awardidElement = (Element)awardidGroup.get(j);
+					if(awardidBuffer.length()>0)
+					{
+						awardidBuffer.append(Constants.IDDELIMITER);
+					}
+					awardidBuffer.append(awardidElement.getTextTrim());
+				}
+			}
+			fundDetail[0]=awardidBuffer.toString();
+			//System.out.println("awardis= "+fundDetail[0]);
+			fundDetail[1]=funderBuffer.toString();
+			//System.out.println("funder= "+fundDetail[1]);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return fundDetail;
+	}
+	
+	public void setInspecFundingInfo(Connection con)
+	{
+		try
+		{
+			fundingInfo=populateFundingInfo(con);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 
     public static void main(String args[])
@@ -101,7 +239,11 @@ public class INSPECCombiner
 
          writer.setOperation(operation);
         INSPECCombiner c = new INSPECCombiner(writer);
-
+        Connection con = DbConnection.getConnection(url, driver, username, password);
+        
+        /*stored all funding info in the memory by hmo at 9/13/2022*/
+        c.setInspecFundingInfo(con);
+        
         /*TH added 09/21/2020 for ES lookup generation*/
         Combiner.CURRENTDB = databaseIndexName;
         for(String str: args)
@@ -385,6 +527,35 @@ public class INSPECCombiner
 	            String abString = getStringFromClob(rs.getClob("ab"));		            	           
 	            
 	            String accessnumber = rs.getString("anum");
+	            //Get FUNDING for specify Accessnumber
+	            ArrayList<String> fundings = new ArrayList<String>();
+	            
+	            if(fundingInfo.get(accessnumber)!=null)
+	            {
+		            for(String s:fundingInfo.get(accessnumber)){              
+		                fundings.add(s);
+		            }
+		            
+	            }
+	            if(fundings.size()>0)
+	            {
+	            	String fundingID=fundings.get(0);
+	            	if(fundingID!=null && fundingID.length()>0)
+	            	{
+	            		String[] fundingIDs=fundingID.split(Constants.IDDELIMITER,-1);
+	            		rec.put(EVCombinedRec.GRANTID, fundingIDs);
+	            		//System.out.println(accessnumber +" GRANTID= "+Arrays.toString(fundingIDs));
+	            	}
+	            	
+	            	String fundingAgency=fundings.get(1);
+	            	if(fundingAgency!=null && fundingAgency.length()>0)
+	            	{
+	            		String[] fundingAgencies=fundingAgency.split(Constants.IDDELIMITER,-1);
+		                rec.put(EVCombinedRec.GRANTAGENCY,fundingAgencies);
+		                System.out.println(accessnumber+" GRANTAGENCY= "+Arrays.toString(fundingAgencies));
+	            	}
+	            }
+	            
 	            String strYear ="";
 	            if(rs.getString("pyr") != null && validYear(getPubYear(rs.getString("pyr"))))
 	            {
@@ -454,13 +625,9 @@ public class INSPECCombiner
 	                            aaff.append(rs.getString("aaffmulti2"));
 	                        }
 	                    }
-	
-	                    //System.out.println(aaff.toString());
-						//System.out.println(Arrays.toString(prepareAffiliation(aaff.toString())));
+	                    
 	                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAffiliation(aaff.toString()));
-	                  //added by hmo on 2019/09/11
-	                   // rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationID(aaff.toString()));
-	                   // rec.put(EVCombinedRec.ORG_ID, prepareAffiliationORGID(aaff.toString()));
+	                    //added by hmo on 2019/09/11	                 
 	                    rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationORGID(aaff.toString()));
 	                    rec.put(EVCombinedRec.ORG_ID, prepareAffiliationID(aaff.toString()));
 	                    rec.put(EVCombinedRec.AFFILIATION_LOCATION, prepareAffiliationLocation(aaff.toString()));
@@ -831,6 +998,66 @@ public class INSPECCombiner
 	                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
 	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
 	
+	                //following items are newly added for new inspec DTD(EVOPS-1068)@2/12/2021 by hmo
+		              
+	                //1. USPTO
+	                /*
+	                if(rs.getString("pauth")!=null && rs.getString("pauth").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.AUTHORITY_CODE, rs.getString("pauth"));
+	                }
+	                
+	                
+	                //2. CPC
+	                if(rs.getString("cpc")!=null && rs.getString("cpc").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.ECLA_CODES, getCPCCode(rs.getString("cpc")));
+	                }	                          
+	                
+	                //4. MIN group(Material Ident. no., Y2k MIN)
+	                if(rs.getString("mat_id")!=null && rs.getString("mat_id").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.MATERIAL_NUMBER, rs.getString("mat_id"));
+	                }
+	                
+	                //6. Video group
+	                if(rs.getString("videogroup")!=null && rs.getString("videogroup").trim().length()>0)
+	                {
+	                	String[] videoGroup = getVideoLocation(rs.getString("videogroup"));
+	                	if(videoGroup[0]!=null && videoGroup[1]!=null)
+	                	{
+	                		rec.put(EVCombinedRec.VIDEO_LOCATION, videoGroup[0]+", "+videoGroup[1]);
+	                	}
+	                	else if(videoGroup[0]!=null)
+	                	{
+	                		rec.put(EVCombinedRec.VIDEO_LOCATION, videoGroup[0]);
+	                	}
+	                	else if(videoGroup[1]!=null)
+	                	{
+	                		rec.put(EVCombinedRec.VIDEO_LOCATION, videoGroup[1]);
+	                	}
+	                	
+	                	if(videoGroup[2]!=null)
+	                	{
+	                		rec.put(EVCombinedRec.VIDEO_PUBLISHERNAME, videoGroup[2]);
+	                	}	                	
+	                }
+	                	                
+	                //7. Funding group
+	                if(rs.getString("fundg")!=null && rs.getString("fundg").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.GRANTID, getGrantID(rs.getString("fundg")));
+	                	rec.put(EVCombinedRec.GRANTAGENCY, getGrantAgency(rs.getString("fundg")));
+	                }	                	              
+	                
+	                //9. open access
+	                if(rs.getString("openaccess")!=null && rs.getString("openaccess").trim().length()>0)
+	                {
+	                	rec.put(EVCombinedRec.ISOPENACESS, rs.getString("openaccess"));
+	                }
+	                */
+	                //end of new items for new inspec dtd
+	                
 	                if (this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	                {
 	                	writer.writeRec(rec);//Use this line for FAST extraction
@@ -911,6 +1138,164 @@ public class INSPECCombiner
 	        
 	        }
        }
+    }
+    
+    private String[] getGrantID(String fundgStr) throws Exception
+    {
+    	String[] grantID = null;
+    	if(fundgStr!=null)
+    	{
+    		InputStream fundInputStream = new ByteArrayInputStream(fundgStr.getBytes(Charset.forName("UTF-8")));
+    		SAXBuilder builder = new SAXBuilder();
+    		builder.setExpandEntities(false);
+    		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+    		Document fundgDoc = builder.build(fundInputStream);
+    		Element fundgRoot = fundgDoc.getRootElement();
+    		
+    		//Element fundg = fundgRoot.getChild("fundg");
+    		List awardg = fundgRoot.getChildren("awardg");
+    		if(awardg!=null)
+    		{
+	    		grantID = new String[awardg.size()];
+	    		for(int i=0;i<awardg.size();i++)
+	    		{  			
+	    			Element awardgElement = (Element)awardg.get(i);
+	    			List awardidArr = awardgElement.getChildren("awardid");
+	    			for(int j=0;j<awardidArr.size();j++)
+	    			{
+	    				Element awardidElement = (Element)awardidArr.get(j);
+	    				String awardid = awardidElement.getTextTrim();
+	    				grantID[i+j] = awardid;
+	    			}
+	    		}
+    		}
+    		//System.out.println("grantID "+String.join(",", grantID));
+    		return grantID;
+    	 
+    	}
+    	return null;
+    }
+    
+    private String[] getGrantAgency(String fundgStr) throws Exception
+    {
+    	String[] grantAgency = null;
+    	if(fundgStr!=null)
+    	{
+    		InputStream fundInputStream = new ByteArrayInputStream(fundgStr.getBytes(Charset.forName("UTF-8")));
+    		SAXBuilder builder = new SAXBuilder();
+    		builder.setExpandEntities(false);
+    		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+    		Document fundgDoc = builder.build(fundInputStream);
+    		Element fundgRoot = fundgDoc.getRootElement();
+    		System.out.println("root element name "+fundgRoot.getName());
+    		//Element fundg = fundgRoot.getChild("fundg");
+    		List awardg = fundgRoot.getChildren("awardg");
+    		grantAgency = new String[awardg.size()];
+    		if(awardg!=null)
+    		{
+	    		for(int i=0;i<awardg.size();i++)
+	    		{  			
+	    			Element awardgElement = (Element)awardg.get(i);
+	    			String funder = awardgElement.getChildText("funder");
+	    			grantAgency[i] = funder;
+	    		}
+    		}
+    		//System.out.println("grantAgency "+String.join(",", grantAgency));
+    		return grantAgency;
+    	 
+    	}
+    	return null;
+    }
+    
+    private String[] getVideoLocation(String videoGroup) throws Exception
+    {
+    	String videoLoc = null;
+    	String videoCountry = null;
+    	String videoPnm = null;
+    	String[] videoLocationGroup = new String[3];
+    	if(videoGroup!=null)
+    	{
+    		InputStream videogInputStream = new ByteArrayInputStream(videoGroup.getBytes(Charset.forName("UTF-8")));
+    		SAXBuilder builder = new SAXBuilder();
+    		builder.setExpandEntities(false);
+    		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+    		Document videoDoc = builder.build(videogInputStream);
+    		Element videogRoot = videoDoc.getRootElement();
+    		//System.out.println("root element name "+videogRoot.getName());
+    		//Element videog = videogRoot.getChild("videog");
+    		if(videogRoot!=null)
+    		{
+    			Element pugs = videogRoot.getChild("pug");
+    			if(pugs!=null)
+    			{
+    				videoLocationGroup[0] = pugs.getChildText("loc");  //videoLoc 	 
+    				videoLocationGroup[1] = pugs.getChildText("cntry");  //videoCountry
+    				videoLocationGroup[2] = pugs.getChildText("pnm");  //videoPnm
+    			}
+    		}  
+    		//System.out.println("video location "+videoLoc);
+    		return videoLocationGroup;  
+    	}
+    	return null;
+    }
+    
+    private String getLinkGroupDOICode(String linkGroupDoi) throws Exception
+    {
+    	String linkgDoi = null;
+    	if(linkGroupDoi!=null)
+    	{
+    		InputStream linkInputStream = new ByteArrayInputStream(linkGroupDoi.getBytes(Charset.forName("UTF-8")));
+    		SAXBuilder builder = new SAXBuilder();
+    		builder.setExpandEntities(false);
+    		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+    		Document linkgDoc = builder.build(linkInputStream);
+    		Element linkgRoot = linkgDoc.getRootElement();
+    		//System.out.println("root element name "+linkgRoot.getName());
+    		//Element linkg = linkgRoot.getChild("linkg");
+    		List links = linkgRoot.getChildren("link");
+    		for(int i=0;i<links.size();i++)
+    		{  			
+    			Element linkElement = (Element)links.get(i);
+    			String linkType = linkElement.getAttributeValue("type");
+    			String link = linkElement.getAttributeValue("link");
+    			if(linkType !=null && linkType.equalsIgnoreCase("doi"))
+    			{  				
+    				linkgDoi = link;
+    				//System.out.println("linkgDoi "+linkgDoi);
+    				return linkgDoi;
+    			}
+    		}   		 		
+    	 
+    	}
+    	return linkgDoi;
+    }
+    
+    private String[] getCPCCode(String cpcXmlString) throws Exception
+    {
+    	String[] cpcArr = null;
+    	if(cpcXmlString!=null)
+    	{
+    		InputStream cpcInputStream = new ByteArrayInputStream(cpcXmlString.getBytes(Charset.forName("UTF-8")));
+    		SAXBuilder builder = new SAXBuilder();
+    		builder.setExpandEntities(false);
+    		builder.setFeature( "http://xml.org/sax/features/namespaces", true );
+    		Document cpcDoc = builder.build(cpcInputStream);
+    		Element cpcRoot = cpcDoc.getRootElement();
+    		
+    		//Element cpcg = cpcRoot.getChild("cpcg");
+    		List cc = cpcRoot.getChildren("cc");
+    		for(int i=0;i<cc.size();i++)
+    		{
+    			cpcArr = new String[cc.size()];
+    			Element ccElement = (Element)cc.get(i);
+    			String cpcCode = ccElement.getChildText("code");   			
+    			cpcArr[i] = cpcCode;
+    		}
+    		//System.out.println("cpc= "+String.join(",", cpcArr));
+    		return cpcArr;
+    	 
+    	}
+    	return null;
     }
     
     private String getIpcCode(String ipc) throws Exception
@@ -1832,7 +2217,7 @@ public class INSPECCombiner
 							}
 
 							rec.put(EVCombinedRec.AUTHOR, prepareAuthor(aus.toString()));
-							rec.put(EVCombinedRec.FIRST_AUTHOR,prepareFirstAuthor(aus.toString()));
+							rec.put(EVCombinedRec.FIRST_AUTHOR, prepareFirstAuthor(aus.toString()));
 						}
 
 						// AFFILIATION
