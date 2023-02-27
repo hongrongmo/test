@@ -194,6 +194,41 @@ public class INSPECCombiner
 		return fundDetail;
 	}
 	
+	//Parsing CPCG data
+	private String getCpc(String cpcContent) throws Exception
+	{			
+		StringBuffer cpcCodeBuffer = new StringBuffer();		
+		SAXBuilder builder = new SAXBuilder();
+		try 
+		{
+			builder.setExpandEntities(false);
+			builder.setFeature( "http://xml.org/sax/features/namespaces", true );			
+			Document doc = builder.build(new StringReader(cpcContent));
+			Element cpcRoot = doc.getRootElement();
+			List cc = cpcRoot.getChildren();
+			for(int i=0;i<cc.size();i++)
+			{
+				Element ccElement = (Element)cc.get(i);
+				Element codeElement = ccElement.getChild("code");
+				if(codeElement!=null)
+				{
+					if(cpcCodeBuffer.length()>0)
+					{
+						cpcCodeBuffer.append(Constants.IDDELIMITER);
+					}
+					cpcCodeBuffer.append(codeElement.getTextTrim());
+				}
+				
+			}
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return cpcCodeBuffer.toString();
+	}
+		
 	public void setInspecFundingInfo(Connection con)
 	{
 		try
@@ -242,7 +277,7 @@ public class INSPECCombiner
         Connection con = DbConnection.getConnection(url, driver, username, password);
         
         /*stored all funding info in the memory by hmo at 9/13/2022*/
-        c.setInspecFundingInfo(con);
+        //c.setInspecFundingInfo(con);
         
         /*TH added 09/21/2020 for ES lookup generation*/
         Combiner.CURRENTDB = databaseIndexName;
@@ -296,7 +331,9 @@ public class INSPECCombiner
     			
     				stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
     				System.out.println("Running the query...");
-    				String sqlQuery = "select * from " + Combiner.TABLENAME;
+    				//String sqlQuery = "select * from " + Combiner.TABLENAME;
+    				//change to join ins_group table by hmo@2/14/2023
+    				String sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+)";
     				System.out.println(sqlQuery);
     				rs = stmt.executeQuery(sqlQuery);
     				
@@ -349,15 +386,22 @@ public class INSPECCombiner
 
         	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             System.out.println("Doing year:"+year);
-
+            String sqlQuery = null;
             if(year == 2999)
             {
-                rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+" where pyr='0294' or pyr='0994' or pyr='1101' or pyr='20007' or pyr='Dec.' or pyr='July' or pyr is null");
+                //rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+" where pyr='0294' or pyr='0994' or pyr='1101' or pyr='20007' or pyr='Dec.' or pyr='July' or pyr is null");
+            	//change to join ins_group table by hmo@2/14/2023
+            	sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+) and (a.pyr='0294' or a.pyr='0994' or a.pyr='1101' or a.pyr='20007' or a.pyr='Dec.' or a.pyr='July' or a.pyr is null)";           	
             }
             else
             {
-                rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+" where pyr ='"+ year +"'");
+                //rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+" where pyr ='"+ year +"'");
+            	//change to join ins_group table by hmo@2/14/2023
+            	sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+) and a.pyr='"+year+"'";
+            	
             }
+            System.out.println("year sqlQuery= "+sqlQuery);
+            rs = stmt.executeQuery(sqlQuery);
             writeRecs(rs,con);
             System.out.println("Wrote records.");
             this.writer.flush();
@@ -519,40 +563,45 @@ public class INSPECCombiner
     	    	kafka = new KafkaService(processTime+"_ins_"+loadNumber, this.propertyFileName);
     	    }
     	    System.out.println("epoch="+processTime+" database=INS totalCount="+totalCount);
-	        while(rs.next())
+    	    while(rs.next())
 	        {
 	            EVCombinedRec rec = new EVCombinedRec();
 	            ++i;
 	            String mid = rs.getString("M_ID");
-	            String abString = getStringFromClob(rs.getClob("ab"));		            	           
-	            
-	            String accessnumber = rs.getString("anum");
-	            //Get FUNDING for specify Accessnumber
-	            ArrayList<String> fundings = new ArrayList<String>();
-	            
-	            if(fundingInfo.get(accessnumber)!=null)
+	            String abString = getStringFromClob(rs.getClob("ab"));		            	           	            
+	            String accessnumber = rs.getString("anum");	            
+	            String insGroupType = rs.getString("type");	            
+	            String insGroupContent = rs.getString("content");	           	           
+	             
+	            if(insGroupType!=null && insGroupContent!=null)
 	            {
-		            for(String s:fundingInfo.get(accessnumber)){              
-		                fundings.add(s);
-		            }
-		            
-	            }
-	            if(fundings.size()>0)
-	            {
-	            	String fundingID=fundings.get(0);
-	            	if(fundingID!=null && fundingID.length()>0)
+	            	if(insGroupType.equalsIgnoreCase("funding"))
 	            	{
-	            		String[] fundingIDs=fundingID.split(Constants.IDDELIMITER,-1);
-	            		rec.put(EVCombinedRec.GRANTID, fundingIDs);
-	            		//System.out.println(accessnumber +" GRANTID= "+Arrays.toString(fundingIDs));
+		            	String[] fundings=getFunding(insGroupContent);
+		            	String fundingID=fundings[0];
+		            	
+		            	if(fundingID!=null && fundingID.length()>0)
+		            	{
+		            		String[] fundingIDs=fundingID.split(Constants.IDDELIMITER,-1);
+		            		rec.put(EVCombinedRec.GRANTID, fundingIDs);
+		            		//System.out.println(accessnumber +" GRANTID= "+Arrays.toString(fundingIDs));
+		            	}
+		            	
+		            	String fundingAgency=fundings[1];
+		            	if(fundingAgency!=null && fundingAgency.length()>0)
+		            	{
+		            		String[] fundingAgencies=fundingAgency.split(Constants.IDDELIMITER,-1);
+			                rec.put(EVCombinedRec.GRANTAGENCY,fundingAgencies);
+			                //System.out.println(accessnumber+" GRANTAGENCY= "+Arrays.toString(fundingAgencies));
+		            	}
 	            	}
-	            	
-	            	String fundingAgency=fundings.get(1);
-	            	if(fundingAgency!=null && fundingAgency.length()>0)
+	            	else if(insGroupType.equalsIgnoreCase("cpc"))
 	            	{
-	            		String[] fundingAgencies=fundingAgency.split(Constants.IDDELIMITER,-1);
-		                rec.put(EVCombinedRec.GRANTAGENCY,fundingAgencies);
-		                System.out.println(accessnumber+" GRANTAGENCY= "+Arrays.toString(fundingAgencies));
+	            		String cpcCode = getCpc(insGroupContent);	
+	            		//System.out.println("cpcCode="+cpcCode);
+	            		String[] cpcCodes=cpcCode.split(Constants.IDDELIMITER,-1);
+	            		rec.put(EVCombinedRec.CPCCLASS, cpcCodes);
+	            		//System.out.println("cpcCode index="+Arrays.toString(cpcCodes));
 	            	}
 	            }
 	            
@@ -1743,6 +1792,34 @@ public class INSPECCombiner
 
     }
     
+   public String prepareFirstAuthor(String aString)
+	        throws Exception
+   {
+
+       ArrayList list = new ArrayList();
+       StringTokenizer st = new StringTokenizer(aString, Constants.AUDELIMITER);
+       String s=null;
+
+       while (st.hasMoreTokens())
+       {
+           s = st.nextToken().trim();
+           if(s.length() > 0)
+           {
+               if(s.indexOf(Constants.IDDELIMITER) > -1)
+               {
+                    int i = s.indexOf(Constants.IDDELIMITER);
+                     s = s.substring(0,i);
+               }
+               s = s.trim();
+
+               break;
+           }
+
+       }
+
+       return s;
+
+    }
 
     public String[] prepareIndexterms(String aString)
         throws Exception
@@ -1897,6 +1974,14 @@ public class INSPECCombiner
         {
             list.add("PA");
         }
+        else if(newdocType.equals("90"))
+        {
+            list.add("REP");
+        }
+        else if(newdocType.equals("95"))
+        {
+            list.add("VID");
+        }
         else
         {
             list.add("NA");
@@ -1966,34 +2051,7 @@ public class INSPECCombiner
         return buf.toString();
     }
     
-    public String prepareFirstAuthor(String aString)
-	        throws Exception
-    {
-
-        ArrayList list = new ArrayList();
-        StringTokenizer st = new StringTokenizer(aString, Constants.AUDELIMITER);
-        String s=null;
-
-        while (st.hasMoreTokens())
-        {
-            s = st.nextToken().trim();
-            if(s.length() > 0)
-            {
-                if(s.indexOf(Constants.IDDELIMITER) > -1)
-                {
-                     int i = s.indexOf(Constants.IDDELIMITER);
-                      s = s.substring(0,i);
-                }
-                s = s.trim();
-
-                break;
-            }
-
-        }
-
-        return s;
-
-    }
+   
 
     private String getDiscipline(String dis)
     {
@@ -2041,23 +2099,31 @@ public class INSPECCombiner
 
         	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             String sqlQuery = "";
-        //  System.out.println("Running the query...");
-        //  rs = stmt.executeQuery("select m_id, aaff, su, ab, anum, aoi, aus, aus2,pyr, rnum, pnum, cpat, ciorg, iorg, pas, cdate, cedate, doi, nrtype, doit, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN);
+            //System.out.println("Running the query...");
+            //rs = stmt.executeQuery("select m_id, aaff, su, ab, anum, aoi, aus, aus2,pyr, rnum, pnum, cpat, ciorg, iorg, pas, cdate, cedate, doi, nrtype, doit, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN);
             if (loadN == 3001)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
+            	//sqlQuery="select * from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
+            	//change to join ins_group table by hmo@2/14/2023
+				sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+) and a.pyr is null and a.load_number < 200537";
             }
             else if (loadN == 3002)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn,  LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
+                
+            	//sqlQuery="select * from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
+            	//change to join ins_group table by hmo@2/14/2023
+            	sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+) and a.pyr like '194%'or a.pyr like '195%' or (a.pyr like '196%' and a.pyr != '1969')";
             }
             else if(loadN ==8413583)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
+            	sqlQuery="select * from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
+                //sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
             }
             else
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
+            	//sqlQuery="select * from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
+            	//change to join ins_group table by hmo@2/14/2023
+				sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+) and a.load_number="+loadN;
             }
             System.out.println("Inspect sqlQuery= "+sqlQuery);
             rs = stmt.executeQuery(sqlQuery);

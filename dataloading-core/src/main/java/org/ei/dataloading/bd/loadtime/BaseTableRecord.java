@@ -94,7 +94,7 @@ public class BaseTableRecord
    	public static final BaseTableRecord PUI = new BaseTableRecord("PUI", new Integer(200), "cpx");
    	public static final BaseTableRecord ABSTRACTORIGINAL = new BaseTableRecord("ABSTRACTORIGINAL", new Integer(20), "cpx");
    	public static final BaseTableRecord ABSTRACTPERSPECTIVE = new BaseTableRecord("ABSTRACTPERSPECTIVE", new Integer(512), "cpx");
-   	public static final BaseTableRecord ABSTRACTDATA= new BaseTableRecord("ABSTRACTDATA", new Integer(20000), "cpx");
+   	public static final BaseTableRecord ABSTRACTDATA= new BaseTableRecord("ABSTRACTDATA", new Integer(40000), "cpx");
    	public static final BaseTableRecord CITTYPE  = new BaseTableRecord("CITTYPE", new Integer(5), "cpx");
    	public static final BaseTableRecord CORRESPONDENCENAME  = new BaseTableRecord("CORRESPONDENCENAME", new Integer(4000), "cpx");
    	public static final BaseTableRecord CORRESPONDENCEAFFILIATION = new BaseTableRecord("CORRESPONDENCEAFFILIATION", new Integer(4000), "cpx");

@@ -285,7 +285,6 @@ public class InspecXMLReader extends FilterReader
 			if(fundGroup!=null)
 			{
 				//record.put("FUNDG",getFungs(fundGroup));
-				//record.put("FUNDG",getFungs(fundGroup));
 				record.put("FUNDG",new StringBuffer(getMixData("fundg",fundGroup.getContent())));
 				//System.out.println("FUNDG="+getMixData("fundg",fundGroup.getContent()));
 			}			
@@ -898,7 +897,7 @@ public class InspecXMLReader extends FilterReader
 								citS.append(link.getAttributeValue("type"));
 							}
 							citS.append(Constants.GROUPDELIMITER);
-							citS.append(cite.getChild("brflink").getTextTrim());
+							citS.append(mapEntity(cite.getChild("brflink").getTextTrim()));
 						}
 						citS.append(Constants.IDDELIMITER);
 
@@ -906,7 +905,7 @@ public class InspecXMLReader extends FilterReader
 						//citS.append("NOTES::"); //30
 						if(cite.getChild("brfnotes")!=null)
 						{
-							citS.append(cite.getChild("brfnotes").getTextTrim());
+							citS.append(mapEntity(cite.getChild("brfnotes").getTextTrim()));
 							//System.out.println("NOTES="+cite.getChild("brfnotes").getTextTrim());
 						}
 						
@@ -940,7 +939,7 @@ public class InspecXMLReader extends FilterReader
 			while(collabIt.hasNext())
 			{
 				Element collabEl = (Element)collabIt.next();
-				citS.append(collabEl.getTextTrim());
+				citS.append(mapEntity(collabEl.getTextTrim()));
 				citS.append(Constants.GROUPDELIMITER);
 			}
 		}
@@ -960,11 +959,11 @@ public class InspecXMLReader extends FilterReader
 				   Element fund = (Element)funds.get(k);
 				   String funder =mapEntity(fund.getChildText("funder"));
 				   String doiAttr=fund.getAttributeValue("doi");
-				   System.out.println("DOI="+doiAttr);
+				   //System.out.println("DOI="+doiAttr);
 				   List awardids=fund.getChildren("awardid");
 				 
 				   if(funder!=null)
-					   fundBuffer.append(funder.replaceAll("\\n", "").replaceAll("\\t", ""));
+					   fundBuffer.append(mapEntity(funder.replaceAll("\\n", "").replaceAll("\\t", "")));
 				   fundBuffer.append(Constants.IDDELIMITER);
 				   if(doiAttr!=null)
 					   fundBuffer.append(doiAttr);
@@ -1162,7 +1161,8 @@ public class InspecXMLReader extends FilterReader
 				text= perl.substitute("s/>/&gt;/g",text);
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
-
+				
+				//added to take care of unicode
 				b.append(mapEntity(text));
 
             }
@@ -1338,9 +1338,10 @@ public class InspecXMLReader extends FilterReader
 
 	        if(m.getChild("orgn")!= null)
 	        {
-	        	oneAffiliation.append(mapEntity(m.getChild("orgn").getTextTrim()));
-	        	
+	        	//added DataLoadDictionary.mapEntity to take care of special unicode character
+	        	oneAffiliation.append(mapEntity(m.getChild("orgn").getTextTrim()));	        	
 	        }
+	        
 	        //dept
 	        oneAffiliation.append(Constants.IDDELIMITER);
 	        if(m.getChild("dept") != null)
@@ -1852,6 +1853,14 @@ public class InspecXMLReader extends FilterReader
 			if(i < lt.size()-1)
 				chemindex = chemindex.append(Constants.AUDELIMITER);
 		}
+		
+		if(chemindex.length() > 3995 )		
+		{
+			chemindex = chemindex.delete(3995,chemindex.length());
+		}
+		
+		if(chemindex.length()>0 && chemindex.lastIndexOf(Constants.AUDELIMITER)>0)
+			chemindex = chemindex.delete(chemindex.lastIndexOf(Constants.AUDELIMITER),chemindex.length());
 
 		record.put("CHI",chemindex);
 	}
@@ -2022,6 +2031,12 @@ public class InspecXMLReader extends FilterReader
 				terms.append(Constants.AUDELIMITER);
 			}
 		}
+		
+		if(terms.length() > 3995 )		
+		{
+			terms = terms.delete(3995,terms.length());
+		}
+		
 		return terms.delete(terms.lastIndexOf(Constants.AUDELIMITER),terms.length());
 	}
 	

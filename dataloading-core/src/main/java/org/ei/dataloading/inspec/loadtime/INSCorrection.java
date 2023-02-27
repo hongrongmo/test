@@ -46,6 +46,7 @@ public class INSCorrection
     static String backupTable="ins_temp_backup";
     static String numericalTable="ins_master_numerical_temp";
     static String citationTable="ins_master_citation_temp";
+    static String groupTable="ins_group_temp";
     static String sqlldrFileName="InspecSqlLoaderFile.sh";
     private static String propertyFileName;
     private static int updateNumber= 0;
@@ -163,7 +164,7 @@ public class INSCorrection
                 if (matcher.find())
                 {
                     updateNumber = Integer.parseInt(args[3]);
-                    //System.out.println("args[3] updateNumber= "+updateNumber);
+                    System.out.println("args[3] updateNumber= "+updateNumber);
                 }
                 else
                 {
@@ -625,7 +626,8 @@ public class INSCorrection
         {
         	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			//get inspec funding info added by hmo at 10/11/2022
-        	c.setInspecFundingInfo(con);
+			//get inspec funding and cpc content from joining bd_master_orig with ins_group table by hmo at 01/18/2023
+        	//c.setInspecFundingInfo(con);
         	
         	String sqlQuery = null;
 			//HH 05/26/2022: Caused bug of generating empty lookups since Sep 17 2021, INSPECCombiner obj already created at startCorrection , comment this out
@@ -634,7 +636,8 @@ public class INSCorrection
             {
                 System.out.println("Running the query...");
                 writer.setOperation("add");               
-				sqlQuery = "select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from ins_master_orig where updatenumber='"+updateNumber+"'";
+				//sqlQuery = "select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from ins_master_orig where updatenumber='"+updateNumber+"'";
+                sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from ins_master_orig a,ins_group b where a.anum=b.anum (+) and a.updatenumber='"+updateNumber+"'";
                 System.out.println("updateQuery= "+	sqlQuery);
                 rs = stmt.executeQuery(sqlQuery);
                 c.writeRecs(rs,con);              
@@ -847,6 +850,21 @@ public class INSCorrection
                 pstmt.setInt(1,updateNumber);
                 pstmt.executeUpdate();
                 
+                //added for funding project at 1/18/2023 by hmo             
+                
+                if(test)
+                {
+                    System.out.println("begin to execute stored procedure update_ins_group_table");
+                    System.out.println("press enter to continue");
+                    System.in.read();
+                    Thread.currentThread().sleep(1000);
+                }
+                pstmt = con.prepareCall("{ call update_ins_group_table(?,?,?)}");
+                pstmt.setInt(1,updateNumber);
+                pstmt.setString(2,"funding");
+                pstmt.setString(3,fileName);
+                pstmt.executeUpdate();
+                
             }
             else if(action != null && action.equalsIgnoreCase("ins"))
             {
@@ -1022,6 +1040,12 @@ public class INSCorrection
                 {
                     this.citationTable=tableName[i];
                     System.out.println("truncate citation temp table "+this.citationTable);
+                }
+                
+                if(i==5)
+                {
+                    this.groupTable=tableName[i];
+                    System.out.println("truncate group temp table "+this.groupTable);
                 }
 
                 stmt.executeUpdate("truncate table "+tableName[i]);

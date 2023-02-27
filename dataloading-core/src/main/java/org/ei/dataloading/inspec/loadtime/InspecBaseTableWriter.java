@@ -18,6 +18,7 @@ public class InspecBaseTableWriter
 	private PrintWriter out;
 	private PrintWriter numericalIndexOut;
 	private PrintWriter citationOut;
+	private PrintWriter insGroupOut;
 	private String filepath;
 	private int loadnumber;
 	private int filenumber = 0;
@@ -139,6 +140,16 @@ public class InspecBaseTableWriter
 				    outPutCitation(mid,accessnumber,loadnumber,valueS);
                 }
 				
+				if(bf.equalsIgnoreCase("FUNDG"))
+				{
+				    outPutInsGroup(mid,accessnumber,loadnumber,valueS,"funding");
+                }
+				
+				if(bf.equalsIgnoreCase("CPC"))
+				{				    
+					outPutInsGroup(mid,accessnumber,loadnumber,valueS,"cpc");
+                }
+				
 			}
 			else
 			{
@@ -155,7 +166,11 @@ public class InspecBaseTableWriter
 
 			if(valueS != null)
 			{
-				out.print(valueS);
+				//citation and fundg are output as separate file
+				if(!bf.equalsIgnoreCase("CIT") && !bf.equalsIgnoreCase("FUNDG"))
+				{
+					out.print(valueS);
+				}
 			}
 
 		}
@@ -169,8 +184,27 @@ public class InspecBaseTableWriter
 		{
 			citationOut.flush();
 		}
+		if(insGroupOut!=null)
+		{
+			insGroupOut.flush();
+		}
 		++curRecNum;
 	}
+	
+	public void outPutInsGroup(String mid, String accessnumber, String loadnumber, String content,String type) throws Exception
+	{
+		if(insGroupOut==null)
+		{
+			String name = this.filename;
+			int pathSeperator = filename.lastIndexOf("/");
+			//System.out.println("pathSeperator "+pathSeperator);			
+			name="InsGroup_"+filename.substring(pathSeperator+1)+"."+filenumber+".out";
+			System.out.println("InsGroup output file name "+name); 
+			insGroupOut = new PrintWriter(new FileWriter(name)); 
+			//System.out.println("create Insgroup out file");
+		}
+		insGroupOut.append(mid+"\t"+accessnumber+"\t"+content+"\t"+type+"\t"+loadnumber+"\n");
+	} 
 	
 	public void outPutCitation(String mid, String accessnumber, String loadnumber, String valueS) throws Exception
 	{
@@ -233,15 +267,16 @@ public class InspecBaseTableWriter
 						//to Make the same format with inspec author
 						author=author.replace("|", Constants.IDDELIMITER);
 						author=author.replace(Constants.GROUPDELIMITER, Constants.AUDELIMITER);		
+						//cutoff oversize content by hmo @7/26/2022
+						if (author.length() > 0 && author.length() > 3950)
+						{
+							author = author.substring(0,3950);
+							author = author.substring(0, author.lastIndexOf(Constants.AUDELIMITER));
+							
+						}
 						outputBuffer.append(author);
 					}
-					/*
-					else
-					{
-						System.out.println("record "+accessNumber+" author is null");
-						//outputBuffer.append(null);
-					}
-					*/
+					
 					
 					outputBuffer.append("\t");
 					

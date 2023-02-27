@@ -1,4 +1,3 @@
-
 package org.ei.dataloading;
 
 import java.util.Hashtable;
@@ -510,11 +509,18 @@ public class EVCombinedRec {
 	public static final String PROCESS_INFO = "377";
 
 	//added by hmo @2020-12-09
-	public static final String FREETOREADSTATUS = "378";
-	
-	//added by hmo @2021-09-01
+
+	public static final String FREETOREADSTATUS = "378";		
+	public static final String VIDEO_PUBLISHERNAME = "379";
+	public static final String VIDEO_LOCATION = "380";
+
+	public static final String FULL_AUTHOR = "381";
+	public static final String FULL_AFFILIATION = "382";
+	public static final String CAR_ID = "383";
 	public static final String FIRST_AUTHOR = "384";
-	
+	public static final String CSX_TERMS = "385";
+	 //*/
+
 	private Hashtable h = new Hashtable();
 
 	public boolean containsKey(String key)
@@ -593,4 +599,3 @@ public class EVCombinedRec {
 	    return true;
 	}
 }
-
