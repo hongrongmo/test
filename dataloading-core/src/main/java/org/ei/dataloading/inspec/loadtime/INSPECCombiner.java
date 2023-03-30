@@ -1976,7 +1976,7 @@ public class INSPECCombiner
         }
         else if(newdocType.equals("90"))
         {
-            list.add("REP");
+            list.add("PP");
         }
         else if(newdocType.equals("95"))
         {
