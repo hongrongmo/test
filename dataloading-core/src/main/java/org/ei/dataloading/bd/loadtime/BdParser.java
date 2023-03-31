@@ -5094,7 +5094,8 @@ public class BdParser
 						else if (descriptorsType.equals("CSX")&& mhBuffer.length()>0)
 						{
 							//System.out.println("CSXTERM="+mhBuffer.toString());
-							record.put("CSXTERM",mhBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));							
+							//record.put("CSXTERM",mhBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));	
+							record.put("CSXTERM",mhBuffer.toString());
 						}
 						else
 						{
