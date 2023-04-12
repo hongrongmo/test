@@ -171,6 +171,7 @@ public class InspecXMLReader extends FilterReader
 			// reposg
 			if(bibGroup.getChild("reposg")!=null) {
 				Element reposg=bibGroup.getChild("reposg");
+				record.put("REPOSG",new StringBuffer(getMixData("reposg",reposg.getContent())));
 				if(reposg.getChildText("access")!=null)
 					record.put("ACCESS",new StringBuffer(reposg.getChildText("access")));				
 			}
@@ -259,10 +260,8 @@ public class InspecXMLReader extends FilterReader
 			// CPC
 			if(idxGroup.getChild("cpcg")!=null)
 			{
-				Element cpcGroup = idxGroup.getChild("cpcg");
-				//record.put("CPC",getIndexing(idxGroup.getChild("cpcg"),"cc"));
+				Element cpcGroup = idxGroup.getChild("cpcg");				
 				record.put("CPC",new StringBuffer(getMixData("cpcg",cpcGroup.getContent())));
-				//System.out.println("CPCG="+getMixData("cpcg",cpcGroup.getContent()));
 			}
 			
 			if(idxGroup.getChild("ucindg")!=null)
@@ -283,10 +282,8 @@ public class InspecXMLReader extends FilterReader
 			//added by hmo @12/22/2020 for EVOPS-1068
 			Element fundGroup = article.getChild("fundg");
 			if(fundGroup!=null)
-			{
-				//record.put("FUNDG",getFungs(fundGroup));
-				record.put("FUNDG",new StringBuffer(getMixData("fundg",fundGroup.getContent())));
-				//System.out.println("FUNDG="+getMixData("fundg",fundGroup.getContent()));
+			{				
+				record.put("FUNDG",new StringBuffer(getMixData("fundg",fundGroup.getContent())));			
 			}			
 			
 			
@@ -530,6 +527,10 @@ public class InspecXMLReader extends FilterReader
 									citS.append(sdate.getChild("day").getTextTrim());
 									citS.append("-");
 								}
+								if(sdate.getChild("yr")!=null)
+								{
+									citS.append(sdate.getChild("yr").getTextTrim());							
+								}
 
 							}
 							citS.append(Constants.GROUPDELIMITER);
@@ -546,6 +547,10 @@ public class InspecXMLReader extends FilterReader
 								{
 									citS.append(sdate.getChild("day").getTextTrim());
 									citS.append("-");
+								}
+								if(sdate.getChild("yr")!=null)
+								{
+									citS.append(sdate.getChild("yr").getTextTrim());							
 								}
 
 							}
@@ -947,6 +952,7 @@ public class InspecXMLReader extends FilterReader
 	}
 	
 	
+	
 	private StringBuffer getFungs(Element e)
 	{
 		StringBuffer fundBuffer=new StringBuffer();
@@ -1082,10 +1088,10 @@ public class InspecXMLReader extends FilterReader
 		}
 		return citS.toString();
 
-	}
+	}		
 	
 	private  String getMixData(String name, List l)
-    {
+    {		
 		Iterator it = l.iterator();
 		String content="";
        
@@ -1096,7 +1102,7 @@ public class InspecXMLReader extends FilterReader
     }
 	
 	private  String getMixData(List l, String content)
-    {
+    {		
 		Iterator it = l.iterator();		
         while(it.hasNext())
         {
@@ -1112,8 +1118,8 @@ public class InspecXMLReader extends FilterReader
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
 
-				content=mapEntity(content.trim()+text.trim());
-
+				content=mapEntity(content.trim() + text.trim());
+				
             }
             else if(o instanceof EntityRef)
             {
@@ -1139,13 +1145,12 @@ public class InspecXMLReader extends FilterReader
                 content=getMixData(e.getContent(), content.trim());
                content=content.trim()+"</"+e.getName()+">";
             }
-        }
-		//content=content.trim()+"</"+name+">";
+        }		
 		return content;
     }
 	
     private  StringBuffer getMixData(List l, StringBuffer b)
-    {
+    { 	
         Iterator it = l.iterator();
 
         while(it.hasNext())
@@ -1162,12 +1167,12 @@ public class InspecXMLReader extends FilterReader
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
 				
-				//added to take care of unicode
+				//added to take care of unicode				
 				b.append(mapEntity(text));
 
             }
-             else if(o instanceof EntityRef)
-             {
+            else if(o instanceof EntityRef)
+            {
   				if(inabstract)
   						entity.add(((EntityRef)o).getName());
 
@@ -1196,7 +1201,7 @@ public class InspecXMLReader extends FilterReader
     }
 
     private  StringBuffer getMixCData(List l, StringBuffer b)
-	{
+	{   	
 		inabstract=true;
 		b=getMixData(l,b);
 		inabstract=false;
@@ -1218,7 +1223,7 @@ public class InspecXMLReader extends FilterReader
 
 		   //getMixData(n.getChild("snm").getContent(),name);
 		   name.append(mapEntity(n.getChild("snm").getTextTrim()));
-		   
+
 		   if(n.getChild("init")!=null)
 		   {
 			   name.append(", ");
@@ -1298,6 +1303,7 @@ public class InspecXMLReader extends FilterReader
 	        StringBuffer oneAffiliation = new StringBuffer();
 	        StringBuffer country = new StringBuffer();
 	        getMixData(m.getChild("aff").getContent(),oneAffiliation);
+	       
 	        oneAffiliation.append(Constants.IDDELIMITER);
 
         	//first author affiliation, independent from au-affiliation:
@@ -1339,13 +1345,14 @@ public class InspecXMLReader extends FilterReader
 	        if(m.getChild("orgn")!= null)
 	        {
 	        	//added DataLoadDictionary.mapEntity to take care of special unicode character
-	        	oneAffiliation.append(mapEntity(m.getChild("orgn").getTextTrim()));	        	
+	        	oneAffiliation.append(mapEntity(m.getChild("orgn").getTextTrim()));
+	        	
 	        }
-	        
 	        //dept
 	        oneAffiliation.append(Constants.IDDELIMITER);
 	        if(m.getChild("dept") != null)
 	        {
+	        	//added DataLoadDictionary.mapEntity to take care of special unicode character
 	        	oneAffiliation.append(mapEntity(m.getChild("dept").getTextTrim()));
 	        }
 	        //addressline - could be multy
@@ -1365,6 +1372,7 @@ public class InspecXMLReader extends FilterReader
 					}
 			
 				}
+				//added DataLoadDictionary.mapEntity to take care of special unicode character
 				oneAffiliation.append(mapEntity(addline.toString()));
 			}
 
@@ -1372,8 +1380,8 @@ public class InspecXMLReader extends FilterReader
 	        //city
 	        if(m.getChild("city")!= null)
 	        {
+	        	//added DataLoadDictionary.mapEntity to take care of special unicode character
 	        	oneAffiliation.append(mapEntity(m.getChild("city").getTextTrim()));
-
 	        }
 
 	        oneAffiliation.append(Constants.IDDELIMITER);
@@ -1853,7 +1861,6 @@ public class InspecXMLReader extends FilterReader
 			if(i < lt.size()-1)
 				chemindex = chemindex.append(Constants.AUDELIMITER);
 		}
-		
 		if(chemindex.length() > 3995 )		
 		{
 			chemindex = chemindex.delete(3995,chemindex.length());
@@ -1861,7 +1868,6 @@ public class InspecXMLReader extends FilterReader
 		
 		if(chemindex.length()>0 && chemindex.lastIndexOf(Constants.AUDELIMITER)>0)
 			chemindex = chemindex.delete(chemindex.lastIndexOf(Constants.AUDELIMITER),chemindex.length());
-
 		record.put("CHI",chemindex);
 	}
 
@@ -2012,7 +2018,7 @@ public class InspecXMLReader extends FilterReader
 				{
 					terms.append("*");
 				}
-				terms.append(t.getChildTextTrim("code"));
+				terms.append(mapEntity(t.getChildTextTrim("code")));
 
 				//add cpc group by hmo @12/17/2020 based on EVOPS-1068
 				//if((elementname.equalsIgnoreCase("ipcg") &&

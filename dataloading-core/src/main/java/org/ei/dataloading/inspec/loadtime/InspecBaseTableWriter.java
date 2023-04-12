@@ -150,6 +150,16 @@ public class InspecBaseTableWriter
 					outPutInsGroup(mid,accessnumber,loadnumber,valueS,"cpc");
                 }
 				
+				if(bf.equalsIgnoreCase("REPOSG"))
+				{				    
+					outPutInsGroup(mid,accessnumber,loadnumber,valueS,"reposg");
+                }
+				
+				if(bf.equalsIgnoreCase("LINKG"))
+				{				    
+					outPutInsGroup(mid,accessnumber,loadnumber,valueS,"linkg");
+                }
+				
 			}
 			else
 			{
@@ -167,7 +177,9 @@ public class InspecBaseTableWriter
 			if(valueS != null)
 			{
 				//citation and fundg are output as separate file
-				if(!bf.equalsIgnoreCase("CIT") && !bf.equalsIgnoreCase("FUNDG"))
+				if(!bf.equalsIgnoreCase("CIT") && !bf.equalsIgnoreCase("FUNDG") 
+						&& !bf.equalsIgnoreCase("CPC") && !bf.equalsIgnoreCase("REPOSG") 
+						&& !bf.equalsIgnoreCase("LINKG"))
 				{
 					out.print(valueS);
 				}
