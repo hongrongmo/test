@@ -39,20 +39,20 @@ import java.text.*;
 public class XmlCombiner extends CombinerTimestamp {
 
 	public String[] EVCombinedRecKeys = { EVCombinedRec.AUTHOR, EVCombinedRec.AUTHOR_AFFILIATION,
-			EVCombinedRec.AFFILIATION_LOCATION, EVCombinedRec.COUNTRY, EVCombinedRec.EDITOR, EVCombinedRec.TITLE,
-			EVCombinedRec.TRANSLATED_TITLE, EVCombinedRec.VOLUME_TITLE, EVCombinedRec.ABSTRACT,
-			EVCombinedRec.CONTROLLED_TERMS, EVCombinedRec.UNCONTROLLED_TERMS, EVCombinedRec.CHEMICALTERMS,
-			EVCombinedRec.INT_PATENT_CLASSIFICATION, EVCombinedRec.ISSN, EVCombinedRec.CODEN, EVCombinedRec.ISBN,
-			EVCombinedRec.SERIAL_TITLE, EVCombinedRec.MAIN_HEADING, EVCombinedRec.PUBLISHER_NAME,
-			EVCombinedRec.TREATMENT_CODE, EVCombinedRec.LANGUAGE, EVCombinedRec.DOCTYPE,
-			EVCombinedRec.CLASSIFICATION_CODE, EVCombinedRec.CONFERENCE_CODE, EVCombinedRec.CONFERENCE_NAME,
-			EVCombinedRec.CONFERENCE_LOCATION, EVCombinedRec.MEETING_DATE, EVCombinedRec.SPONSOR_NAME,
-			EVCombinedRec.CONFERENCEAFFILIATIONS, EVCombinedRec.CONFERENCEEDITORS, EVCombinedRec.CONFERENCEPARTNUMBER,
-			EVCombinedRec.CONFERENCEPAGERANGE, EVCombinedRec.CONFERENCENUMBERPAGES, EVCombinedRec.MONOGRAPH_TITLE,
-			EVCombinedRec.DATABASE, EVCombinedRec.LOAD_NUMBER, EVCombinedRec.PUB_YEAR, EVCombinedRec.DEDUPKEY,
-			EVCombinedRec.VOLUME, EVCombinedRec.ISSUE, EVCombinedRec.STARTPAGE, EVCombinedRec.ACCESSION_NUMBER,
-			EVCombinedRec.REPORTNUMBER, EVCombinedRec.DOI, EVCombinedRec.COPYRIGHT, EVCombinedRec.PII,
-			EVCombinedRec.PUI, EVCombinedRec.COMPANIES, EVCombinedRec.CASREGISTRYNUMBER, EVCombinedRec.PUB_SORT };
+	EVCombinedRec.AFFILIATION_LOCATION, EVCombinedRec.COUNTRY, EVCombinedRec.EDITOR, EVCombinedRec.TITLE,
+	EVCombinedRec.TRANSLATED_TITLE, EVCombinedRec.VOLUME_TITLE, EVCombinedRec.ABSTRACT,
+	EVCombinedRec.CONTROLLED_TERMS, EVCombinedRec.UNCONTROLLED_TERMS, EVCombinedRec.CHEMICALTERMS,
+	EVCombinedRec.INT_PATENT_CLASSIFICATION, EVCombinedRec.ISSN, EVCombinedRec.CODEN, EVCombinedRec.ISBN,
+	EVCombinedRec.SERIAL_TITLE, EVCombinedRec.MAIN_HEADING, EVCombinedRec.PUBLISHER_NAME,
+	EVCombinedRec.TREATMENT_CODE, EVCombinedRec.LANGUAGE, EVCombinedRec.DOCTYPE,
+	EVCombinedRec.CLASSIFICATION_CODE, EVCombinedRec.CONFERENCE_CODE, EVCombinedRec.CONFERENCE_NAME,
+	EVCombinedRec.CONFERENCE_LOCATION, EVCombinedRec.MEETING_DATE, EVCombinedRec.SPONSOR_NAME,
+	EVCombinedRec.CONFERENCEAFFILIATIONS, EVCombinedRec.CONFERENCEEDITORS, EVCombinedRec.CONFERENCEPARTNUMBER,
+	EVCombinedRec.CONFERENCEPAGERANGE, EVCombinedRec.CONFERENCENUMBERPAGES, EVCombinedRec.MONOGRAPH_TITLE,
+	EVCombinedRec.DATABASE, EVCombinedRec.LOAD_NUMBER, EVCombinedRec.PUB_YEAR, EVCombinedRec.DEDUPKEY,
+	EVCombinedRec.VOLUME, EVCombinedRec.ISSUE, EVCombinedRec.STARTPAGE, EVCombinedRec.ACCESSION_NUMBER,
+	EVCombinedRec.REPORTNUMBER, EVCombinedRec.DOI, EVCombinedRec.COPYRIGHT, EVCombinedRec.PII,
+	EVCombinedRec.PUI, EVCombinedRec.COMPANIES, EVCombinedRec.CASREGISTRYNUMBER, EVCombinedRec.PUB_SORT };
 
 	Perl5Util perl = new Perl5Util();
 
@@ -719,8 +719,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     }
 
                     if (rs.getString("EDITORS") != null)
-                    {
-                        //rec.put(EVCombinedRec.EDITOR, prepareEditor(rs.getString("EDITORS")));
+                    {                        
                     	String[] editors = prepareEditor(rs.getString("EDITORS"));
  	                    rec.put(EVCombinedRec.EDITOR, editors);
 	                    if(rec.getString(EVCombinedRec.FIRST_AUTHOR)==null)
@@ -1341,13 +1340,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     if(rs.getString("ISOPENACESS") != null)
                     {
                         rec.put(EVCombinedRec.ISOPENACESS, rs.getString("ISOPENACESS"));                        
-                    }
-                    /*
-                    else
-                    {
-                    	 rec.put(EVCombinedRec.ISOPENACESS, "0");
-                    }
-                    */
+                    }                 
                                                            
                     //due to bd_master table structure change, we have to handle the missed column exception
                     try
@@ -2494,24 +2487,21 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 			  +
 			  "b.author_1 as cafe_author1,b.affiliation as cafe_affiliation,b.affiliation_1 as cafe_affiliation1,b.CORRESPONDENCEAFFILIATION as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,"
 			  +
-			  "a.REGIONALTERM,a.SOURCETITLEABBREV,a.UPDATENUMBER,a.m_id,a.apict,a.apict1,a.PUBLICATIONYEAR,a.LOADNUMBER,a.CORRESPONDENCEAFFILIATION,a.CSXTERM, count(*) over() totalCount from "
-			  + tableName +
-			  " a left outer join CAFE_PUI_LIST_MASTER c on a.pui= c.puisecondary left outer join cafe_master b on b.pui=c.pui where a.database='cpx' and a.loadnumber != 0";
+			  "a.REGIONALTERM,a.SOURCETITLEABBREV,a.UPDATENUMBER,a.m_id,a.apict,a.apict1,a.PUBLICATIONYEAR,a.LOADNUMBER,a.CORRESPONDENCEAFFILIATION, a.CSXTERM, count(*) over() totalCount from "
+			  + tableName + " a left outer join CAFE_PUI_LIST_MASTER c on a.pui= c.puisecondary left outer join cafe_master b on b.pui=c.pui where a.database='cpx' and a.loadnumber != 0";
           }
 	  else
 	  {
 		  if(actionType.equalsIgnoreCase("lookupIndex"))
 			  sqlQuery =
 				  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER, null as affid, null as cafe_affiliation,"
-				  +
-				  "null as cafe_author, null as cafe_author1, m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION,null as CAFE_CORRESPONDENCEAFFILIATION,CSXTERM FROM "
+				  + "null as cafe_author, null as cafe_author1, m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION,null as CAFE_CORRESPONDENCEAFFILIATION,CSXTERM FROM "
 				  + tableName + " where LOADNUMBER='" + weekNumber +
 				  "' AND loadnumber != 0 and database='" + database + "'";
 		  else
 			  sqlQuery =
 			  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER,null as affid, null as cafe_affiliation, "
-			  +
-			  "null as cafe_author, null as cafe_author1, m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION,null as CAFE_CORRESPONDENCEAFFILIATION,CSXTERM FROM "
+			  + "null as cafe_author, null as cafe_author1, m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION,null as CAFE_CORRESPONDENCEAFFILIATION,CSXTERM FROM "
 			  + tableName + " where loadnumber != 0 and database='" + database + "'"; 
 	  }
 	  
@@ -2570,6 +2560,8 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 		EVCombinedRec[] recArray = null;
 		boolean isChimica = false;
 		boolean isCpx = false;
+		boolean isGeo = false;  //added to block CV term for geo database by hmo at 5/18/2022
+		boolean isElt = false;  //added to block CV term for elt database by hmo at 5/18/2022
 		String accessNumber = "";
 		String pui = "";
 
@@ -2580,6 +2572,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 	        List<String> controltermList = new ArrayList<>();
 	        List<String> publishernameList = new ArrayList<>();
 	        List<String> ipcList = new ArrayList<>();
+	        List<String> icsList = new ArrayList<>(); //added by hmo at 04/18/2023
 	        
 		try {
 
@@ -2593,6 +2586,15 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 					}
 					if (rs.getString("DATABASE").equals("cpx")) {
 						isCpx = true;
+					}
+					//added to block CV term for geo database by hmo at 5/18/2022
+					if (rs.getString("DATABASE").equals("geo")) {
+						isGeo = true;
+					}
+					
+					//added to block CV term for elt database by hmo at 5/18/2022
+					if (rs.getString("DATABASE").equals("elt")) {
+						isElt = true;
 					}
 				}
 
@@ -2706,8 +2708,10 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 						}
 
 						if (!isChimica) {
-							if (rs.getString("CONTROLLEDTERM") != null) {
-								rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CONTROLLEDTERM")));
+							if(!isCpx && !isGeo && !isElt) {  //added to block CV term for geo, elt and cpx database by hmo at 5/18/2022
+								if (rs.getString("CONTROLLEDTERM") != null) {
+									rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CONTROLLEDTERM")));
+								}
 							}
 						} else {
 							if (rs.getString("CHEMICALTERM") != null) {
@@ -2782,6 +2786,12 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 								rec.put(EVCombinedRec.CONTROLLED_TERMS, cvt);
 							}
 						}
+						
+						//added by hmo at 04/18/2023 for EVOPS_1386
+						if (rs.getString("CSXTERM") != null) {
+							rec.put(EVCombinedRec.CSX_TERMS, prepareMulti(rs.getString("CSXTERM")));						
+						}
+						
 						recVector.add(rec);
 						recArray = (EVCombinedRec[]) recVector.toArray(new EVCombinedRec[0]);
 
@@ -2802,6 +2812,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
             recs.put("PUBLISHERNAME",publishernameList);
             recs.put("SERIALTITLE",serialTitleList);
             recs.put("INTERNATONALPATENTCLASSIFICATION",ipcList);
+            recs.put("INTERNATIONALCLASSIFICATIONFORSTANDARD",icsList); //added by hmo at 4/18/2023
             
 		} catch (Exception e) {
 			e.printStackTrace();

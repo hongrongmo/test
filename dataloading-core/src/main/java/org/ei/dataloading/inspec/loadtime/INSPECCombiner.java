@@ -724,7 +724,6 @@ public class INSPECCombiner
 	                        }
 	                    }
 	
-	                    //rec.put(EVCombinedRec.EDITOR_AFFILIATION, prepareAuthor(eaff.toString()));
 	                    rec.put(EVCombinedRec.EDITOR_AFFILIATION, prepareAffiliation(eaff.toString()));
 	                    
 	                    //added by hmo on 2019/09/11
