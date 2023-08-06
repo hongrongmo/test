@@ -322,56 +322,56 @@ public class INSPECCombiner
     }
 
     public void writeCombinedByTableHook(Connection con)
-    		throws Exception
-    		{
-    			Statement stmt = null;
-    			ResultSet rs = null;
-    			try
-    			{
-    			
-    				stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-    				System.out.println("Running the query...");
-    				//String sqlQuery = "select * from " + Combiner.TABLENAME;
-    				//change to join ins_group table by hmo@2/14/2023
-    				String sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+)";
-    				System.out.println(sqlQuery);
-    				rs = stmt.executeQuery(sqlQuery);
-    				
-    				System.out.println("Got records ...from table::"+Combiner.TABLENAME);
-    				writeRecs(rs,con);
-    				System.out.println("Wrote records.");
-    				this.writer.end();
-    				this.writer.flush();
-    			
-    			}
-    			finally
-    			{
-    			
-    				if (rs != null)
-    				{
-    					try
-    					{
-    						rs.close();
-    					}
-    					catch (Exception e)
-    					{
-    						e.printStackTrace();
-    					}
-    				}
-    				
-    				if (stmt != null)
-    				{
-    					try
-    					{
-    						stmt.close();
-    					}
-    					catch (Exception e)
-    					{
-    						e.printStackTrace();
-    					}
-    				}
-    			}
-    		}
+	throws Exception
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		try
+		{
+		
+			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			System.out.println("Running the query...");
+			//String sqlQuery = "select * from " + Combiner.TABLENAME;
+			//change to join ins_group table by hmo@2/14/2023
+			String sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+) order by by a._m_id";
+			System.out.println(sqlQuery);
+			rs = stmt.executeQuery(sqlQuery);
+			
+			System.out.println("Got records ...from table::"+Combiner.TABLENAME);
+			writeRecs(rs,con);
+			System.out.println("Wrote records.");
+			this.writer.end();
+			this.writer.flush();
+		
+		}
+		finally
+		{
+		
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+	}
 
 
     public void writeCombinedByYearHook(Connection con,
@@ -397,7 +397,7 @@ public class INSPECCombiner
             {
                 //rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+" where pyr ='"+ year +"'");
             	//change to join ins_group table by hmo@2/14/2023
-            	sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+) and a.pyr='"+year+"'";
+            	sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+) and a.pyr='"+year+"' order by a.m_id";
             	
             }
             System.out.println("year sqlQuery= "+sqlQuery);
@@ -553,6 +553,7 @@ public class INSPECCombiner
         long processTime = System.currentTimeMillis();
         //int MAX_THREAD = 110; 
         //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
+        EVCombinedRec rec = null;
         
         try
         {
@@ -563,11 +564,22 @@ public class INSPECCombiner
     	    	kafka = new KafkaService(processTime+"_ins_"+loadNumber, this.propertyFileName);
     	    }
     	    System.out.println("epoch="+processTime+" database=INS totalCount="+totalCount);
+    	    String oldMid = "0";
+    	    
     	    while(rs.next())
 	        {
-	            EVCombinedRec rec = new EVCombinedRec();
-	            ++i;
-	            String mid = rs.getString("M_ID");
+    	    	String mid = rs.getString("M_ID");
+    	    	if(!mid.equalsIgnoreCase(oldMid))
+	        	{
+	        		if(rec!=null)
+	        		{
+	        			this.writer.writeRec(rec,kafka, batchData, missedData);
+	        		}
+	        		rec = new EVCombinedRec();
+	        		oldMid=mid;
+	        		++i;
+	        	}
+	            
 	            String abString = getStringFromClob(rs.getClob("ab"));		            	           	            
 	            String accessnumber = rs.getString("anum");	            
 	            String insGroupType = rs.getString("type");	            
@@ -1124,7 +1136,7 @@ public class INSPECCombiner
 		                
 		                //writer.writeRec(rec,kafka);
 		                
-	                	this.writer.writeRec(rec,kafka, batchData, missedData);																	
+	                	//this.writer.writeRec(rec,kafka, batchData, missedData);																	
 	                	if(this.lookupObj!=null)
 	                		this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 			            if(counter<batchSize)
@@ -1132,12 +1144,7 @@ public class INSPECCombiner
 			            	counter++;
 			            }
 			            else
-			            { 
-			            	/*
-			            	 thread = new Thread(sendMessage);
-			            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
-			            	 thread.start(); 
-			            	 */
+			            { 			            	
 			            	 kafka.runBatch(batchData,missedData);
 			            	 batchData = new ConcurrentHashMap<String,String>();
 			            	 counter=0;			            	 
@@ -1160,12 +1167,12 @@ public class INSPECCombiner
         	{
 	        	try
 	        	{
-	        		 kafka.runBatch(batchData,missedData);
-	        		 /*
-	        		 thread = new Thread(sendMessage);
-	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
-	            	 thread.start(); 
-	            	 */
+	        		if(rec!=null)
+	        		{
+	        			this.writer.writeRec(rec,kafka, batchData, missedData);
+	        		}
+	        		kafka.runBatch(batchData,missedData);
+	        		
 	        	}
 	        	catch(Exception ex) 
 	        	{

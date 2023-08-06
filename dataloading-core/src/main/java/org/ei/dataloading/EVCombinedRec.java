@@ -519,6 +519,9 @@ public class EVCombinedRec {
 	public static final String CAR_ID = "383";
 	public static final String FIRST_AUTHOR = "384";
 	public static final String CSX_TERMS = "385";
+	public static final String CONFSERIESID = "386";
+	public static final String CONFSERIALNAME = "387";
+	public static final String CONFSERIALACRONYM = "388";
 	 //*/
 
 	private Hashtable h = new Hashtable();

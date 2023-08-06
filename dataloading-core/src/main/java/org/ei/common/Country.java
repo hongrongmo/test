@@ -1411,7 +1411,7 @@ public class Country {
         htCountry.put("com", "comoros");
         htCountry.put("kna", "st. kitts and nevis");
         // htCountry.put("kp", "korea, republic of");
-        // htCountry.put("kr", "korea, republic of");
+        htCountry.put("kor", "korea, republic of");
         htCountry.put("kwt", "kuwait");
         htCountry.put("cym", "cayman islands");
         htCountry.put("kaz", "kazakhstan");

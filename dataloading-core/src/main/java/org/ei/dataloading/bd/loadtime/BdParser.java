@@ -455,6 +455,23 @@ public class BdParser
 								record.put("SSRNVERSION",itemid);					
 							}
 							
+							//capture subtype pre EVOPS-1383 by hmo @12/15/2022
+							else if(itemid_idtype != null && (itemid_idtype.equals("SUBTYPE"))) //added on 04/11/2022 && requested for EVOPS-1301
+							{							
+								String itemid = itemidElement.getTextTrim();
+								record.put("SUBTYPE",itemid);	
+								//System.out.println("SUBTYPE="+itemid);
+							}
+							//capture CONFSERIES ID pre EVOPS-1310 by hmo @05/11/2023
+							else if(itemid_idtype != null && (itemid_idtype.equals("CONFSERIES"))) 
+							{							
+								String itemid = itemidElement.getTextTrim();
+								record.put("CONFSERIES",itemid);	
+								//Fake CONFSERIES ACRONYM pre EVOPS-1310 by hmo @05/11/2023 for test only
+								//record.put("CONFSERIESACRONYM",itemid.substring(10,15));	
+								//System.out.println("CONFSERIESACRONYM="+record.get("CONFSERIESACRONYM"));
+							}
+							
 						}
 
 						//head
@@ -1328,8 +1345,12 @@ public class BdParser
 								if(record.get("GRANTTEXT")==null && grantlist.getChild("grant-text",noNamespace)!=null)
 								{
 									String grantText =  grantlist.getChildText("grant-text",noNamespace);
-									record.put("GRANTTEXT",DataLoadDictionary.mapEntity(grantText));
-									//System.out.println(eid+" get fundingText from grantlist");
+									grantText =  DataLoadDictionary.mapEntity(grantText);
+									if(grantText.length()>3900)
+									{
+										grantText = grantText.substring(0,3900);
+									}
+									record.put("GRANTTEXT",grantText);
 								}
 								
 							}

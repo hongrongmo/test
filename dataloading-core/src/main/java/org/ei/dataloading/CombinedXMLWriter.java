@@ -2398,8 +2398,26 @@ public class CombinedXMLWriter
  	            contentObject.put("VIDEOLOCATION".toLowerCase(),rec.getString(EVCombinedRec.VIDEO_LOCATION));       
             }
             
-            //output pretty format        
-            //Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
+            //CONFSERIESID
+            //System.out.println("CONFSERIESID="+rec.getString(EVCombinedRec.CONFSERIESID));
+            if(rec.getString(EVCombinedRec.CONFSERIESID)!=null && rec.getString(EVCombinedRec.CONFSERIESID).length()>0)
+            {          	
+ 	            contentObject.put("CONFSERIESID".toLowerCase(),rec.getString(EVCombinedRec.CONFSERIESID));       
+            }
+            
+            //CONFSERIESNAME
+            //System.out.println("CONFSERIESNAME="+rec.getString(EVCombinedRec.CONFSERIESNAME));
+            if(rec.getString(EVCombinedRec.CONFSERIALNAME)!=null && rec.getString(EVCombinedRec.CONFSERIALNAME).length()>0)
+            {          	
+ 	            contentObject.put("CONFERENCESERIALTITLE".toLowerCase(),rec.getString(EVCombinedRec.CONFSERIALNAME));       
+            }
+            
+            //CONFSERIALACRONYM
+            //System.out.println("CONFSERIALACRONYM="+rec.getString(EVCombinedRec.CONFSERIALACRONYM));
+            if(rec.getString(EVCombinedRec.CONFSERIALACRONYM)!=null && rec.getString(EVCombinedRec.CONFSERIALACRONYM).length()>0)
+            {            	
+ 	            contentObject.put("CONFERENCEACR".toLowerCase(),rec.getString(EVCombinedRec.CONFSERIALACRONYM));       
+            }
             
             //output regular format
             Gson gson = new GsonBuilder().disableHtmlEscaping().create();
@@ -4190,14 +4208,7 @@ public class CombinedXMLWriter
             {
 	            elementArrayObject = formJsonArray(orgID,"ORG_ID");          
 	            contentObject.put("ORG_ID".toLowerCase(),elementArrayObject);
-            }
-           
-            /*
-            if(rec.getString(EVCombinedRec.ISOPENACESS)!=null && rec.getString(EVCombinedRec.ISOPENACESS).length()>0)
-            {	                
-	            contentObject.put("ISOPENACESS".toLowerCase(),rec.getString(EVCombinedRec.ISOPENACESS));	          
-            }
-            */
+            }                      
             
             String openaccess=rec.getString(EVCombinedRec.ISOPENACESS);                       
             if(openaccess!=null && openaccess.length()>0)

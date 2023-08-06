@@ -358,6 +358,35 @@ public class BaseTableWriter
 	    	//System.out.println(" VORDOI "+record.get("VORDOI"));
 		}	
 	    
+	    //output subtype pre EVOPS-1383 by hmo @12/15/2022
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("SUBTYPE")!=null)
+		{
+	    	recordBuf.append(record.get("SUBTYPE"));
+	    	//System.out.println(" SUBTYPE= "+record.get("SUBTYPE"));
+		}	
+	    
+	    //output confseries pre EVOPS-1310 by hmo @05/11/2023
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("CONFSERIES")!=null)
+		{
+	    	recordBuf.append(record.get("CONFSERIES"));
+	    	//System.out.println(" CONFSERIES= "+record.get("CONFSERIES"));
+		}
+   
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("CONFSERIESTITLE")!=null)
+		{
+	    	recordBuf.append(record.get("CONFSERIESTITLE"));
+	    	//System.out.println(" CONFSERIESTITLE= "+record.get("CONFSERIESTITLE"));
+		}
+	    
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("CONFSERIESACRONYM")!=null)
+		{
+	    	recordBuf.append(record.get("CONFSERIESACRONYM"));
+	    	//System.out.println(" CONFSERIESACRONYM= "+record.get("CONFSERIESACRONYM"));
+		}
 	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
 	    {
