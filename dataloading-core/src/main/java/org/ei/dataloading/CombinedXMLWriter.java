@@ -880,11 +880,26 @@ public class CombinedXMLWriter
 	            contentObject.put("ORDERNUMBER".toLowerCase(),elementArrayObject);     
             }
             
+            //added by hmo at 8/9/2023 for EVOPS-1497
             String[] countries=rec.getStrings(EVCombinedRec.COUNTRY);
-            if(countries!=null && countries.length>0 )
+            String sourcecountry = rec.getString(EVCombinedRec.SOURCE_COUNTRY); 
+            if(countries!=null && countries.length>0 && countries[0]!=null && countries[0].length()>0)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(countries),"COUNTRY");          
 	            contentObject.put("COUNTRY".toLowerCase(),elementArrayObject);
+	            //System.out.println("COUNTRY="+Arrays.toString(countries));
+            }
+            /*** block - pending for confirmimg if we should use sourcecountry as conntry
+            else if(sourcecountry!=null && sourcecountry.length()>0)
+            {
+            	String[] sourcecountries = {sourcecountry};
+            	elementArrayObject = formJsonArray(removeExtraSpace(sourcecountries),"COUNTRY");          
+	            contentObject.put("COUNTRY".toLowerCase(),elementArrayObject);	            
+            }
+            */
+            else
+            {
+            	System.out.println("no country code found");
             }
             
             if(rec.getString(EVCombinedRec.VOLUME)!=null && rec.getString(EVCombinedRec.VOLUME).length()>0)

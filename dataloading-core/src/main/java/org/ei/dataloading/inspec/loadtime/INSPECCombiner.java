@@ -333,7 +333,7 @@ public class INSPECCombiner
 			System.out.println("Running the query...");
 			//String sqlQuery = "select * from " + Combiner.TABLENAME;
 			//change to join ins_group table by hmo@2/14/2023
-			String sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+) order by by a._m_id";
+			String sqlQuery = "select a.m_id, a.fdate, a.opan, a.copa, a.ppdate,a.sspdate, a.aaff, a.afc, a.su, a.pubti, a.pfjt, a.pajt, a.sfjt, a.sajt, a.ab, a.anum, a.aoi, a.aus, a.aus2, a.pyr, a.rnum, a.pnum, a.cpat, a.ciorg, a.iorg, a.pas, a.pcdn, a.scdn, a.cdate, a.cedate, a.pdoi, a.nrtype, a.chi, a.pvoliss, a.pvol, a.piss, a.pipn, a.cloc, a.cls, a.cvs, a.eaff, a.eds, a.fls, a.la, a.matid, a.ndi, a.pspdate, a.ppub, a.rtype, a.sbn, a.sorg, a.psn, a.ssn, a.tc, a.sspdate, a.ti, a.trs, a.trmc,a.aaffmulti1, a.aaffmulti2, a.eaffmulti1, a.eaffmulti2, a.nssn, a.npsn, a.LOAD_NUMBER, a.seq_num, a.ipc, a.updatenumber,b.type,b.content from "+Combiner.TABLENAME+" a,ins_group b where a.anum=b.anum (+) order by a.m_id";
 			System.out.println(sqlQuery);
 			rs = stmt.executeQuery(sqlQuery);
 			
@@ -612,7 +612,8 @@ public class INSPECCombiner
 	            		String cpcCode = getCpc(insGroupContent);	
 	            		//System.out.println("cpcCode="+cpcCode);
 	            		String[] cpcCodes=cpcCode.split(Constants.IDDELIMITER,-1);
-	            		rec.put(EVCombinedRec.CPCCLASS, cpcCodes);
+	            		//rec.put(EVCombinedRec.CPCCLASS, cpcCodes);  //use ecla code instead @8/29/2023 pre Ken request
+	            		rec.put(EVCombinedRec.ECLA_CODES, cpcCodes);
 	            		//System.out.println("cpcCode index="+Arrays.toString(cpcCodes));
 	            	}
 	            }

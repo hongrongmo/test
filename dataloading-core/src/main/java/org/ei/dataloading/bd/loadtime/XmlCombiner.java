@@ -735,6 +735,11 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     {
                         rec.put(EVCombinedRec.SERIAL_TITLE_TRANSLATION, prepareMulti(rs.getString("TRANSLATEDSOURCETITLE")));
                     }
+                    
+                    //added by hmo at 8/9/2023 for EVOPS-1497
+                    if (rs.getString("SOURCECOUNTRY") != null) {
+						rec.put(EVCombinedRec.SOURCE_COUNTRY, CountryFormatter.formatCountry(rs.getString("SOURCECOUNTRY")));
+					}
 
                     if (rs.getString("VOLUMETITLE") != null)
                     {
@@ -883,6 +888,11 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     {
                          rec.put(EVCombinedRec.ABBRV_SRC_TITLE, sta);
                     }
+                    
+                    //added by hmo at 8/9/2023 for EVOPS-1497
+                    if (rs.getString("SOURCECOUNTRY") != null) {
+						rec.put(EVCombinedRec.SOURCE_COUNTRY, CountryFormatter.formatCountry(rs.getString("SOURCECOUNTRY")));
+					}
 
                     if (rs.getString("PUBLISHERNAME") != null)
                     {
@@ -2729,6 +2739,11 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 
 						if (st != null) {
 							rec.put(EVCombinedRec.SERIAL_TITLE, st);
+						}
+						
+						//added by hmo at 8/9/2023 for EVOPS-1497
+						if (rs.getString("SOURCECOUNTRY") != null) {
+							rec.put(EVCombinedRec.SOURCE_COUNTRY, CountryFormatter.formatCountry(rs.getString("SOURCECOUNTRY")));
 						}
 
 						if (rs.getString("PUBLISHERNAME") != null) {
