@@ -899,7 +899,7 @@ public class CombinedXMLWriter
             */
             else
             {
-            	System.out.println("no country code found");
+            	//System.out.println("no country code found");
             }
             
             if(rec.getString(EVCombinedRec.VOLUME)!=null && rec.getString(EVCombinedRec.VOLUME).length()>0)

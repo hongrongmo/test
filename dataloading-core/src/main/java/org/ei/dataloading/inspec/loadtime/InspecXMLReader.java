@@ -173,7 +173,69 @@ public class InspecXMLReader extends FilterReader
 				Element reposg=bibGroup.getChild("reposg");
 				record.put("REPOSG",new StringBuffer(getMixData("reposg",reposg.getContent())));
 				if(reposg.getChildText("access")!=null)
-					record.put("ACCESS",new StringBuffer(reposg.getChildText("access")));				
+					record.put("ACCESS",new StringBuffer(reposg.getChildText("access")));
+				if(reposg.getChild("pgn")!=null)
+					record.put("PIPN",getMixData(reposg.getChild("pgn").getContent(),new StringBuffer()));
+
+				//Publication Date
+				if(reposg.getChild("pdt")!=null)
+					getPubDate(reposg.getChild("pdt"),"P");
+
+				//Publisher Name
+				if(reposg.getChild("pnm")!=null)
+					record.put("PPUB",getMixData(reposg.getChild("pnm").getContent(),new StringBuffer()));
+				
+				if(reposg.getChild("repos")!=null) {
+					record.put("PFJT",getMixData(reposg.getChild("repos").getContent(),new StringBuffer()));
+					record.put("PAJT",getMixData(reposg.getChild("repos").getContent(),new StringBuffer()));
+				}
+				
+			   //Publication Country
+				if(reposg.getChild("cntry")!=null)
+					record.put("PCPUB",getMixData(reposg.getChild("cntry").getContent(),new StringBuffer()));
+
+				//Coden
+				if(reposg.getChild("cdn")!=null)
+					record.put("PCDN",getMixData(reposg.getChild("cdn").getContent(),new StringBuffer()));
+				
+				if(reposg.getChild("issng")!=null)
+				{
+					record.put("PSN",getIssn(reposg.getChild("issng"),"print"));
+					record.put("PNSN",getIssn(reposg.getChild("issng")));
+				}			
+				else if(reposg.getChild("issn")!=null)
+				{
+					record.put("PSN",getMixData(reposg.getChild("issn").getContent(),new StringBuffer()));
+				}
+
+				//SICI
+				if(reposg.getChild("sici")!=null)
+					record.put("PSICI",getMixData(reposg.getChild("sici").getContent(),new StringBuffer()));
+
+				//CCCC
+				if(reposg.getChild("cccc")!=null)
+					record.put("PCCCC",getMixData(reposg.getChild("cccc").getContent(),new StringBuffer()));
+
+				//UNCMED
+				if(reposg.getChild("uncmed")!=null)
+					record.put("PUM",getMixData(reposg.getChild("uncmed").getContent(),new StringBuffer()));
+
+				//DOCUMENT NUMBER
+				if(reposg.getChild("docnum")!=null)
+					record.put("PDNUM",getMixData(reposg.getChild("docnum").getContent(),new StringBuffer()));
+
+				//DOI
+				if(reposg.getChild("doi")!=null)
+					record.put("PDOI",new StringBuffer(reposg.getChildTextTrim("doi")));
+
+				//URL
+				if(reposg.getChild("url")!=null)
+					record.put("PURL",getMixData(reposg.getChild("url").getContent(),new StringBuffer()));
+
+				//DCURL
+				if(reposg.getChild("dcurl")!=null)
+					record.put("PDCURL",getMixData(reposg.getChild("dcurl").getContent(),new StringBuffer()));
+
 			}
 
 			//Journal

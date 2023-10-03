@@ -522,6 +522,7 @@ public class EVCombinedRec {
 	public static final String CONFSERIESID = "386";
 	public static final String CONFSERIALNAME = "387";
 	public static final String CONFSERIALACRONYM = "388";
+	public static final String SOURCE_COUNTRY = "389";  //added by hmo at 8/9/2023 for EVOPS-1497
 	 //*/
 
 	private Hashtable h = new Hashtable();
