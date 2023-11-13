@@ -1155,7 +1155,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                         rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareCASRegistry(rs.getString("CASREGISTRYNUMBER"), rs.getString("DATABASE")));
                     }
 
-                    if (rs.getString("DATABASE").equals("cpx"))
+                    //if (rs.getString("DATABASE").equals("cpx")) //remove this line to give datesort to all database by Hongrong @10/24/2023
                     {
                         rec.put(EVCombinedRec.DATESORT, prepareDateSort(rs.getString("DATESORT"),rs.getString("PUBLICATIONYEAR")));
                     }
