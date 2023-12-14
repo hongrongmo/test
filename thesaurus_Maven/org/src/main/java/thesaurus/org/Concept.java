@@ -1,4 +1,4 @@
-package thesaurus.org;
+package org.ei.thesaurus;
 
 import java.sql.*;
 
