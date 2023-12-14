@@ -329,6 +329,10 @@ public class KnovelCorrection {
 	                    System.out.println("datafile: "+outFile+" does not exists");
 	                    System.exit(1);
 	                }
+	                else
+	                {
+	                	System.out.println("datafile: "+outFile);
+	                }
 
 	                if(test)
 	                {
