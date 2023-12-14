@@ -397,6 +397,9 @@ public class InspecXMLReader extends FilterReader
 			if(videoGroup!=null)
 			{			
 				record.put("VIDEOG",new StringBuffer(getMixData("videog",videoGroup.getContent())));
+				Element pug=videoGroup.getChild("pug");
+				if(pug !=null && pug.getChild("access")!=null)
+					record.put("ACCESS",new StringBuffer(pug.getChildText("access")));
 				//System.out.println("VIDEOG="+getMixData("videog",videoGroup.getContent()));
 			}
 			
@@ -408,6 +411,8 @@ public class InspecXMLReader extends FilterReader
 			if(reposGroup!=null)
 			{			
 				record.put("REPOSG",new StringBuffer(getMixData("reposg",reposGroup.getContent())));
+				if(reposGroup.getChild("access")!=null)
+					record.put("ACCESS",new StringBuffer(reposGroup.getChildText("access")));
 				//System.out.println("REPOSG="+getMixData("reposg",reposGroup.getContent()));
 			}
 
@@ -1644,6 +1649,19 @@ public class InspecXMLReader extends FilterReader
 		//DCURL
 		if(e.getChild("dcurl")!=null)
 			record.put(keyprfx+"DCURL",getMixData(e.getChild("dcurl").getContent(),new StringBuffer()));
+		
+		/*get open access from following location pre EVOPS-1415 by hmo @12/06/2023
+		article/bibliog/jrefg/jrog/access
+		article/bibliog/rptg/pug/access
+		article/bibliog/dssg/pug/access
+		article/bibliog/stdg/pug/access
+		article/bibliog/bookg/pug/access
+		article/bibliog/videog/pug/access
+		article/bibliog/reposg/access
+		*/
+		
+		if(e.getChildText("access")!=null)
+			record.put("ACCESS",new StringBuffer(e.getChildText("access")));
 
 	}
 
@@ -1977,6 +1995,19 @@ public class InspecXMLReader extends FilterReader
 			record.put("PSN",new StringBuffer(e.getChildTextTrim("issn")));
 
 		}
+		
+		/*get open access from following location pre EVOPS-1415 by hmo @11/07/2023
+		article/bibliog/jrefg/jrog/access
+		article/bibliog/rptg/pug/access
+		article/bibliog/dssg/pug/access
+		article/bibliog/stdg/pug/access
+		article/bibliog/bookg/pug/access
+		article/bibliog/videog/pug/access
+		article/bibliog/reposg/access
+		*/
+		
+		if(e.getChildText("access")!=null)
+			record.put("ACCESS",new StringBuffer(e.getChildText("access")));
 	}
 
     private StringBuffer getPlace(Element e)
