@@ -89,7 +89,19 @@ public class CombinedXMLWriter
     private String loadnumber;
     private String accessnumber;
     private String endpoint;
-
+    
+    public static void main(String args[]) throws Exception
+    {
+    	CombinedXMLWriter c = new CombinedXMLWriter(1,1,"cpx");
+    	String testString = "NEW PROCEDURE FOR SINGLE CRYSTAL GROWTH OF YB<A2>C<U3>O&lt;X.";
+    	//CombinedXMLWriter c = new CombinedXMLWriter();
+    	//String testString = args[0];
+    	System.out.println("before= "+testString+"\n after="+c.removeExtraSpace(testString));
+    	System.out.println("after2="+StringEscapeUtils.unescapeHtml4(testString));
+    	System.out.println("after3="+c.perl.substitute("s/&lt;/</g",testString));
+   	
+    }
+    
     public String getEndpoint() {
     	return endpoint;
     }
@@ -4352,22 +4364,33 @@ public class CombinedXMLWriter
     	}
     }
     
-    private String removeExtraSpace(String input)    {
+    public String removeExtraSpace(String input)    {
     	String output="";
     	if(input!=null)
     	{ 
     		//System.out.println("INPUT0="+input);
-    		input = input.replaceAll("&mdash;", "—").replaceAll("&dollar;", "\\$").replaceAll("&percnt;", "%").replaceAll("&apos;","'").replaceAll("&les;","⩽").replaceAll("&ges;", "⩾");
+    		//input = input.replaceAll("&mdash;", "—").replaceAll("&dollar;", "\\$").replaceAll("&percnt;", "%").replaceAll("&apos;","'");
+    		input = input.replaceAll("&mdash;", "—");
+    		input = input.replaceAll("&percnt;", "%");
+    		input = input.replaceAll("&apos;","'");
     		//System.out.println("INPUT1="+input);
     		input = DataLoadDictionary.cleanBadCharacters(input);
     		//System.out.println("INPUT2="+input);
-    		input = input.trim().replaceAll("\\s{2,}", " ");//"&les:" and "&ges;" are not recognize by escape api so w do it manually
+    		input = input.trim().replaceAll("\\s{2,}", " ");
     		//System.out.println("INPUT3="+input);
     		output=Entity.unescapeHtml(input);
     		//System.out.println("INPUT4="+input);
     		output=removeSpecialTag(output);
     		//System.out.println("INPUT5="+input);
-    		
+    		input = input.replaceAll("&amp;","&");
+    		input = input.replaceAll("&lt;", "<");
+    		input = input.replaceAll("&lt", "<");
+    		input = input.replaceAll("&gt;", ">");
+    		input = input.replaceAll("&gt", ">");
+    		input = input.replaceAll("&les;","⩽");   
+    		input = input.replaceAll("&les","⩽");
+    		input = input.replaceAll("&ges;", "⩾");//"&les:" and "&ges;" are not recognize by escape api so w do it manually
+    		input = input.replaceAll("&ges", "⩾");    		   		  		
     	}
     	return output;
     }
@@ -5421,16 +5444,6 @@ public class CombinedXMLWriter
     {
         SimpleDateFormat sdtf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
         return "[" + sdtf.format(new Date(timeStamp)) + " - LOAD :" + this.numberID  + " - BATCH:"  + batchidFormat  + " ]";
-    }
-    
-    public static void main(String args[]) throws Exception
-    {
-    	CombinedXMLWriter c = new CombinedXMLWriter(1,1,"cpx");
-    	//String testString = "  check   comma  space ";
-    	String testString = args[0];
-    	//System.out.println("before= "+testString+"\n after="+c.removeExtraSpace(testString));
-    	//System.out.println("after2="+StringEscapeUtils.unescapeHtml4(testString));
-   	
     }
     
     public String prettyPrintJSON(String unformattedJsonString) {
