@@ -493,7 +493,7 @@ public class UPTCombiner extends CombinerTimestamp {
 	                        rec.put(EVCombinedRec.TITLE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ti")))));
 	
 	                    if (rs.getString("inv") != null) {
-	
+	                    	
 	                        if (rs.getString("asg") != null) 
 	                        {	
 	                            List lstAsg = convertString2List(rs.getString("asg"));
@@ -508,7 +508,9 @@ public class UPTCombiner extends CombinerTimestamp {
 	                            arrVals[0] = replaceNull(arrVals[0]);
 	
 	                            for (int j = 0; j < arrVals.length; j++) {
-	                                arrVals[j] = formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(arrVals[j]))));
+	                            	
+	                                arrVals[j] = formatAuthor(Entity.unescapeHtml(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(arrVals[j])))));
+
 	                            }
 	
 	                            if (arrVals != null)
@@ -520,7 +522,7 @@ public class UPTCombiner extends CombinerTimestamp {
 	                        }
 	                        else 
 	                        {
-	                        	String[] authorGroup = convert2Array(formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv"))))));
+	                        	String[] authorGroup = convert2Array(formatAuthor(Entity.unescapeHtml(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv")))))));
 	                            rec.put(EVCombinedRec.AUTHOR,authorGroup);
 	                            rec.put(EVCombinedRec.AUTHOR,authorGroup[0]);
 	                        }
