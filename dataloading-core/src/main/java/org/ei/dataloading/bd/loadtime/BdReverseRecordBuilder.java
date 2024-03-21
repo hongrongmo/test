@@ -21,7 +21,6 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-
 import java.util.*;
 
 import org.ei.common.bd.*;
@@ -33,12 +32,10 @@ import org.ei.common.Constants;
 import java.sql.*;
 
 import org.ei.common.Constants;
-import org.ei.common.bd.BdAuthors;
 import org.ei.dataloading.DataLoadDictionary;
+import org.ei.dataloading.EVCombinedRec;
 import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
-
 import org.ei.xml.Entity;
-
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import org.ei.data.compendex.runtime.*;
@@ -172,11 +169,7 @@ public class BdReverseRecordBuilder
          int count = 0;
          boolean checkResult = false;
          FileWriter file = null;
-<<<<<<< HEAD
-         String xsdFileName="ani512.dtd";
-=======
          String xsdFileName="ani515/ani515.xsd";
->>>>>>> branch 'NYC-staging' of git@github.com:elsevier-research/engvillage-dataloading.git
          try
          {
              stmt = con.createStatement();
@@ -213,42 +206,6 @@ public class BdReverseRecordBuilder
          }
     	
     }
-<<<<<<< HEAD
-    
-    private boolean validatedXml(String filename,String xsdFileName) throws Exception
-	{
-		// parse an XML document into a DOM tree
-		 javax.xml.parsers.DocumentBuilder parser =  javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		 Document document = parser.parse(new File(filename));
-
-		// create a SchemaFactory capable of understanding WXS schemas
-		//SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-		 SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-
-		// load a WXS schema, represented by a Schema instance
-		//Source schemaFile = new StreamSource(new File("ani512.xsd"));
-		Source schemaFile = new StreamSource(new File(xsdFileName));
-		Schema schema = factory.newSchema(schemaFile);
-
-		// create a Validator instance, which can be used to validate an instance document
-		Validator validator = schema.newValidator();
-
-		// validate the DOM tree
-		try {
-		   //validator.validate(new DOMSource(document));
-			validator.validate(new StreamSource(new File(filename)));
-			
-		    System.out.println(filename+" is valid!");
-		    return true;
-		} catch (SAXException e) {
-			System.out.println(filename+" is invalid!");
-			e.printStackTrace();
-			return false;
-		    // instance document is invalid!
-		}
-		
-	}
-=======
     */
     
     //this one is used for a record for each xml file
@@ -278,7 +235,7 @@ public class BdReverseRecordBuilder
              }
              else
              {
-            	rs = stmt.executeQuery("select *  from bd_master where loadnumber="+loadN+" and database='"+databaseName+"'");
+            	 rs = stmt.executeQuery("select *  from bd_master where loadnumber="+loadN+" and database='"+databaseName+"'");
              }
              
              path=new File(databaseName);
@@ -315,11 +272,13 @@ public class BdReverseRecordBuilder
                  file.write("</bibdataset>");
                  file.close();
                  
+                 /*
                  if(!validatedXml(filename,xsdFileName))
                  {
                 	 continue;
                 	 //break;
                  }
+                 */
                  
              }
              
@@ -823,8 +782,26 @@ public class BdReverseRecordBuilder
 		return singleRecordData;
 	}
     
+    public String replaceNull(String sVal) {
+
+		if (sVal == null)
+			sVal = "";
+
+		return sVal;
+	}
+
+	public String[] getCvs(List list) {
+
+		if (list != null && list.size() > 0) {
+			return (String[]) list.toArray(new String[0]);
+
+		}
+		return null;
+	}
+    
     public Hashtable getBDDataFromDatabase(ResultSet rs)
     {
+
     	Hashtable singleRecordData = new Hashtable();
     	try 
     	{
@@ -899,9 +876,9 @@ public class BdReverseRecordBuilder
 	    		singleRecordData.put("CORRESPONDENCENAME",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CORRESPONDENCENAME")));
 	    	}
 	    	
-	    	if(rs.getString("correspondenceaffiliation")!=null)
+	    	if(rs.getString("CORRESPONDENCEAFFILIATION")!=null)
 	    	{
-	    		singleRecordData.put("CORRESPONDENCEAFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("correspondenceaffiliation")));
+	    		singleRecordData.put("CORRESPONDENCEAFFILIATION",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CORRESPONDENCEAFFILIATION")));
 	    	}
 	    	
 	    	if(rs.getString("CORRESPONDENCEEADDRESS")!=null)
@@ -1129,6 +1106,69 @@ public class BdReverseRecordBuilder
 	    		singleRecordData.put("CONTROLLEDTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("CONTROLLEDTERM")));   
 	    	}
 	    	
+	    	//added by hmo for elt at 2/28/2024
+	    	//controlledterm
+	    	if(rs.getString("APICT")!=null || rs.getString("APICT1")!=null)
+	    	{		    	
+				String apict = replaceNull(rs.getString("APICT"));
+				String apict1 = replaceNull(rs.getString("APICT1"));
+	
+				if (apict != null && !apict.trim().equals("")) {
+					if (apict1 != null && !apict1.trim().equals("")) {
+						apict = apict+Constants.AUDELIMITER+apict1;
+					}				
+				}
+				singleRecordData.put("APICT",dictionary.AlphaEntitysToNumericEntitys(apict)); 									
+	    	}
+	    	
+	    	//Linked terms  added by hmo for elt at 2/28/2024
+	    	if(rs.getString("APILT")!=null)
+	    	{
+	    		String apilt=rs.getString("APILT");
+	    		singleRecordData.put("APILT",dictionary.AlphaEntitysToNumericEntitys(apilt));
+	    	}
+	    	
+	    	if(rs.getString("APIAMS")!=null)
+	    	{
+	    		String apiams=rs.getString("APIAMS");
+	    		singleRecordData.put("APIAMS",dictionary.AlphaEntitysToNumericEntitys(apiams));
+	    	}
+	    	
+	    	if(rs.getString("APILTM")!=null)
+	    	{
+	    		String apiltm=rs.getString("APILTM");
+	    		singleRecordData.put("APILTM",dictionary.AlphaEntitysToNumericEntitys(apiltm));
+	    	}
+	    	
+	    	if(rs.getString("APIAPC")!=null)
+	    	{
+	    		String apiapc=rs.getString("APIAPC");
+	    		singleRecordData.put("APIAPC",dictionary.AlphaEntitysToNumericEntitys(apiapc));
+	    	}
+	    	
+	    	if(rs.getString("APIAT")!=null)
+	    	{
+	    		String apiat=rs.getString("APIAT");
+	    		singleRecordData.put("APIAT",dictionary.AlphaEntitysToNumericEntitys(apiat));
+	    	}
+	    	
+	    	/*
+	    	//CAS Registry Numbers
+	    	if(rs.getString("CASREGISTRYNUMBER")!=null)
+	    	{
+	    		String casNumber=rs.getString("CASREGISTRYNUMBER");
+	    		singleRecordData.put("CASREGISTRYNUMBER",dictionary.AlphaEntitysToNumericEntitys(casNumber));
+	    	}
+	    	*/
+	    	
+	    	
+	    	//classification
+	    	if(rs.getString("CLASSIFICATIONDESC")!=null)
+	    	{
+	    		String classification=rs.getString("CLASSIFICATIONDESC");
+	    		singleRecordData.put("CLASSIFICATION",dictionary.AlphaEntitysToNumericEntitys(classification));
+	    	}
+	    	
 	    	if(rs.getString("UNCONTROLLEDTERM")!=null)
 	    	{
 	    		singleRecordData.put("UNCONTROLLEDTERM",dictionary.AlphaEntitysToNumericEntitys(rs.getString("UNCONTROLLEDTERM"))); 
@@ -1258,7 +1298,7 @@ public class BdReverseRecordBuilder
     	String affiliationString = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("AFFILIATION"));
     	String affiliation1String = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("AFFILIATION_1"));
     	String correspondencename = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CORRESPONDENCENAME"));
-    	String correspondenceaffiliation = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("correspondenceaffiliation"));
+    	String correspondenceaffiliation = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CORRESPONDENCEAFFILIATION"));
     	String correspondenceeaddress = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CORRESPONDENCEEADDRESS"));
     	String grantlist = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("GRANTLIST"));
     	String abstractdata = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("ABSTRACTDATA"));
@@ -1310,7 +1350,17 @@ public class BdReverseRecordBuilder
     	String conferenceeditoraddress = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONFERENCEEDITORADDRESS")); 	
     	String controlledterm = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("CONTROLLEDTERM"));                  
     	String uncontrolledterm = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("UNCONTROLLEDTERM"));               
-    	String mainheading = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("MAINHEADING"));                     
+    	String mainheading = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("MAINHEADING")); 
+    	String apict=dictionary.AlphaEntitysToNumericEntitys((String)rs.get("APICT")); 
+    	String apilt=dictionary.AlphaEntitysToNumericEntitys((String)rs.get("APILT")); 
+    	String apiat=dictionary.AlphaEntitysToNumericEntitys((String)rs.get("APIAT"));
+    	String apiams=dictionary.AlphaEntitysToNumericEntitys((String)rs.get("APIAMS"));
+    	String apiltm=dictionary.AlphaEntitysToNumericEntitys((String)rs.get("APILTM"));
+    	String apiapc=dictionary.AlphaEntitysToNumericEntitys((String)rs.get("APIAPC"));
+    	String classification = (String)rs.get("CLASSIFICATION");
+    	//String controlledterm =null;//block out mainheading for databrick @08/13/2021
+    	//String uncontrolledterm =null;//block out mainheading for databrick @08/13/2021
+    	//String mainheading =null;//block out mainheading for databrick @08/13/2021
     	String speciesterm = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("SPECIESTERM"));                     
     	String regionalterm = dictionary.AlphaEntitysToNumericEntitys((String)rs.get("REGIONALTERM"));                    
     	String treatmentcode = (String)rs.get("TREATMENTCODE");                   
@@ -1384,6 +1434,7 @@ public class BdReverseRecordBuilder
     	//ACCESSNUMBER
     	if(accessnumber!=null && accessnumber.length()>0)
     	{
+    		System.out.println("ACCESSNUMBER="+accessnumber);
     		file.write("<itemid idtype=\""+database.toUpperCase()+"\">"+accessnumber+"</itemid>\n");
     	}
     	
@@ -1504,6 +1555,7 @@ public class BdReverseRecordBuilder
 		//CORRESPONDENCEAFFILIATION
 		if(correspondencename!=null || correspondenceaffiliation!=null || correspondenceeaddress!=null)
 		{
+			System.out.println("CORRESPONDENCEAFFILIATION");
 			outputCorrespondence(file,correspondencename,correspondenceaffiliation,correspondenceeaddress,accessnumber);			
 		}//correspondence
 			
@@ -1799,7 +1851,14 @@ public class BdReverseRecordBuilder
 				(regionalterm != null && regionalterm.length()>0) || (treatmentcode != null && treatmentcode.length()>0) || 
 				(chemicalterm != null && chemicalterm.length()>0))		    				    				
 				{
-					file.write("<descriptorgroup>\n");
+					if(database.equalsIgnoreCase("elt"))
+					{
+						file.write("<API-descriptorgroup>\n");
+					}
+					else
+					{				
+						file.write("<descriptorgroup>\n");
+					}
 					if(controlledterm!=null && controlledterm.length()>0)
 					{
 						outputControlledterm(file,controlledterm);							
@@ -1834,13 +1893,68 @@ public class BdReverseRecordBuilder
 					{
 						outputChemicalterm(file,chemicalterm);
 					}//ifchemicalterm				
-					file.write("</descriptorgroup>\n");
+					if(database.equalsIgnoreCase("elt"))
+					{
+						file.write("</API-descriptorgroup>\n");
+					}
+					else
+					{				
+						file.write("</descriptorgroup>\n");
+					}
 				} //if descriptorgroup
 			
+				if(database.equalsIgnoreCase("elt") && ((classification != null && classification.length()>0) || (apict !=null && apict.length()>0) || 
+					(apilt !=null && apilt.length()>0) || (apiat !=null && apiat.length()>0) ||(casregistrynumber!=null && casregistrynumber.length()>0) ||
+					(apiams !=null && apiams.length()>0) || (apiapc !=null && apiapc.length()>0) || (apiltm !=null && apiltm.length()>0)))
+				{
+					file.write("<API-descriptorgroup>\n");
+					file.write("<autoposting>\n");
+					if(apilt !=null && apilt.length()>0)
+					{
+						outputELTTerms("API-LT",file,apilt);
+					}
+					if(apict !=null && apict.length()>0)
+					{
+						outputELTTerms("API-CT",file,apict);
+					}
+					if(apiat !=null && apiat.length()>0)
+					{
+						outputELTTerms("API-AT",file,apiat);
+					}
+					if(classification != null && classification.length()>0)
+					{
+						outputELTClassification(file,classification);
+					}
+					
+					if(casregistrynumber!=null && casregistrynumber.length()>0)
+					{
+						outputELTTerms("API-CRN",file,apiat);
+					}
+					
+					if(apiams!=null && apiams.length()>0)
+					{
+						outputELTMAINTerms("API-AMS",file,apiams);
+					}
+					
+					if(apiapc!=null && apiapc.length()>0)
+					{
+						outputELTMAINTerms("API-APC",file,apiapc);
+					}
+					
+					if(apiltm!=null && apiltm.length()>0)
+					{
+						outputELTtermgroup(file,apiltm);
+					}
+					
+					file.write("</autoposting>\n");
+					file.write("</API-descriptorgroup>\n");
+				}
+			
+				
 				if(classificationcode!=null && classificationcode.length()>0)
 				{
 					outputClassificationgroup(file,classificationcode);
-				}//if
+				}//if							
 				
 				if(manufacturer!=null && manufacturer.length()>0)
 				{
@@ -1858,10 +1972,13 @@ public class BdReverseRecordBuilder
 					outputSequencebanks(file,sequencebank);
 				}//if
 				
-				if(casregistrynumber!=null && casregistrynumber.length()>0)
-				{
-					outputChemicalgroup(file, casregistrynumber);
-				}//if
+				if(!database.equalsIgnoreCase("elt"))
+				{				
+					if(casregistrynumber!=null && casregistrynumber.length()>0)
+					{
+						outputChemicalgroup(file, casregistrynumber);
+					}//if
+				}
 				file.write("</enhancement>\n");
 			}    							
 			file.write("</head>\n");
@@ -1875,7 +1992,7 @@ public class BdReverseRecordBuilder
 					file.write("<bibliography refcount=\""+refcount+"\">\n");	
 					//skip reference for now @12/2/2020 by HMO
 					//file.write("<reference>SKIP REFERENCE</reference>");
-					getReference(file,accessnumber);
+					//getReference(file,accessnumber);//skip reference for databrick 
 					file.write("</bibliography>\n");
 							
 				}
@@ -2530,7 +2647,9 @@ public class BdReverseRecordBuilder
 
 	private void outputCorrespondence(FileWriter file, String correspondencename,String correspondenceaffiliation,String correspondenceeaddress,String accessnumber) throws Exception
 	{
-		
+		//System.out.println("correspondencename = "+correspondencename);
+		//System.out.println("correspondenceaffiliation = "+correspondenceaffiliation);
+		//System.out.println("correspondenceeaddress = "+correspondenceeaddress);
 		String[] correspondencenames=null;
 		String[] correspondenceAffArr=null;
 		String[] correspondenceeaddressArr=null;
@@ -2549,6 +2668,7 @@ public class BdReverseRecordBuilder
 		{
 			
 			correspondencenames = correspondencename.split(Constants.AUDELIMITER,-1);
+			//System.out.println("correspondencename size = "+correspondencenames.length);
 			for(int i=0;i<correspondencenames.length;i++)
 			{
 				file.write("<correspondence>\n");
@@ -2664,6 +2784,7 @@ public class BdReverseRecordBuilder
 					
 					if(correspondenceAffArr!=null && correspondenceAffArr.length>i)
 					{
+						//System.out.println("correspondenceAffArr size = "+correspondenceAffArr.length);
 						String[] affs = correspondenceAffArr[i].split(Constants.IDDELIMITER,-1);
 						
 						//System.out.println("correspondenceaffiliation size = "+affs.length);
@@ -2672,6 +2793,7 @@ public class BdReverseRecordBuilder
 							
 							
 							String afid = affs[0];
+							System.out.println("afid="+affs[0]);
 							String venue = null;
 							String content =null;
 							String dptid = null;
@@ -2679,11 +2801,12 @@ public class BdReverseRecordBuilder
 							{
 								venue = affs[1];
 							}
-							
+							//System.out.println("venue="+affs[1]);
 							String country = null;
 							if(affs.length>2)
 							{
-								content = affs[2];				
+								content = affs[2];	
+								System.out.println("content="+affs[2]);
 								if(content.indexOf(Constants.GROUPDELIMITER)>-1)
 								{
 									String[] organizations = content.split(Constants.GROUPDELIMITER);																					
@@ -2697,6 +2820,7 @@ public class BdReverseRecordBuilder
 							if(affs.length>3)
 							{
 								dptid = affs[3];
+								System.out.println("dptid="+affs[3]);
 							}
 							
 							if((afid!=null && afid.length()>0 ) || (dptid!=null && dptid.length()>0 ) || 
@@ -2735,18 +2859,22 @@ public class BdReverseRecordBuilder
 										if(organizations.length>0)
 										{
 											organization = organizations[0];
+											System.out.println("organization="+organizations[0]);
 										}
 										if(organizations.length>1)
 										{
 											address_part = organizations[1];
+											System.out.println("address_part="+organizations[1]);
 										}
 										if(organizations.length>2)
 										{
 											city_group = organizations[2];
+											System.out.println("city_group="+organizations[2]);
 										}
 										if(organizations.length>3)
 										{
 											country = organizations[3];
+											System.out.println("country="+organizations[3]);
 										}
 										
 										if(organization!=null && organization.length()>0)
@@ -2872,7 +3000,7 @@ public class BdReverseRecordBuilder
 				if(grantAgency!=null && grantAgency.length()>0){
 					file.write("<grant-agency>"+cleanBadCharacters(grantAgency)+"</grant-agency>\n");
 				}
-				file.write("</grant>");
+				file.write("</grant>\n");
 				
 			}
 			else
@@ -3735,6 +3863,94 @@ public class BdReverseRecordBuilder
 		file.write("</descriptors>\n");
     }
     
+    private void outputELTMAINTerms(String term, FileWriter file, String controlledterm) throws Exception
+    {
+    	file.write("<"+term+">\n");					
+		
+		String[] controlledtermElements = controlledterm.split(Constants.IDDELIMITER,-1);
+		for(int i=0;i<controlledtermElements.length;i++)
+		{
+			String controlledtermElement = controlledtermElements[i];
+			if(controlledtermElement!=null && controlledtermElement.length()>0)
+			{
+				file.write("<API-term major-term-indicator=");
+				if(term.equalsIgnoreCase("API-AMS"))
+				{
+					file.write("\"M\">");
+				}
+				else if (term.equalsIgnoreCase("API-APC"))
+				{
+					file.write("\"P\">");
+				}
+				else
+				{
+					file.write(">");
+				}
+				file.write(cleanBadCharacters(controlledtermElement)+"</API-term>\n");				
+			}
+		}
+		file.write("</"+term+">\n");
+    }
+    
+    private void outputELTTerms(String term, FileWriter file, String controlledterm) throws Exception
+    {
+    	file.write("<"+term+">\n");
+		String descriptorsType = null;				
+		
+		String[] controlledtermElements = controlledterm.split(Constants.IDDELIMITER,-1);
+		for(int i=0;i<controlledtermElements.length;i++)
+		{
+			String controlledtermElement = controlledtermElements[i];
+			if(controlledtermElement!=null && controlledtermElement.length()>0)
+			{
+				file.write("<autoposting-term>"+cleanBadCharacters(controlledtermElement)+"</autoposting-term>\n");				
+			}
+		}
+		file.write("</"+term+">\n");
+    }
+    
+    private void outputAPILT(FileWriter file, String controlledterm) throws Exception
+    {
+    	file.write("<API-LT>\n");
+		String descriptorsType = null;				
+		
+		String[] controlledtermElements = controlledterm.split(Constants.AUDELIMITER,-1);
+		for(int i=0;i<controlledtermElements.length;i++)
+		{
+			String controlledtermElement = controlledtermElements[i];
+			if(controlledtermElement!=null && controlledtermElement.length()>0)
+			{
+				file.write("<autoposting-term>"+cleanBadCharacters(controlledtermElement)+"</autoposting-term>\n");				
+			}
+		}
+		file.write("</API-LT>\n");
+    }
+    
+    private void outputELTtermgroup(FileWriter file, String controlledterm) throws Exception
+    {
+    	file.write("<API-LTM>\n");
+		String descriptorsType = null;				
+		
+		String[] controlledtermElements = controlledterm.split(Constants.GROUPDELIMITER,-1);
+		for(int i=0;i<controlledtermElements.length;i++)
+		{
+			String controlledtermElement = controlledtermElements[i];
+			file.write("<API-LTM-group>\n");
+			if(controlledtermElement!=null && controlledtermElement.length()>0)
+			{
+				String[] controllSubterms = controlledtermElement.split(Constants.IDDELIMITER,-1);
+				for(int j=0;j<controllSubterms.length;j++)
+				{
+					String controllSubtermElement = controllSubterms[j];
+					file.write("<autoposting-term>"+cleanBadCharacters(controllSubtermElement)+"</autoposting-term>\n");	
+				}
+			}
+			file.write("</API-LTM-group>\n");
+		}
+		file.write("</API-LTM>\n");
+    }
+    
+    
     private void outputUncontrolledterm(FileWriter file, String uncontrolledterm) throws Exception
     {
     	file.write("<descriptors controlled=\"n\" type=\"CFL\">\n");	    								    							
@@ -3872,6 +4088,22 @@ public class BdReverseRecordBuilder
 		}
 		file.write("</classifications>\n");
 		file.write("</classificationgroup>\n");
+    }
+    
+    private void outputELTClassification(FileWriter file, String classificationcode) throws Exception
+    {
+    	CPXDataDictionary classificationDesc = new CPXDataDictionary();
+    	file.write("<API-CC>\n");
+					
+		String[] classificationcodeElements = classificationcode.split(Constants.AUDELIMITER,-1);
+		for(int i=0;i<classificationcodeElements.length;i++)
+		{
+			String  classificationcodeElement = classificationcodeElements[i];	    					
+			file.write("<classification>\n");
+			file.write("<classification-description>"+classificationcodeElement+"</classification-description>\n");			
+			file.write("</classification>\n");
+		}
+		file.write("</API-CC>\n");		
     }
     
     private void outputManufacturergroups(FileWriter file,String manufacturer) throws Exception
@@ -4585,7 +4817,7 @@ public class BdReverseRecordBuilder
             	 				}
             	 				file.write("/>\n");
             	 			}
-            	 			else if(referencepages.indexOf("PAGECOUNT:")>-1)
+            	 			else if(referencecitationpage.indexOf("PAGECOUNT:")>-1)
             	 			{
             	 				file.write("<pagecount");
             	 				
@@ -5030,6 +5262,13 @@ public class BdReverseRecordBuilder
          badCharacterMap.put("&mellip;","&#8943;");
          badCharacterMap.put("&ldquo;","&#8220;");
          badCharacterMap.put("&rdquo;","&#8221;");
-  
-     }  
+         
+   
+         
+       
+        
+         
+     }
+
+	    
 }
