@@ -4390,7 +4390,7 @@ public class PatentXmlReader
 				switch ((int) c)
 				{
 					case 30 :sb.append(c);break;
-					case 31 :sb.append(c);break;
+					case 31 :sb.append(c);break;					
 					case 128 :sb.append("&Ccedil;");break;
 					case 129 :sb.append("&uuml;");break;
 					case 130 :sb.append("&eacute;");break;
@@ -4399,7 +4399,7 @@ public class PatentXmlReader
 					case 133 :sb.append("&agrave;");break;
 					case 134 :sb.append("&aring;");break;
 					case 135 :sb.append("&ccedil;");break;
-					case 136 :sb.append("&ecirc;");break;
+					//case 136 :sb.append("&ecirc;");break;
 					case 137 :sb.append("&euml;");break;
 					case 138 :sb.append("&egrave;");break;
 					case 139 :sb.append("&iuml;");break;
@@ -4462,11 +4462,11 @@ public class PatentXmlReader
 					case 199 :sb.append("&Ccedil;");break; 	//Capital C cedilla
 					case 200 :sb.append("&Egrave;");break; 	//Capital E grave;
 					case 201 :sb.append("&Eacute;");break; 	//Capital E acute
-					case 202 :sb.append("&Ecire;");break; 	//Capital E circumflex
+					case 202 :sb.append("&Ecirc;");break; 	//Capital E circumflex
 					case 203 :sb.append("&Euml;");break; 	//Capital E diaeresis
 					case 204 :sb.append("&Igrave;");break; 	//Capital I acute
 					case 205 :sb.append("&Iacute;");break; 	//Capital E diaeresis
-					case 206 :sb.append("&Icire;");break; 	//Capital I circumflex
+					case 206 :sb.append("&Icirc;");break; 	//Capital I circumflex
 					case 207 :sb.append("&Iuml;");break; 	//Capital I diaeresis
 					case 208 :sb.append("&ETH;");break; 	//Capital Eth, Edh, crossed D
 					case 209 :sb.append("&Ntilde;");break; 	//Capital Ntilde
@@ -4485,11 +4485,11 @@ public class PatentXmlReader
 					case 231 :sb.append("&ccedil;");break; 	//a c cedilla
 					case 232 :sb.append("&egrave;");break; 	//a e grave
 					case 233 :sb.append("&eacute;");break; 	//a e acute
-					case 234 :sb.append("&ecire;");break; 	//a circumflex
+					case 234 :sb.append("&ecirc;");break; 	//a circumflex
 					case 235 :sb.append("&euml;");break; 	//a e diaeresis
 					case 236 :sb.append("&igrave;");break; 	//a i grave
 					case 237 :sb.append("&iacute;");break; 	//a i acute
-					case 238 :sb.append("&icire;");break; 	//a circumflex
+					case 238 :sb.append("&icirc;");break; 	//a circumflex
 					case 239 :sb.append("&iuml;");break; 	//a diaeresis
 					case 240 :sb.append("&eth;");break; 	//a eth
 					case 241 :sb.append("&ntilde;");break; 	//a n tilde
@@ -4659,9 +4659,8 @@ public class PatentXmlReader
 					case 9827 :sb.append("&clubs;");break; 	//black club suit, shamrock
 					case 9829 :sb.append("&hearts;");break; //black heart suit, valentine
 					case 9830 :sb.append("&diams;");break;	//Black diamond suit
-
-					//default:sb.append(' ');
 					default:sb.append("&#"+(int)c+";");
+				
 					break;
 				}
 			}
