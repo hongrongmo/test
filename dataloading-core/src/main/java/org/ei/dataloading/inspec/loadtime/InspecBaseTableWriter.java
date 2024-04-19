@@ -160,6 +160,12 @@ public class InspecBaseTableWriter
 					outPutInsGroup(mid,accessnumber,loadnumber,valueS,"linkg");
                 }
 				
+				//added for video group by hmo at 04/19/2024
+				if(bf.equalsIgnoreCase("VIDEOG"))
+				{				    
+					outPutInsGroup(mid,accessnumber,loadnumber,valueS,"videog");
+                }
+				
 			}
 			else
 			{

@@ -2035,7 +2035,7 @@ public class INSPECCombiner
         }
         else if(newdocType.equals("95"))
         {
-            list.add("VID");
+            list.add("MM");
         }
         else
         {
