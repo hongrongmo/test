@@ -430,30 +430,48 @@ public void writeRecs(ResultSet rs)
 	
 					// AUS
 					String aString = rs.getString("PERSON_ANALYTIC");
+					
 					if(aString != null)
 					{
-					  String[] authors = aString.split(AUDELIMITER);	
-					  if(authors!=null && authors.length>0)	
+					  aString=aString.replace("?", "");
+					  String[] auhorGroup=aString.split(AUDELIMITER);
+					  rec.put(EVCombinedRec.AUTHOR,auhorGroup);
+					  for(int j=0;j<auhorGroup.length;j++)
 					  {
-						  rec.put(EVCombinedRec.AUTHOR, authors);					 
-						  rec.put(EVCombinedRec.FIRST_AUTHOR,authors[0]);
+						  if(!auhorGroup[j].equals(""))
+						  {
+							  rec.put(EVCombinedRec.FIRST_AUTHOR,auhorGroup[j]);
+							  //System.out.println("FIRST_AUTHOR_"+j+"="+auhorGroup[j]);
+							  break;
+						  }
 					  }
 					}
 	
 					// EDS
 					String eString = rs.getString("PERSON_MONOGRAPH");
 					if(eString != null)
-					{
+					{					  
 					  String otherEditors = rs.getString("PERSON_COLLECTION");
 					  if(otherEditors != null)
 					  {
 						eString = eString.concat(AUDELIMITER).concat(otherEditors);
 					  }
+					  eString=eString.replace("?", "");
+					  //rec.put(EVCombinedRec.EDITOR, eString.split(AUDELIMITER));
 					  String[] editors = eString.split(AUDELIMITER);
 					  rec.put(EVCombinedRec.EDITOR,editors);
 					  if(rec.getString(EVCombinedRec.FIRST_AUTHOR)==null)
 					  {
-						  rec.put(EVCombinedRec.FIRST_AUTHOR,editors[0]);
+						  for(int j=0;j<editors.length;j++)
+						  {
+							  if(!editors[j].equals(""))
+							  {
+								  rec.put(EVCombinedRec.FIRST_AUTHOR,editors[j]);
+								  //System.out.println("FIRST_EDITOR_"+j+"="+editors[j]);
+								  break;
+							  }
+						  }
+						 
 					  }
 					}
 	
@@ -1314,10 +1332,10 @@ private class LocalErrorHandler implements ErrorHandler {
 
 					// AUS
 					String aString = rs.getString("PERSON_ANALYTIC");
-					if (aString != null) {						
+					if (aString != null) {
 						String[] auhorGroup=aString.split(AUDELIMITER);
-						rec.put(EVCombinedRec.AUTHOR,auhorGroup);
-						rec.put(EVCombinedRec.FIRST_AUTHOR,auhorGroup[0]);
+						  rec.put(EVCombinedRec.AUTHOR,auhorGroup);
+						  rec.put(EVCombinedRec.FIRST_AUTHOR,auhorGroup[0]);
 					}
 
 					// EDS
@@ -1397,6 +1415,8 @@ private class LocalErrorHandler implements ErrorHandler {
 						}
 					}
 
+					/*
+					 * comment out CVS term to use thesaurus by hmo at 5/19/2022
 					// INDEX_TERMS (CVS)
 					if (rs.getString("INDEX_TERMS") != null) {
 						String[] idxterms = rs.getString("INDEX_TERMS").split(AUDELIMITER);
@@ -1405,6 +1425,8 @@ private class LocalErrorHandler implements ErrorHandler {
 						}
 						rec.putIfNotNull(EVCombinedRec.CONTROLLED_TERMS, idxterms);
 					}
+					*/
+					
 					rec.putIfNotNull(EVCombinedRec.SERIAL_TITLE, rs.getString("TITLE_OF_SERIAL"));
 					rec.putIfNotNull(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
 
@@ -1432,6 +1454,7 @@ private class LocalErrorHandler implements ErrorHandler {
 
 			recs.put("AUTHOR", authorList);
 			recs.put("AFFILIATION", affiliationList);
+			//comment out CVS term to use thesaurus by hmo at 5/19/2022
 			recs.put("CONTROLLEDTERM", controltermList);
 			recs.put("PUBLISHERNAME", publishernameList);
 			recs.put("SERIALTITLE", serialTitleList);

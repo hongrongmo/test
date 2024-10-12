@@ -183,6 +183,10 @@ public class BaseTableRecord
 	public static final BaseTableRecord REFERENCEITEMCITATIONEADDRESS= new BaseTableRecord("REFERENCEITEMCITATIONEADDRESS", new Integer(4000), "cpx");
 	public static final BaseTableRecord REFERENCEITEMCITATIONREFTEXT= new BaseTableRecord("REFERENCEITEMCITATIONREFTEXT", new Integer(4000), "cpx");
 	public static final BaseTableRecord REFITEMCITATIONAFFILIATION= new BaseTableRecord("REFITEMCITATIONAFFILIATION", new Integer(4000), "cpx");
+	public static final BaseTableRecord REFITEMCITATIONDATACOLLECTION= new BaseTableRecord("REFITEMCITATIONDATACOLLECTION", new Integer(1000), "cpx");  //added at 06/25/2024
+	public static final BaseTableRecord REFERENCEITEMCITATIONEID= new BaseTableRecord("REFERENCEITEMCITATIONEID", new Integer(64), "cpx");  //added at 06/25/2024
+	public static final BaseTableRecord REFERENCEITEMCITATIONID= new BaseTableRecord("REFERENCEITEMCITATIONID", new Integer(1000), "cpx");  //added at 06/25/2024
+	public static final BaseTableRecord REFERENCEITEMCITATIONCITATIONTITLE= new BaseTableRecord("REFERENCEITEMCITATIONCITATIONTITLE", new Integer(4000), "cpx");  //added at 07/09/2024
 	
 
 
@@ -337,6 +341,10 @@ public class BaseTableRecord
 		bdTableColumns.add(REFERENCEITEMCITATIONEADDRESS);
 	    bdTableColumns.add(REFERENCEITEMCITATIONREFTEXT);
 	    bdTableColumns.add(REFITEMCITATIONAFFILIATION);
+	    bdTableColumns.add(REFITEMCITATIONDATACOLLECTION); //added at 6/25/2024 by hmo
+	    bdTableColumns.add(REFERENCEITEMCITATIONEID);  //added at 6/25/2024 by hmo
+	    bdTableColumns.add(REFERENCEITEMCITATIONID);  //added at 6/25/2024 by hmo
+	    bdTableColumns.add(REFERENCEITEMCITATIONCITATIONTITLE); //added at 6/25/2024 by hmo
 		bdTableColumns.add(REFERENCE);
 
 

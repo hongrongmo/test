@@ -473,6 +473,7 @@ public class BaseTableWriter
 			 Hashtable REFERENCEITEMCITATIONCODEN = (Hashtable)reference.get("REFERENCEITEMCITATIONCODEN");
 			 Hashtable REFERENCEITEMCITATIONID = (Hashtable)reference.get("REFERENCEITEMCITATIONID");
 			 Hashtable REFITEMCITATIONAFFILIATION = (Hashtable)reference.get("REFITEMCITATIONAFFILIATION");
+			 Hashtable REFITEMCITATIONDATACOLLECTION = (Hashtable)reference.get("REFITEMCITATIONDATACOLLECTION");
 			 Hashtable REFERENCESOURCETEXT = (Hashtable)reference.get("REFERENCESOURCETEXT");
 
 			 StringBuffer recordBuf = null;
@@ -798,6 +799,17 @@ public class BaseTableWriter
 					  									"REFITEMCITATIONAFFILIATION",
 					  									(String)REFITEMCITATIONAFFILIATION.get(referenceID)));
 					  //System.out.println("---RECORD= "+recordBuf.toString());
+				  }
+				  
+				  recordBuf.append(FIELDDELIM);	
+				  
+				  if(REFITEMCITATIONDATACOLLECTION != null && REFITEMCITATIONDATACOLLECTION.get(referenceID)!=null)
+				  {
+					  //System.out.println("---REFITEMCITATIONDATACOLLECTION="+(String)REFITEMCITATIONDATACOLLECTION.get(referenceID));
+					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFITEMCITATIONDATACOLLECTION")).intValue(),
+					  									"REFITEMCITATIONDATACOLLECTION",
+					  									(String)REFITEMCITATIONDATACOLLECTION.get(referenceID)));
+					  
 				  }
 				  
 				  /* Source text is used for internal use only based on jira EVOPS-716

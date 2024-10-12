@@ -582,6 +582,8 @@ public class GeoRefCorrection
 			stmt = con.prepareStatement(updateQuery);
 			System.out.println("run "+updateQuery);
 		    stmt.executeUpdate();
+		    //comment this out by hmo based on EVOPS-1891
+		    /*
 			stmt = con.prepareStatement(selectQuery);
 			System.out.println("run "+selectQuery);
 			rs = stmt.executeQuery();
@@ -594,9 +596,13 @@ public class GeoRefCorrection
 				i++;
 
 			}
-			runUpdateFlag(updateNumber);
-			runAddDelete(topTwoLoadnumber,c);
-			addToMasterTable();
+			*/
+			//runUpdateFlag(updateNumber);//change by hmo based on EVOPS-1891
+			//runAddDelete(topTwoLoadnumber,c); //change by hmo based on EVOPS-1891
+		    //runAddDelete(updateNumber,c);//change by hmo based on EVOPS-1891
+			runUpdateFlag(updateNumber,con);//change by hmo based on EVOPS-1891, passing in the con
+			runAddDelete(updateNumber,c,con);//change by hmo based on EVOPS-1891, passing in the con
+			addToMasterTable(con);//change by hmo based on EVOPS-1891, passing in the con
 
 
 		}
@@ -624,6 +630,18 @@ public class GeoRefCorrection
 				try
 				{
 					rs.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
+			
+			if (con != null)
+			{
+				try
+				{
+					con.close();
 				}
 				catch (Exception en)
 				{
@@ -677,6 +695,40 @@ public class GeoRefCorrection
 				try
 				{
 					con1.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
+		}
+
+	}
+	
+	private void runUpdateFlag(int updateNumber, Connection con1)
+	{
+		PreparedStatement stmt = null;
+		ResultSet rs = null;		
+		try
+		{			
+			stmt = con1.prepareStatement("update georef_master_ip set updateflag=document_type where updatenumber='"+updateNumber+"'");
+			System.out.println("update georef_master_ip set updateflag=document_type where updatenumber='"+updateNumber+"'");
+			stmt.executeUpdate();
+			stmt = con1.prepareStatement("update georef_master_ip set document_type='GI' where updatenumber='"+updateNumber+"'");
+			System.out.println("update georef_master_ip set document_type='GI' where updatenumber='"+updateNumber+"'");
+			stmt.executeUpdate();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
 				}
 				catch (Exception en)
 				{
@@ -776,6 +828,67 @@ public class GeoRefCorrection
 		}
 
 	}
+	
+	private void addRecords(String idNumber,Connection con1)
+	{
+		PreparedStatement stmt = null;
+		ResultSet rs = null;		
+		try
+		{			
+			stmt = con1.prepareStatement("insert into georef_master_orig select * from georef_master_add where id_number='"+idNumber+"'");
+			stmt.executeUpdate();
+
+		}
+		catch(Exception e)
+		{
+			try
+			{
+				System.out.println("Exception on GeoRefCorrection.addRecords  "+e.getMessage());
+				//stmt = con1.prepareStatement("insert into georef_master_error values('"+idNumber+"',"+updateNumber+",Sysdate,'"+e.getMessage()+"','"+fileToBeLoaded+"'");
+				stmt = con1.prepareStatement("insert into georef_correction_error values(?,?,Sysdate,?,?)");
+				stmt.setString(1,idNumber);
+				stmt.setInt(2,updateNumber);
+				stmt.setString(3,e.getMessage());
+				stmt.setString(4,fileToBeLoaded);
+				stmt.executeUpdate();
+			}
+			catch(Exception em)
+			{
+				em.printStackTrace();
+			}
+			finally
+			{
+				if (stmt != null)
+				{
+					try
+					{
+						stmt.close();
+					}
+					catch (Exception ef)
+					{
+						ef.printStackTrace();
+					}
+				}				
+		}
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
+			
+		}
+
+	}
 
 	private void addToMasterTable()
 	{
@@ -804,11 +917,9 @@ public class GeoRefCorrection
 			{
 				for(int i=0;i<idNumberList.size();i++)
 				{
-					addRecords(idNumberList.get(i));
+					addRecords(idNumberList.get(i),con1);
 				}
 			}
-
-
 		}
 		catch(Exception e)
 		{
@@ -854,7 +965,154 @@ public class GeoRefCorrection
 			}
 		}
 	}
+	
+	private void addToMasterTable(Connection con1)
+	{
+		PreparedStatement stmt = null;
+		ResultSet rs = null;	
+		try
+		{			
+			//added by hmo at 6/15/2022 to remove duplicate records
+			stmt = con1.prepareStatement("delete from georef_master_orig where id_number in (select id_number from georef_master_add)");
+			stmt.executeUpdate();
+			System.out.println("run query 'delete from georef_master_orig where id_number in (select id_number from georef_master_add'");
+			stmt = con1.prepareStatement("select id_number from georef_master_add");
+			rs = stmt.executeQuery();
+			List<String> idNumberList = new ArrayList();
 
+			while (rs.next())
+			{
+				idNumberList.add(rs.getString("id_number"));
+			}
+			if(idNumberList.size()>0)
+			{
+				for(int i=0;i<idNumberList.size();i++)
+				{
+					addRecords(idNumberList.get(i),con1);
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			log4j.info("Exception on GeoRefCorrection.addToMasterTable "+e.getMessage());
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
+
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
+
+			if (con1 != null)
+			{
+				try
+				{
+					con1.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	private void addToMasterTable(String updateNumber, GeoRefCombiner c)
+	{
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		Connection con1 = null;
+		try
+		{
+			if(con1==null)
+			{
+				con1 = getConnection(url,driver,username,password);
+			}
+			
+			stmt = con1.prepareStatement("delete from georef_master_orig where id_number in (select id_number from georef_master_delete)");
+			stmt.executeUpdate();
+			System.out.println("run query 'delete from georef_master_orig where id_number in (select id_number from georef_master_delete'");
+			stmt = con1.prepareStatement("select id_number from georef_master_add");
+			rs = stmt.executeQuery();
+			List<String> idNumberList = new ArrayList();
+
+			while (rs.next())
+			{
+				idNumberList.add(rs.getString("id_number"));
+			}
+			if(idNumberList.size()>0)
+			{
+				for(int i=0;i<idNumberList.size();i++)
+				{
+					addRecords(idNumberList.get(i));
+				}
+			}			
+		}
+		catch(Exception e)
+		{
+			log4j.info("Exception on GeoRefCorrection.addToMasterTable "+e.getMessage());
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
+
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
+
+			if (con1 != null)
+			{
+				try
+				{
+					con1.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
+		}
+	}
+/*
 	@SuppressWarnings("resource")
 	private void runAddDelete(String[] updateNumber, GeoRefCombiner c)
 	{
@@ -895,8 +1153,76 @@ public class GeoRefCorrection
 		    	System.out.println("No Load Number");
 			}
 
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception on GeoRefCorrection.runAddDelete "+e.getMessage());
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
 
+			if (con1 != null)
+			{
+				try
+				{
+					con1.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
 
+		}
+
+	}
+*/
+	@SuppressWarnings("resource")
+	private void runAddDelete(int updateNumber, GeoRefCombiner c)
+	{
+		PreparedStatement stmt = null;
+		String addQuery=null;
+		String deleteQuery=null;
+		String updateQuery=null;
+		String updateQuery1=null;
+		Connection con1 = null;
+		try
+		{
+			if(con1==null)
+			{
+				con1 = getConnection(url,driver,username,password);
+			}
+			if(updateNumber>400000)
+			{
+			  addQuery = "insert into georef_master_add select * from georef_master_ip where updatenumber='"+updateNumber+"'";
+			  System.out.println("Run Query \"insert into georef_master_add select * from georef_master_ip where updatenumber='\"+updateNumber+\"'\"");
+			  deleteQuery = "insert into georef_master_delete select * from georef_master_orig where document_type='GI'";
+			  System.out.println("Run Query \"insert into georef_master_delete select * from georef_master_orig where document_type='GI'\"" );
+			  updateQuery = "update georef_master_add set PERSON_MONOGRAPH=replace(PERSON_MONOGRAPH,'?',' '),PERSON_ANALYTIC=replace(PERSON_ANALYTIC,'?',' '),PERSON_COLLECTION=replace(PERSON_COLLECTION,'?',' ')  where PERSON_MONOGRAPH like'%?%' or PERSON_ANALYTIC like'%?%' or PERSON_COLLECTION  like'%?%;'";
+			  System.out.println("Run Query update georef_master_delete set m_id=(select m_id from georef_master_orig where id_number=georef_master_delete.id_number) where exists(select m_id from georef_master_orig where id_number=georef_master_delete.id_number)" );
+		      stmt = con1.prepareStatement(addQuery);
+		      stmt.executeUpdate();
+		      stmt = con1.prepareStatement(deleteQuery);
+		      stmt.executeUpdate();
+		      stmt = con1.prepareStatement(updateQuery);
+		      stmt.executeUpdate();			  
+		    }
+		    else
+		    {
+		    	System.out.println("invalid loadnumber "+updateNumber);
+			}
 
 		}
 		catch(Exception e)
@@ -930,12 +1256,66 @@ public class GeoRefCorrection
 				}
 			}
 
+		}
+
+	}
+	
+	@SuppressWarnings("resource")
+	private void runAddDelete(int updateNumber, GeoRefCombiner c, Connection con1)
+	{
+		PreparedStatement stmt = null;
+		String addQuery=null;
+		String deleteQuery=null;
+		String updateQuery=null;
+		String updateQuery1=null;
+
+		try
+		{
+			if(updateNumber>400000)
+			{
+			  addQuery = "insert into georef_master_add select * from georef_master_ip where updatenumber='"+updateNumber+"'";
+			  System.out.println("Run Query \"insert into georef_master_add select * from georef_master_ip where updatenumber='\"+updateNumber+\"'\"");
+			  deleteQuery = "insert into georef_master_delete select * from georef_master_orig where document_type='GI'";
+			  System.out.println("Run Query \"insert into georef_master_delete select * from georef_master_orig where document_type='GI'\"" );
+			  updateQuery = "update georef_master_add set PERSON_MONOGRAPH=replace(PERSON_MONOGRAPH,'?',' '),PERSON_ANALYTIC=replace(PERSON_ANALYTIC,'?',' '),PERSON_COLLECTION=replace(PERSON_COLLECTION,'?',' ')  where PERSON_MONOGRAPH like'%?%' or PERSON_ANALYTIC like'%?%' or PERSON_COLLECTION  like'%?%;'";
+			  System.out.println("Run Query update georef_master_delete set m_id=(select m_id from georef_master_orig where id_number=georef_master_delete.id_number) where exists(select m_id from georef_master_orig where id_number=georef_master_delete.id_number)" );
+		      stmt = con1.prepareStatement(addQuery);
+		      stmt.executeUpdate();
+		      stmt = con1.prepareStatement(deleteQuery);
+		      stmt.executeUpdate();
+		      stmt = con1.prepareStatement(updateQuery);
+		      stmt.executeUpdate();			  
+		    }
+		    else
+		    {
+		    	System.out.println("invalid loadnumber "+updateNumber);
+			}
+
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception on GeoRefCorrection.runAddDelete "+e.getMessage());
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}		
 
 		}
 
-
-
 	}
+
+
 
 	private void deleteRecord(String m_id)
 	{

@@ -11,14 +11,11 @@ import org.apache.commons.text.StringEscapeUtils;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
 import org.xml.sax.InputSource;
-
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-
 import org.ei.common.Constants;
 import org.ei.common.bd.*;
 import org.ei.dataloading.*;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -42,18 +39,17 @@ public class BdParser
 	private String updatenumber;
 	private String s3FileLoc = "";   //HH 04/05/2016 for Cafe
 	private DataLoadDictionary dictionary = new DataLoadDictionary();
-
 	
-	  private Namespace aitNamespace = Namespace.getNamespace("ait", "http://www.elsevier.com/xml/ait/dtd");
-	  private Namespace ceNamespace = Namespace.getNamespace("ce", "http://www.elsevier.com/xml/common/dtd");	  
-	  private Namespace noNamespace = Namespace.getNamespace("", "");	  
-	  private Namespace aniNamespace;	  
-	  private Namespace xmlNamespace = Namespace.getNamespace("xml", "http://www.w3.org/XML/1998/namespace");	  
-	  private Namespace xoeNamespace = Namespace.getNamespace("xoe", "http://www.elsevier.com/xml/xoe/dtd");	  
-	  private Namespace xocsNamespace = Namespace.getNamespace("xocs", "http://www.elsevier.com/xml/xocs/dtd");	  
-	  private Namespace aiiNamespace = Namespace.getNamespace("aii", "http://www.elsevier.com/xml/ani/internal");
-	  
-	
+	private Namespace aitNamespace = Namespace.getNamespace("ait", "http://www.elsevier.com/xml/ait/dtd");
+	private Namespace ceNamespace = Namespace.getNamespace("ce", "http://www.elsevier.com/xml/common/dtd");	  
+	private Namespace noNamespace = Namespace.getNamespace("", "");	  
+	private Namespace aniNamespace;	  
+	private Namespace xmlNamespace = Namespace.getNamespace("xml", "http://www.w3.org/XML/1998/namespace");	  
+	private Namespace xoeNamespace = Namespace.getNamespace("xoe", "http://www.elsevier.com/xml/xoe/dtd");	  
+	private Namespace xocsNamespace = Namespace.getNamespace("xocs", "http://www.elsevier.com/xml/xocs/dtd");	  
+	private Namespace aiiNamespace = Namespace.getNamespace("aii", "http://www.elsevier.com/xml/ani/internal");
+	private Namespace mmlNamespace = Namespace.getNamespace("mml","http://www.w3.org/1998/Math/MathML");
+	  	
 	public static String accessNumberS;
 	private int affid = 0;
 	private static Hashtable contributorRole = new Hashtable();
@@ -246,7 +242,7 @@ public class BdParser
 					}
 					//System.out.println("EID1="+eid);
 					
-					Element fundingList = cpxRoot.getChild("funding-list",xocsNamespace);					
+					Element fundingList = cpxRoot.getChild("funding-list",this.xocsNamespace);					
 					Element openAccess = cpxRoot.getChild("open-access", this.xocsNamespace);
 				          if (openAccess != null) {
 				            if (openAccess.getChild("oa-access-effective-date", this.xocsNamespace) != null) {
@@ -266,7 +262,7 @@ public class BdParser
 				          } 
 				          
 					
-					Element indexeddate = item.getChild("indexeddate",xocsNamespace);
+					Element indexeddate = item.getChild("indexeddate",this.xocsNamespace);
 					if(indexeddate !=null)
 					{
 						String epoch = indexeddate.getAttributeValue("epoch");
@@ -1516,7 +1512,7 @@ public class BdParser
 		Hashtable referenceItemcitationEAddress = new Hashtable();
 		Hashtable referenceItemcitationRefText = new Hashtable();
 		Hashtable referenceSourceText = new Hashtable();
-
+		Hashtable referenceItemcitationDatabase = new Hashtable();
 
 		if(referenceGroup != null && referenceGroup.size()>0)
 		{
@@ -1684,8 +1680,7 @@ public class BdParser
 						List itemidList = refdItemidlist.getChildren("itemid",noNamespace);
 						if(itemidList!=null)
 						{
-							String itemid = getItemID(itemidList);
-							//System.out.println("ITEM_CPX_ID::"+itemid);
+							String itemid = getRefItemID(itemidList);
 							referenceItemid.put(referenceID,itemid);
 							
 							String itemdoi=getItemDoi(itemidList);
@@ -1704,13 +1699,13 @@ public class BdParser
 						String  refFullTextValue = refFullText.getTextTrim();
 						//System.out.println("ref-fulltext1::"+refFullTextValue);
 						//change to deal with non-roman characters @08/10/2018
-						//referenceText.put(referenceID,dictionary.mapEntity(refFullTextValue));
-						//referenceFullText.put(referenceID,trimStringToLength(refFullTextValue,3950));
-						referenceFullText.put(referenceID,refFullTextValue);
-						if(refFullTextValue.length()>3950)
+						//referenceText.put(referenceID,dictionary.mapEntity(refFullTextValue));						
+						//referenceFullText.put(referenceID,refFullTextValue);
+						if(refFullTextValue.length()>3500)
 						{
 							System.out.println("record "+getAccessNumber()+" ref-fulltext oversize::"+refFullTextValue.length());
 						}
+						referenceFullText.put(referenceID,trimStringToLength(refFullTextValue,3500));
 					}
 					
 					
@@ -1731,10 +1726,33 @@ public class BdParser
 						List itemidList = refdItemcitation.getChildren("itemid",noNamespace);
 						if(itemidList!=null)
 						{
-							String itemid = getItemID(itemidList);
+							String itemid = getRefItemID(itemidList);
 							//System.out.println("CITATIONITEM_CPX_ID="+itemid);
 							referenceItemcitationID.put(referenceID,itemid);
 						}						
+						
+						//REFERENCE CITATION DATABASE
+						Element refdItemcitationDatabase = (Element) refdItemcitation.getChild("databases",noNamespace);
+						
+						if(refdItemcitationDatabase!=null)
+						{							
+							List itemdatabaseList = refdItemcitationDatabase.getChildren("dbcollection",noNamespace);
+							StringBuffer referenceItemdatabase = new StringBuffer();
+							if(itemdatabaseList!=null)
+							{								
+								for(int j=0;j<itemdatabaseList.size();j++)
+								{
+									Element itemdatabaseElement = (Element)itemdatabaseList.get(j);									
+									String citationitemdatabase = itemdatabaseElement.getTextTrim();
+									referenceItemdatabase.append(citationitemdatabase);
+									if(j<itemdatabaseList.size()-1)
+									{
+										referenceItemdatabase.append(",");
+									}
+								}								
+								referenceItemcitationDatabase.put(referenceID,referenceItemdatabase.toString());
+							}
+						}
 						
 						//REFERENCE CITATION PII
 						if(refdItemcitation.getChild("pii",ceNamespace)!=null)
@@ -1753,12 +1771,18 @@ public class BdParser
 						}
 
 						//REFERENCE CITATION CITATIONTITLE
-						if(refdItemcitation.getChild("citation-title",ceNamespace)!=null)
+						if(refdItemcitation.getChild("citation-title",noNamespace)!=null)
 						{
-							Element citationTitles = (Element)refdItemcitation.getChild("citation-title",ceNamespace);
+							Element citationTitles = (Element)refdItemcitation.getChild("citation-title",noNamespace);
 							String citation = getCitationTitle(citationTitles);
 							referenceItemcitationCitationTitle.put(referenceID,citation);
 							//System.out.println("referenceItemcitation CITATIONTITLE "+citation);
+							//fill the referencetitle with citation title when there is no reference title
+							if(referenceTitle.get(referenceID)==null)
+							{
+								//System.out.println("REFTITLE="+citationTitles.getChildText("titletext"));
+								referenceTitle.put(referenceID, citationTitles.getChildText("titletext"));
+							}
 
 						}
 
@@ -1780,7 +1804,6 @@ public class BdParser
 							StringBuffer secondgroup = new StringBuffer();
 							referenceItemcitationAffiliation.put(referenceID,auffToStringBuffer(refAffmap,secondgroup));
 							//System.out.println("referenceItemcitation AUTHOR "+auToStringBuffer(refAusmap));
-							//System.out.println("referenceItemcitation AFFILIATION "+auffToStringBuffer(refAffmap,secondgroup));
 
 						}
 
@@ -1935,8 +1958,7 @@ public class BdParser
 						{
 							//change to deal with non-roman characters @08/10/2018
 							//referenceItemcitationRefText.put(referenceID,dictionary.mapEntity(citationRefText.getTextTrim()));
-							referenceItemcitationRefText.put(referenceID,citationRefText.getTextTrim());
-							//System.out.println("REFERENCE CITATION REF-TEXT::"+citationRefText.getTextTrim());
+							referenceItemcitationRefText.put(referenceID,citationRefText.getTextTrim());							
 						}
 
 					}//refd-itemcitation
@@ -2141,17 +2163,22 @@ public class BdParser
 			reference.put("REFERENCEITEMCITATIONREFTEXT",referenceItemcitationRefText);
 			//System.out.println("REFERENCEITEMCITATIONREFTEXT::"+referenceItemcitationRefText);
 		}
-		
+						
+		//follow items added by hmo @6/26/2024
 		if(referenceItemcitationEID!=null && referenceItemcitationEID.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONEID",referenceItemcitationEID);
 		}
-		
-		
+				
 		if(referenceItemcitationID!=null && referenceItemcitationID.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONID",referenceItemcitationID);
 		}
+		
+		if(referenceItemcitationDatabase!=null && referenceItemcitationDatabase.size()>0)
+		{			
+			reference.put("REFITEMCITATIONDATACOLLECTION",referenceItemcitationDatabase);
+		} 
 		
 		if(referenceSourceText!=null && referenceSourceText.size()>0)
 		{
@@ -2287,6 +2314,29 @@ public class BdParser
 		{
 			referenceItemid.append(Constants.IDDELIMITER);
 		}
+		return referenceItemid.toString();
+	}
+	
+	private String getRefItemID(List itemidList) throws Exception
+	{
+		StringBuffer referenceItemid = new StringBuffer();
+		String cpxID = null;
+		String geoID = null;
+		String chemID = null;
+		String apiID = null;
+		String apilitID = null;
+		for(int j=0;j<itemidList.size();j++)
+		{
+			Element itemidElement = (Element)itemidList.get(j);
+			String  itemid_idtype = itemidElement.getAttributeValue("idtype");			
+			String itemid = itemidElement.getTextTrim();
+			referenceItemid.append("\""+itemid_idtype+"\":\""+itemid+"\"")	;
+			if(j<itemidList.size()-1)
+			{
+				referenceItemid.append(",");
+			}
+		}
+		
 		return referenceItemid.toString();
 	}
 
@@ -5040,7 +5090,7 @@ public class BdParser
 							String sublink=null;
 							String subsublink=null;
 							Element linkElement = descriptor.getChild("link",noNamespace);
-							//if(linkElement!=null)
+
 							//only MUD term need to keep link element by hmo at 5/26/2022
 							if(descriptorsType.equalsIgnoreCase("MUD") && linkElement!=null)
 							{								
@@ -5054,7 +5104,6 @@ public class BdParser
 								{
 									subsublink = DataLoadDictionary.mapEntity(getMixData(linkElement.getChild("subsublink",noNamespace).getContent()));
 								}
-								//System.out.println("******** link "+link);
 							}												
 							
 							if(mhBuffer.length()>0)
